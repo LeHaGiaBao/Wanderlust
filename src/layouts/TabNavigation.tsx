@@ -1,9 +1,9 @@
 import React from 'react';
-import HomeScreen from '../pages/HomeScreen';
-import BookingScreen from '../pages/BookingScreen';
-import ExploreScreen from '../pages/ExploreScreen';
-import RecommendScreen from '../pages/RecommendScreen';
-import ProfileScreen from '../pages/ProfileScreen';
+import HomeScreen from '../pages/Home/HomeScreen';
+import BookingScreen from '../pages/Booking/BookingScreen';
+import ExploreScreen from '../pages/Explore/ExploreScreen';
+import RecommendScreen from '../pages/Recommend/RecommendScreen';
+import ProfileScreen from '../pages/Profile/ProfileScreen';
 import { COLORS, FONTSIZE, SPACING } from '../themes/theme';
 import { View, StyleSheet } from 'react-native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
