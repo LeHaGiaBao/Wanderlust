@@ -1,7 +1,7 @@
 import {StatusBar} from 'react-native'
 import styled from 'styled-components/native'
 import {FontAwesomeIcon} from '@fortawesome/react-native-fontawesome'
-import {faUser} from '@fortawesome/free-solid-svg-icons'
+import {faBell, faUser} from '@fortawesome/free-solid-svg-icons'
 
 const currentStatusBarHeight = StatusBar.currentHeight || 0
 
@@ -27,7 +27,13 @@ export const TopHotelListContainer = styled.View`
 
 export const Header = styled.View`
 	flex-direction: row;
-	justify-content: space-between;
+	justify-content: start;
+`
+
+export const SubHeader = styled.View`
+	flex-direction: column;
+	justify-content: flex-start;
+	padding-left: 12px;
 `
 
 export const InputContainer = styled.View`
@@ -35,8 +41,15 @@ export const InputContainer = styled.View`
 `
 
 export const Title = styled.Text`
-	font-size: 24px;
+	font-size: 16px;
 	font-weight: 700;
+	color: #155850;
+`
+
+export const Subtitle = styled.Text`
+	font-size: 12px;
+	font-weight: 700;
+	color: #878787;
 `
 
 export const PlaceTitle = styled.Text`
@@ -51,8 +64,17 @@ export const TopHotelTitle = styled.Text`
 
 export const UserIcon = styled(FontAwesomeIcon).attrs({
 	icon: faUser,
-	size: 24,
-	color: '#000',
+	size: 20,
+	color: '#053731',
 })`
 	margin-top: 6px;
+`
+
+export const NotificationIcon = styled(FontAwesomeIcon).attrs({
+	icon: faBell,
+	size: 20,
+	color: '#053731',
+})`
+	margin-top: 6px;
+	margin-left: 120px;
 `

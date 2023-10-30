@@ -42,16 +42,21 @@ function HomeScreen() {
     return (
         <Style.Container>
             <Style.Header>
-                <Style.Title>
-                    Wanderlust
-                </Style.Title>
                 <Style.UserIcon />
+                <Style.SubHeader>
+                    <Style.Title>
+                        Xin chào,
+                    </Style.Title>
+                    <Style.Subtitle>
+                        Hôm nay bạn muốn đi đâu?
+                    </Style.Subtitle>
+                </Style.SubHeader>
+                <Style.NotificationIcon />
             </Style.Header>
 
             <Style.InputContainer>
-                <InputSearch placeholder="Search" />
+                <InputSearch placeholder="Tìm kiếm trong Wanderlust" />
             </Style.InputContainer>
-
         </Style.Container>
     );
 }

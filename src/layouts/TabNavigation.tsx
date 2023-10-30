@@ -4,14 +4,12 @@ import BookingScreen from '../pages/Booking/BookingScreen';
 import ExploreScreen from '../pages/Explore/ExploreScreen';
 import RecommendScreen from '../pages/Recommend/RecommendScreen';
 import ProfileScreen from '../pages/Profile/ProfileScreen';
-import { COLORS, FONTSIZE, SPACING } from '../themes/theme';
-import { View, StyleSheet } from 'react-native';
+import { COLORS, SPACING } from '../themes/theme';
+import { SvgXml } from 'react-native-svg';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import FontAwesome from 'react-native-vector-icons/FontAwesome';
-import Fontisto from 'react-native-vector-icons/Fontisto';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
-import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import Feather from 'react-native-vector-icons/Feather'
+import Octicons from 'react-native-vector-icons/Octicons'
 
 const Tab = createBottomTabNavigator();
 
@@ -26,13 +24,15 @@ function TabNavigation() {
                     borderTopWidth: 0,
                     height: SPACING.space_10 * 10,
                 },
+                tabBarActiveTintColor: '#155850',
+                tabBarInactiveTintColor: '#6D6D6D',
             }}>
             <Tab.Screen
                 name="Trang chủ"
                 component={HomeScreen}
                 options={{
                     tabBarIcon: ({ color }) => (
-                        <FontAwesome name="home" color={color} size={26} />
+                        <Octicons name="home" color={color} size={26} />
                     ),
                 }}
             />
@@ -41,7 +41,7 @@ function TabNavigation() {
                 component={BookingScreen}
                 options={{
                     tabBarIcon: ({ color }) => (
-                        <Fontisto name="room" color={color} size={26} />
+                        <Feather name="calendar" color={color} size={26} />
                     ),
                 }} />
             <Tab.Screen
@@ -49,7 +49,7 @@ function TabNavigation() {
                 component={ExploreScreen}
                 options={{
                     tabBarIcon: ({ color }) => (
-                        <MaterialCommunityIcons name="telescope" color={color} size={26} />
+                        <Feather name="compass" color={color} size={26} />
                     ),
                 }} />
             <Tab.Screen
@@ -71,13 +71,5 @@ function TabNavigation() {
         </Tab.Navigator>
     );
 }
-
-const styles = StyleSheet.create({
-    activeTabBackground: {
-        backgroundColor: COLORS.Black,
-        padding: SPACING.space_18,
-        borderRadius: SPACING.space_18 * 10,
-    },
-});
 
 export default TabNavigation;
