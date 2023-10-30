@@ -1,0 +1,10 @@
+./next
+node_modules
+.vscode
+.eslintrc.json
+.prettierrc
+.env.redis
+redis.conf
+prometheus.*
+Dockerfile
+docker-compose.yml
