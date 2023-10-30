@@ -5,7 +5,6 @@ import ExploreScreen from '../pages/Explore/ExploreScreen';
 import RecommendScreen from '../pages/Recommend/RecommendScreen';
 import ProfileScreen from '../pages/Profile/ProfileScreen';
 import { COLORS, SPACING } from '../themes/theme';
-import { SvgXml } from 'react-native-svg';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import Feather from 'react-native-vector-icons/Feather'
