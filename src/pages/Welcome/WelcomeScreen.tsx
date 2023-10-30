@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { StyleSheet, Text, View, ImageBackground, Pressable } from 'react-native';
 import OnBoarding from '../OnBoarding/OnBoarding';
+import { useNavigation } from '@react-navigation/native';
 
 const images = [
     {
@@ -23,6 +24,7 @@ const images = [
 function WelcomeScreen() {
     const [showInitialView, setShowInitialView] = useState(true);
     const [step, setStep] = useState(0);
+    const navigation = useNavigation();
 
     useEffect(() => {
         const timer = setTimeout(() => {
@@ -33,7 +35,9 @@ function WelcomeScreen() {
     }, []);
 
     const onNextStep = () => {
-        if (step < images.length - 1) {
+        if (step === images.length - 1) {
+            navigation.navigate('Login');
+        } else {
             setStep(step + 1);
         }
     };
@@ -59,7 +63,7 @@ function WelcomeScreen() {
                             <Text style={styles.textButton}>Tiếp theo</Text>
                         </Pressable>
                     ) : (
-                        <Pressable style={styles.buttonStart} onPress={() => alert('You reached the end.')}>
+                        <Pressable style={styles.buttonStart} onPress={onNextStep}>
                             <Text style={styles.textButton}>Bắt đầu</Text>
                         </Pressable>
                     )}
@@ -104,7 +108,7 @@ const styles = StyleSheet.create({
         backgroundColor: '#155850',
         alignItems: 'center',
         justifyContent: 'center',
-        paddingVertical: 12,
+        paddingVertical: 15,
         paddingHorizontal: 32,
         borderRadius: 50,
         elevation: 3,
@@ -117,7 +121,7 @@ const styles = StyleSheet.create({
         backgroundColor: '#155850',
         alignItems: 'center',
         justifyContent: 'center',
-        paddingVertical: 12,
+        paddingVertical: 15,
         paddingHorizontal: 32,
         borderRadius: 50,
         elevation: 3,
