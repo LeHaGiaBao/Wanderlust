@@ -1,9 +1,13 @@
 import React from 'react';
 import * as Style from './style'
-import InputSearch from '../../containers/InputSearch/InputSearch';
+import InputSearch from '../../components/InputSearch/InputSearch';
 import { View, StyleSheet, SafeAreaView, ScrollView } from 'react-native';
 import HomeFilter from '../../components/HomeFilter/HomeFilter';
 import HomeContentTitle from '../../components/HomeContentTitle/HomeContentTitle';
+import ListDestination from '../../components/ListDestination/ListDestination';
+import ListHotel from '../../components/ListHotel/ListHotel';
+import ListTour from '../../components/ListTour/ListTour';
+import ListFlight from '../../components/ListFlight/ListFlight';
 
 function HomeScreen() {
     return (
@@ -29,14 +33,35 @@ function HomeScreen() {
                 <InputSearch placeholder="Tìm kiếm trong Wanderlust" />
             </Style.InputContainer>
 
-            <SafeAreaView>
+            <SafeAreaView style={styles.safeArea}>
                 <ScrollView>
                     <HomeContentTitle title="Điểm đến" />
 
                     <HomeFilter />
+
+                    <View style={styles.listDestination}>
+                        <ListDestination />
+                    </View>
+
+                    <HomeContentTitle title="Khách sạn" />
+
+                    <View style={styles.listDestination}>
+                        <ListHotel />
+                    </View>
+
+                    <HomeContentTitle title="Chuyến bay giá rẻ" />
+
+                    <View style={styles.listDestination}>
+                        <ListFlight />
+                    </View>
+
+                    <HomeContentTitle title="Tour giá hời" />
+
+                    <View style={styles.listDestination}>
+                        <ListTour />
+                    </View>
                 </ScrollView>
             </SafeAreaView>
-
         </Style.Container>
     );
 }
@@ -60,6 +85,14 @@ const styles = StyleSheet.create({
         backgroundColor: '#D7F3F0',
         borderRadius: 100,
     },
+
+    safeArea: {
+        marginBottom: 120,
+    },
+
+    listDestination: {
+        marginTop: 12,
+    }
 });
 
 export default HomeScreen;

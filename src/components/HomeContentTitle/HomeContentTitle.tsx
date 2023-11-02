@@ -20,6 +20,7 @@ const styles = StyleSheet.create({
         fontSize: 16,
         marginTop: 24,
         paddingLeft: 5,
+        fontWeight: '600',
     },
 
     seeAll: {
