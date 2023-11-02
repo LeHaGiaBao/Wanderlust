@@ -2,57 +2,57 @@ import React from 'react';
 import { View, StyleSheet, Text, SafeAreaView, FlatList, Image } from 'react-native';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons'
 import Fontisto from 'react-native-vector-icons/Fontisto'
-import AntDesign from 'react-native-vector-icons/AntDesign'
 
 const data = [
     {
         id: '1',
-        source: require('../../../assets/Hotel/hotel.jpg'),
-        title: 'Khách sạn Mường Thanh',
-        subText: 'Khánh Hoà, Việt Nam',
-        star: '4.5',
+        source: require('../../../assets/Flight/vietnamAirlines.png'),
+        title: 'TP.HCM - Quy Nhơn',
+        price: '1.234.000 VND',
+        discount: '1.800.000 VND',
+        date: '14.12.2023',
     },
     {
-        id: '2',
-        source: require('../../../assets/Hotel/hotel.jpg'),
-        title: 'Khách sạn Mường Thanh',
-        subText: 'Khánh Hoà, Việt Nam',
-        star: '4.5',
+        id: '1',
+        source: require('../../../assets/Flight/vietnamAirlines.png'),
+        title: 'TP.HCM - Quy Nhơn',
+        price: '1.234.000 VND',
+        discount: '1.800.000 VND',
+        date: '14.12.2023',
     },
     {
-        id: '3',
-        source: require('../../../assets/Hotel/hotel.jpg'),
-        title: 'Khách sạn Mường Thanh',
-        subText: 'Khánh Hoà, Việt Nam',
-        star: '4.5',
+        id: '1',
+        source: require('../../../assets/Flight/vietnamAirlines.png'),
+        title: 'TP.HCM - Quy Nhơn',
+        price: '1.234.000 VND',
+        discount: '1.800.000 VND',
+        date: '14.12.2023',
     },
 ];
 
-function ListHotel() {
+function ListFlight() {
     return (
         <SafeAreaView style={styles.containerLayout}>
             <FlatList
                 horizontal
                 data={data}
-                renderItem={({ item }) => <HotelItem source={item.source} title={item.title} subText={item.subText} star={item.star} />}
+                renderItem={({ item }) => <HotelItem source={item.source} title={item.title} price={item.price} discount={item.discount} date={item.date} />}
                 keyExtractor={item => item.id}
             />
         </SafeAreaView>
     );
 }
-const HotelItem = ({ source, title, subText, star }: any) => (
+const HotelItem = ({ source, title, price, discount, date }: any) => (
     <View style={styles.container}>
         <Image source={source} style={styles.image} />
         <View style={styles.gridLayout}>
             <View>
                 <Text style={styles.text}>{title}</Text>
+                <Text style={styles.date}>{date}</Text>
+                <View style={styles.line} />
                 <View style={styles.grid}>
-                    <AntDesign name="star" size={15} color="#F9B21A" />
-                    <Text style={styles.starText}>{star}</Text>
-                </View>
-                <View style={styles.grid}>
-                    <MaterialIcons name="place" size={15} color="#155850" />
-                    <Text style={styles.subText}>{subText}</Text>
+                    <Text style={styles.price}>{price}</Text>
+                    <Text style={styles.discount}>{discount}</Text>
                 </View>
             </View>
         </View>
@@ -86,6 +86,8 @@ const styles = StyleSheet.create({
     },
 
     gridLayout: {
+        marginLeft: 5,
+        width: 160,
         flexDirection: 'row',
         justifyContent: 'space-between',
     },
@@ -103,11 +105,11 @@ const styles = StyleSheet.create({
         color: '#6D6D6D',
     },
 
-    starText: {
-        marginLeft: 5,
-        fontSize: 12,
+    date: {
+        marginTop: 5,
+        fontSize: 10,
         fontWeight: '500',
-        color: '#0D0D0D',
+        color: '#6D6D6D',
     },
 
     grid: {
@@ -117,8 +119,8 @@ const styles = StyleSheet.create({
     },
 
     line: {
-        marginTop: 8,
-        marginBottom: 8,
+        marginTop: 4,
+        marginBottom: 1,
         width: '100%',
         height: 1,
         backgroundColor: '#D9D9D9'
@@ -131,15 +133,16 @@ const styles = StyleSheet.create({
 
     price: {
         color: '#E52525',
-        fontSize: 14,
+        fontSize: 12,
         fontWeight: '500',
     },
 
     discount: {
-        backgroundColor: '#E52525',
-        height: 19,
-        width: 50,
-        borderRadius: 50,
+        marginTop: 2,
+        marginLeft: 7,
+        fontSize: 8,
+        color: '#878787',
+        textDecorationLine: 'line-through',
     },
 
     discountText: {
@@ -155,8 +158,8 @@ const styles = StyleSheet.create({
 
     iconHeart: {
         marginRight: 5,
-        marginTop: 20,
+        marginTop: 7,
     },
 });
 
-export default ListHotel;
+export default ListFlight;

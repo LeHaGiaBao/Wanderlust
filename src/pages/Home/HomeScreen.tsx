@@ -7,6 +7,7 @@ import HomeContentTitle from '../../components/HomeContentTitle/HomeContentTitle
 import ListDestination from '../../components/ListDestination/ListDestination';
 import ListHotel from '../../components/ListHotel/ListHotel';
 import ListTour from '../../components/ListTour/ListTour';
+import ListFlight from '../../components/ListFlight/ListFlight';
 
 function HomeScreen() {
     return (
@@ -46,6 +47,12 @@ function HomeScreen() {
 
                     <View style={styles.listDestination}>
                         <ListHotel />
+                    </View>
+
+                    <HomeContentTitle title="Chuyến bay giá rẻ" />
+
+                    <View style={styles.listDestination}>
+                        <ListFlight />
                     </View>
 
                     <HomeContentTitle title="Tour giá hời" />
