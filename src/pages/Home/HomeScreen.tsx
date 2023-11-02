@@ -6,7 +6,7 @@ import HomeFilter from '../../components/HomeFilter/HomeFilter';
 import HomeContentTitle from '../../components/HomeContentTitle/HomeContentTitle';
 import ListDestination from '../../components/ListDestination/ListDestination';
 import ListHotel from '../../components/ListHotel/ListHotel';
-import ListTour from '../../components/ListDestination copy/ListTour';
+import ListTour from '../../components/ListTour/ListTour';
 
 function HomeScreen() {
     return (
