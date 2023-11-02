@@ -1,24 +1,19 @@
-import { useState } from 'react';
 import { StyleSheet, Text, View, TextInput, Pressable } from 'react-native';
 import AuthTitle from '../../components/AuthTitle/AuthTitle';
-import { MaterialCommunityIcons } from '@expo/vector-icons';
-import AntDesign from 'react-native-vector-icons/AntDesign'
-import FontAwesome from 'react-native-vector-icons/FontAwesome'
 import { useNavigation } from '@react-navigation/native';
-import InputForm from '../../components/Input/InputForm';
+import { useState } from 'react';
+import PhoneCode from '../../components/PhoneCode/PhoneCode';
 
 function RegisterScreen() {
     const [text, onChangeText] = useState();
-    const [password, setPassword] = useState('');
-    const [showPassword, setShowPassword] = useState(false);
     const navigation = useNavigation();
 
-    const toggleShowPassword = () => {
-        setShowPassword(!showPassword);
-    };
-
     const handleLogin = () => {
-        navigation.navigate('MainScreen');
+        navigation.navigate('Login');
+    }
+
+    const handleRegister = () => {
+        navigation.navigate('OTP');
     }
 
     return (
@@ -26,17 +21,27 @@ function RegisterScreen() {
             <View style={styles.welcomeView}>
                 <AuthTitle title="Đăng ký" subTitle="Chào mừng bạn đến với Wanderlust!" />
 
-                <Pressable style={styles.button} onPress={handleLogin}>
+                <View style={styles.formInput}>
+                    <PhoneCode />
+                    <TextInput
+                        style={styles.inputPhone}
+                        value={text}
+                    />
+                </View>
+
+                <Pressable style={styles.button} onPress={handleRegister}>
                     <Text style={styles.textButton}>Tiếp tục</Text>
                 </Pressable>
 
-                <View style={styles.or}>
-                    <Text style={styles.orText}>
-                        Bạn đã có tài khoản?
-                        {' '}
-                        <Text style={styles.signUp}>Đăng nhập</Text>
-                    </Text>
-                </View>
+                <Pressable onPress={handleLogin}>
+                    <View style={styles.or} >
+                        <Text style={styles.orText}>
+                            Bạn đã có tài khoản?
+                            {' '}
+                            <Text style={styles.signUp}>Đăng nhập</Text>
+                        </Text>
+                    </View>
+                </Pressable>
             </View>
         </>
     );
@@ -49,20 +54,35 @@ const styles = StyleSheet.create({
     },
 
     formInput: {
+        flexDirection: 'row',
+        justifyContent: 'space-between',
         marginTop: 60,
+        marginLeft: 16,
+        marginRight: 16,
     },
 
-    forgotPassword: {
-        textAlign: 'right',
-        marginRight: 16,
-        color: '#155850',
-        fontSize: 15,
-        fontWeight: '500',
-        textDecorationLine: 'underline',
+    inputCode: {
+        width: 100,
+        height: 45,
+        borderWidth: 2,
+        padding: 10,
+        borderColor: '#878787',
+        borderRadius: 8,
+        color: '#000',
+    },
+
+    inputPhone: {
+        width: 240,
+        height: 45,
+        borderWidth: 2,
+        padding: 10,
+        borderColor: '#878787',
+        borderRadius: 8,
+        color: '#000',
     },
 
     button: {
-        marginTop: 35,
+        marginTop: 190,
         marginLeft: 16,
         marginRight: 16,
         backgroundColor: '#155850',
@@ -83,19 +103,10 @@ const styles = StyleSheet.create({
     },
 
     or: {
-        marginTop: 50,
+        marginTop: 220,
         flexDirection: 'row',
         justifyContent: 'center',
         alignItems: 'center',
-    },
-
-    border: {
-        marginLeft: 8,
-        marginRight: 8,
-        width: 120,
-        maxWidth: 50,
-        height: 1,
-        backgroundColor: '#6D6D6DCC',
     },
 
     orText: {
@@ -105,39 +116,13 @@ const styles = StyleSheet.create({
         fontWeight: '500',
     },
 
-    social: {
-        marginTop: 50,
-        marginLeft: 130,
-        marginRight: 130,
-        flexDirection: 'row',
-        justifyContent: 'space-between',
-        alignItems: 'center',
-    },
-
-    socialNetwork: {
-        width: 50,
-        height: 50,
-        backgroundColor: '#D7F3F0',
-        borderRadius: '100%',
-    },
-
-    google: {
-        paddingLeft: 12,
-        paddingTop: 12,
-    },
-
-    facebook: {
-        paddingLeft: 16,
-        paddingTop: 12,
-    },
-
     signUp: {
         textAlign: 'center',
         color: '#155850',
         fontSize: 15,
         fontWeight: '500',
         textDecorationLine: 'underline',
-    }
+    },
 });
 
 export default RegisterScreen;
