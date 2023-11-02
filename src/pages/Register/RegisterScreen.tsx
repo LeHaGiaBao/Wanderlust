@@ -1,11 +1,13 @@
 import { useState } from 'react';
 import { StyleSheet, Text, View, TextInput, Pressable } from 'react-native';
 import AuthTitle from '../../components/AuthTitle/AuthTitle';
+import { MaterialCommunityIcons } from '@expo/vector-icons';
+import AntDesign from 'react-native-vector-icons/AntDesign'
+import FontAwesome from 'react-native-vector-icons/FontAwesome'
 import { useNavigation } from '@react-navigation/native';
 import InputForm from '../../components/Input/InputForm';
-import Social from '../../components/Social/Social';
 
-function LoginScreen() {
+function RegisterScreen() {
     const [text, onChangeText] = useState();
     const [password, setPassword] = useState('');
     const [showPassword, setShowPassword] = useState(false);
@@ -19,40 +21,21 @@ function LoginScreen() {
         navigation.navigate('MainScreen');
     }
 
-    const handleRegister = () => {
-        navigation.navigate('Register');
-    }
-
     return (
         <>
             <View style={styles.welcomeView}>
-                <AuthTitle title="Đăng nhập" subTitle="Chào mừng bạn đến với Wanderlust!" />
-                <View style={styles.formInput}>
-                    <InputForm type="email" title="Email" placeholder="Nhập email" />
-                    <InputForm type="password" title="Mật khẩu" placeholder="Nhập mật khẩu" />
-                    <Text style={styles.forgotPassword}>Quên mật khẩu?</Text>
-                </View>
+                <AuthTitle title="Đăng ký" subTitle="Chào mừng bạn đến với Wanderlust!" />
 
                 <Pressable style={styles.button} onPress={handleLogin}>
-                    <Text style={styles.textButton}>Đăng nhập</Text>
+                    <Text style={styles.textButton}>Tiếp tục</Text>
                 </Pressable>
 
                 <View style={styles.or}>
-                    <View style={styles.border} />
-                    <Text style={styles.orText}>Hoặc</Text>
-                    <View style={styles.border} />
-                </View>
-
-                <Social />
-
-                <View style={styles.or}>
-                    <Pressable onPress={handleRegister}>
-                        <Text style={styles.orText}>
-                            Bạn chưa có tài khoản?
-                            {' '}
-                            <Text style={styles.signUp}>Đăng ký ngay</Text>
-                        </Text>
-                    </Pressable>
+                    <Text style={styles.orText}>
+                        Bạn đã có tài khoản?
+                        {' '}
+                        <Text style={styles.signUp}>Đăng nhập</Text>
+                    </Text>
                 </View>
             </View>
         </>
@@ -122,6 +105,32 @@ const styles = StyleSheet.create({
         fontWeight: '500',
     },
 
+    social: {
+        marginTop: 50,
+        marginLeft: 130,
+        marginRight: 130,
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+    },
+
+    socialNetwork: {
+        width: 50,
+        height: 50,
+        backgroundColor: '#D7F3F0',
+        borderRadius: '100%',
+    },
+
+    google: {
+        paddingLeft: 12,
+        paddingTop: 12,
+    },
+
+    facebook: {
+        paddingLeft: 16,
+        paddingTop: 12,
+    },
+
     signUp: {
         textAlign: 'center',
         color: '#155850',
@@ -131,4 +140,4 @@ const styles = StyleSheet.create({
     }
 });
 
-export default LoginScreen;
+export default RegisterScreen;

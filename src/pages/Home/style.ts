@@ -76,5 +76,4 @@ export const NotificationIcon = styled(FontAwesomeIcon).attrs({
 	color: '#053731',
 })`
 	margin-top: 6px;
-	margin-left: 120px;
 `
