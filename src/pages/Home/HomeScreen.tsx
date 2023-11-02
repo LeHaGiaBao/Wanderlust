@@ -1,45 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
 import * as Style from './style'
-import { Category } from '../../utils/types'
 import InputSearch from '../../containers/InputSearch/InputSearch';
 import { View, StyleSheet, Text } from 'react-native';
-
-const CATEGORIES: Category[] = [
-    {
-        description: 'All Places',
-        key: 'ALL',
-    },
-    {
-        description: 'Popular',
-        key: 'POPULAR',
-    },
-    {
-        description: 'Top Rated',
-        key: 'TOP_RATED',
-    },
-    {
-        description: 'Featured',
-        key: 'FEATURED',
-    },
-    {
-        description: 'Luxury',
-        key: 'LUXURY',
-    },
-];
+import HomeFilter from '../../components/HomeFilter/HomeFilter';
 
 function HomeScreen() {
-    const [selectedCategory, setSelectedCategory] = useState<Category>(
-        CATEGORIES[0],
-    );
-
-    const handleCategoryClick = (categoryKey: string) => {
-        const categoryClicked = CATEGORIES.find(
-            category => category.key === categoryKey,
-        ) as Category;
-
-        setSelectedCategory(categoryClicked);
-    };
-
     return (
         <Style.Container>
             <Style.Header>
@@ -68,6 +33,8 @@ function HomeScreen() {
                 <Text style={styles.seeAll}>Xem tất cả</Text>
             </View>
 
+            <HomeFilter />
+
         </Style.Container>
     );
 }
@@ -79,7 +46,7 @@ const styles = StyleSheet.create({
         width: 40,
         height: 40,
         backgroundColor: '#D7F3F0',
-        borderRadius: '100%',
+        borderRadius: 100,
     },
 
     circleNotification: {
@@ -89,7 +56,7 @@ const styles = StyleSheet.create({
         width: 40,
         height: 40,
         backgroundColor: '#D7F3F0',
-        borderRadius: '100%',
+        borderRadius: 100,
     },
 
     destinationGrid: {
@@ -104,11 +71,12 @@ const styles = StyleSheet.create({
     },
 
     seeAll: {
-        color: '#155850',
+        color: '#20A696',
         fontSize: 12,
         marginTop: 26,
         paddingLeft: 5,
-    }
+        fontWeight: '500',
+    },
 });
 
 export default HomeScreen;
