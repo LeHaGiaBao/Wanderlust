@@ -1,9 +1,10 @@
 import React from 'react';
 import * as Style from './style'
-import InputSearch from '../../containers/InputSearch/InputSearch';
+import InputSearch from '../../components/InputSearch/InputSearch';
 import { View, StyleSheet, SafeAreaView, ScrollView } from 'react-native';
 import HomeFilter from '../../components/HomeFilter/HomeFilter';
 import HomeContentTitle from '../../components/HomeContentTitle/HomeContentTitle';
+import ListDestination from '../../components/ListDestination/ListDestination';
 
 function HomeScreen() {
     return (
@@ -34,9 +35,13 @@ function HomeScreen() {
                     <HomeContentTitle title="Điểm đến" />
 
                     <HomeFilter />
+
+                    <View style={styles.listDestination}>
+                        <ListDestination />
+                    </View>
+
                 </ScrollView>
             </SafeAreaView>
-
         </Style.Container>
     );
 }
@@ -60,6 +65,10 @@ const styles = StyleSheet.create({
         backgroundColor: '#D7F3F0',
         borderRadius: 100,
     },
+
+    listDestination: {
+        marginTop: 12,
+    }
 });
 
 export default HomeScreen;
