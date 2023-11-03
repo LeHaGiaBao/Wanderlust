@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View, TextInput, Pressable } from 'react-native';
+import { StyleSheet, Text, View, TextInput, Pressable, ScrollView } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { useEffect, useState } from 'react';
 import AntDesign from 'react-native-vector-icons/AntDesign'
@@ -20,51 +20,52 @@ function CompletedProfile() {
     return (
         <>
             <View style={styles.welcomeView}>
+                <ScrollView>
+                    <Pressable onPress={handleBack}>
+                        <View style={styles.back}>
+                            <AntDesign name='leftcircleo' size={20} color="#155850" />
+                            <Text style={styles.textBack}>Quay lại</Text>
+                        </View>
+                    </Pressable>
 
-                <Pressable onPress={handleBack}>
-                    <View style={styles.back}>
-                        <AntDesign name='leftcircleo' size={20} color="#155850" />
-                        <Text style={styles.textBack}>Quay lại</Text>
+                    <Text style={styles.textTitle}>Thông tin cá nhân</Text>
+                    <Text style={styles.textSubTitle}>Thêm các thông tin cá nhân cần thiết của bạn</Text>
+
+                    <View style={styles.formInput}>
+                        <InputForm type="Họ và tên" title="Email" placeholder="Nguyễn Văn A" />
+                        <InputForm type="email" title="Email" placeholder="nguyenvana@gmail.com" />
+                        <InputForm type="email" title="Ngày sinh" placeholder="15/04/20002" />
+                        <InputForm type="password" title="Mật khẩu" placeholder="Nhập mật khẩu" />
+                        <InputForm type="password" title="Nhập lại mật khẩu" placeholder="Nhập mật khẩu" />
                     </View>
-                </Pressable>
 
-                <Text style={styles.textTitle}>Thông tin cá nhân</Text>
-                <Text style={styles.textSubTitle}>Thêm các thông tin cá nhân cần thiết của bạn</Text>
-
-                <View style={styles.formInput}>
-                    <InputForm type="Họ và tên" title="Email" placeholder="Nguyễn Văn A" />
-                    <InputForm type="email" title="Email" placeholder="nguyenvana@gmail.com" />
-                    <InputForm type="email" title="Ngày sinh" placeholder="15/04/20002" />
-                    <InputForm type="password" title="Mật khẩu" placeholder="Nhập mật khẩu" />
-                    <InputForm type="password" title="Nhập lại mật khẩu" placeholder="Nhập mật khẩu" />
-                </View>
-
-                <Pressable>
-                    <View style={styles.or} >
-                        <Text>
-                            <Text style={styles.orText}>
-                                Bằng cách chọn
+                    <Pressable>
+                        <View style={styles.or} >
+                            <Text>
+                                <Text style={styles.orText}>
+                                    Bằng cách chọn
+                                    {' '}
+                                    <Text style={styles.colorGreen}>
+                                        Đồng ý và tiếp tục
+                                    </Text>, tôi đồng ý
+                                    {' '}
+                                </Text>
+                                <View></View>
+                                <Text style={styles.signUp}>Điều khoản và dịch vụ</Text>
+                                {' '}
+                                của
                                 {' '}
                                 <Text style={styles.colorGreen}>
-                                    Đồng ý và tiếp tục
-                                </Text>, tôi đồng ý
-                                {' '}
+                                    Wanderlust.
+                                </Text>
                             </Text>
-                            <View></View>
-                            <Text style={styles.signUp}>Điều khoản và dịch vụ</Text>
-                            {' '}
-                            của
-                            {' '}
-                            <Text style={styles.colorGreen}>
-                                Wanderlust.
-                            </Text>
-                        </Text>
-                    </View>
-                </Pressable>
+                        </View>
+                    </Pressable>
 
-                <Pressable style={styles.button} onPress={handleRegister}>
-                    <Text style={styles.textButton}>Đồng ý và tiếp tục</Text>
-                </Pressable>
+                    <Pressable style={styles.button} onPress={handleRegister}>
+                        <Text style={styles.textButton}>Đồng ý và tiếp tục</Text>
+                    </Pressable>
+                </ScrollView>
             </View>
         </>
     );

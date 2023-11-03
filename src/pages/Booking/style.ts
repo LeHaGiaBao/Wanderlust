@@ -27,7 +27,7 @@ export const TopHotelListContainer = styled.View`
 
 export const Header = styled.View`
 	flex-direction: row;
-	justify-content: space-between;
+	justify-content: start;
 `
 
 export const SubHeader = styled.View`
@@ -43,13 +43,13 @@ export const InputContainer = styled.View`
 export const Title = styled.Text`
 	font-size: 16px;
 	font-weight: 700;
-	color: #155850;
+	color: #fff;
 `
 
 export const Subtitle = styled.Text`
 	font-size: 12px;
 	font-weight: 700;
-	color: #878787;
+	color: #fff;
 `
 
 export const PlaceTitle = styled.Text`

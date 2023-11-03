@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { StyleSheet, Text, View, TextInput, Pressable } from 'react-native';
+import { StyleSheet, Text, View, TextInput, Pressable, ScrollView } from 'react-native';
 import AuthTitle from '../../components/AuthTitle/AuthTitle';
 import { useNavigation } from '@react-navigation/native';
 import InputForm from '../../components/Input/InputForm';
@@ -26,34 +26,36 @@ function LoginScreen() {
     return (
         <>
             <View style={styles.welcomeView}>
-                <AuthTitle title="Đăng nhập" subTitle="Chào mừng bạn đến với Wanderlust!" />
-                <View style={styles.formInput}>
-                    <InputForm type="email" title="Email" placeholder="Nhập email" />
-                    <InputForm type="password" title="Mật khẩu" placeholder="Nhập mật khẩu" />
-                    <Text style={styles.forgotPassword}>Quên mật khẩu?</Text>
-                </View>
+                <ScrollView>
+                    <AuthTitle title="Đăng nhập" subTitle="Chào mừng bạn đến với Wanderlust!" />
+                    <View style={styles.formInput}>
+                        <InputForm type="email" title="Email" placeholder="Nhập email" />
+                        <InputForm type="password" title="Mật khẩu" placeholder="Nhập mật khẩu" />
+                        <Text style={styles.forgotPassword}>Quên mật khẩu?</Text>
+                    </View>
 
-                <Pressable style={styles.button} onPress={handleLogin}>
-                    <Text style={styles.textButton}>Đăng nhập</Text>
-                </Pressable>
-
-                <View style={styles.or}>
-                    <View style={styles.border} />
-                    <Text style={styles.orText}>Hoặc</Text>
-                    <View style={styles.border} />
-                </View>
-
-                <Social />
-
-                <View style={styles.or}>
-                    <Pressable onPress={handleRegister}>
-                        <Text style={styles.orText}>
-                            Bạn chưa có tài khoản?
-                            {' '}
-                            <Text style={styles.signUp}>Đăng ký ngay</Text>
-                        </Text>
+                    <Pressable style={styles.button} onPress={handleLogin}>
+                        <Text style={styles.textButton}>Đăng nhập</Text>
                     </Pressable>
-                </View>
+
+                    <View style={styles.or}>
+                        <View style={styles.border} />
+                        <Text style={styles.orText}>Hoặc</Text>
+                        <View style={styles.border} />
+                    </View>
+
+                    <Social />
+
+                    <View style={styles.or}>
+                        <Pressable onPress={handleRegister}>
+                            <Text style={styles.orText}>
+                                Bạn chưa có tài khoản?
+                                {' '}
+                                <Text style={styles.signUp}>Đăng ký ngay</Text>
+                            </Text>
+                        </Pressable>
+                    </View>
+                </ScrollView>
             </View>
         </>
     );

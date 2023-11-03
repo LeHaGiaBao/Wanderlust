@@ -13,17 +13,19 @@ function HomeScreen() {
     return (
         <Style.Container>
             <Style.Header>
-                <View style={styles.circleUser}>
-                    <Style.UserIcon />
+                <View style={styles.user}>
+                    <View style={styles.circleUser}>
+                        <Style.UserIcon />
+                    </View>
+                    <Style.SubHeader>
+                        <Style.Title>
+                            Xin chào,
+                        </Style.Title>
+                        <Style.Subtitle>
+                            Hôm nay bạn muốn đi đâu?
+                        </Style.Subtitle>
+                    </Style.SubHeader>
                 </View>
-                <Style.SubHeader>
-                    <Style.Title>
-                        Xin chào,
-                    </Style.Title>
-                    <Style.Subtitle>
-                        Hôm nay bạn muốn đi đâu?
-                    </Style.Subtitle>
-                </Style.SubHeader>
                 <View style={styles.circleNotification}>
                     <Style.NotificationIcon />
                 </View>
@@ -67,6 +69,10 @@ function HomeScreen() {
 }
 
 const styles = StyleSheet.create({
+    user: {
+        flexDirection: 'row',
+    },
+
     circleUser: {
         paddingTop: 5,
         paddingLeft: 10,
@@ -77,7 +83,6 @@ const styles = StyleSheet.create({
     },
 
     circleNotification: {
-        marginLeft: 100,
         paddingTop: 5,
         paddingLeft: 10,
         width: 40,

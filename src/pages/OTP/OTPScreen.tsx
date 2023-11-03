@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View, TextInput, Pressable } from 'react-native';
+import { StyleSheet, Text, View, TextInput, Pressable, ScrollView } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { useEffect, useState } from 'react';
 import AntDesign from 'react-native-vector-icons/AntDesign'
@@ -47,57 +47,58 @@ function OTPScreen() {
     return (
         <>
             <View style={styles.welcomeView}>
+                <ScrollView>
+                    <Pressable onPress={handleBack}>
+                        <View style={styles.back}>
+                            <AntDesign name='leftcircleo' size={20} color="#155850" />
+                            <Text style={styles.textBack}>Quay lại</Text>
+                        </View>
+                    </Pressable>
 
-                <Pressable onPress={handleBack}>
-                    <View style={styles.back}>
-                        <AntDesign name='leftcircleo' size={20} color="#155850" />
-                        <Text style={styles.textBack}>Quay lại</Text>
+                    <Text style={styles.textTitle}>Nhập mã OTP</Text>
+                    <Text style={styles.textSubTitle}>Nhập mã OTP được gửi về tin nhắn của bạn</Text>
+
+                    <View style={styles.formInput}>
+                        <TextInput
+                            style={styles.inputCode}
+                            value={text} />
+
+                        <TextInput
+                            style={styles.inputCode}
+                            value={text} />
+
+                        <TextInput
+                            style={styles.inputCode}
+                            value={text} />
+
+                        <TextInput
+                            style={styles.inputCode}
+                            value={text} />
+
+                        <TextInput
+                            style={styles.inputCode}
+                            value={text} />
+
+                        <TextInput
+                            style={styles.inputCode}
+                            value={text} />
                     </View>
-                </Pressable>
 
-                <Text style={styles.textTitle}>Nhập mã OTP</Text>
-                <Text style={styles.textSubTitle}>Nhập mã OTP được gửi về tin nhắn của bạn</Text>
+                    <Text style={styles.countDown}>00: {timeLeft}</Text>
 
-                <View style={styles.formInput}>
-                    <TextInput
-                        style={styles.inputCode}
-                        value={text} />
+                    <Pressable style={styles.button} onPress={handleRegister}>
+                        <Text style={styles.textButton}>Xác nhận</Text>
+                    </Pressable>
 
-                    <TextInput
-                        style={styles.inputCode}
-                        value={text} />
-
-                    <TextInput
-                        style={styles.inputCode}
-                        value={text} />
-
-                    <TextInput
-                        style={styles.inputCode}
-                        value={text} />
-
-                    <TextInput
-                        style={styles.inputCode}
-                        value={text} />
-
-                    <TextInput
-                        style={styles.inputCode}
-                        value={text} />
-                </View>
-
-                <Text style={styles.countDown}>00: {timeLeft}</Text>
-
-                <Pressable style={styles.button} onPress={handleRegister}>
-                    <Text style={styles.textButton}>Xác nhận</Text>
-                </Pressable>
-
-                <Pressable onPress={startCountdown}>
-                    <View style={styles.or} >
-                        <Text style={styles.orText}>
-                            Bạn chưa nhận được mã OTP?
-                        </Text>
-                        <Text style={styles.signUp}>Gửi lại mã OPT</Text>
-                    </View>
-                </Pressable>
+                    <Pressable onPress={startCountdown}>
+                        <View style={styles.or} >
+                            <Text style={styles.orText}>
+                                Bạn chưa nhận được mã OTP?
+                            </Text>
+                            <Text style={styles.signUp}>Gửi lại mã OPT</Text>
+                        </View>
+                    </Pressable>
+                </ScrollView>
             </View>
         </>
     );
