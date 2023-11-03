@@ -41,7 +41,7 @@ const styles = StyleSheet.create({
         width: 50,
         height: 50,
         backgroundColor: '#D7F3F0',
-        borderRadius: '100%',
+        borderRadius: 100,
     },
 
     google: {
