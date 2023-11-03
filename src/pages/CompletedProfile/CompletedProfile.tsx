@@ -3,46 +3,19 @@ import { useNavigation } from '@react-navigation/native';
 import { useEffect, useState } from 'react';
 import AntDesign from 'react-native-vector-icons/AntDesign'
 import PhoneCode from '../../components/PhoneCode/PhoneCode';
+import InputForm from '../../components/Input/InputForm';
 
-function OTPScreen() {
+function CompletedProfile() {
     const [text, onChangeText] = useState();
     const navigation = useNavigation();
-    const [timeLeft, setTimeLeft] = useState(30);
-    const [countdownActive, setCountdownActive] = useState(false);
 
     const handleBack = () => {
-        navigation.navigate('Register');
+        navigation.navigate('OTP');
     }
 
     const handleRegister = () => {
-        navigation.navigate('CompletedProfile');
+        navigation.navigate('MainScreen');
     }
-
-    useEffect(() => {
-        let countdownInterval: any;
-
-        if (countdownActive) {
-            countdownInterval = setInterval(() => {
-                setTimeLeft((prevTime) => {
-                    if (prevTime === 1) {
-                        setCountdownActive(false); // Stop the countdown when timeLeft reaches 0
-                    }
-                    return prevTime - 1;
-                });
-            }, 1000);
-        } else {
-            clearInterval(countdownInterval);
-        }
-
-        return () => {
-            clearInterval(countdownInterval);
-        };
-    }, [countdownActive]);
-
-    const startCountdown = () => {
-        setTimeLeft(30);
-        setCountdownActive(true);
-    };
 
     return (
         <>
@@ -55,48 +28,42 @@ function OTPScreen() {
                     </View>
                 </Pressable>
 
-                <Text style={styles.textTitle}>Nhập mã OTP</Text>
-                <Text style={styles.textSubTitle}>Nhập mã OTP được gửi về tin nhắn của bạn</Text>
+                <Text style={styles.textTitle}>Thông tin cá nhân</Text>
+                <Text style={styles.textSubTitle}>Thêm các thông tin cá nhân cần thiết của bạn</Text>
 
                 <View style={styles.formInput}>
-                    <TextInput
-                        style={styles.inputCode}
-                        value={text} />
-
-                    <TextInput
-                        style={styles.inputCode}
-                        value={text} />
-
-                    <TextInput
-                        style={styles.inputCode}
-                        value={text} />
-
-                    <TextInput
-                        style={styles.inputCode}
-                        value={text} />
-
-                    <TextInput
-                        style={styles.inputCode}
-                        value={text} />
-
-                    <TextInput
-                        style={styles.inputCode}
-                        value={text} />
+                    <InputForm type="Họ và tên" title="Email" placeholder="Nguyễn Văn A" />
+                    <InputForm type="email" title="Email" placeholder="nguyenvana@gmail.com" />
+                    <InputForm type="email" title="Ngày sinh" placeholder="15/04/20002" />
+                    <InputForm type="password" title="Mật khẩu" placeholder="Nhập mật khẩu" />
+                    <InputForm type="password" title="Nhập lại mật khẩu" placeholder="Nhập mật khẩu" />
                 </View>
 
-                <Text style={styles.countDown}>00: {timeLeft}</Text>
-
-                <Pressable style={styles.button} onPress={handleRegister}>
-                    <Text style={styles.textButton}>Xác nhận</Text>
+                <Pressable>
+                    <View style={styles.or} >
+                        <Text>
+                            <Text style={styles.orText}>
+                                Bằng cách chọn
+                                {' '}
+                                <Text style={styles.colorGreen}>
+                                    Đồng ý và tiếp tục
+                                </Text>, tôi đồng ý
+                                {' '}
+                            </Text>
+                            <View></View>
+                            <Text style={styles.signUp}>Điều khoản và dịch vụ</Text>
+                            {' '}
+                            của
+                            {' '}
+                            <Text style={styles.colorGreen}>
+                                Wanderlust.
+                            </Text>
+                        </Text>
+                    </View>
                 </Pressable>
 
-                <Pressable onPress={startCountdown}>
-                    <View style={styles.or} >
-                        <Text style={styles.orText}>
-                            Bạn chưa nhận được mã OTP?
-                        </Text>
-                        <Text style={styles.signUp}>Gửi lại mã OPT</Text>
-                    </View>
+                <Pressable style={styles.button} onPress={handleRegister}>
+                    <Text style={styles.textButton}>Đồng ý và tiếp tục</Text>
                 </Pressable>
             </View>
         </>
@@ -125,7 +92,7 @@ const styles = StyleSheet.create({
 
     textTitle: {
         textAlign: 'center',
-        marginTop: 90,
+        marginTop: 30,
         color: '#155850',
         fontSize: 35,
         fontWeight: '700',
@@ -140,11 +107,7 @@ const styles = StyleSheet.create({
     },
 
     formInput: {
-        flexDirection: 'row',
-        justifyContent: 'space-between',
-        marginTop: 60,
-        marginLeft: 16,
-        marginRight: 16,
+        marginTop: 20,
     },
 
     inputCode: {
@@ -165,7 +128,7 @@ const styles = StyleSheet.create({
     },
 
     button: {
-        marginTop: 190,
+        marginTop: 30,
         marginLeft: 16,
         marginRight: 16,
         backgroundColor: '#155850',
@@ -186,7 +149,7 @@ const styles = StyleSheet.create({
     },
 
     or: {
-        marginTop: 110,
+        marginTop: 20,
         alignItems: 'center',
     },
 
@@ -205,6 +168,13 @@ const styles = StyleSheet.create({
         fontWeight: '500',
         textDecorationLine: 'underline',
     },
+
+    colorGreen: {
+        textAlign: 'center',
+        color: '#155850',
+        fontSize: 15,
+        fontWeight: '500',
+    }
 });
 
-export default OTPScreen;
+export default CompletedProfile;

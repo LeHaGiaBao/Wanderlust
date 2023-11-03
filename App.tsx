@@ -5,6 +5,7 @@ import TabNavigation from "./src/layouts/TabNavigation";
 import LoginScreen from "./src/pages/Login/LoginScreen";
 import RegisterScreen from "./src/pages/Register/RegisterScreen";
 import OTPScreen from "./src/pages/OTP/OTPScreen";
+import CompletedProfile from "./src/pages/CompletedProfile/CompletedProfile";
 
 const Stack = createNativeStackNavigator();
 
@@ -17,6 +18,7 @@ export default function App() {
           <Stack.Screen name="Login" component={LoginScreen} />
           <Stack.Screen name="Register" component={RegisterScreen} />
           <Stack.Screen name="OTP" component={OTPScreen} />
+          <Stack.Screen name="CompletedProfile" component={CompletedProfile} />
           <Stack.Screen
             name="MainScreen"
             component={TabNavigation}
