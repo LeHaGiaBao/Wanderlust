@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View, TextInput, Pressable } from 'react-native';
+import { StyleSheet, Text, View, TextInput, Pressable, ScrollView } from 'react-native';
 import AuthTitle from '../../components/AuthTitle/AuthTitle';
 import { useNavigation } from '@react-navigation/native';
 import { useState } from 'react';
@@ -19,29 +19,31 @@ function RegisterScreen() {
     return (
         <>
             <View style={styles.welcomeView}>
-                <AuthTitle title="Đăng ký" subTitle="Chào mừng bạn đến với Wanderlust!" />
+                <ScrollView>
+                    <AuthTitle title="Đăng ký" subTitle="Chào mừng bạn đến với Wanderlust!" />
 
-                <View style={styles.formInput}>
-                    <PhoneCode />
-                    <TextInput
-                        style={styles.inputPhone}
-                        value={text}
-                    />
-                </View>
-
-                <Pressable style={styles.button} onPress={handleRegister}>
-                    <Text style={styles.textButton}>Tiếp tục</Text>
-                </Pressable>
-
-                <Pressable onPress={handleLogin}>
-                    <View style={styles.or} >
-                        <Text style={styles.orText}>
-                            Bạn đã có tài khoản?
-                            {' '}
-                            <Text style={styles.signUp}>Đăng nhập</Text>
-                        </Text>
+                    <View style={styles.formInput}>
+                        <PhoneCode />
+                        <TextInput
+                            style={styles.inputPhone}
+                            value={text}
+                        />
                     </View>
-                </Pressable>
+
+                    <Pressable style={styles.button} onPress={handleRegister}>
+                        <Text style={styles.textButton}>Tiếp tục</Text>
+                    </Pressable>
+
+                    <Pressable onPress={handleLogin}>
+                        <View style={styles.or} >
+                            <Text style={styles.orText}>
+                                Bạn đã có tài khoản?
+                                {' '}
+                                <Text style={styles.signUp}>Đăng nhập</Text>
+                            </Text>
+                        </View>
+                    </Pressable>
+                </ScrollView>
             </View>
         </>
     );

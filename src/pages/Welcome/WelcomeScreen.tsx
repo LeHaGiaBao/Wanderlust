@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { StyleSheet, Text, View, ImageBackground, Pressable } from 'react-native';
+import { StyleSheet, Text, View, ImageBackground, Pressable, ScrollView } from 'react-native';
 import OnBoarding from '../OnBoarding/OnBoarding';
 import { useNavigation } from '@react-navigation/native';
 
@@ -56,17 +56,19 @@ function WelcomeScreen() {
                     resizeMode="cover"
                     style={styles.image}
                 >
-                    <Text style={styles.text}>{images[step].title}</Text>
-                    <Text style={styles.subText}>{images[step].subText}</Text>
-                    {step < images.length - 1 ? (
-                        <Pressable style={styles.button} onPress={onNextStep}>
-                            <Text style={styles.textButton}>Tiếp theo</Text>
-                        </Pressable>
-                    ) : (
-                        <Pressable style={styles.buttonStart} onPress={onNextStep}>
-                            <Text style={styles.textButton}>Bắt đầu</Text>
-                        </Pressable>
-                    )}
+                    <ScrollView>
+                        <Text style={styles.text}>{images[step].title}</Text>
+                        <Text style={styles.subText}>{images[step].subText}</Text>
+                        {step < images.length - 1 ? (
+                            <Pressable style={styles.button} onPress={onNextStep}>
+                                <Text style={styles.textButton}>Tiếp theo</Text>
+                            </Pressable>
+                        ) : (
+                            <Pressable style={styles.buttonStart} onPress={onNextStep}>
+                                <Text style={styles.textButton}>Bắt đầu</Text>
+                            </Pressable>
+                        )}
+                    </ScrollView>
                 </ImageBackground>
             </View>
         );
