@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet } from 'react-native';
+import { StyleSheet, View, Text } from 'react-native';
 import { COLORS } from '../../themes/theme';
 import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
 import RoomBooking from '../../layouts/BookingPage/RoomBooking';
@@ -16,12 +16,19 @@ function TopNavigationTab() {
             screenOptions={{
                 tabBarStyle: {
                     backgroundColor: COLORS.White,
-                    borderTopWidth: 0,
                     borderRadius: 20,
                     height: 50,
+                    borderTopWidth: 0,
                 },
                 tabBarActiveTintColor: '#155850',
                 tabBarInactiveTintColor: '#6D6D6D',
+                tabBarLabelStyle: {
+                    fontSize: 12,
+                    fontWeight: '500',
+                },
+                tabBarIndicatorStyle: {
+                    height: 0,
+                },
             }}
         >
             <Tab.Screen
@@ -30,7 +37,7 @@ function TopNavigationTab() {
             // options={{
             //     tabBarIcon: ({ color }) => (
             //         <FontAwesome5 name="hotel" color={color} size={20} />
-            //     )
+            //     ),
             // }}
             />
             <Tab.Screen
