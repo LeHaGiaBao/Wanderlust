@@ -25,8 +25,12 @@ function BookingScreen() {
                     </Style.Header>
 
                     <TopNavigationTab />
-
                 </Style.Container>
+            </View>
+
+            <View style={styles.titleGrid}>
+                <Text style={styles.title}>Đề xuất</Text>
+                <Text style={styles.seeAll}>Xem tất cả</Text>
             </View>
         </View>
     );
@@ -72,6 +76,28 @@ const styles = StyleSheet.create({
 
     listDestination: {
         marginTop: 12,
+    },
+
+    titleGrid: {
+        marginLeft: 16,
+        marginRight: 16,
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+    },
+
+    title: {
+        fontSize: 20,
+        marginTop: 24,
+        paddingLeft: 5,
+        fontWeight: '600',
+    },
+
+    seeAll: {
+        color: '#20A696',
+        fontSize: 14,
+        marginTop: 30,
+        paddingLeft: 5,
+        fontWeight: '500',
     },
 });
 
