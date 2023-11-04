@@ -1,3 +1,4 @@
+import TopNavigationTab from '../../components/TopNavigationTab/TopNavigationTab';
 import * as Style from './style'
 import { StyleSheet, Text, View } from 'react-native';
 
@@ -22,6 +23,9 @@ function BookingScreen() {
                             <Style.NotificationIcon />
                         </View>
                     </Style.Header>
+
+                    <TopNavigationTab />
+
                 </Style.Container>
             </View>
         </View>
@@ -38,7 +42,7 @@ const styles = StyleSheet.create({
 
     bookingHeader: {
         backgroundColor: '#155850',
-        height: 400,
+        height: 425,
         borderEndEndRadius: 20,
         borderEndStartRadius: 20,
     },
@@ -68,7 +72,7 @@ const styles = StyleSheet.create({
 
     listDestination: {
         marginTop: 12,
-    }
+    },
 });
 
 export default BookingScreen;

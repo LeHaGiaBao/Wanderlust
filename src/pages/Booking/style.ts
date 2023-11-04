@@ -28,6 +28,7 @@ export const TopHotelListContainer = styled.View`
 export const Header = styled.View`
 	flex-direction: row;
 	justify-content: start;
+	margin-bottom: 20;
 `
 
 export const SubHeader = styled.View`
