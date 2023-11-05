@@ -68,9 +68,6 @@ function TabNavigation() {
                         <Feather name="user" color={color} size={26} />
                     ),
                 }} />
-            <Tab.Screen
-                name="Thanh toán"
-                component={PaymentScreen} />
         </Tab.Navigator>
     );
 }

@@ -16,7 +16,7 @@ function LoginScreen() {
     };
 
     const handleLogin = () => {
-        navigation.navigate('MainScreen');
+        navigation.navigate('Payment');
     }
 
     const handleRegister = () => {
