@@ -8,7 +8,6 @@ import PhoneCode from '../../components/PhoneCode/PhoneCode';
 import PriceDetail from '../../components/PriceDetail/PriceDetail';
 
 function PaymentScreen() {
-    const [text, onChangeText] = useState();
     const navigation = useNavigation();
 
     const handleBack = () => {
