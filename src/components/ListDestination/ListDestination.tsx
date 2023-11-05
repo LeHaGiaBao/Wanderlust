@@ -1,7 +1,8 @@
 import React from 'react';
-import { View, StyleSheet, Image, Text } from 'react-native';
+import { View, StyleSheet, Image, Text, Pressable } from 'react-native';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons'
 import Fontisto from 'react-native-vector-icons/Fontisto'
+import { useNavigation } from '@react-navigation/native';
 
 const data = [
     {
@@ -27,63 +28,77 @@ const data = [
 ];
 
 function ListDestination() {
+    const navigation = useNavigation()
+
+    const handleNavigation = () => {
+        navigation.navigate('HotelDetail')
+    }
+
     return (
         <>
             <View style={styles.container1}>
-                <View style={styles.destinationItem}>
-                    <Image source={data[0].source} style={styles.image} />
-                    <View style={styles.gridLayout}>
-                        <View>
-                            <Text style={styles.text}>{data[0].title}</Text>
-                            <View style={styles.grid}>
-                                <MaterialIcons name="place" size={17} color="#155850" />
-                                <Text style={styles.subText}>{data[0].subText}</Text>
+                <Pressable onPress={handleNavigation}>
+                    <View style={styles.destinationItem}>
+                        <Image source={data[0].source} style={styles.image} />
+                        <View style={styles.gridLayout}>
+                            <View>
+                                <Text style={styles.text}>{data[0].title}</Text>
+                                <View style={styles.grid}>
+                                    <MaterialIcons name="place" size={17} color="#155850" />
+                                    <Text style={styles.subText}>{data[0].subText}</Text>
+                                </View>
                             </View>
+                            <Fontisto name="heart-alt" size={20} color="#E52525" style={styles.iconHeart} />
                         </View>
-                        <Fontisto name="heart-alt" size={20} color="#E52525" style={styles.iconHeart} />
                     </View>
-                </View>
-                <View style={styles.destinationItem}>
-                    <Image source={data[1].source} style={styles.image} />
-                    <View style={styles.gridLayout}>
-                        <View>
-                            <Text style={styles.text}>{data[1].title}</Text>
-                            <View style={styles.grid}>
-                                <MaterialIcons name="place" size={17} color="#155850" />
-                                <Text style={styles.subText}>{data[1].subText}</Text>
+                </Pressable>
+                <Pressable onPress={handleNavigation}>
+                    <View style={styles.destinationItem}>
+                        <Image source={data[1].source} style={styles.image} />
+                        <View style={styles.gridLayout}>
+                            <View>
+                                <Text style={styles.text}>{data[1].title}</Text>
+                                <View style={styles.grid}>
+                                    <MaterialIcons name="place" size={17} color="#155850" />
+                                    <Text style={styles.subText}>{data[1].subText}</Text>
+                                </View>
                             </View>
+                            <Fontisto name="heart-alt" size={20} color="#E52525" style={styles.iconHeart} />
                         </View>
-                        <Fontisto name="heart-alt" size={20} color="#E52525" style={styles.iconHeart} />
                     </View>
-                </View>
+                </Pressable>
             </View>
             <View style={styles.container2}>
-                <View style={styles.destinationItem}>
-                    <Image source={data[2].source} style={styles.image} />
-                    <View style={styles.gridLayout}>
-                        <View>
-                            <Text style={styles.text}>{data[2].title}</Text>
-                            <View style={styles.grid}>
-                                <MaterialIcons name="place" size={17} color="#155850" />
-                                <Text style={styles.subText}>{data[2].subText}</Text>
+                <Pressable onPress={handleNavigation}>
+                    <View style={styles.destinationItem}>
+                        <Image source={data[2].source} style={styles.image} />
+                        <View style={styles.gridLayout}>
+                            <View>
+                                <Text style={styles.text}>{data[2].title}</Text>
+                                <View style={styles.grid}>
+                                    <MaterialIcons name="place" size={17} color="#155850" />
+                                    <Text style={styles.subText}>{data[2].subText}</Text>
+                                </View>
                             </View>
+                            <Fontisto name="heart-alt" size={20} color="#E52525" style={styles.iconHeart} />
                         </View>
-                        <Fontisto name="heart-alt" size={20} color="#E52525" style={styles.iconHeart} />
                     </View>
-                </View>
-                <View style={styles.destinationItem}>
-                    <Image source={data[3].source} style={styles.image} />
-                    <View style={styles.gridLayout}>
-                        <View>
-                            <Text style={styles.text}>{data[3].title}</Text>
-                            <View style={styles.grid}>
-                                <MaterialIcons name="place" size={17} color="#155850" />
-                                <Text style={styles.subText}>{data[3].subText}</Text>
+                </Pressable>
+                <Pressable onPress={handleNavigation}>
+                    <View style={styles.destinationItem}>
+                        <Image source={data[3].source} style={styles.image} />
+                        <View style={styles.gridLayout}>
+                            <View>
+                                <Text style={styles.text}>{data[3].title}</Text>
+                                <View style={styles.grid}>
+                                    <MaterialIcons name="place" size={17} color="#155850" />
+                                    <Text style={styles.subText}>{data[3].subText}</Text>
+                                </View>
                             </View>
+                            <Fontisto name="heart-alt" size={20} color="#E52525" style={styles.iconHeart} />
                         </View>
-                        <Fontisto name="heart-alt" size={20} color="#E52525" style={styles.iconHeart} />
                     </View>
-                </View>
+                </Pressable>
             </View>
         </>
     );
