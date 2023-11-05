@@ -1,40 +1,36 @@
 import { useNavigation } from '@react-navigation/native';
 import React, { useState } from 'react';
-import { Pressable, View, Text, StyleSheet, Image } from 'react-native';
+import { Pressable, View, Text, StyleSheet, ScrollView } from 'react-native';
 import AntDesign from 'react-native-vector-icons/AntDesign'
 import InforHotelComponent from '../../components/InforHotelComponent/InforHotelComponent';
-
-const data = [
-    {
-        source: require('../../../assets/Hotel/room.jpg'),
-        title: 'Khu nghỉ dưỡng Vinpearl Wonderwold Phú Quốc',
-        subtitle: 'Biệt thự Rose, 1 phòng ngủ lớn',
-        star: '4.5'
-    }
-]
+import InforCustomerComponent from '../../components/InforCustomerComponent/InforCustomerComponent';
 
 function PaymentScreen() {
     const [text, onChangeText] = useState();
     const navigation = useNavigation();
 
     return (
-        <View style={styles.componentContainer}>
-            <View style={styles.header}>
-                <Pressable>
-                    <View style={styles.back}>
-                        <AntDesign name='leftcircleo' size={20} color="#155850" style={styles.iconBack} />
-                    </View>
-                </Pressable>
+        <ScrollView>
+            <View style={styles.componentContainer}>
+                <View style={styles.header}>
+                    <Pressable>
+                        <View style={styles.back}>
+                            <AntDesign name='leftcircleo' size={20} color="#155850" style={styles.iconBack} />
+                        </View>
+                    </Pressable>
 
-                <Text style={styles.title}>Xác nhận thông tin</Text>
+                    <Text style={styles.title}>Xác nhận thông tin</Text>
 
-                <View style={styles.container} />
+                    <View style={styles.container} />
+                </View>
+
+                <Text style={styles.infoTitle}>Thông tin đặt phòng</Text>
+
+                <InforHotelComponent />
+
+                <InforCustomerComponent />
             </View>
-
-            <Text style={styles.infoTitle}>Thông tin đặt phòng</Text>
-
-            <InforHotelComponent />
-        </View>
+        </ScrollView>
     );
 }
 
