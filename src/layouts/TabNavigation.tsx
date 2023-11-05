@@ -9,6 +9,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import Feather from 'react-native-vector-icons/Feather'
 import Octicons from 'react-native-vector-icons/Octicons'
+import PaymentScreen from '../pages/Payment/PaymentScreen';
 
 const Tab = createBottomTabNavigator();
 
@@ -67,6 +68,9 @@ function TabNavigation() {
                         <Feather name="user" color={color} size={26} />
                     ),
                 }} />
+            <Tab.Screen
+                name="Thanh toán"
+                component={PaymentScreen} />
         </Tab.Navigator>
     );
 }
