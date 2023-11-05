@@ -7,6 +7,7 @@ import RegisterScreen from "./src/pages/Register/RegisterScreen";
 import OTPScreen from "./src/pages/OTP/OTPScreen";
 import CompletedProfile from "./src/pages/CompletedProfile/CompletedProfile";
 import PaymentScreen from "./src/pages/Payment/PaymentScreen";
+import PaymentConfirmScreen from "./src/pages/PaymentConfirm/PaymentConfirmScreen";
 
 const Stack = createNativeStackNavigator();
 
@@ -21,6 +22,7 @@ export default function App() {
           <Stack.Screen name="OTP" component={OTPScreen} />
           <Stack.Screen name="CompletedProfile" component={CompletedProfile} />
           <Stack.Screen name="Payment" component={PaymentScreen} />
+          <Stack.Screen name="PaymentConfirm" component={PaymentConfirmScreen} />
           <Stack.Screen
             name="MainScreen"
             component={TabNavigation}
