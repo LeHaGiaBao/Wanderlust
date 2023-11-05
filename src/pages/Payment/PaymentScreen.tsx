@@ -11,11 +11,19 @@ function PaymentScreen() {
     const [text, onChangeText] = useState();
     const navigation = useNavigation();
 
+    const handleBack = () => {
+        navigation.goBack()
+    }
+
+    const handleConfirm = () => {
+        navigation.navigate('PaymentConfirm')
+    }
+
     return (
         <ScrollView>
             <View style={styles.componentContainer}>
                 <View style={styles.header}>
-                    <Pressable>
+                    <Pressable onPress={handleBack}>
                         <View style={styles.back}>
                             <AntDesign name='leftcircleo' size={20} color="#155850" style={styles.iconBack} />
                         </View>
@@ -53,7 +61,7 @@ function PaymentScreen() {
 
                 <PriceDetail />
 
-                <Pressable style={styles.button}>
+                <Pressable style={styles.button} onPress={handleConfirm}>
                     <Text style={styles.textButton}>Tiếp tục</Text>
                 </Pressable>
             </View>
