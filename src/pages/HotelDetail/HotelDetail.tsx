@@ -1,6 +1,6 @@
 import { useNavigation } from '@react-navigation/native';
 import React from 'react';
-import { ImageBackground, Pressable, ScrollView, StyleSheet, View, Text } from 'react-native';
+import { Image, ImageBackground, Pressable, ScrollView, StyleSheet, View, Text } from 'react-native';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import Fontisto from 'react-native-vector-icons/Fontisto'
@@ -9,6 +9,7 @@ import Feather from 'react-native-vector-icons/Feather';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 import HomeContentTitle from '../../components/HomeContentTitle/HomeContentTitle';
+import InforCustomerComponent from '../../components/InforCustomerComponent/InforCustomerComponent';
 
 function HotelDetail() {
     const navigation = useNavigation()
@@ -109,8 +110,27 @@ function HotelDetail() {
                     <View style={styles.feedback}>
                         <HomeContentTitle title="Đánh giá" />
 
-                    </View>
+                        <View style={styles.review}>
+                            <Image source={require('../../../assets/User/user.png')} style={styles.userAvatar} />
+                            <View style={styles.reviewContent}>
+                                <View style={styles.grid}>
+                                    <Text style={styles.nameReview}>Thanh Mai</Text>
+                                    <View style={styles.gridStarReview}>
+                                        <AntDesign name="star" size={20} color="#F9B21A" />
+                                        <Text style={styles.starVote}>4.8</Text>
+                                    </View>
+                                </View>
+                                <Text style={styles.reviewByCustomer}>“Dịch vụ trong khách sạn tốt, nhân viên chuyên nghiệp, phục vụ tận tâm, mình rất hài lòng.”</Text>
+                            </View>
+                        </View>
 
+                        <View style={styles.destinationGrid}>
+                            <Text style={styles.destination}>Thông tin đặt phòng</Text>
+                            <Text style={styles.seeAll}>Chỉnh sửa</Text>
+                        </View>
+
+                        <InforCustomerComponent />
+                    </View>
                 </View>
             </ImageBackground>
         </ScrollView>
@@ -291,6 +311,67 @@ const styles = StyleSheet.create({
     feedback: {
         paddingLeft: 16,
         paddingRight: 16,
+    },
+
+    destinationGrid: {
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+    },
+
+    destination: {
+        fontSize: 16,
+        marginTop: 24,
+        paddingLeft: 5,
+        fontWeight: '600',
+    },
+
+    seeAll: {
+        color: '#20A696',
+        fontSize: 12,
+        marginTop: 26,
+        paddingLeft: 5,
+        fontWeight: '500',
+    },
+
+    review: {
+        flexDirection: 'row',
+        justifyContent: 'flex-start',
+        marginTop: 8,
+        height: 90,
+        width: '100%',
+        padding: 16,
+        borderRadius: 8,
+        backgroundColor: '#fff',
+        shadowColor: '#c9c9c94c',
+    },
+
+    userAvatar: {
+        height: 32,
+        width: 32,
+        borderRadius: 100,
+    },
+
+    reviewContent: {
+        marginLeft: 8,
+        width: '87%',
+    },
+
+    nameReview: {
+        fontSize: 15,
+        fontWeight: '500',
+        color: '#0D0D0D',
+    },
+
+    reviewByCustomer: {
+        marginTop: 5,
+        fontSize: 12,
+        fontWeight: '500',
+        color: '#6D6D6D',
+    },
+
+    gridStarReview: {
+        flexDirection: 'row',
+        justifyContent: 'flex-start',
     }
 })
 
