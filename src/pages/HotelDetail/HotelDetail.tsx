@@ -95,6 +95,22 @@ function HotelDetail() {
                             </View>
                         </View>
                     </View>
+
+                    <View style={styles.introduction}>
+                        <Text style={styles.infoIntro}>Tổng quan</Text>
+                        <Text style={styles.subTextIntro}>
+                            Nằm trên đảo Phú Quốc, cách Bãi Dài 700m, Vinpearl Wonderworld Phu Quoc cung cấp chỗ nghỉ với hồ bơi ngoài trời, chỗ đỗ xe riêng miễn phí, trung tâm thể dục và khu vườn. Resort 5 sao này có...
+                            {' '}
+                            {' '}
+                            <Text style={styles.moreText}>Xem thêm</Text>
+                        </Text>
+                    </View>
+
+                    <View style={styles.feedback}>
+                        <HomeContentTitle title="Đánh giá" />
+
+                    </View>
+
                 </View>
             </ImageBackground>
         </ScrollView>
@@ -244,6 +260,37 @@ const styles = StyleSheet.create({
     gridLayout: {
         flexDirection: 'row',
         justifyContent: 'flex-start',
+    },
+
+    introduction: {
+        marginTop: 16,
+        paddingLeft: 16,
+        paddingRight: 16,
+    },
+
+    infoIntro: {
+        fontSize: 16,
+        fontWeight: '600',
+        color: '#0D0D0D',
+    },
+
+    subTextIntro: {
+        marginTop: 8,
+        fontSize: 14,
+        fontWeight: '500',
+        color: '#878787',
+    },
+
+    moreText: {
+        fontSize: 14,
+        fontWeight: '500',
+        color: '#155850',
+        textDecorationLine: 'underline',
+    },
+
+    feedback: {
+        paddingLeft: 16,
+        paddingRight: 16,
     }
 })
 
