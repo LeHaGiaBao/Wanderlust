@@ -1,6 +1,6 @@
 import { useNavigation } from '@react-navigation/native';
 import React from 'react';
-import { Image, ImageBackground, Pressable, ScrollView, StyleSheet, View, Text } from 'react-native';
+import { Image, ImageBackground, Pressable, ScrollView, StyleSheet, View, Text, SafeAreaView } from 'react-native';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import Fontisto from 'react-native-vector-icons/Fontisto'
@@ -10,6 +10,7 @@ import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityI
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 import HomeContentTitle from '../../components/HomeContentTitle/HomeContentTitle';
 import InforCustomerComponent from '../../components/InforCustomerComponent/InforCustomerComponent';
+import InforRoomComponent from '../../components/InforRoomComponent/InforRoomComponent';
 
 function HotelDetail() {
     const navigation = useNavigation()
@@ -130,6 +131,10 @@ function HotelDetail() {
                         </View>
 
                         <InforCustomerComponent />
+
+                        <View style={styles.listRoom}>
+                            <InforRoomComponent />
+                        </View>
                     </View>
                 </View>
             </ImageBackground>
@@ -141,6 +146,7 @@ const styles = StyleSheet.create({
     backgroundImage: {
         flex: 1,
         height: 300,
+        marginBottom: 1200,
     },
 
     headerContainer: {
@@ -198,7 +204,6 @@ const styles = StyleSheet.create({
         backgroundColor: '#FFF',
         borderTopStartRadius: 24,
         borderTopEndRadius: 24,
-        height: 'auto',
     },
 
     titleName: {
@@ -372,7 +377,11 @@ const styles = StyleSheet.create({
     gridStarReview: {
         flexDirection: 'row',
         justifyContent: 'flex-start',
-    }
+    },
+
+    listRoom: {
+        marginTop: 20,
+    },
 })
 
 export default HotelDetail;
