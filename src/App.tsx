@@ -36,14 +36,12 @@ import Booking from './pages/Booking/Booking';
 import Explore from './pages/Explore/Explore';
 import Recommend from './pages/Recommend/Recommend';
 import Profile from './pages/Profile/Profile';
-import Onboarding from './pages/Welcome/Onboarding/Onboarding';
 import Welcome from './pages/Welcome/Welcome/Welcome';
 
 setupIonicReact();
 
 const App: React.FC = () => (
   <IonApp>
-    {/* <Onboarding /> */}
     <Welcome />
     {/* <IonReactRouter>
       <IonTabs>
