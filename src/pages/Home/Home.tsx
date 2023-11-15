@@ -1,24 +1,20 @@
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
-import ExploreContainer from '../../components/ExploreContainer';
+import { IonContent } from '@ionic/react';
 import './Home.css';
+import HomeNavBar from '../../containers/Home/HomeNavBar/HomeNavBar';
+import SearchBar from '../../components/SearchBar/SearchBar';
+import HeadingTitle from '../../containers/Home/HeadingTitle/HeadingTitle';
+import Filter from '../../containers/Home/Filter/Filter';
 
 const Home: React.FC = () => {
     return (
-        <IonPage>
-            <IonHeader>
-                <IonToolbar>
-                    <IonTitle>Trang chủ</IonTitle>
-                </IonToolbar>
-            </IonHeader>
-            <IonContent fullscreen>
-                <IonHeader collapse="condense">
-                    <IonToolbar>
-                        <IonTitle size="large">Trang chủ</IonTitle>
-                    </IonToolbar>
-                </IonHeader>
-                <ExploreContainer name="Tab 1 page" />
-            </IonContent>
-        </IonPage>
+        <IonContent fullscreen>
+            <div className='homeContainer'>
+                <HomeNavBar />
+                <SearchBar />
+                <HeadingTitle title="Điểm đến" />
+                <Filter />
+            </div>
+        </IonContent>
     );
 };
 

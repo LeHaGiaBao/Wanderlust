@@ -1,5 +1,4 @@
 import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
-import ExploreContainer from '../../components/ExploreContainer';
 import './Profile.css';
 
 const Profile: React.FC = () => {
@@ -16,7 +15,6 @@ const Profile: React.FC = () => {
                         <IonTitle size="large">Tài khoản</IonTitle>
                     </IonToolbar>
                 </IonHeader>
-                <ExploreContainer name="Tab 1 page" />
             </IonContent>
         </IonPage>
     );

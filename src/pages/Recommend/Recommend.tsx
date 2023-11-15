@@ -1,5 +1,4 @@
 import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
-import ExploreContainer from '../../components/ExploreContainer';
 import './Recommend.css';
 
 const Recommend: React.FC = () => {
@@ -16,7 +15,6 @@ const Recommend: React.FC = () => {
                         <IonTitle size="large">Đề xuất</IonTitle>
                     </IonToolbar>
                 </IonHeader>
-                <ExploreContainer name="Tab 1 page" />
             </IonContent>
         </IonPage>
     );
