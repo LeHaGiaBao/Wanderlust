@@ -37,12 +37,14 @@ import Explore from './pages/Explore/Explore';
 import Recommend from './pages/Recommend/Recommend';
 import Profile from './pages/Profile/Profile';
 import Welcome from './pages/Welcome/Welcome/Welcome';
+import Login from './pages/Auth/Login/Login';
 
 setupIonicReact();
 
 const App: React.FC = () => (
   <IonApp>
-    <Welcome />
+    {/* <Welcome /> */}
+    <Login />
     {/* <IonReactRouter>
       <IonTabs>
         <IonRouterOutlet>
