@@ -37,17 +37,19 @@ import Explore from './pages/Explore/Explore';
 import Recommend from './pages/Recommend/Recommend';
 import Profile from './pages/Profile/Profile';
 import Onboarding from './pages/Welcome/Onboarding/Onboarding';
+import Welcome from './pages/Welcome/Welcome/Welcome';
 
 setupIonicReact();
 
 const App: React.FC = () => (
   <IonApp>
-    <IonReactRouter>
+    {/* <Onboarding /> */}
+    <Welcome />
+    {/* <IonReactRouter>
       <IonTabs>
         <IonRouterOutlet>
           <Route exact path="/home">
-            <Onboarding />
-            {/* <Home /> */}
+            <Home />
           </Route>
           <Route exact path="/booking">
             <Booking />
@@ -88,7 +90,7 @@ const App: React.FC = () => (
           </IonTabButton>
         </IonTabBar>
       </IonTabs>
-    </IonReactRouter>
+    </IonReactRouter> */}
   </IonApp>
 );
 
