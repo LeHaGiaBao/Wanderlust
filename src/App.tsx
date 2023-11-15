@@ -40,6 +40,7 @@ import Welcome from './pages/Welcome/Welcome/Welcome';
 import Login from './pages/Auth/Login/Login';
 import Register from './pages/Auth/Register/Register';
 import OTP from './pages/Auth/OTP/OTP';
+import ProfileComplete from './pages/Auth/ProfileComplete/ProfileComplete';
 
 setupIonicReact();
 
@@ -48,7 +49,8 @@ const App: React.FC = () => (
     {/* <Welcome /> */}
     {/* <Login /> */}
     {/* <Register /> */}
-    <OTP />
+    {/* <OTP /> */}
+    <ProfileComplete />
     {/* <IonReactRouter>
       <IonTabs>
         <IonRouterOutlet>
