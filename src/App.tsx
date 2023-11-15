@@ -36,22 +36,17 @@ import Booking from './pages/Booking/Booking';
 import Explore from './pages/Explore/Explore';
 import Recommend from './pages/Recommend/Recommend';
 import Profile from './pages/Profile/Profile';
-import Welcome from './pages/Welcome/Welcome/Welcome';
-import Login from './pages/Auth/Login/Login';
-import Register from './pages/Auth/Register/Register';
-import OTP from './pages/Auth/OTP/OTP';
-import ProfileComplete from './pages/Auth/ProfileComplete/ProfileComplete';
+import { RiHome5Line } from "react-icons/ri";
+import { IoCalendarOutline } from "react-icons/io5";
+import { LuCompass } from "react-icons/lu";
+import { MdOutlineRecommend } from "react-icons/md";
+import { CgProfile } from "react-icons/cg";
 
 setupIonicReact();
 
 const App: React.FC = () => (
   <IonApp>
-    {/* <Welcome /> */}
-    {/* <Login /> */}
-    {/* <Register /> */}
-    {/* <OTP /> */}
-    <ProfileComplete />
-    {/* <IonReactRouter>
+    <IonReactRouter>
       <IonTabs>
         <IonRouterOutlet>
           <Route exact path="/home">
@@ -73,30 +68,30 @@ const App: React.FC = () => (
             <Redirect to="/home" />
           </Route>
         </IonRouterOutlet>
-        <IonTabBar slot="bottom">
+        <IonTabBar slot="bottom" className='navBar'>
           <IonTabButton tab="home" href="/home">
-            <IonIcon aria-hidden="true" icon={home} />
+            <RiHome5Line className='iconNavbar' />
             <IonLabel>Trang chủ</IonLabel>
           </IonTabButton>
           <IonTabButton tab="booking" href="/booking">
-            <IonIcon aria-hidden="true" icon={calendar} />
+            <IoCalendarOutline className='iconNavbar' />
             <IonLabel>Đặt trước</IonLabel>
           </IonTabButton>
           <IonTabButton tab="explore" href="/explore">
-            <IonIcon aria-hidden="true" icon={compass} />
+            <LuCompass className='iconNavbar' />
             <IonLabel>Khám phá</IonLabel>
           </IonTabButton>
           <IonTabButton tab="recommend" href="/recommend">
-            <IonIcon aria-hidden="true" icon={thumbsUp} />
+            <MdOutlineRecommend className='iconNavbar' />
             <IonLabel>Đề xuất</IonLabel>
           </IonTabButton>
           <IonTabButton tab="profile" href="/profile">
-            <IonIcon aria-hidden="true" icon={personCircle} />
+            <CgProfile className='iconNavbar' />
             <IonLabel>Tài khoản</IonLabel>
           </IonTabButton>
         </IonTabBar>
       </IonTabs>
-    </IonReactRouter> */}
+    </IonReactRouter>
   </IonApp>
 );
 
