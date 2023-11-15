@@ -36,6 +36,7 @@ import Booking from './pages/Booking/Booking';
 import Explore from './pages/Explore/Explore';
 import Recommend from './pages/Recommend/Recommend';
 import Profile from './pages/Profile/Profile';
+import Onboarding from './pages/Welcome/Onboarding/Onboarding';
 
 setupIonicReact();
 
@@ -45,7 +46,8 @@ const App: React.FC = () => (
       <IonTabs>
         <IonRouterOutlet>
           <Route exact path="/home">
-            <Home />
+            <Onboarding />
+            {/* <Home /> */}
           </Route>
           <Route exact path="/booking">
             <Booking />
