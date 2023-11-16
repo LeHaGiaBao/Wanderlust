@@ -3,6 +3,10 @@
 	overflow-x: scroll;
 }
 
+.filterContainer::-webkit-scrollbar {
+	display: none;
+}
+
 .filter {
 	display: flex;
 	flex-direction: row;

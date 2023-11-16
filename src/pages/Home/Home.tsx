@@ -5,6 +5,7 @@ import SearchBar from '../../components/SearchBar/SearchBar';
 import HeadingTitle from '../../containers/Home/HeadingTitle/HeadingTitle';
 import Filter from '../../containers/Home/Filter/Filter';
 import ListDestination from '../../containers/Home/ListDestination/ListDestination';
+import ListHotel from '../../containers/Home/ListHotel/ListHotel';
 
 const Home: React.FC = () => {
     return (
@@ -15,6 +16,8 @@ const Home: React.FC = () => {
                 <HeadingTitle title="Điểm đến" />
                 <Filter />
                 <ListDestination />
+                <HeadingTitle title="Khách sạn" />
+                <ListHotel />
             </div>
         </IonContent>
     );
