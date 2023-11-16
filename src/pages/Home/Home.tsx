@@ -7,6 +7,7 @@ import Filter from '../../containers/Home/Filter/Filter';
 import ListDestination from '../../containers/Home/ListDestination/ListDestination';
 import ListHotel from '../../containers/Home/ListHotel/ListHotel';
 import ListFlight from '../../containers/Home/ListFlight/ListFlight';
+import ListTour from '../../containers/Home/ListTour/ListTour';
 
 const Home: React.FC = () => {
     return (
@@ -21,6 +22,8 @@ const Home: React.FC = () => {
                 <ListHotel />
                 <HeadingTitle title="Chuyến bay giá rẻ" />
                 <ListFlight />
+                <HeadingTitle title="Tour giá hời" />
+                <ListTour />
             </div>
         </IonContent>
     );

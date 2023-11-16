@@ -1,7 +1,5 @@
 import React from 'react';
 import './ListDestination.css'
-import { MdLocationOn } from "react-icons/md";
-import { AiOutlineHeart } from "react-icons/ai";
 import HomeDestination from '../../../components/HomeDestination/HomeDestination';
 
 const data = [
