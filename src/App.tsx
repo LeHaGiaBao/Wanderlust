@@ -1,7 +1,6 @@
 import { Redirect, Route } from 'react-router-dom';
 import {
   IonApp,
-  IonIcon,
   IonLabel,
   IonRouterOutlet,
   IonTabBar,
@@ -30,7 +29,6 @@ import '@ionic/react/css/display.css';
 /* Theme variables */
 import './theme/variables.css';
 
-import { home, calendar, compass, personCircle, thumbsUp } from 'ionicons/icons';
 import Home from './pages/Home/Home';
 import Booking from './pages/Booking/Booking';
 import Explore from './pages/Explore/Explore';
@@ -63,9 +61,6 @@ const App: React.FC = () => (
           </Route>
           <Route exact path="/profile">
             <Profile />
-          </Route>
-          <Route exact path="/">
-            <Redirect to="/home" />
           </Route>
         </IonRouterOutlet>
         <IonTabBar slot="bottom" className='navBar'>
