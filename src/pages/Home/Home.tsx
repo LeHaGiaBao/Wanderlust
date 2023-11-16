@@ -6,6 +6,7 @@ import HeadingTitle from '../../containers/Home/HeadingTitle/HeadingTitle';
 import Filter from '../../containers/Home/Filter/Filter';
 import ListDestination from '../../containers/Home/ListDestination/ListDestination';
 import ListHotel from '../../containers/Home/ListHotel/ListHotel';
+import ListFlight from '../../containers/Home/ListFlight/ListFlight';
 
 const Home: React.FC = () => {
     return (
@@ -18,6 +19,8 @@ const Home: React.FC = () => {
                 <ListDestination />
                 <HeadingTitle title="Khách sạn" />
                 <ListHotel />
+                <HeadingTitle title="Chuyến bay giá rẻ" />
+                <ListFlight />
             </div>
         </IonContent>
     );
