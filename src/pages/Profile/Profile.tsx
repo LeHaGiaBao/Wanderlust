@@ -1,22 +1,14 @@
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
+import { IonContent } from '@ionic/react';
 import './Profile.css';
+import ProfileNavbar from '../../containers/Profile/ProfileNavbar/ProfileNavbar';
 
 const Profile: React.FC = () => {
     return (
-        <IonPage>
-            <IonHeader>
-                <IonToolbar>
-                    <IonTitle>Tài khoản</IonTitle>
-                </IonToolbar>
-            </IonHeader>
-            <IonContent fullscreen>
-                <IonHeader collapse="condense">
-                    <IonToolbar>
-                        <IonTitle size="large">Tài khoản</IonTitle>
-                    </IonToolbar>
-                </IonHeader>
-            </IonContent>
-        </IonPage>
+        <IonContent fullscreen>
+            <div className='profileContainer'>
+                <ProfileNavbar />
+            </div>
+        </IonContent>
     );
 };
 

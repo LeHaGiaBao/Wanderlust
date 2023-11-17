@@ -1,0 +1,54 @@
+.profileNavbar {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.profileAvatarContent {
+	display: flex;
+	flex-direction: row;
+}
+
+.avatarProfile {
+	width: 4.2rem;
+	height: 4.2rem;
+	background-color: #d7f3f0;
+	border-radius: 100%;
+}
+
+.profileNavbarContent {
+	display: flex;
+	flex-direction: column;
+	margin-top: 1rem;
+	margin-left: 1rem;
+}
+
+.titleName {
+	color: #155850;
+	font-size: 1.3rem;
+	font-weight: 500;
+	margin-top: -0.02rem;
+	margin-bottom: -0.7rem;
+}
+
+.subTitleName {
+	color: #878787;
+	font-size: 0.9rem;
+	font-weight: 500;
+}
+
+.profileButton {
+	margin-top: 1.2rem;
+	width: 3rem;
+	height: 3rem;
+	background-color: #d7f3f0;
+	border-radius: 100%;
+	padding: 0.6rem;
+	text-align: center;
+}
+
+.iconArrow {
+	color: #155850;
+	width: 1.7rem;
+	height: 1.7rem;
+}
