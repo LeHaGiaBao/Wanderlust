@@ -1,5 +1,45 @@
 .profileContainer {
 	height: 100%;
 	padding: 0 16px;
-	margin: 5.5rem 0 56rem 0;
+	margin: 5.5rem 0 40rem 0;
+}
+
+.profileTitle {
+	margin: 1.5rem 0;
+	color: #0d0d0d;
+	font-size: 1.2rem;
+	font-style: normal;
+	font-weight: 600;
+	line-height: normal;
+}
+
+.featureContainer {
+	margin-top: 5rem;
+	display: flex;
+	flex-direction: column;
+}
+
+.feature {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: center;
+	border-radius: 8px;
+	background: #fff;
+	box-shadow: 0px 0px 6px 0px rgba(135, 135, 135, 0.25);
+	padding: 0.75rem;
+}
+
+.featureIcon {
+	color: #155850;
+	width: 2rem;
+	height: 2rem;
+}
+
+.featureContent {
+	/* width: 18rem; */
+	margin-top: 0.3rem;
+	color: #0d0d0d;
+	font-size: 1.1rem;
+	font-weight: 500;
 }
