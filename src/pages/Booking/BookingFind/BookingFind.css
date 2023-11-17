@@ -1,42 +1,5 @@
 .bookingFindContainer {
 	height: 100%;
 	padding: 0 16px;
-	margin: 5.5rem 0 56rem 0;
-}
-
-.navBarContainer {
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	align-items: center;
-}
-
-.iconBack {
-	margin-top: 10px;
-	height: 2rem;
-	width: 2rem;
-	border-radius: 100%;
-	background-color: #d7f3f0;
-	padding: 0.4rem;
-}
-
-.iconArrowBack {
-	text-align: center;
-	height: 1.2rem;
-	width: 1.2rem;
-	color: #155850;
-}
-
-.navBarTitle {
-	color: #0d0d0d;
-	text-align: center;
-	font-size: 1.1rem;
-	font-weight: 600;
-}
-
-.iconBackItem {
-	height: 2rem;
-	width: 2rem;
-	border-radius: 100%;
-	padding: 0.4rem;
+	margin: 5rem 0;
 }
