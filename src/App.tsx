@@ -39,12 +39,14 @@ import { IoCalendarOutline } from "react-icons/io5";
 import { LuCompass } from "react-icons/lu";
 import { MdOutlineRecommend } from "react-icons/md";
 import { CgProfile } from "react-icons/cg";
+import BookingFind from './pages/Booking/BookingFind/BookingFind';
 
 setupIonicReact();
 
 const App: React.FC = () => (
   <IonApp>
-    <IonReactRouter>
+    <BookingFind />
+    {/* <IonReactRouter>
       <IonTabs>
         <IonRouterOutlet>
           <Route exact path="/home">
@@ -86,7 +88,7 @@ const App: React.FC = () => (
           </IonTabButton>
         </IonTabBar>
       </IonTabs>
-    </IonReactRouter>
+    </IonReactRouter> */}
   </IonApp>
 );
 
