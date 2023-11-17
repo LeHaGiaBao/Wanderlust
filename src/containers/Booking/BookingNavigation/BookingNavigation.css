@@ -1,0 +1,24 @@
+.bookingNavigation {
+	margin: 1.5rem 0;
+	background-color: #fff;
+	border-radius: 20px;
+}
+
+ion-segment-button {
+	height: 2.3rem;
+	--indicator-color: #155850;
+}
+
+ion-segment-button.md {
+	--color: #000;
+	--color-checked: #155850;
+	--indicator-height: 4px;
+}
+
+ion-segment-button.ios {
+	--color: #155850;
+	--color-checked: #fff;
+	--border-radius: 20px;
+	font-size: 0.7rem;
+	font-weight: 500;
+}

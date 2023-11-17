@@ -1,0 +1,39 @@
+.buttonNavigation {
+	margin: 3.5rem 0;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	text-align: center;
+	gap: 3rem;
+}
+
+.btnNavContainer {
+	width: 5rem;
+	height: 5rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.btnIcon {
+	width: 3rem;
+	height: 3rem;
+	background-color: #d7f3f0;
+	border-radius: 100%;
+	padding: 0.7rem;
+	text-align: center;
+}
+
+.btnIconClass {
+	color: #155850;
+	width: 1.7rem;
+	height: 1.7rem;
+}
+
+.btnContent {
+	text-align: center;
+	color: #0d0d0d;
+	font-size: 1rem;
+	font-weight: 500;
+}
