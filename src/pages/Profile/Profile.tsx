@@ -18,7 +18,7 @@ const Profile: React.FC = () => {
                 <SettingContainer />
                 <h1 className='profileTitle'>Về ứng dụng</h1>
                 <ApplicationInformation />
-                <div className='featureContainer'>
+                <div className='logoutContainer'>
                     <div className='feature'>
                         <RiShutDownLine className='featureIcon' />
                         <h1 className='featureContent'>Đăng xuất</h1>
