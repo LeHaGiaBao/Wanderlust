@@ -2,6 +2,7 @@ import { IonContent } from '@ionic/react';
 import './Profile.css';
 import ProfileNavbar from '../../containers/Profile/ProfileNavbar/ProfileNavbar';
 import ButtonNavigation from '../../containers/Profile/ButtonNavigation/ButtonNavigation';
+import FeatureContainer from '../../containers/Profile/FeatureContainer/FeatureContainer';
 
 const Profile: React.FC = () => {
     return (
@@ -9,6 +10,7 @@ const Profile: React.FC = () => {
             <div className='profileContainer'>
                 <ProfileNavbar />
                 <ButtonNavigation />
+                <FeatureContainer />
             </div>
         </IonContent>
     );
