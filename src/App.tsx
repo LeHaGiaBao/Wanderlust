@@ -39,12 +39,13 @@ import { IoCalendarOutline } from "react-icons/io5";
 import { LuCompass } from "react-icons/lu";
 import { MdOutlineRecommend } from "react-icons/md";
 import { CgProfile } from "react-icons/cg";
+import FullDestination from './pages/Home/FullDestination/FullDestination';
 
 setupIonicReact();
 
 const App: React.FC = () => (
   <IonApp>
-    <Home />
+    <FullDestination />
     {/* <IonReactRouter>
       <IonTabs>
         <IonRouterOutlet>

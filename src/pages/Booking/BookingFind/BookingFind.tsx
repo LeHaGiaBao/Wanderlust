@@ -1,9 +1,9 @@
 import React from 'react';
 import './BookingFind.css'
 import { IonContent } from '@ionic/react';
-import BookingFindNavbar from '../../../containers/BookingFind/BookingFindNavbar/BookingFindNavbar';
 import ItemContainer from '../../../containers/BookingFind/ItemContainer/ItemContainer';
 import BookingRecommend from '../../../containers/Booking/BookingRecommend/BookingRecommend';
+import Navbar from '../../../components/Navbar/Navbar';
 
 
 function BookingFind() {
@@ -11,7 +11,7 @@ function BookingFind() {
         <>
             <IonContent fullscreen>
                 <div className='bookingFindContainer'>
-                    <BookingFindNavbar />
+                    <Navbar title="Kết quả tìm kiếm" />
                     <ItemContainer />
                     <BookingRecommend />
                 </div>

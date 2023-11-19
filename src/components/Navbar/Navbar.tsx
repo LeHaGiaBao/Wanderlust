@@ -1,15 +1,15 @@
 import React from 'react';
-import './BookingFindNavbar.css'
+import './Navbar.css'
 import { IoIosArrowDropleft } from "react-icons/io";
 
-function BookingFindNavbar() {
+function Navbar({ title }: any) {
     return (
         <>
             <div className='navBarContainer'>
                 <div className='iconBack'>
                     <IoIosArrowDropleft className='iconArrowBack' />
                 </div>
-                <h1 className='navBarTitle'>Kết quả tìm kiếm</h1>
+                <h1 className='navBarTitle'>{title}</h1>
                 <div className='iconBackItem'>
                 </div>
             </div>
@@ -17,4 +17,4 @@ function BookingFindNavbar() {
     );
 }
 
-export default BookingFindNavbar;
+export default Navbar;
