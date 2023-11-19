@@ -40,12 +40,13 @@ import { LuCompass } from "react-icons/lu";
 import { MdOutlineRecommend } from "react-icons/md";
 import { CgProfile } from "react-icons/cg";
 import FullHotel from './pages/Home/FullHotel/FullHotel';
+import FullTour from './pages/Home/FullTour/FullTour';
 
 setupIonicReact();
 
 const App: React.FC = () => (
   <IonApp>
-    <FullHotel />
+    <FullTour />
     {/* <IonReactRouter>
       <IonTabs>
         <IonRouterOutlet>
