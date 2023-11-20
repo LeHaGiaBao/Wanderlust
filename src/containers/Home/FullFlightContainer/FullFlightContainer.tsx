@@ -7,6 +7,10 @@ function FullFlightContainer() {
         <>
             <div className='fullFlight'>
                 <FlightItem />
+                <FlightItem />
+                <FlightItem />
+                <FlightItem />
+                <FlightItem />
             </div>
         </>
     );

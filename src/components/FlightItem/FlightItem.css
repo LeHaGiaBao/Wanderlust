@@ -1,92 +1,92 @@
 .flightItem {
-	margin-top: 2rem;
 	display: flex;
 	flex-direction: row;
-	box-shadow: 0px 0px 8px 0px rgba(157, 157, 157, 0.35);
 	padding: 8px 16px;
+	box-shadow: 0px 0px 8px 0px rgba(157, 157, 157, 0.35);
 	border-radius: 16px;
 }
 
-.flightItemInformation {
-	background-color: #fff;
+.flightInformation {
+	width: 75vw;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 }
 
-.informationHeader {
+.flightInformationHeader {
 	display: flex;
 	flex-direction: row;
+	justify-content: space-between;
 	align-items: center;
+	text-align: center;
 }
 
-.logoFight {
+.inforFlight {
+	display: flex;
+	flex-direction: row;
+}
+
+.flightLogo {
 	width: 20px;
 	height: 20px;
 }
 
-.flightBrandName {
-	margin-top: 0.5rem;
-	margin-left: 7px;
+.flightName {
+	margin-top: 4px;
+	margin-left: 8px;
 	color: #0d0d0d;
 	font-size: 12px;
 	font-weight: 500;
 }
 
-.flightRank {
-	margin-left: 15px;
-	margin-top: 0.5rem;
+.seatType {
+	margin-top: 5px;
+	margin-left: 8px;
 	color: #053731;
 	font-size: 10px;
 	font-weight: 500;
 }
 
-.informationTime {
+.fightTimeInformation {
+	width: 40vw;
 	display: flex;
 	flex-direction: row;
+	justify-content: space-between;
 }
 
-.startTime {
-	text-align: center;
+.informationTimeAndDestination {
 	display: flex;
 	flex-direction: column;
-}
-
-.endTime {
+	align-items: center;
 	text-align: center;
-	display: flex;
-	flex-direction: column;
 }
 
-.time {
+.timeFlight {
 	color: #0d0d0d;
 	font-size: 14px;
 	font-weight: 500;
 }
 
-.destination {
-	margin-top: 4px;
+.destinationFlight {
 	color: #155850;
 	font-size: 12px;
 	font-weight: 500;
 }
 
-.simulation {
+.flightSimulation {
 	display: flex;
+	justify-content: space-between;
 	flex-direction: column;
 	align-items: center;
-	margin: 0 8px;
 }
 
 .simulationTime {
-	margin-bottom: 5px;
 	color: #6d6d6d;
 	font-size: 10px;
 	font-weight: 500;
 }
 
 .simulationType {
-	margin-top: 5px;
 	color: #6d6d6d;
 	font-size: 10px;
 	font-weight: 500;
@@ -98,8 +98,8 @@
 	display: block;
 	border-top: 2px solid transparent;
 	border-bottom: 2px solid transparent;
-	box-shadow: inset 0 0 0 2px #d9d9d9;
-	width: 96px;
+	box-shadow: inset 0 0 0 1px #6d6d6d;
+	width: 100%;
 	height: 6px;
 }
 
@@ -110,65 +110,72 @@
 	position: absolute;
 	width: 6px;
 	height: 6px;
-	border-top: 2px solid #d9d9d9;
-	border-right: 2px solid #d9d9d9;
+	color: #6d6d6d;
+	border-top: 2px solid #6d6d6d;
+	border-right: 2px solid #6d6d6d;
 	transform: rotate(45deg);
 	right: 0;
 	bottom: -2px;
 }
 
-.dotLine {
+.ticketInformation {
+	width: 40vw;
 	display: flex;
 	flex-direction: column;
-	margin-top: 5rem;
-	border: none;
-	border-top: 1px dotted #d9d9d9;
-	color: #d9d9d9;
-	height: 1px;
-	width: 100vw;
-	transform: rotate(90deg);
+	justify-content: space-between;
+	align-items: flex-end;
 }
 
-.informationTicket {
-	display: flex;
-	flex-direction: column;
-	align-items: end;
-}
-
-.inforDetail {
+.ticketDetail {
+	margin-top: 9px;
 	color: #053731;
 	font-size: 10px;
 	font-weight: 500;
 }
 
-.customerInfo {
-	margin-top: 20px;
-	width: 85px;
+.ticketInformationContent {
 	display: flex;
-	flex-direction: row;
+	flex-direction: column;
 	justify-content: space-between;
+	align-items: flex-end;
 }
 
-.inforIcon {
+.ticketType {
 	display: flex;
-	width: 16px;
-	height: 16px;
-	justify-content: center;
-	align-items: center;
+	flex-direction: row;
+}
+
+.ticketIcon {
+	width: 11.493px;
+	height: 11.867px;
 	color: #6d6d6d;
 }
 
-.inforContent {
-	margin-top: 0.2rem;
+.typeInfor {
+	margin-top: 1px;
+	margin-left: 4px;
 	color: #6d6d6d;
 	font-size: 10px;
 	font-weight: 500;
 }
 
-.inforPrice {
-	margin-top: 0.2rem;
-	width: 100px;
+.ticketPrice {
+	margin-top: 1px;
 	color: #e52525;
 	font-size: 14px;
 	font-weight: 500;
+}
+
+.ticketRip {
+	width: 10%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.ripLine {
+	height: 100%;
+	width: 50%;
+	border-left: 2px dashed #d9d9d9;
 }
