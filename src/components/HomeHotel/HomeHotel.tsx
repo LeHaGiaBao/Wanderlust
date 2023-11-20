@@ -1,8 +1,10 @@
 import React from 'react';
 import './HomeHotel.css'
-import { AiFillStar } from "react-icons/ai";
-import { MdLocationOn } from "react-icons/md";
-import { AiOutlineHeart } from "react-icons/ai";
+import {
+    Star1,
+    Location,
+    Heart
+} from 'iconsax-react'
 
 interface HomeHotel {
     image: any,
@@ -19,15 +21,15 @@ function HomeHotel({ image, name, star, location }: HomeHotel) {
                 <div className='hotelNameContent'>
                     <h1 className='hotelName'>{name}</h1>
                     <div className='hotelStar'>
-                        <AiFillStar className='starIcon' />
+                        <Star1 className='starIcon' variant="Bold" />
                         <h1 className='starNumber'>{star}</h1>
                     </div>
                     <div className='hotelLocation'>
-                        <MdLocationOn className='locationIcon' />
+                        <Location className='locationIcon' variant="Bold" />
                         <h1 className='locationName'>{location}</h1>
                     </div>
                 </div>
-                <AiOutlineHeart className='heartIconHotel' />
+                <Heart className='heartIconHotel' />
             </div>
         </>
     );

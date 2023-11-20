@@ -1,6 +1,6 @@
 import React from 'react';
 import './HomeNavBar.css'
-import { GoBell } from "react-icons/go";
+import { Notification } from 'iconsax-react'
 
 function HomeNavBar() {
     return (
@@ -14,7 +14,7 @@ function HomeNavBar() {
                     </div>
                 </div>
                 <div className='homeNotification'>
-                    <GoBell className='iconBell' />
+                    <Notification className='iconBell' />
                 </div>
             </div>
         </>

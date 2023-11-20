@@ -1,0 +1,174 @@
+.flightItem {
+	margin-top: 2rem;
+	display: flex;
+	flex-direction: row;
+	box-shadow: 0px 0px 8px 0px rgba(157, 157, 157, 0.35);
+	padding: 8px 16px;
+	border-radius: 16px;
+}
+
+.flightItemInformation {
+	background-color: #fff;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.informationHeader {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+.logoFight {
+	width: 20px;
+	height: 20px;
+}
+
+.flightBrandName {
+	margin-top: 0.5rem;
+	margin-left: 7px;
+	color: #0d0d0d;
+	font-size: 12px;
+	font-weight: 500;
+}
+
+.flightRank {
+	margin-left: 15px;
+	margin-top: 0.5rem;
+	color: #053731;
+	font-size: 10px;
+	font-weight: 500;
+}
+
+.informationTime {
+	display: flex;
+	flex-direction: row;
+}
+
+.startTime {
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+}
+
+.endTime {
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+}
+
+.time {
+	color: #0d0d0d;
+	font-size: 14px;
+	font-weight: 500;
+}
+
+.destination {
+	margin-top: 4px;
+	color: #155850;
+	font-size: 12px;
+	font-weight: 500;
+}
+
+.simulation {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: 0 8px;
+}
+
+.simulationTime {
+	margin-bottom: 5px;
+	color: #6d6d6d;
+	font-size: 10px;
+	font-weight: 500;
+}
+
+.simulationType {
+	margin-top: 5px;
+	color: #6d6d6d;
+	font-size: 10px;
+	font-weight: 500;
+}
+
+.arrowLong {
+	box-sizing: border-box;
+	position: relative;
+	display: block;
+	border-top: 2px solid transparent;
+	border-bottom: 2px solid transparent;
+	box-shadow: inset 0 0 0 2px #d9d9d9;
+	width: 96px;
+	height: 6px;
+}
+
+.arrowLong::after {
+	content: '';
+	display: block;
+	box-sizing: border-box;
+	position: absolute;
+	width: 6px;
+	height: 6px;
+	border-top: 2px solid #d9d9d9;
+	border-right: 2px solid #d9d9d9;
+	transform: rotate(45deg);
+	right: 0;
+	bottom: -2px;
+}
+
+.dotLine {
+	display: flex;
+	flex-direction: column;
+	margin-top: 5rem;
+	border: none;
+	border-top: 1px dotted #d9d9d9;
+	color: #d9d9d9;
+	height: 1px;
+	width: 100vw;
+	transform: rotate(90deg);
+}
+
+.informationTicket {
+	display: flex;
+	flex-direction: column;
+	align-items: end;
+}
+
+.inforDetail {
+	color: #053731;
+	font-size: 10px;
+	font-weight: 500;
+}
+
+.customerInfo {
+	margin-top: 20px;
+	width: 85px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.inforIcon {
+	display: flex;
+	width: 16px;
+	height: 16px;
+	justify-content: center;
+	align-items: center;
+	color: #6d6d6d;
+}
+
+.inforContent {
+	margin-top: 0.2rem;
+	color: #6d6d6d;
+	font-size: 10px;
+	font-weight: 500;
+}
+
+.inforPrice {
+	margin-top: 0.2rem;
+	width: 100px;
+	color: #e52525;
+	font-size: 14px;
+	font-weight: 500;
+}

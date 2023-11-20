@@ -1,0 +1,4 @@
+.fullFlight {
+	display: flex;
+	flex-direction: column;
+}

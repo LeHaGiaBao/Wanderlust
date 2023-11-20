@@ -1,6 +1,8 @@
 import React from 'react';
 import './HomeFlight.css'
-import { AiOutlineHeart } from "react-icons/ai";
+import {
+    Heart
+} from 'iconsax-react'
 
 interface HomeFlight {
     image: any,
@@ -26,7 +28,7 @@ function HomeFlight({ image, name, date, priceDiscount, priceNotDiscount }: Home
                         </div>
                     </div>
                 </div>
-                <AiOutlineHeart className='heartIconflight' />
+                <Heart className='heartIconflight' />
             </div>
         </>
     );
