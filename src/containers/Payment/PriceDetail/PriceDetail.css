@@ -1,0 +1,16 @@
+.priceDetail {
+	display: flex;
+	flex-direction: column;
+}
+
+.priceItem {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.contentText {
+	color: #6d6d6d;
+	font-size: 14px;
+	font-weight: 500;
+}
