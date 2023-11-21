@@ -1,8 +1,10 @@
 import React from 'react';
 import './BookingItemRecommend.css'
-import { TiStarFullOutline } from "react-icons/ti";
-import { MdLocationOn } from "react-icons/md";
-import { AiOutlineHeart } from "react-icons/ai";
+import {
+    Star1,
+    Location,
+    Heart
+} from 'iconsax-react'
 
 function BookingItemRecommend() {
     return (
@@ -13,16 +15,16 @@ function BookingItemRecommend() {
                     <div className='contentItem'>
                         <h1 className='titleHotel'>Khu nghỉ dưỡng Vinpearl Wonderwold Phú Quốc</h1>
                         <div className='hotelStar'>
-                            <TiStarFullOutline className='hotelStarIcon' />
+                            <Star1 className='hotelStarIcon' variant='Bold' />
                             <h1 className='hotelStarNumber'>4.8</h1>
                         </div>
                         <div className='hotelLocation'>
-                            <MdLocationOn className='hotelLocationIcon' />
+                            <Location className='hotelLocationIcon' variant='Bold' />
                             <h1 className='hotelLocationName'>Phú Quốc, Kiên Giang, Việt Nam</h1>
                         </div>
                     </div>
                     <div className='heartIconContainer'>
-                        <AiOutlineHeart className='heartIcon' />
+                        <Heart className='heartIcon' />
                     </div>
                 </div>
                 <div className='bookingLine' />

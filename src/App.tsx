@@ -34,20 +34,19 @@ import Booking from './pages/Booking/Booking';
 import Explore from './pages/Explore/Explore';
 import Recommend from './pages/Recommend/Recommend';
 import Profile from './pages/Profile/Profile';
-import { RiHome5Line } from "react-icons/ri";
-import { IoCalendarOutline } from "react-icons/io5";
-import { LuCompass } from "react-icons/lu";
-import { MdOutlineRecommend } from "react-icons/md";
-import { CgProfile } from "react-icons/cg";
-import FullHotel from './pages/Home/FullHotel/FullHotel';
-import FullTour from './pages/Home/FullTour/FullTour';
+import {
+  Home2,
+  Stickynote,
+  LocationDiscover,
+  LikeShapes,
+  ProfileCircle
+} from 'iconsax-react'
 
 setupIonicReact();
 
 const App: React.FC = () => (
   <IonApp>
-    <FullTour />
-    {/* <IonReactRouter>
+    <IonReactRouter>
       <IonTabs>
         <IonRouterOutlet>
           <Route exact path="/home">
@@ -68,28 +67,28 @@ const App: React.FC = () => (
         </IonRouterOutlet>
         <IonTabBar slot="bottom" className='navBar'>
           <IonTabButton tab="home" href="/home">
-            <RiHome5Line className='iconNavbar' />
+            <Home2 className='iconNavbar' />
             <IonLabel>Trang chủ</IonLabel>
           </IonTabButton>
           <IonTabButton tab="booking" href="/booking">
-            <IoCalendarOutline className='iconNavbar' />
+            <Stickynote className='iconNavbar' />
             <IonLabel>Đặt trước</IonLabel>
           </IonTabButton>
           <IonTabButton tab="explore" href="/explore">
-            <LuCompass className='iconNavbar' />
+            <LocationDiscover className='iconNavbar' />
             <IonLabel>Khám phá</IonLabel>
           </IonTabButton>
           <IonTabButton tab="recommend" href="/recommend">
-            <MdOutlineRecommend className='iconNavbar' />
+            <LikeShapes className='iconNavbar' />
             <IonLabel>Đề xuất</IonLabel>
           </IonTabButton>
           <IonTabButton tab="profile" href="/profile">
-            <CgProfile className='iconNavbar' />
+            <ProfileCircle className='iconNavbar' />
             <IonLabel>Tài khoản</IonLabel>
           </IonTabButton>
         </IonTabBar>
       </IonTabs>
-    </IonReactRouter> */}
+    </IonReactRouter>
   </IonApp>
 );
 

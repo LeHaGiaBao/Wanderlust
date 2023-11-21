@@ -1,7 +1,7 @@
 import React from 'react';
 import './TermOfServices.css'
 import { IonContent } from '@ionic/react';
-import { IoIosArrowDropleft } from 'react-icons/io';
+import { ArrowCircleLeft } from 'iconsax-react'
 
 function TermOfServices() {
     return (
@@ -9,7 +9,7 @@ function TermOfServices() {
             <IonContent fullscreen>
                 <div className='servicesContainer'>
                     <div className='backContainer'>
-                        <IoIosArrowDropleft className='iconBack' />
+                        <ArrowCircleLeft className='iconBack' />
                         <div className='textBack'>Quay lại</div>
                     </div>
                     <div className='servicesHeader'>

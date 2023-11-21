@@ -1,7 +1,7 @@
 import React from 'react';
 import './OTP.css'
 import { IonContent } from '@ionic/react';
-import { IoIosArrowDropleft } from "react-icons/io";
+import { ArrowCircleLeft } from 'iconsax-react'
 
 function OTP() {
     return (
@@ -9,7 +9,7 @@ function OTP() {
             <IonContent fullscreen>
                 <div className='OTPContainer'>
                     <div className='backContainer'>
-                        <IoIosArrowDropleft className='iconBack' />
+                        <ArrowCircleLeft className='iconBack' />
                         <div className='textBack'>Quay lại</div>
                     </div>
                     <div className='OTPHeader'>

@@ -1,7 +1,9 @@
 import React from 'react';
 import './HomeDestination.css'
-import { MdLocationOn } from "react-icons/md";
-import { AiOutlineHeart } from "react-icons/ai";
+import {
+    Location,
+    Heart
+} from 'iconsax-react'
 
 interface HomeDestination {
     image: any,
@@ -18,12 +20,12 @@ function HomeDestination({ image, name, location }: HomeDestination) {
                     <div className='destinationText'>
                         <h1 className='destinationName'>{name}</h1>
                         <div className='destinationLocation'>
-                            <MdLocationOn className='locationIcon' />
+                            <Location className='locationIcon' variant="Bold" />
                             <h1 className='locationName'>{location}</h1>
                         </div>
                     </div>
                     <div className='heartIconContainer'>
-                        <AiOutlineHeart className='heartIcon' />
+                        <Heart className='heartIcon' size="20" />
                     </div>
                 </div>
             </div>
