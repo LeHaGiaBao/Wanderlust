@@ -13,6 +13,11 @@ function PriceDetail() {
                     <h1 className='contentText'>Thuế và phí (8%)</h1>
                     <h1 className='contentText'>639.920 VND</h1>
                 </div>
+                <div className='confirmPaymentLine' />
+                <div className='totalPrice'>
+                    <h1 className='totalText'>Tổng: </h1>
+                    <h1 className='totalPrice'>8.638.920 VND</h1>
+                </div>
             </div>
         </>
     );

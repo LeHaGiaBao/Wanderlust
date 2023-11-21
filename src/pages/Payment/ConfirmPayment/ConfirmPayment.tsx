@@ -20,6 +20,7 @@ function ConfirmPayment() {
                     <CustomerGoWith />
                     <h1 className='confirmTitle' style={{ marginTop: '68px' }}>Chi tiết giá</h1>
                     <PriceDetail />
+                    <button className='buttonConfirm'>Tiếp tục</button>
                 </div>
             </IonContent>
         </>
