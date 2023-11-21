@@ -1,0 +1,41 @@
+.priceDetail {
+	display: flex;
+	flex-direction: column;
+}
+
+.priceItem {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.contentText {
+	color: #6d6d6d;
+	font-size: 14px;
+	font-weight: 500;
+}
+
+.confirmPaymentLine {
+	margin: 12px 0;
+	width: 100%;
+	height: 1px;
+	background-color: #d9d9d9;
+}
+
+.totalPrice {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.totalText {
+	color: #0d0d0d;
+	font-size: 20px;
+	font-weight: 600;
+}
+
+.totalPrice {
+	color: #e52525;
+	font-size: 20px;
+	font-weight: 600;
+}

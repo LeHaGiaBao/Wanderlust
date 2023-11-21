@@ -1,28 +1,34 @@
 import React from 'react';
-import './ItemContainer.css'
+import './CustomerInfor.css'
 import {
-    Location,
-    Calendar,
+    LoginCurve,
+    LogoutCurve,
     Buildings,
     Profile,
     Pet
 } from 'iconsax-react'
 
-function ItemContainer() {
+function CustomerInfor() {
     return (
         <>
-            <div className='bookingItemContainer'>
-                <div className='itemDesination'>
-                    <div className='item'>
-                        <Location className='itemIcon' />
-                        <h1 className='itemContent'>Phú Quốc, Việt Nam</h1>
+            <div className='customerInforContainer'>
+                <div className='checkInfor'>
+                    <div className='container'>
+                        <LoginCurve className='inforIcon' />
+                        <div className='checkContainer'>
+                            <h1 className='checkTitle'>Check in</h1>
+                            <h1 className='checkTime'>2:00 PM, Thứ 3, 07/11</h1>
+                        </div>
                     </div>
-                    <div className='item'>
-                        <Calendar className='itemIcon' />
-                        <h1 className='itemContent'>07-10 tháng 11</h1>
+                    <div className='container'>
+                        <LogoutCurve className='inforIcon' />
+                        <div className='checkContainer'>
+                            <h1 className='checkTitle'>Check out</h1>
+                            <h1 className='checkTime'>12:00 PM, CN, 10/11</h1>
+                        </div>
                     </div>
                 </div>
-                <div className='itemLine' />
+                <div className='checkLine' />
                 <div className='itemInformation'>
                     <div className='item'>
                         <Buildings className='itemIcon' />
@@ -46,4 +52,4 @@ function ItemContainer() {
     );
 }
 
-export default ItemContainer;
+export default CustomerInfor;
