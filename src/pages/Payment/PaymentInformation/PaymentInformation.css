@@ -3,3 +3,69 @@
 	padding: 0 16px;
 	margin: 5rem 0;
 }
+
+.priceDetail {
+	display: flex;
+	flex-direction: column;
+}
+
+.priceItem {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.contentText {
+	color: #6d6d6d;
+	font-size: 14px;
+	font-weight: 500;
+}
+
+.confirmPaymentLine {
+	margin: 12px 0;
+	width: 100%;
+	height: 1px;
+	background-color: #d9d9d9;
+}
+
+.totalPrice {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.totalText {
+	color: #0d0d0d;
+	font-size: 20px;
+	font-weight: 600;
+}
+
+.totalPrice {
+	color: #e52525;
+	font-size: 20px;
+	font-weight: 600;
+}
+
+.buttonConfirm {
+	margin: 2.5rem 0;
+	background-color: #155850;
+	width: 100%;
+	height: 3.6rem;
+	border-radius: 50px;
+	color: white;
+	font-size: 1.2rem;
+	font-weight: 600;
+	box-shadow: 0px 10px 25px 0px rgba(21, 86, 88, 0.3);
+}
+
+.contentTextTotal {
+	color: #0d0d0d;
+	font-size: 16px;
+	font-weight: 600;
+}
+
+.contentTextDiscount {
+	color: #155850;
+	font-size: 14px;
+	font-weight: 500;
+}
