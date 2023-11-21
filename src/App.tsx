@@ -41,14 +41,12 @@ import {
   LikeShapes,
   ProfileCircle
 } from 'iconsax-react'
-import PaymentConfirm from './pages/Payment/PaymentConfirm/PaymentConfirm';
 
 setupIonicReact();
 
 const App: React.FC = () => (
   <IonApp>
-    <PaymentConfirm />
-    {/* <IonReactRouter>
+    <IonReactRouter>
       <IonTabs>
         <IonRouterOutlet>
           <Route exact path="/home">
@@ -90,7 +88,7 @@ const App: React.FC = () => (
           </IonTabButton>
         </IonTabBar>
       </IonTabs>
-    </IonReactRouter> */}
+    </IonReactRouter>
   </IonApp>
 );
 
