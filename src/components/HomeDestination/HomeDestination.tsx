@@ -25,7 +25,7 @@ function HomeDestination({ image, name, location }: HomeDestination) {
                         </div>
                     </div>
                     <div className='heartIconContainer'>
-                        <Heart className='heartIcon' />
+                        <Heart className='heartIcon' size="20" />
                     </div>
                 </div>
             </div>

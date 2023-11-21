@@ -41,14 +41,12 @@ import {
   LikeShapes,
   ProfileCircle
 } from 'iconsax-react'
-import FullFlight from './pages/Home/FullFlight/FullFlight';
 
 setupIonicReact();
 
 const App: React.FC = () => (
   <IonApp>
-    <FullFlight />
-    {/* <IonReactRouter>
+    <IonReactRouter>
       <IonTabs>
         <IonRouterOutlet>
           <Route exact path="/home">
@@ -90,7 +88,7 @@ const App: React.FC = () => (
           </IonTabButton>
         </IonTabBar>
       </IonTabs>
-    </IonReactRouter> */}
+    </IonReactRouter>
   </IonApp>
 );
 

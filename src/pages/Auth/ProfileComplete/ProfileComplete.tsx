@@ -1,7 +1,7 @@
 import React from 'react';
 import './ProfileComplete.css'
 import { IonContent } from '@ionic/react';
-import { IoIosArrowDropleft } from "react-icons/io";
+import { ArrowCircleLeft } from 'iconsax-react'
 
 function ProfileComplete() {
     return (
@@ -9,7 +9,7 @@ function ProfileComplete() {
             <IonContent fullscreen>
                 <div className='profileCompleteContainer'>
                     <div className='backContainer'>
-                        <IoIosArrowDropleft className='iconBack' />
+                        <ArrowCircleLeft className='iconBack' />
                         <div className='textBack'>Quay lại</div>
                     </div>
                     <div className='profileCompleteHeader'>
