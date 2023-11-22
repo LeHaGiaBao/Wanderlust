@@ -41,13 +41,13 @@ import {
   LikeShapes,
   ProfileCircle
 } from 'iconsax-react'
-import AddNewCard from './pages/Payment/AddNewCard/AddNewCard';
+import AddVoucher from './pages/Payment/AddVoucher/AddVoucher';
 
 setupIonicReact();
 
 const App: React.FC = () => (
   <IonApp>
-    <AddNewCard />
+    <AddVoucher />
     {/* <IonReactRouter>
       <IonTabs>
         <IonRouterOutlet>
