@@ -1,0 +1,211 @@
+.billDetailContainer {
+	height: 100%;
+	padding: 0 16px;
+	margin: 5rem 0 50rem 0;
+}
+
+.confirmTitle {
+	margin: 16px 0;
+	color: #0d0d0d;
+	font-size: 16px;
+	font-weight: 600;
+}
+
+.billCode {
+	padding: 8px;
+	display: flex;
+	flex-direction: row;
+	gap: 8px;
+	align-items: center;
+	justify-content: space-between;
+	align-items: center;
+	border-radius: 8px;
+	border: 1px solid #878787;
+	background-color: #fff;
+	box-shadow: 0px 0px 6px 0px rgba(135, 135, 135, 0.25);
+}
+
+.codeContent {
+	width: 65%;
+	text-align: right;
+	margin-top: 0.7rem;
+	color: #155850;
+	font-size: 16px;
+	font-weight: 600;
+}
+
+.copyIcon {
+	width: 24px;
+	height: 24px;
+	color: #155850;
+}
+
+.addressContainer {
+	margin-top: 16px;
+	padding: 8px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	border-radius: 12px;
+	background-color: #fff;
+	box-shadow: 0px 0px 20px 0px rgba(201, 201, 201, 0.3);
+}
+
+.iconLocation {
+	width: 15%;
+	height: 100%;
+	text-align: center;
+}
+
+.locationIcon {
+	width: 24px;
+	height: 24px;
+	color: #155850;
+}
+
+.addressContent {
+	width: 70%;
+	color: #6d6d6d;
+	font-size: 14px;
+	font-weight: 500;
+}
+
+.mapItem {
+	width: 15%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.mapIcon {
+	width: 24px;
+	height: 24px;
+	color: #155850;
+}
+
+.mapContent {
+	margin-top: 0.2rem;
+	color: #155850;
+	font-size: 10px;
+	font-weight: 500;
+}
+
+.customerInfor {
+	margin: 8px 0;
+	padding: 12px 16px;
+	border-radius: 8px;
+	background-color: #fff;
+	box-shadow: 0px 0px 6px 0px rgba(135, 135, 135, 0.25);
+	color: #6d6d6d;
+	font-size: 14px;
+	font-weight: 500;
+}
+
+.changeTitle {
+	color: #0d0d0d;
+	font-size: 14px;
+	font-weight: 500;
+}
+
+.changeContent {
+	color: #878787;
+	font-size: 14px;
+	font-weight: 500;
+}
+
+.hotelContact {
+	margin: 8px 0;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	gap: 8px;
+	padding: 8px 16px;
+	border-radius: 8px;
+	background-color: #fff;
+	box-shadow: 0px 0px 6px 0px rgba(135, 135, 135, 0.25);
+}
+
+.hotelIcon {
+	width: 24px;
+	height: 24px;
+	color: #0d0d0d;
+}
+
+.hotelInfor {
+	margin-top: 5px;
+	color: #0d0d0d;
+	font-size: 14px;
+	font-weight: 500;
+}
+
+.confirmPaymentLine {
+	margin: 12px 0;
+	width: 100%;
+	height: 1px;
+	background-color: #d9d9d9;
+}
+
+.totalPrice {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.totalText {
+	color: #0d0d0d;
+	font-size: 20px;
+	font-weight: 600;
+}
+
+.totalPrice {
+	color: #e52525;
+	font-size: 20px;
+	font-weight: 600;
+}
+
+.privacyContainer {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	gap: 8px;
+}
+
+.privacyIcon {
+	width: 50px;
+	height: 50px;
+	color: #0d0d0d;
+}
+
+.privacyContent {
+	display: flex;
+	flex-direction: column;
+}
+
+.contentHeader {
+	margin-top: 15px;
+	color: #0d0d0d;
+	font-size: 14px;
+	font-weight: 500;
+}
+
+.contentInfor {
+	margin-top: 2px;
+	color: #6d6d6d;
+	font-size: 12px;
+	font-weight: 500;
+}
+
+.privacyIconClose {
+	width: 50px;
+	height: 50px;
+	color: #e52525;
+}
+
+.contentSubInfor {
+	margin-top: 2px;
+	color: #155850;
+	font-size: 12px;
+	font-weight: 500;
+}

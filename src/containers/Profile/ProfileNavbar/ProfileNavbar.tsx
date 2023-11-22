@@ -1,5 +1,6 @@
 import React from 'react';
 import './ProfileNavbar.css'
+import { ArrowRight2 } from 'iconsax-react'
 import { IoIosArrowForward } from "react-icons/io";
 
 function ProfileNavbar() {
@@ -14,7 +15,7 @@ function ProfileNavbar() {
                     </div>
                 </div>
                 <div className='profileButton'>
-                    <IoIosArrowForward className='iconArrow' />
+                    <ArrowRight2 className='iconArrow' />
                 </div>
             </div>
         </>

@@ -1,28 +1,30 @@
 import React from 'react';
 import './SettingContainer.css'
-import { IoIosArrowDropright } from "react-icons/io";
-import { CgProfile } from "react-icons/cg";
-import { IoWalletOutline } from "react-icons/io5";
-import { LiaKeySolid } from "react-icons/lia";
+import {
+    ProfileCircle,
+    EmptyWallet,
+    Key,
+    ArrowCircleRight
+} from 'iconsax-react'
 
 function SettingContainer() {
     return (
         <>
             <div className='featureContainer'>
                 <div className='feature'>
-                    <CgProfile className='featureIcon' />
+                    <ProfileCircle className='featureIcon' />
                     <h1 className='featureContent'>Thông tin cá nhân</h1>
-                    <IoIosArrowDropright className='arrowRight' />
+                    <ArrowCircleRight className='arrowRight' />
                 </div>
                 <div className='feature'>
-                    <IoWalletOutline className='featureIcon' />
+                    <EmptyWallet className='featureIcon' />
                     <h1 className='featureContent'>Phương thức thanh toán</h1>
-                    <IoIosArrowDropright className='arrowRight' />
+                    <ArrowCircleRight className='arrowRight' />
                 </div>
                 <div className='feature'>
-                    <LiaKeySolid className='featureIcon' />
+                    <Key className='featureIcon' />
                     <h1 className='featureContent'>Đổi mật khẩu</h1>
-                    <IoIosArrowDropright className='arrowRight' />
+                    <ArrowCircleRight className='arrowRight' />
                 </div>
             </div>
         </>
