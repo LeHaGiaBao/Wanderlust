@@ -41,14 +41,12 @@ import {
   LikeShapes,
   ProfileCircle
 } from 'iconsax-react'
-import FlightFind from './pages/Booking/FlightFind/FlightFind';
 
 setupIonicReact();
 
 const App: React.FC = () => (
   <IonApp>
-    <FlightFind />
-    {/* <IonReactRouter>
+    <IonReactRouter>
       <IonTabs>
         <IonRouterOutlet>
           <Route exact path="/home">
@@ -90,7 +88,7 @@ const App: React.FC = () => (
           </IonTabButton>
         </IonTabBar>
       </IonTabs>
-    </IonReactRouter> */}
+    </IonReactRouter>
   </IonApp>
 );
 
