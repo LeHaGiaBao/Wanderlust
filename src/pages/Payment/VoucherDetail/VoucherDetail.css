@@ -1,0 +1,18 @@
+.voucherDetailContainer {
+	height: 100%;
+	padding: 0 16px;
+	margin: 5rem 0;
+}
+
+.voucherTitleContent {
+	color: #155850;
+	font-size: 16px;
+	font-weight: 500;
+}
+
+.voucherSubTitleContent {
+	color: #0d0d0d;
+	font-size: 14px;
+	font-weight: 500;
+	line-height: 20px;
+}
