@@ -1,6 +1,6 @@
 import React from 'react';
 import './BookingNavBar.css'
-import { GoBell } from "react-icons/go";
+import { Notification } from 'iconsax-react'
 
 function BookingNavBar() {
     return (
@@ -14,7 +14,7 @@ function BookingNavBar() {
                     </div>
                 </div>
                 <div className='bookingNotification'>
-                    <GoBell className='iconBell' />
+                    <Notification className='iconBell' />
                 </div>
             </div>
         </>
