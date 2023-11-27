@@ -4,13 +4,16 @@ import { IonContent } from '@ionic/react';
 import Navbar from '../../../components/Navbar/Navbar';
 import ConfirmItem from '../../../containers/Payment/ConfirmItem/ConfirmItem';
 import CustomerInfor from '../../../containers/Payment/CustomerInfor/CustomerInfor';
+import { useHistory } from 'react-router';
 
 function PaymentConfirm() {
+    const history = useHistory()
+
     return (
         <>
             <IonContent fullscreen>
                 <div className='paymentConfirmContainer'>
-                    <Navbar title="Xác nhận thanh toán" />
+                    <Navbar title="Xác nhận thanh toán" link="home" />
                     <h1 className='confirmTitle'>Thông tin đặt phòng</h1>
                     <ConfirmItem />
                     <CustomerInfor />
@@ -35,7 +38,7 @@ function PaymentConfirm() {
                         <h1 className='totalText'>Tổng thanh toán: </h1>
                         <h1 className='totalPrice'>8.438.920 VND</h1>
                     </div>
-                    <button className='buttonConfirm'>Thanh toán</button>
+                    <button className='buttonConfirm' onClick={() => history.push('/billdetail')}>Thanh toán</button>
                 </div>
             </IonContent>
         </>

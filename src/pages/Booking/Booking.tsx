@@ -2,6 +2,7 @@ import { IonContent } from '@ionic/react';
 import './Booking.css';
 import BookingContainer from '../../containers/Booking/BookingContainer/BookingContainer';
 import BookingRecommend from '../../containers/Booking/BookingRecommend/BookingRecommend';
+import { useHistory } from 'react-router';
 
 const Booking: React.FC = () => {
     return (

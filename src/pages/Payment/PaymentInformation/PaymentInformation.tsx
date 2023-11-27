@@ -6,13 +6,16 @@ import CreditAndDebit from '../../../containers/Payment/CreditAndDebit/CreditAnd
 import PaymentOther from '../../../containers/Payment/PaymentOther/PaymentOther';
 import Voucher from '../../../containers/Payment/Voucher/Voucher';
 import PriceDetail from '../../../containers/Payment/PriceDetail/PriceDetail';
+import { useHistory } from 'react-router';
 
 function PaymentInformation() {
+    const history = useHistory()
+
     return (
         <>
             <IonContent fullscreen>
                 <div className='paymentInformationContainer'>
-                    <Navbar title="Phương thức thanh toán" />
+                    <Navbar title="Phương thức thanh toán" link="confirmpayment" />
                     <h1 className='confirmTitle'>Credit hoặc Debit Card</h1>
                     <CreditAndDebit />
                     <h1 className='confirmTitle'>Phương thức khác</h1>
@@ -34,7 +37,7 @@ function PaymentInformation() {
                             <h1 className='totalPrice'>8.438.920 VND</h1>
                         </div>
                     </div>
-                    <button className='buttonConfirm'>Tiếp tục</button>
+                    <button className='buttonConfirm' onClick={() => history.push('/paymentconfirm')}>Tiếp tục</button>
                 </div>
             </IonContent>
         </>

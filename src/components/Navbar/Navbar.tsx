@@ -1,12 +1,15 @@
 import React from 'react';
 import './Navbar.css'
 import { IoIosArrowDropleft } from "react-icons/io";
+import { useHistory } from 'react-router';
 
-function Navbar({ title }: any) {
+function Navbar({ title, link }: any) {
+    const history = useHistory()
+
     return (
         <>
             <div className='navBarContainer'>
-                <div className='iconBack'>
+                <div className='iconBack' onClick={() => history.push(`/${link}`)}>
                     <IoIosArrowDropleft className='iconArrowBack' />
                 </div>
                 <h1 className='navBarTitle'>{title}</h1>

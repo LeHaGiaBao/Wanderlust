@@ -10,7 +10,7 @@ function BookingItemRecommend() {
     return (
         <>
             <div className='bookingItem'>
-                <img alt="image" className='itemImage' src="https://dulichvn.org.vn/nhaptin/uploads/images/2022/Thang3/resort-phu-quoc-1.jpg" />
+                <img alt="image" className='itemImageHotel' src="https://dulichvn.org.vn/nhaptin/uploads/images/2022/Thang3/resort-phu-quoc-1.jpg" />
                 <div className='itemContent'>
                     <div className='contentItem'>
                         <h1 className='titleHotel'>Khu nghỉ dưỡng Vinpearl Wonderwold Phú Quốc</h1>

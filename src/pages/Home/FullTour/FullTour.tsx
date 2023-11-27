@@ -11,7 +11,7 @@ function FullTour() {
         <>
             <IonContent fullscreen>
                 <div className='fullTourContainer'>
-                    <Navbar title="Tour giá hời" />
+                    <Navbar title="Tour giá hời" link="home" />
                     <div className='listFullTour'>
                         <ListTour />
                         <ListTour />
