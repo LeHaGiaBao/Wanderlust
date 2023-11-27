@@ -1,0 +1,30 @@
+.hotelDetailContainer {
+	height: 100%;
+	padding: 0 16px;
+	margin: 5rem 0;
+}
+
+.imageDetailHeader {
+}
+
+.detailNavbar {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.icon {
+	margin-top: 10px;
+	height: 2rem;
+	width: 2rem;
+	border-radius: 100%;
+	background-color: #d7f3f0;
+	padding: 0.4rem;
+}
+
+.iconClass {
+	text-align: center;
+	height: 1.2rem;
+	width: 1.2rem;
+	color: #155850;
+}
