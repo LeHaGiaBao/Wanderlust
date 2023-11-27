@@ -9,7 +9,7 @@ function FullHotel() {
         <>
             <IonContent fullscreen>
                 <div className='fullHotelContainer'>
-                    <Navbar title="Khách sạn" />
+                    <Navbar title="Khách sạn" link="home" />
                     <div className='listFullHotel'>
                         <BookingRecommend />
                         <BookingRecommend />

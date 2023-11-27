@@ -10,7 +10,7 @@ function FullDestination() {
         <>
             <IonContent fullscreen>
                 <div className='fullDestinationContainer'>
-                    <Navbar title="Điểm đến" />
+                    <Navbar title="Điểm đến" link="home" />
                     <Filter />
                     <ListDestination />
                     <ListDestination />

@@ -19,7 +19,7 @@ function HomeFlight({ image, name, date, priceDiscount, priceNotDiscount }: Home
                 <img alt="flight" className='flightImage' src={image} />
                 <div className='flightNameContent'>
                     <div className='contentFlight'>
-                        <h1 className='flightName'>{name}</h1>
+                        <h1 className='flightNameList'>{name}</h1>
                         <h1 className='flightDate'>{date}</h1>
                         <div className='flightLine' />
                         <div className='flightPrice'>

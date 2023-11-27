@@ -28,7 +28,8 @@
 	height: 2rem;
 }
 
-.flightName {
+.flightNameList {
+	margin-top: 20px;
 	display: block;
 	overflow: hidden;
 	white-space: nowrap;

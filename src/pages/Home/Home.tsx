@@ -15,14 +15,14 @@ const Home: React.FC = () => {
             <div className='homeContainer'>
                 <HomeNavBar />
                 <SearchBar />
-                <HeadingTitle title="Điểm đến" />
+                <HeadingTitle title="Điểm đến" link="fulldestination" />
                 <Filter />
                 <ListDestination />
-                <HeadingTitle title="Khách sạn" />
+                <HeadingTitle title="Khách sạn" link="fullhotel" />
                 <ListHotel />
-                <HeadingTitle title="Chuyến bay giá rẻ" />
+                <HeadingTitle title="Chuyến bay giá rẻ" link="fullflight" />
                 <ListFlight />
-                <HeadingTitle title="Tour giá hời" />
+                <HeadingTitle title="Tour giá hời" link="fulltour" />
                 <ListTour />
             </div>
         </IonContent>

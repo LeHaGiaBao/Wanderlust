@@ -9,7 +9,7 @@ function FullFlight() {
         <>
             <IonContent fullscreen>
                 <div className='fullFlightContainer'>
-                    <Navbar title="Chuyến bay giá rẻ" />
+                    <Navbar title="Chuyến bay giá rẻ" link="home" />
                     <FullFlightContainer />
                 </div>
             </IonContent>
