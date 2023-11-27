@@ -11,7 +11,7 @@ function BookingFind() {
         <>
             <IonContent fullscreen>
                 <div className='bookingFindContainer'>
-                    <Navbar title="Kết quả tìm kiếm" />
+                    <Navbar title="Kết quả tìm kiếm" link="booking" />
                     <ItemContainer />
                     <BookingRecommend />
                 </div>
