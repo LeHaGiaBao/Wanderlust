@@ -18,6 +18,7 @@ import { TbSwimming } from "react-icons/tb";
 import { LuCupSoda } from "react-icons/lu";
 import { useHistory } from 'react-router';
 import CustomerInfor from '../../../containers/Payment/CustomerInfor/CustomerInfor';
+import ConfirmItem from '../../../containers/Payment/ConfirmItem/ConfirmItem';
 
 function HotelDetail() {
     const history = useHistory()
@@ -102,6 +103,17 @@ function HotelDetail() {
                     <h1 className='generalTitle'>Thông tin đặt phòng</h1>
                     <div style={{ padding: '0 16px' }}>
                         <CustomerInfor />
+                    </div>
+                    <div style={{ padding: '10px 16px' }}>
+                        <div onClick={() => history.push('/confirmpayment')}>
+                            <ConfirmItem />
+                        </div>
+                        <div onClick={() => history.push('/confirmpayment')}>
+                            <ConfirmItem />
+                        </div>
+                        <div onClick={() => history.push('/confirmpayment')}>
+                            <ConfirmItem />
+                        </div>
                     </div>
                 </div>
             </IonContent>

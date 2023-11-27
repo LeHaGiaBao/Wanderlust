@@ -15,7 +15,7 @@ function ConfirmPayment() {
         <>
             <IonContent fullscreen>
                 <div className='confirmPaymentContainer'>
-                    <Navbar title="Xác nhận thông tin" link="booking" />
+                    <Navbar title="Xác nhận thông tin" link="hoteldetail" />
                     <h1 className='confirmTitle'>Thông tin đặt phòng</h1>
                     <ConfirmItem />
                     <CustomerInfor />

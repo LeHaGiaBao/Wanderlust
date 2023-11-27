@@ -2,13 +2,16 @@ import React from 'react';
 import './AddNewCard.css'
 import { IonContent } from '@ionic/react';
 import Navbar from '../../../components/Navbar/Navbar';
+import { useHistory } from 'react-router';
 
 function AddNewCard() {
+    const history = useHistory()
+
     return (
         <>
             <IonContent fullscreen>
                 <div className='addNewCardContainer'>
-                    <Navbar title="Thêm thẻ mới" />
+                    <Navbar title="Thêm thẻ mới" link="paymentinformation" />
                     <div className='cardContainer'>
                         <div className='cardHeader'>
                             <h1 className='cardType'>CREDIT</h1>
@@ -58,7 +61,7 @@ function AddNewCard() {
                             <label className='labelText'>Mã bảo mật</label>
                             <input id='email' type='email' className='inputData' />
                         </div>
-                        <button className='buttonInput'>Thêm thẻ</button>
+                        <button className='buttonInput' onClick={() => history.push('/paymentinformation')}>Thêm thẻ</button>
                     </form>
                 </div>
             </IonContent>

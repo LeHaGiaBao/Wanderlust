@@ -2,8 +2,11 @@ import React from 'react';
 import './CreditAndDebit.css'
 import { IoMdRadioButtonOn } from "react-icons/io";
 import { AddCircle } from 'iconsax-react'
+import { useHistory } from 'react-router';
 
 function CreditAndDebit() {
+    const history = useHistory()
+
     return (
         <>
             <div className='creditCard'>
@@ -13,7 +16,7 @@ function CreditAndDebit() {
                 </div>
                 <IoMdRadioButtonOn className='radioButton' />
             </div>
-            <div className='addNewCard'>
+            <div className='addNewCard' onClick={() => history.push('/addnewcard')}>
                 <AddCircle className='addIcon' />
                 <h1 className='addTitle'>Thêm thẻ mới</h1>
             </div>
