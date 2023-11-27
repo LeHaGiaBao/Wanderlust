@@ -17,6 +17,7 @@ import { LuParkingCircle } from "react-icons/lu";
 import { TbSwimming } from "react-icons/tb";
 import { LuCupSoda } from "react-icons/lu";
 import { useHistory } from 'react-router';
+import CustomerInfor from '../../../containers/Payment/CustomerInfor/CustomerInfor';
 
 function HotelDetail() {
     const history = useHistory()
@@ -91,6 +92,16 @@ function HotelDetail() {
                                 <h1 className='itemFlexTitle'>Quán Bar</h1>
                             </div>
                         </div>
+                    </div>
+                    <h1 className='generalTitle'>Tổng quan</h1>
+                    <p className='generalContent'>
+                        Nằm trên đảo Phú Quốc, cách Bãi Dài 700m, Vinpearl Wonderworld Phu Quoc cung cấp chỗ nghỉ với hồ bơi ngoài trời, chỗ đỗ xe riêng miễn phí, trung tâm thể dục và khu vườn. Resort 5 sao này có...
+                        {' '}
+                        <span className='seeAllTitle'>Xem thêm</span>
+                    </p>
+                    <h1 className='generalTitle'>Thông tin đặt phòng</h1>
+                    <div style={{ padding: '0 16px' }}>
+                        <CustomerInfor />
                     </div>
                 </div>
             </IonContent>

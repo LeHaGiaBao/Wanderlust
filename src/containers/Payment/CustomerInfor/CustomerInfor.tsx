@@ -13,14 +13,14 @@ function CustomerInfor() {
         <>
             <div className='customerInforContainer'>
                 <div className='checkInfor'>
-                    <div className='container'>
+                    <div className='containerItem'>
                         <LoginCurve className='inforIcon' />
                         <div className='checkContainer'>
                             <h1 className='checkTitle'>Check in</h1>
                             <h1 className='checkTime'>2:00 PM, Thứ 3, 07/11</h1>
                         </div>
                     </div>
-                    <div className='container'>
+                    <div className='containerItem'>
                         <LogoutCurve className='inforIcon' />
                         <div className='checkContainer'>
                             <h1 className='checkTitle'>Check out</h1>
