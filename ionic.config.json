@@ -1,7 +1,0 @@
-{
-  "name": "wanderlust",
-  "integrations": {
-    "capacitor": {}
-  },
-  "type": "react-vite"
-}
