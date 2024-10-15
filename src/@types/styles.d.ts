@@ -28,8 +28,8 @@ export type ColorType =
   | 'White';
 
 export interface TypographyProps {
-  text?: string;
-  typo?: TypoType;
-  color?: ColorType;
+  text: string;
+  typo: TypoType;
+  color: ColorType;
   styles?: StyleProp;
 }
