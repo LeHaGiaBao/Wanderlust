@@ -1,6 +1,13 @@
 {
   "navigation": {
-    "wanderlust": "wanderlust",
+    "wanderlust": "Wanderlust",
+    "wanderlust_des": "Khám phá những vùng đất mới",
+    "booking": "Booking",
+    "booking_des": "Dễ dàng tìm kiếm và đặt phòng",
+    "vivu": "Vi vu",
+    "vivu_des": "Tìm kiếm chuyến bay dễ dàng, nhanh chóng",
+    "next": "Tiếp theo",
+    "start": "Bắt đầu",
     "tab_home": "Trang chủ",
     "tab_booking": "Đặt trước",
     "tab_explore": "Khám phá",

@@ -8,10 +8,10 @@ import BookingScreen from '@/screens/tabs/Booking';
 import ExploreScreen from '@/screens/tabs/Explore';
 import RecommendScreen from '@/screens/tabs/Recommend';
 import AccountScreen from '@/screens/tabs/Account';
+import {WIcon} from '@/components/UIKit';
 import {
   Home2,
   Stickynote,
-  SearchNormal1,
   LikeShapes,
   ProfileCircle,
 } from 'iconsax-react-native';
@@ -69,9 +69,8 @@ function NavigationBar() {
           options={{
             headerShown: false,
             tabBarIcon: ({focused}) => (
-              <SearchNormal1
-                color={`${focused ? PrimaryColor.Main : BaseColor.DarkGray}`}
-                variant={`${focused ? 'Bold' : 'Linear'}`}
+              <WIcon
+                icon={`${focused ? 'Explore-Bold' : 'Explore-Linear'}`}
                 size={24}
               />
             ),
