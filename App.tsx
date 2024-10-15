@@ -10,12 +10,6 @@ function App(): React.JSX.Element {
   return (
     <GestureHandlerRootView style={styles.appContainer}>
       <MainRoutes />
-      {/* <ImageBackground
-        source={images.WelcomeImage1}
-        resizeMode="cover"
-        style={styles.container}>
-        <View />
-      </ImageBackground> */}
     </GestureHandlerRootView>
   );
 }
@@ -23,12 +17,7 @@ function App(): React.JSX.Element {
 const styles = StyleSheet.create({
   appContainer: {
     flex: 1,
-    marginTop: 200,
   },
-  // container: {
-  //   width: '100%',
-  //   height: '100%',
-  // },
 });
 
 export default App;

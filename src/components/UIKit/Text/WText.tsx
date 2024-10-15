@@ -1,12 +1,12 @@
 /* eslint-disable react-native/no-inline-styles */
 /* eslint-disable react/react-in-jsx-scope */
 import {TypographyProps} from '@/@types/styles';
-import {generateColor, generateTypography} from '@/utils';
+import {generateColor, generateTypography} from '@/components/UIKit/Utils';
 import {memo} from 'react';
 import {Text} from 'react-native';
 
 function WText(props: TypographyProps) {
-  const {text = '', typo, color, styles} = props;
+  const {text = '', typo, color, styles, ...rest} = props;
 
   const {fontFamily, fontSize} = generateTypography(typo);
   let textColor = generateColor(color);
@@ -21,7 +21,8 @@ function WText(props: TypographyProps) {
           color: textColor,
           textDecorationLine: typo === 'Helper' ? 'underline' : 'none',
         },
-      ]}>
+      ]}
+      {...rest}>
       {text}
     </Text>
   );

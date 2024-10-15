@@ -76,7 +76,6 @@ function NavigationBar() {
             ),
           }}
         />
-
         <Tab.Screen
           name={translate('navigation:tab_recommend')}
           component={RecommendScreen}

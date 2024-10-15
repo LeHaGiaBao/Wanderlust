@@ -1,4 +1,4 @@
-import {ColorType, TypoType} from '@/@types/styles';
+import {ColorType, TypoType, WRadius} from '@/@types/styles';
 import {
   BaseColor,
   FontFamily,
@@ -90,4 +90,29 @@ export const generateTypography = (typo: TypoType) => {
     fontFamily,
     fontSize,
   };
+};
+
+export const generateRadius = (radius: WRadius) => {
+  switch (radius) {
+    case '4':
+      return 4;
+    case '8':
+      return 8;
+    case '12':
+      return 12;
+    case '16':
+      return 16;
+    case '20':
+      return 20;
+    case '24':
+      return 24;
+    case '25':
+      return 25;
+    case '50':
+      return 50;
+  }
+};
+
+export const WRadiusValue = (radius: WRadius) => {
+  return generateRadius(radius);
 };
