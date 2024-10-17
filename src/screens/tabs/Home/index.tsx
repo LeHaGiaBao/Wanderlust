@@ -7,10 +7,9 @@ function HomeScreen() {
     <View style={styles.homeScreen}>
       {/* <ImageBackground
         source={images.WelcomeImage1}
+        style={{height: Devices.height, width: Devices.width}}
         resizeMode="cover"
-        style={styles.container}>
-        <View />
-      </ImageBackground> */}
+      /> */}
     </View>
   );
 }
