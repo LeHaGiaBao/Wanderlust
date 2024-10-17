@@ -1,4 +1,4 @@
-import {StyleProp} from 'react-native';
+import {Button, StyleProp, TextComponent} from 'react-native';
 
 export type TypoType =
   | 'Heading1'
@@ -27,9 +27,28 @@ export type ColorType =
   | 'LightLightGray'
   | 'White';
 
-export interface TypographyProps {
-  text?: string;
-  typo?: TypoType;
-  color?: ColorType;
+export type WRadius = '4' | '8' | '12' | '16' | '20' | '24' | '25' | '50';
+
+export interface TypographyProps extends Partial<TextComponent> {
+  text: string;
+  typo: TypoType;
+  color: ColorType;
   styles?: StyleProp;
+}
+
+export interface ButtonProps extends Partial<Button> {
+  text: string;
+  typo: TypoType;
+  color: ColorType;
+  backgroundColor: ColorType;
+  radius?: WRadius;
+  border?: boolean;
+  width?: number;
+  height?: number;
+  disable?: boolean;
+  buttonStyles?: StyleProp;
+  icon?: JSX.Element;
+  iconAlign?: 'Left' | 'Right';
+  onPress?: () => void;
+  onLongPress?: () => void;
 }
