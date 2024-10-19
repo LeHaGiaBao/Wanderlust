@@ -1,6 +1,8 @@
 import {Button, StyleProp, TextComponent} from 'react-native';
 
 export type TypoType =
+  | 'Title'
+  | 'Description'
   | 'Heading1'
   | 'Heading2'
   | 'Button1'

@@ -44,6 +44,14 @@ export const generateTypography = (typo: TypoType) => {
   let fontSize = FontSize.FontSize16;
 
   switch (typo) {
+    case 'Title':
+      fontFamily = FontFamily.FontMedium;
+      fontSize = FontSize.FontSize32;
+      break;
+    case 'Description':
+      fontFamily = FontFamily.FontMedium;
+      fontSize = FontSize.FontSize24;
+      break;
     case 'Heading1':
       fontFamily = FontFamily.FontRegular;
       fontSize = FontSize.FontSize20;
