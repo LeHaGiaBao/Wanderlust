@@ -3,15 +3,7 @@ import {View} from 'react-native';
 import {styles} from './styles';
 
 function HomeScreen() {
-  return (
-    <View style={styles.homeScreen}>
-      {/* <ImageBackground
-        source={images.WelcomeImage1}
-        style={{height: Devices.height, width: Devices.width}}
-        resizeMode="cover"
-      /> */}
-    </View>
-  );
+  return <View style={styles.homeScreen} />;
 }
 
 export default memo(HomeScreen);
