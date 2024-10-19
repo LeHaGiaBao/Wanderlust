@@ -5,6 +5,7 @@ import SplashScreen from 'react-native-splash-screen';
 import {Routes} from './routes';
 import AppScreen from './AppScreen';
 import Home from '@/screens/tabs/Home';
+import WelcomeScreen from '@/screens/auth/WelcomeScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -16,6 +17,11 @@ function MainRoutes() {
   return (
     <NavigationContainer onReady={onNavigationReady}>
       <Stack.Navigator>
+        <Stack.Screen
+          name={Routes.welcomeScreen}
+          component={WelcomeScreen}
+          options={{headerShown: false}}
+        />
         <Stack.Screen
           name={Routes.appScreen}
           component={AppScreen}
