@@ -2,6 +2,17 @@
   "source": {
     "hello": "Xin chào,",
     "where_want_to_go": "Hôm nay bạn muốn đi đâu?",
-    "find_in_wanderlust": "Tìm kiếm trong Wanderlust"
+    "find_in_wanderlust": "Tìm kiếm trong Wanderlust",
+    "view_all": "Xem tất cả",
+    "destination": "Điểm đến",
+    "hotel": "Khách sạn",
+    "cheap_flight": "Chuyến bay giá rẻ",
+    "good_tour": "Tour giá hời",
+    "destination_filter": {
+      "all": "Tất cả",
+      "popular": "Phổ biến",
+      "near": "Gần bạn",
+      "most_visit": "Thăm nhiều nhất"
+    }
   }
 }

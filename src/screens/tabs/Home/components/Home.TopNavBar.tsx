@@ -88,7 +88,7 @@ const styles = StyleSheet.create({
     gap: 8,
   },
   searchBar: {
-    marginTop: 24,
+    marginVertical: 24,
     paddingHorizontal: 16,
     width: '100%',
     height: 40,
