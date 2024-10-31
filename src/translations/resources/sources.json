@@ -1,5 +1,7 @@
 {
   "source": {
-    "hello": "Xin chào"
+    "hello": "Xin chào,",
+    "where_want_to_go": "Hôm nay bạn muốn đi đâu?",
+    "find_in_wanderlust": "Tìm kiếm trong Wanderlust"
   }
 }

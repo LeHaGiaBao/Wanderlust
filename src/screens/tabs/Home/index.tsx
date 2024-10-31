@@ -1,9 +1,14 @@
 import React, {memo} from 'react';
-import {View} from 'react-native';
+import {ScrollView} from 'react-native';
 import {styles} from './styles';
+import HomeTopNavBar from './components/Home.TopNavBar';
 
 function HomeScreen() {
-  return <View style={styles.homeScreen} />;
+  return (
+    <ScrollView style={styles.homeScreen}>
+      <HomeTopNavBar />
+    </ScrollView>
+  );
 }
 
 export default memo(HomeScreen);
