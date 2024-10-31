@@ -54,3 +54,16 @@ export interface ButtonProps extends Partial<Button> {
   onPress?: () => void;
   onLongPress?: () => void;
 }
+
+export interface InputFieldsProps {
+  type: 'Text' | 'Password';
+  text?: string;
+  placeholder: string;
+  notification?: string;
+  isError?: boolean;
+  icon?: JSX.Element;
+  iconAlign: 'Left' | 'Right';
+  inputStyles?: StyleProp;
+  onPress?: () => void;
+  onLongPress?: () => void;
+}
