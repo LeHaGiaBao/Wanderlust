@@ -3,9 +3,13 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {NavigationContainer} from '@react-navigation/native';
 import SplashScreen from 'react-native-splash-screen';
 import {Routes} from './routes';
+import WelcomeScreen from '@/screens/auth/WelcomeScreen';
 import AppScreen from './AppScreen';
 import Home from '@/screens/tabs/Home';
-import WelcomeScreen from '@/screens/auth/WelcomeScreen';
+import Booking from '@/screens/tabs/Booking';
+import Explore from '@/screens/tabs/Explore';
+import Recommend from '@/screens/tabs/Recommend';
+import Account from '@/screens/tabs/Account';
 
 const Stack = createNativeStackNavigator();
 
@@ -30,6 +34,26 @@ function MainRoutes() {
         <Stack.Screen
           name={Routes.tab_home}
           component={Home}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name={Routes.tab_booking}
+          component={Booking}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name={Routes.tab_explore}
+          component={Explore}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name={Routes.tab_recommend}
+          component={Recommend}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name={Routes.tab_account}
+          component={Account}
           options={{headerShown: false}}
         />
       </Stack.Navigator>
