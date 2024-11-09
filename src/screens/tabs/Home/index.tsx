@@ -8,6 +8,7 @@ import HomeTopNavBar from './components/Home.TopNavBar';
 import HomeNavigation from './components/Home.Navigation';
 import HomeDestinationList from './components/Home.DestinationList';
 import HomeHotelList from './components/Home.HotelList';
+import HomeFlightList from './components/Home.FlightList';
 
 const TOUR_DATA = [
   {
@@ -108,6 +109,7 @@ function HomeScreen() {
             title={translate('source:cheap_flight')}
             onPress={() => {}}
           />
+          <HomeFlightList />
           <HomeNavigation
             title={translate('source:good_tour')}
             onPress={() => {}}

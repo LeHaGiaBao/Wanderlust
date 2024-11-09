@@ -10,7 +10,7 @@ interface SmallCardItemProps {
   id?: string;
   image: string;
   title: string;
-  destination: string;
+  destination?: string;
   star?: string;
   date?: string;
   price?: string;
@@ -131,7 +131,7 @@ function SmallCardItem(props: SmallCardItemProps) {
                     color={PrimaryColor.Main}
                   />
                   <WText
-                    text={destination}
+                    text={destination ?? ''}
                     typo="Body3"
                     color="DarkGray"
                     numberOfLines={1}
@@ -164,7 +164,7 @@ function SmallCardItem(props: SmallCardItemProps) {
             <View style={styles.location}>
               <Location size={12} variant="Bold" color={PrimaryColor.Main} />
               <WText
-                text={destination}
+                text={destination ?? ''}
                 typo="Label"
                 color="DarkGray"
                 numberOfLines={1}

@@ -77,8 +77,8 @@ export const styles = StyleSheet.create({
     padding: 4,
   },
   imageHorizontal: {
-    width: 60,
-    height: 60,
+    width: 64,
+    height: 64,
     borderRadius: 4,
   },
   contentHorizontal: {
