@@ -12,6 +12,10 @@ import Recommend from '@/screens/tabs/Recommend';
 import Account from '@/screens/tabs/Account';
 import Notification from '@/screens/main/Notification';
 import AuthRoutes from './AuthRoutes';
+import AllDestinations from '@/screens/main/Destination/AllDestinations';
+import AllHotels from '@/screens/main/Hotel/AllHotels';
+import AllFlights from '@/screens/main/Flight/AllFlights';
+import AllTours from '@/screens/main/Tour/AllTours';
 
 const Stack = createNativeStackNavigator();
 
@@ -65,6 +69,26 @@ function MainRoutes() {
         <Stack.Screen
           name={Routes.notification}
           component={Notification}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name={Routes.all_destinations}
+          component={AllDestinations}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name={Routes.all_hotels}
+          component={AllHotels}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name={Routes.all_flights}
+          component={AllFlights}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name={Routes.all_tours}
+          component={AllTours}
           options={{headerShown: false}}
         />
       </Stack.Navigator>

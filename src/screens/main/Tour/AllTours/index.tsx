@@ -1,16 +1,9 @@
 /* eslint-disable react-native/no-inline-styles */
 import React, {memo, useCallback} from 'react';
 import {FlatList, StyleSheet, View} from 'react-native';
-import translate from '@/translations/i18n';
+import {SmallCardItem, TopNavigation} from '@/components/containers';
 import {BaseColor, Devices} from '@/constants';
-import {SmallCardItem} from '@/components/containers';
-import HomeTopNavBar from './components/Home.TopNavBar';
-import HomeNavigation from './components/Home.Navigation';
-import HomeDestinationList from './components/Home.DestinationList';
-import HomeHotelList from './components/Home.HotelList';
-import HomeFlightList from './components/Home.FlightList';
-import {useWanderlustNavigation} from '@/hooks/core/core';
-import {Routes} from '@/routes/routes';
+import translate from '@/translations/i18n';
 
 const TOUR_DATA = [
   {
@@ -51,15 +44,18 @@ const TOUR_DATA = [
   },
 ];
 
-const HOME_DATA = [...TOUR_DATA, ...TOUR_DATA, ...TOUR_DATA].map(
-  (item, index) => ({
-    ...item,
-    id: index + 1,
-  }),
-);
+const DATA = [
+  ...TOUR_DATA,
+  ...TOUR_DATA,
+  ...TOUR_DATA,
+  ...TOUR_DATA,
+  ...TOUR_DATA,
+].map((item, index) => ({
+  ...item,
+  id: index + 1,
+}));
 
-function HomeScreen() {
-  const nav = useWanderlustNavigation();
+function AllTours() {
   const keyExtractor = useCallback((item: any) => item.id.toString(), []);
 
   const renderItem = useCallback(({item}: any) => {
@@ -86,38 +82,20 @@ function HomeScreen() {
 
   return (
     <FlatList
-      data={HOME_DATA}
+      data={DATA}
       numColumns={2}
       style={styles.container}
+      renderItem={renderItem}
+      keyExtractor={keyExtractor}
+      ItemSeparatorComponent={renderSeparator}
       columnWrapperStyle={styles.columnWrapper}
       showsVerticalScrollIndicator={false}
-      keyExtractor={keyExtractor}
-      renderItem={renderItem}
-      ItemSeparatorComponent={renderSeparator}
       ListFooterComponent={renderFooter}
       ListHeaderComponent={
         <>
-          <HomeTopNavBar />
-          <HomeNavigation
-            title={translate('source:destination')}
-            onPress={() => nav.navigate(Routes.all_destinations)}
-          />
-          <HomeDestinationList />
-          <HomeNavigation
-            title={translate('source:hotel')}
-            onPress={() => nav.navigate(Routes.all_hotels)}
-          />
-          <HomeHotelList />
-          <HomeNavigation
-            title={translate('source:cheap_flight')}
-            onPress={() => nav.navigate(Routes.all_flights)}
-          />
-          <HomeFlightList />
-          <HomeNavigation
-            title={translate('source:good_tour')}
-            onPress={() => nav.navigate(Routes.all_tours)}
-          />
-          <View style={{marginBottom: 8}} />
+          <View style={styles.header}>
+            <TopNavigation title={translate('source:good_tour')} />
+          </View>
         </>
       }
     />
@@ -125,6 +103,9 @@ function HomeScreen() {
 }
 
 const styles = StyleSheet.create({
+  header: {
+    marginBottom: 24,
+  },
   container: {
     display: 'flex',
     paddingTop: 77,
@@ -144,4 +125,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default memo(HomeScreen);
+export default memo(AllTours);

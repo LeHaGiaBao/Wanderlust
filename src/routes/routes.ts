@@ -11,4 +11,8 @@ export const Routes = {
   sign_up: 'sign_up',
   otp: 'otp',
   enter_profile: 'enter_profile',
+  all_destinations: 'all_destinations',
+  all_hotels: 'all_hotels',
+  all_flights: 'all_flights',
+  all_tours: 'all_tours',
 };
