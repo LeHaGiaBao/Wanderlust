@@ -3,10 +3,11 @@ import React, {memo, useCallback} from 'react';
 import {FlatList, StyleSheet, View} from 'react-native';
 import translate from '@/translations/i18n';
 import {BaseColor, Devices} from '@/constants';
+import {SmallCardItem} from '@/components/containers';
 import HomeTopNavBar from './components/Home.TopNavBar';
 import HomeNavigation from './components/Home.Navigation';
-import HomeDestination from './components/Home.Destination';
-import {SmallCardItem} from '@/components/containers';
+import HomeDestinationList from './components/Home.DestinationList';
+import HomeHotelList from './components/Home.HotelList';
 
 const TOUR_DATA = [
   {
@@ -97,11 +98,12 @@ function HomeScreen() {
             title={translate('source:destination')}
             onPress={() => {}}
           />
-          <HomeDestination />
+          <HomeDestinationList />
           <HomeNavigation
             title={translate('source:hotel')}
             onPress={() => {}}
           />
+          <HomeHotelList />
           <HomeNavigation
             title={translate('source:cheap_flight')}
             onPress={() => {}}

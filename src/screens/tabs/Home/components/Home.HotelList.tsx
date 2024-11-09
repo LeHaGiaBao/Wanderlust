@@ -8,73 +8,65 @@ const HOTEL_DATA = [
   {
     id: 1,
     image:
-      'https://rootytrip.com/wp-content/uploads/2023/10/thuy-cung-vinpearl-phu-quoc-0.jpg',
-    title: 'Thuỷ cung Vinpearl',
-    destination: 'Phú Quốc, Việt Nam',
+      'https://q-xx.bstatic.com/xdata/images/hotel/max500/418748574.jpg?k=27520c03e506ee0753e3603062c72a0d56b6edf8b5b0264d5502e498e43f8650&o=',
+    title: 'Khách sạn Mường Thanh',
+    destination: 'Khánh Hoà, Việt Nam',
+    star: '4.5',
   },
   {
     id: 2,
     image:
-      'https://i2.ex-cdn.com/crystalbay.com/files/content/2024/10/15/vinh-ha-long-ve-dep-cua-ky-quan-da-3-lan-duoc-vinh-danh-la-di-san-the-gioi-1114.jpg',
-    title: 'Vinh Hạ Long',
-    destination: 'Quảng Ninh, Việt Nam',
+      'https://ik.imagekit.io/tvlk/image/imageResource/2024/05/17/1715909688078-5de0e3d50292c27c26eccf59b5679e08.jpeg',
+    title: 'Khách sạn Dương Đông',
+    destination: 'Phú Quốc, Việt Nam',
+    star: '4.8',
   },
   {
     id: 3,
     image:
-      'https://cdn.vntrip.vn/cam-nang/wp-content/uploads/2017/08/hoi-an-quang-nam-vntrip.jpg',
-    title: 'Phố cổ Hội An',
-    destination: 'Quảng Nam, Việt Nam',
-  },
-  {
-    id: 3,
-    image:
-      'https://res.klook.com/images/fl_lossy.progressive,q_65/c_fill,w_3000,h_1684/w_80,x_15,y_15,g_south_west,l_Klook_water_br_trans_yhcmh3/activities/ukykclh6jireescsohoj/V%C3%A9ThamQuanThungL%C5%A9ngT%C3%ACnhY%C3%AAu%E1%BB%9F%C4%90%C3%A0L%E1%BA%A1t-KlookVi%E1%BB%87tNam.jpg',
-    title: 'Thung lũng Tình Yêu',
-    destination: 'Đà Lạt, Việt Nam',
+      'https://cf.bstatic.com/xdata/images/hotel/max1024x768/412883158.jpg?k=a220ece8f04054da35466bd13ee87342354cc18122b73eb0fbdcfef850115325&o=&hp=1',
+    title: 'Khu nghỉ dưỡng Vinpearl',
+    destination: 'Khánh Hoà, Việt Nam',
+    star: '4.8',
   },
 ];
 
 function HomeHotelList() {
   const renderItem = useCallback(({item}: any) => {
-    const {image, title, destination} = item;
+    const {image, title, destination, star} = item;
 
     return (
-      <SmallCardItem image={image} title={title} destination={destination} />
+      <SmallCardItem
+        isHorizontal={true}
+        image={image}
+        title={title}
+        destination={destination}
+        star={star}
+      />
     );
   }, []);
 
   const renderHotelSeparator = useCallback(() => {
-    return <View style={{height: 12}} />;
+    return <View style={{height: 12, width: 16}} />;
   }, []);
 
   return (
-    <View style={styles.container}>
-      <FlatList
-        data={HOTEL_DATA}
-        numColumns={2}
-        style={styles.hotel}
-        renderItem={renderItem}
-        ItemSeparatorComponent={renderHotelSeparator}
-        columnWrapperStyle={styles.columnWrapper}
-      />
-    </View>
+    <FlatList
+      data={HOTEL_DATA}
+      horizontal
+      showsHorizontalScrollIndicator={false}
+      style={styles.container}
+      renderItem={renderItem}
+      ItemSeparatorComponent={renderHotelSeparator}
+    />
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     display: 'flex',
-  },
-  hotel: {
     paddingTop: 12,
     paddingBottom: 20,
-    backgroundColor: BaseColor.White,
-  },
-  columnWrapper: {
-    flex: 1,
-    gap: 10,
-    justifyContent: 'space-between',
     backgroundColor: BaseColor.White,
   },
 });
