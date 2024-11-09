@@ -126,7 +126,7 @@ const styles = StyleSheet.create({
     paddingTop: 77,
     paddingHorizontal: 16,
     backgroundColor: BaseColor.White,
-    height: Devices.height + 100,
+    height: Devices.height,
   },
   columnWrapper: {
     flex: 1,

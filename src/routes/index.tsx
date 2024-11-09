@@ -10,6 +10,7 @@ import Booking from '@/screens/tabs/Booking';
 import Explore from '@/screens/tabs/Explore';
 import Recommend from '@/screens/tabs/Recommend';
 import Account from '@/screens/tabs/Account';
+import Notification from '@/screens/main/Notification';
 
 const Stack = createNativeStackNavigator();
 
@@ -54,6 +55,11 @@ function MainRoutes() {
         <Stack.Screen
           name={Routes.tab_account}
           component={Account}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name={Routes.notification}
+          component={Notification}
           options={{headerShown: false}}
         />
       </Stack.Navigator>

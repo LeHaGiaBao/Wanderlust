@@ -6,4 +6,6 @@ export const Routes = {
   tab_explore: 'tab_explore',
   tab_recommend: 'tab_recommend',
   tab_account: 'tab_account',
+
+  notification: 'notification',
 };
