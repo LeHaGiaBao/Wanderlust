@@ -4,6 +4,7 @@ import {BaseColor, PrimaryColor} from '@/constants';
 import translate from '@/translations/i18n';
 import React, {memo, useCallback} from 'react';
 import {FlatList, StyleSheet, View} from 'react-native';
+import HomeHotelList from './Home.HotelList';
 
 const FILTER_DATA = [
   {
@@ -58,6 +59,7 @@ function HomeDestination() {
         renderItem={renderFilter}
         ItemSeparatorComponent={renderFilterSeparator}
       />
+      <HomeHotelList />
     </View>
   );
 }
@@ -67,7 +69,7 @@ const styles = StyleSheet.create({
     display: 'flex',
   },
   filter: {
-    marginVertical: 12,
+    marginTop: 12,
     display: 'flex',
     gap: 16,
   },

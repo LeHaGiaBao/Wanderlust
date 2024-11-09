@@ -35,7 +35,7 @@ const HOTEL_DATA = [
   },
 ];
 
-function HomeHotel() {
+function HomeHotelList() {
   const renderItem = useCallback(({item}: any) => {
     const {image, title, destination} = item;
 
@@ -79,4 +79,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default memo(HomeHotel);
+export default memo(HomeHotelList);
