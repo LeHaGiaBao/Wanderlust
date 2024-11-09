@@ -1,10 +1,11 @@
 import React, {memo} from 'react';
 import {ScrollView, StyleSheet} from 'react-native';
+import translate from '@/translations/i18n';
+import {BaseColor, Devices} from '@/constants';
 import HomeTopNavBar from './components/Home.TopNavBar';
 import HomeNavigation from './components/Home.Navigation';
-import translate from '@/translations/i18n';
 import HomeDestination from './components/Home.Destination';
-import {BaseColor, Devices} from '@/constants';
+import HomeHotel from './components/Home.Hotel';
 
 function HomeScreen() {
   return (
@@ -16,14 +17,15 @@ function HomeScreen() {
       />
       <HomeDestination />
       <HomeNavigation title={translate('source:hotel')} onPress={() => {}} />
+      <HomeHotel />
       <HomeNavigation
         title={translate('source:cheap_flight')}
         onPress={() => {}}
       />
-      <HomeNavigation
+      {/* <HomeNavigation
         title={translate('source:good_tour')}
         onPress={() => {}}
-      />
+      /> */}
     </ScrollView>
   );
 }

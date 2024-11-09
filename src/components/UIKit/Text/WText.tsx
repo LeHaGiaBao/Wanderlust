@@ -6,7 +6,7 @@ import {memo} from 'react';
 import {Text} from 'react-native';
 
 function WText(props: TypographyProps) {
-  const {text = '', typo, color, styles, ...rest} = props;
+  const {text = '', typo, color, styles, numberOfLines, ...rest} = props;
 
   const {fontFamily, fontSize} = generateTypography(typo);
   let textColor = generateColor(color);
@@ -22,6 +22,7 @@ function WText(props: TypographyProps) {
           textDecorationLine: typo === 'Helper' ? 'underline' : 'none',
         },
       ]}
+      numberOfLines={numberOfLines ?? 1}
       {...rest}>
       {text}
     </Text>

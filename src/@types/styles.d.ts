@@ -35,6 +35,7 @@ export interface TypographyProps extends Partial<TextComponent> {
   text: string;
   typo: TypoType;
   color: ColorType;
+  numberOfLines?: number;
   styles?: StyleProp;
 }
 
