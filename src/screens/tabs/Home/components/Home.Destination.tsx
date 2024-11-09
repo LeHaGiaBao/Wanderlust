@@ -1,62 +1,62 @@
 /* eslint-disable react-native/no-inline-styles */
-import {WText} from '@/components/UIKit';
-import {BaseColor, PrimaryColor} from '@/constants';
-import translate from '@/translations/i18n';
+import {SmallCardItem} from '@/components/containers';
+import {BaseColor} from '@/constants';
 import React, {memo, useCallback} from 'react';
 import {FlatList, StyleSheet, View} from 'react-native';
 
-const FILTER_DATA = [
+const HOTEL_DATA = [
   {
     id: 1,
-    text: translate('source:destination_filter:all'),
-    isActive: true,
+    image:
+      'https://rootytrip.com/wp-content/uploads/2023/10/thuy-cung-vinpearl-phu-quoc-0.jpg',
+    title: 'Thuỷ cung Vinpearl',
+    destination: 'Phú Quốc, Việt Nam',
   },
   {
     id: 2,
-    text: translate('source:destination_filter:popular'),
-    isActive: false,
+    image:
+      'https://i2.ex-cdn.com/crystalbay.com/files/content/2024/10/15/vinh-ha-long-ve-dep-cua-ky-quan-da-3-lan-duoc-vinh-danh-la-di-san-the-gioi-1114.jpg',
+    title: 'Vinh Hạ Long',
+    destination: 'Quảng Ninh, Việt Nam',
   },
   {
     id: 3,
-    text: translate('source:destination_filter:near'),
-    isActive: false,
+    image:
+      'https://cdn.vntrip.vn/cam-nang/wp-content/uploads/2017/08/hoi-an-quang-nam-vntrip.jpg',
+    title: 'Phố cổ Hội An',
+    destination: 'Quảng Nam, Việt Nam',
   },
   {
-    id: 4,
-    text: translate('source:destination_filter:most_visit'),
-    isActive: false,
+    id: 3,
+    image:
+      'https://res.klook.com/images/fl_lossy.progressive,q_65/c_fill,w_3000,h_1684/w_80,x_15,y_15,g_south_west,l_Klook_water_br_trans_yhcmh3/activities/ukykclh6jireescsohoj/V%C3%A9ThamQuanThungL%C5%A9ngT%C3%ACnhY%C3%AAu%E1%BB%9F%C4%90%C3%A0L%E1%BA%A1t-KlookVi%E1%BB%87tNam.jpg',
+    title: 'Thung lũng Tình Yêu',
+    destination: 'Đà Lạt, Việt Nam',
   },
 ];
 
 function HomeDestination() {
-  const renderFilter = useCallback(({item}: any) => {
-    const {text, isActive} = item;
-    const background = isActive ? PrimaryColor.Light : BaseColor.LightLightGray;
+  const renderItem = useCallback(({item}: any) => {
+    const {image, title, destination} = item;
 
     return (
-      <View style={[styles.filterItem, {backgroundColor: background}]}>
-        <WText
-          text={text}
-          typo="Button2"
-          color={isActive ? 'Main' : 'DarkGray'}
-        />
-      </View>
+      <SmallCardItem image={image} title={title} destination={destination} />
     );
   }, []);
 
-  const renderFilterSeparator = useCallback(() => {
-    return <View style={{width: 8}} />;
+  const renderHotelSeparator = useCallback(() => {
+    return <View style={{height: 12}} />;
   }, []);
 
   return (
     <View style={styles.container}>
       <FlatList
-        data={FILTER_DATA}
-        horizontal
-        showsHorizontalScrollIndicator={false}
-        style={styles.filter}
-        renderItem={renderFilter}
-        ItemSeparatorComponent={renderFilterSeparator}
+        data={HOTEL_DATA}
+        numColumns={2}
+        style={styles.hotel}
+        renderItem={renderItem}
+        ItemSeparatorComponent={renderHotelSeparator}
+        columnWrapperStyle={styles.columnWrapper}
       />
     </View>
   );
@@ -66,20 +66,16 @@ const styles = StyleSheet.create({
   container: {
     display: 'flex',
   },
-  filter: {
-    marginVertical: 12,
-    display: 'flex',
-    gap: 16,
+  hotel: {
+    paddingTop: 12,
+    paddingBottom: 20,
+    backgroundColor: BaseColor.White,
   },
-  filterItem: {
-    height: 32,
-    width: 'auto',
-    paddingHorizontal: 8,
-    paddingVertical: 4,
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-    borderRadius: 50,
+  columnWrapper: {
+    flex: 1,
+    gap: 10,
+    justifyContent: 'space-between',
+    backgroundColor: BaseColor.White,
   },
 });
 
