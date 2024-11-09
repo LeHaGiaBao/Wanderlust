@@ -16,7 +16,7 @@ function WText(props: TypographyProps) {
     ...rest
   } = props;
 
-  const {fontFamily, fontSize} = generateTypography(typo);
+  const {fontFamily, fontSize, fontWeight} = generateTypography(typo);
   let textColor = generateColor(color);
 
   return (
@@ -28,6 +28,7 @@ function WText(props: TypographyProps) {
           fontSize: fontSize,
           color: textColor,
           textDecorationLine: typo === 'Helper' ? 'underline' : 'none',
+          fontWeight: fontWeight ?? 'medium',
         },
       ]}
       numberOfLines={numberOfLines ?? undefined}

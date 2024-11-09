@@ -11,6 +11,7 @@ import Explore from '@/screens/tabs/Explore';
 import Recommend from '@/screens/tabs/Recommend';
 import Account from '@/screens/tabs/Account';
 import Notification from '@/screens/main/Notification';
+import AuthRoutes from './AuthRoutes';
 
 const Stack = createNativeStackNavigator();
 
@@ -18,6 +19,10 @@ function MainRoutes() {
   const onNavigationReady = useCallback(() => {
     SplashScreen.hide();
   }, []);
+
+  if (false) {
+    return <AuthRoutes />;
+  }
 
   return (
     <NavigationContainer onReady={onNavigationReady}>
