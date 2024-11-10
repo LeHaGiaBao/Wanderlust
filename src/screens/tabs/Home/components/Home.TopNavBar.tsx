@@ -4,11 +4,15 @@ import translate from '@/translations/i18n';
 import React, {memo, useMemo} from 'react';
 import {Image, StyleSheet, TouchableOpacity, View} from 'react-native';
 import {Notification, SearchNormal1} from 'iconsax-react-native';
+import {useWanderlustNavigation} from '@/hooks/core/core';
+import {Routes} from '@/routes/routes';
 
 const IMAGE =
   'https://img.freepik.com/free-psd/3d-illustration-human-avatar-profile_23-2150671142.jpg?semt=ais_hybrid';
 
 function HomeTopNavBar() {
+  const nav = useWanderlustNavigation();
+
   const renderAvatarConatainer = useMemo(() => {
     return (
       <View style={styles.avatarContainer}>
@@ -29,11 +33,13 @@ function HomeTopNavBar() {
 
   const renderNotificationIcon = useMemo(() => {
     return (
-      <TouchableOpacity style={styles.circle}>
+      <TouchableOpacity
+        style={styles.circle}
+        onPress={() => nav.navigate(Routes.notification)}>
         <Notification size={20} color={PrimaryColor.Main} />
       </TouchableOpacity>
     );
-  }, []);
+  }, [nav]);
 
   const renderSearchBar = useMemo(() => {
     return (

@@ -12,7 +12,8 @@ export type TypoType =
   | 'Body3'
   | 'Label'
   | 'Helper'
-  | 'Small';
+  | 'Small'
+  | 'BoldTitle';
 
 export type ColorType =
   | 'Main'
@@ -36,6 +37,7 @@ export interface TypographyProps extends Partial<TextComponent> {
   typo: TypoType;
   color: ColorType;
   numberOfLines?: number;
+  onTextLayout?: any;
   styles?: StyleProp;
 }
 
@@ -57,13 +59,13 @@ export interface ButtonProps extends Partial<Button> {
 }
 
 export interface InputFieldsProps {
-  type: 'Text' | 'Password';
+  type: 'Text' | 'Password' | 'OTP';
   text?: string;
-  placeholder: string;
+  placeholder?: string;
   notification?: string;
   isError?: boolean;
   icon?: JSX.Element;
-  iconAlign: 'Left' | 'Right';
+  iconAlign?: 'Left' | 'Right';
   inputStyles?: StyleProp;
   onPress?: () => void;
   onLongPress?: () => void;

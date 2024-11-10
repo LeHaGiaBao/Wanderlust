@@ -12,6 +12,7 @@ export const FontFamily = {
 
 export const FontSize = {
   FontSize32: 32,
+  FontSize30: 30,
   FontSize24: 24,
   FontSize20: 20,
   FontSize16: 16,

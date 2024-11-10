@@ -13,6 +13,39 @@
       "popular": "Phổ biến",
       "near": "Gần bạn",
       "most_visit": "Thăm nhiều nhất"
-    }
+    },
+    "continue": "Tiếp tục",
+    "back": "Quay lại",
+    "confirm": "Xác nhận",
+    "welcome_to_wanderlust": "Chào mừng bạn đến với Wanderlust!",
+    "email_or_phone": "Email/Số điện thoại",
+    "enter_email_or_phone": "Nhập email hoặc số điện thoại",
+    "enter_phone": "Nhập số điện thoại",
+    "password": "Mật khẩu",
+    "enter_password": "Nhập mật khẩu",
+    "or": "Hoặc",
+    "no_account": "Bạn chưa có tài khoản?",
+    "sign_up_now": "Đăng ký ngay",
+    "have_account": "Bạn đã có tài khoản?",
+    "enter_otp": "Nhập mã OTP được gửi về tin nhắn của bạn",
+    "no_get_otp": "Bạn chưa nhận được mã OTP?",
+    "resend_otp": "Gửi lại mã OTP",
+    "enter_profile": "Thêm các thông tin cá nhân cần thiết của bạn",
+    "profile_info": {
+      "full_name": "Họ tên",
+      "full_name_placeholder": "Tên của bạn",
+      "email": "Email",
+      "email_placeholder": "email@gmail.com",
+      "birth": "Ngày sinh",
+      "birth_placeholder": "dd/mm/yyyy",
+      "password": "Mật khẩu",
+      "confirm_password": "Nhập lại mật khẩu",
+      "confirm_password_placeholder": "Xác nhận mật khẩu"
+    },
+    "policy": {
+      "agree_policy": "Bằng cách Đồng ý và tiếp tục, tôi đồng ý với\n Điều khoản và điều kiện của Wanderlust",
+      "term_and_condition": "Điều khoản và điều kiện"
+    },
+    "agree_and_continue": "Đồng ý và Tiếp tục"
   }
 }

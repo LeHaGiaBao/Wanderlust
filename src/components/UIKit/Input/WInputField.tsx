@@ -32,16 +32,19 @@ function WInputFields(props: InputFieldsProps) {
     setShowPassword(!showPassword);
   }, [showPassword]);
 
-  //TODO Need to custom show password and placeholder text style
-
   return (
     <TouchableOpacity
-      style={[inputStyles, styles.input]}
+      style={[inputStyles, styles.input, type === 'OTP' && styles.otpContainer]}
       onPress={onPress}
       onLongPress={onLongPress}>
       {text && <WText text={text || ''} typo="Label" color="DarkGray" />}
       <TouchableOpacity
-        style={[styles.inputContainer, {borderColor: borderColor}]}>
+        style={[
+          styles.inputContainer,
+          {
+            borderColor: borderColor,
+          },
+        ]}>
         {type === 'Text' && iconAlign === 'Left' && icon}
         <TextInput
           autoCapitalize="none"
@@ -76,8 +79,9 @@ function WInputFields(props: InputFieldsProps) {
 
 const styles = StyleSheet.create({
   input: {
-    flex: 1,
+    display: 'flex',
     gap: 4,
+    width: '100%',
   },
   inputContainer: {
     paddingHorizontal: 16,
@@ -95,6 +99,10 @@ const styles = StyleSheet.create({
     fontFamily: FontFamily.FontMedium,
     fontSize: FontSize.FontSize14,
     color: BaseColor.Black,
+  },
+  otpContainer: {
+    width: 44,
+    height: 44,
   },
 });
 

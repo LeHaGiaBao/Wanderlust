@@ -42,61 +42,80 @@ export const generateColor = (color: ColorType) => {
 export const generateTypography = (typo: TypoType) => {
   let fontFamily = FontFamily.FontMedium;
   let fontSize = FontSize.FontSize16;
+  let fontWeight = 'medium';
 
   switch (typo) {
     case 'Title':
       fontFamily = FontFamily.FontMedium;
       fontSize = FontSize.FontSize32;
+      fontWeight = 'medium';
       break;
     case 'Description':
       fontFamily = FontFamily.FontMedium;
       fontSize = FontSize.FontSize24;
+      fontWeight = 'medium';
       break;
     case 'Heading1':
-      fontFamily = FontFamily.FontRegular;
+      fontFamily = FontFamily.FontMedium;
       fontSize = FontSize.FontSize20;
+      fontWeight = 'semibold';
       break;
     case 'Heading2':
-      fontFamily = FontFamily.FontRegular;
+      fontFamily = FontFamily.FontMedium;
       fontSize = FontSize.FontSize16;
+      fontWeight = '600';
       break;
     case 'Body1':
       fontFamily = FontFamily.FontMedium;
       fontSize = FontSize.FontSize16;
+      fontWeight = 'medium';
       break;
     case 'Body2':
       fontFamily = FontFamily.FontMedium;
       fontSize = FontSize.FontSize14;
+      fontWeight = 'medium';
       break;
     case 'Body3':
       fontFamily = FontFamily.FontMedium;
       fontSize = FontSize.FontSize12;
+      fontWeight = 'medium';
       break;
     case 'Button1':
       fontFamily = FontFamily.FontMedium;
       fontSize = FontSize.FontSize20;
+      fontWeight = 'medium';
       break;
     case 'Button2':
       fontFamily = FontFamily.FontMedium;
       fontSize = FontSize.FontSize12;
+      fontWeight = 'medium';
       break;
     case 'Label':
       fontFamily = FontFamily.FontMedium;
       fontSize = FontSize.FontSize10;
+      fontWeight = 'medium';
       break;
     case 'Helper':
       fontFamily = FontFamily.FontMedium;
       fontSize = FontSize.FontSize12;
+      fontWeight = 'medium';
       break;
     case 'Small':
       fontFamily = FontFamily.FontMedium;
       fontSize = FontSize.FontSize8;
+      fontWeight = 'medium';
+      break;
+    case 'BoldTitle':
+      fontFamily = FontFamily.FontBold;
+      fontSize = FontSize.FontSize30;
+      fontWeight = 'bold';
       break;
   }
 
   return {
     fontFamily,
     fontSize,
+    fontWeight,
   };
 };
 

@@ -54,7 +54,7 @@ function WButton(props: ButtonProps) {
   return (
     <TouchableOpacity
       style={[
-        styles.button,
+        !disable && styles.button,
         buttonStyles,
         {
           backgroundColor: background,

@@ -12,6 +12,12 @@
     "tab_booking": "Đặt trước",
     "tab_explore": "Khám phá",
     "tab_recommend": "Đề xuất",
-    "tab_account": "Tài khoản"
+    "tab_account": "Tài khoản",
+    "notification": "Thông báo",
+    "sign_in": "Đăng nhập",
+    "sign_up": "Đăng ký",
+    "forgot_password": "Quên mật khẩu?",
+    "profile": "Thông tin cá nhân",
+    "otp": "Nhập mã OTP"
   }
 }

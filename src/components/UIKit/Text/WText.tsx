@@ -6,9 +6,17 @@ import {memo} from 'react';
 import {Text} from 'react-native';
 
 function WText(props: TypographyProps) {
-  const {text = '', typo, color, styles, numberOfLines, ...rest} = props;
+  const {
+    text = '',
+    typo,
+    color,
+    styles,
+    numberOfLines,
+    onTextLayout,
+    ...rest
+  } = props;
 
-  const {fontFamily, fontSize} = generateTypography(typo);
+  const {fontFamily, fontSize, fontWeight} = generateTypography(typo);
   let textColor = generateColor(color);
 
   return (
@@ -20,9 +28,11 @@ function WText(props: TypographyProps) {
           fontSize: fontSize,
           color: textColor,
           textDecorationLine: typo === 'Helper' ? 'underline' : 'none',
+          fontWeight: fontWeight ?? 'medium',
         },
       ]}
-      numberOfLines={numberOfLines ?? 1}
+      numberOfLines={numberOfLines ?? undefined}
+      onTextLayout={onTextLayout}
       {...rest}>
       {text}
     </Text>
