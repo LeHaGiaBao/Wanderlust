@@ -46,6 +46,8 @@
       "agree_policy": "Bằng cách Đồng ý và tiếp tục, tôi đồng ý với\n Điều khoản và điều kiện của Wanderlust",
       "term_and_condition": "Điều khoản và điều kiện"
     },
-    "agree_and_continue": "Đồng ý và Tiếp tục"
+    "agree_and_continue": "Đồng ý và Tiếp tục",
+    "n_passenger": "{{n}} hành khách",
+    "detail": "Chi tiết"
   }
 }

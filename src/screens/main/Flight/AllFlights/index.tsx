@@ -1,46 +1,70 @@
-/* eslint-disable react-native/no-inline-styles */
 import React, {memo, useCallback} from 'react';
 import {FlatList, StyleSheet, View} from 'react-native';
-import {SmallCardItem, TopNavigation} from '@/components/containers';
+import {TopNavigation} from '@/components/containers';
 import {BaseColor, Devices} from '@/constants';
 import translate from '@/translations/i18n';
+import {WTicket} from '@/components/UIKit';
 
 const FLIGHT_DATA = [
   {
     id: 1,
-    image:
-      'https://vnpay.vn/s1/statics.vnpay.vn/2023/12/01qbb3ow95tc1702022318054.jpg',
-    title: 'Săn mây Sapa ngắm Bình Minh',
-    destination: 'Lào Cai, Việt Nam',
-    price: '1.425.000VNĐ',
-    discount: '-32%',
+    airlineLogo:
+      'https://e-magazine.asiamedia.vn/wp-content/uploads/2024/01/tct-hang-khong-viet-nam-600.png',
+    airlineName: 'Vietnam Airlines',
+    departureTime: '10.30',
+    departureCity: 'SGN',
+    arrivalTime: '11:30',
+    arrivalCity: 'PQC',
+    flightTime: '01h00',
+    flightType: 'Bay thẳng',
+    ticketType: 'Economy Class',
+    numOfPassengers: '1',
+    ticketPrice: '1.029.000VNĐ',
   },
   {
-    id: 1,
-    image:
-      'https://media-cdn-v2.laodong.vn/Storage/NewsPortal/2022/9/6/1089730/Heritage-Cruise-1.jpg',
-    title: 'Trải nghiệm du thuyền Hạ Long',
-    destination: 'Hạ Long, Việt Nam',
-    price: '3.425.000VNĐ',
-    discount: '-24%',
+    id: 2,
+    airlineLogo:
+      'https://rubee.com.vn/wp-content/uploads/2021/05/Logo-vietjet.jpg',
+    airlineName: 'Vietjet Air',
+    departureTime: '10.30',
+    departureCity: 'SGN',
+    arrivalTime: '11:30',
+    arrivalCity: 'PQC',
+    flightTime: '01h00',
+    flightType: 'Bay thẳng',
+    ticketType: 'Economy Class',
+    numOfPassengers: '1',
+    ticketPrice: '1.029.000VNĐ',
   },
   {
-    id: 1,
-    image:
-      'https://ik.imagekit.io/tvlk/blog/2022/11/khu-du-lich-trang-an-2.jpg?tr=dpr-2,w-675',
-    title: 'Tour Tràng An, Ninh Bình',
-    destination: 'Ninh Bình, Việt Nam',
-    price: '2.100.000VNĐ',
-    discount: '-18%',
+    id: 3,
+    airlineLogo:
+      'https://cdn.haitrieu.com/wp-content/uploads/2022/01/Logo-Bamboo-Airways-V.png',
+    airlineName: 'Bamboo Airways',
+    departureTime: '10.30',
+    departureCity: 'SGN',
+    arrivalTime: '11:30',
+    arrivalCity: 'PQC',
+    flightTime: '01h00',
+    flightType: 'Bay thẳng',
+    ticketType: 'Economy Class',
+    numOfPassengers: '1',
+    ticketPrice: '1.029.000VNĐ',
   },
   {
-    id: 1,
-    image:
-      'https://banahills.sunworld.vn/wp-content/uploads/2024/04/DJI_0004-1-scaled.jpg',
-    title: 'Tour Bà Nà Hills',
-    destination: 'Đà Nẵng, Việt Nam',
-    price: '725.000VNĐ',
-    discount: '-47%',
+    id: 4,
+    airlineLogo:
+      'https://phongvevietmy.com/wp-content/uploads/2020/07/logo-Pacific-Airlines.jpg',
+    airlineName: 'Pacific Airlines',
+    departureTime: '10.30',
+    departureCity: 'SGN',
+    arrivalTime: '11:30',
+    arrivalCity: 'PQC',
+    flightTime: '01h00',
+    flightType: 'Bay thẳng',
+    ticketType: 'Economy Class',
+    numOfPassengers: '1',
+    ticketPrice: '1.029.000VNĐ',
   },
 ];
 
@@ -59,21 +83,35 @@ function AllFlights() {
   const keyExtractor = useCallback((item: any) => item.id.toString(), []);
 
   const renderItem = useCallback(({item}: any) => {
-    const {image, title, destination, price, discount} = item;
+    const {
+      airlineLogo,
+      airlineName,
+      departureTime,
+      departureCity,
+      arrivalTime,
+      arrivalCity,
+      flightTime,
+      flightType,
+      ticketType,
+      ticketPrice,
+      numOfPassengers,
+    } = item;
 
     return (
-      <SmallCardItem
-        image={image}
-        title={title}
-        destination={destination}
-        price={price}
-        discount={discount}
+      <WTicket
+        airlineLogo={airlineLogo}
+        airlineName={airlineName}
+        departureTime={departureTime}
+        departureCity={departureCity}
+        arrivalTime={arrivalTime}
+        arrivalCity={arrivalCity}
+        flightTime={flightTime}
+        flightType={flightType}
+        ticketType={ticketType}
+        numOfPassengers={numOfPassengers}
+        ticketPrice={ticketPrice}
       />
     );
-  }, []);
-
-  const renderSeparator = useCallback(() => {
-    return <View style={{height: 12}} />;
   }, []);
 
   const renderFooter = useCallback(() => {
@@ -83,12 +121,10 @@ function AllFlights() {
   return (
     <FlatList
       data={DATA}
-      numColumns={2}
+      numColumns={1}
       style={styles.container}
       renderItem={renderItem}
       keyExtractor={keyExtractor}
-      ItemSeparatorComponent={renderSeparator}
-      columnWrapperStyle={styles.columnWrapper}
       showsVerticalScrollIndicator={false}
       ListFooterComponent={renderFooter}
       ListHeaderComponent={
@@ -105,19 +141,14 @@ function AllFlights() {
 const styles = StyleSheet.create({
   header: {
     marginBottom: 24,
+    paddingHorizontal: 10,
   },
   container: {
     display: 'flex',
     paddingTop: 77,
-    paddingHorizontal: 16,
+    paddingHorizontal: 6,
     backgroundColor: BaseColor.White,
     height: Devices.height,
-  },
-  columnWrapper: {
-    flex: 1,
-    gap: 10,
-    justifyContent: 'space-between',
-    backgroundColor: BaseColor.White,
   },
   footer: {
     width: '100%',
