@@ -16,6 +16,7 @@ import AllDestinations from '@/screens/main/Destination/AllDestinations';
 import AllHotels from '@/screens/main/Hotel/AllHotels';
 import AllFlights from '@/screens/main/Flight/AllFlights';
 import AllTours from '@/screens/main/Tour/AllTours';
+import Search from '@/screens/main/Search';
 
 const Stack = createNativeStackNavigator();
 
@@ -90,6 +91,11 @@ function MainRoutes() {
           name={Routes.all_tours}
           component={AllTours}
           options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name={Routes.search}
+          component={Search}
+          options={{headerShown: false, animation: 'slide_from_bottom'}}
         />
       </Stack.Navigator>
     </NavigationContainer>

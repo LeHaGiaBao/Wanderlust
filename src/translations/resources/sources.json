@@ -48,6 +48,9 @@
     },
     "agree_and_continue": "Đồng ý và Tiếp tục",
     "n_passenger": "{{n}} hành khách",
-    "detail": "Chi tiết"
+    "detail": "Chi tiết",
+    "search_placeholder": "Tìm kiếm địa điểm, khách sạn,...",
+    "search_history": "Tìm kiếm gần đây",
+    "delete_all": "Xoá tất cả"
   }
 }

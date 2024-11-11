@@ -43,16 +43,18 @@ function HomeTopNavBar() {
 
   const renderSearchBar = useMemo(() => {
     return (
-      <View style={styles.searchBar}>
+      <TouchableOpacity
+        style={styles.searchBar}
+        onPress={() => nav.navigate(Routes.search)}>
         <SearchNormal1 size={24} color={BaseColor.Gray} />
         <WText
           text={translate('source:find_in_wanderlust')}
           typo="Body2"
           color="Gray"
         />
-      </View>
+      </TouchableOpacity>
     );
-  }, []);
+  }, [nav]);
 
   return (
     <View style={styles.container}>
