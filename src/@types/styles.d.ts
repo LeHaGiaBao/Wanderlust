@@ -67,6 +67,8 @@ export interface InputFieldsProps {
   icon?: JSX.Element;
   iconAlign?: 'Left' | 'Right';
   inputStyles?: StyleProp;
+  border?: boolean;
+  borderRadius?: number;
   onPress?: () => void;
   onLongPress?: () => void;
 }

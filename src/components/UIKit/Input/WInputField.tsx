@@ -17,6 +17,8 @@ function WInputFields(props: InputFieldsProps) {
     onLongPress,
     type,
     iconAlign,
+    border = true,
+    borderRadius,
   } = props;
   const [value, setValue] = useState('');
   const [focus, setFocus] = useState(false);
@@ -42,7 +44,8 @@ function WInputFields(props: InputFieldsProps) {
         style={[
           styles.inputContainer,
           {
-            borderColor: borderColor,
+            borderColor: border ? borderColor : BaseColor.White,
+            borderRadius: borderRadius,
           },
         ]}>
         {type === 'Text' && iconAlign === 'Left' && icon}

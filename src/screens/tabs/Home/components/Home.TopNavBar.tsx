@@ -16,9 +16,7 @@ function HomeTopNavBar() {
   const renderAvatarConatainer = useMemo(() => {
     return (
       <View style={styles.avatarContainer}>
-        <TouchableOpacity>
-          <Image source={{uri: IMAGE}} style={styles.circle} />
-        </TouchableOpacity>
+        <Image source={{uri: IMAGE}} style={styles.circle} />
         <View style={styles.content}>
           <WText text={translate('source:hello')} typo="Body1" color="Main" />
           <WText
@@ -43,16 +41,18 @@ function HomeTopNavBar() {
 
   const renderSearchBar = useMemo(() => {
     return (
-      <View style={styles.searchBar}>
+      <TouchableOpacity
+        style={styles.searchBar}
+        onPress={() => nav.navigate(Routes.search)}>
         <SearchNormal1 size={24} color={BaseColor.Gray} />
         <WText
           text={translate('source:find_in_wanderlust')}
           typo="Body2"
           color="Gray"
         />
-      </View>
+      </TouchableOpacity>
     );
-  }, []);
+  }, [nav]);
 
   return (
     <View style={styles.container}>

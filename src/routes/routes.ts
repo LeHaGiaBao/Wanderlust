@@ -15,4 +15,5 @@ export const Routes = {
   all_hotels: 'all_hotels',
   all_flights: 'all_flights',
   all_tours: 'all_tours',
+  search: 'search',
 };
