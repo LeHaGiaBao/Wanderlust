@@ -16,9 +16,7 @@ function HomeTopNavBar() {
   const renderAvatarConatainer = useMemo(() => {
     return (
       <View style={styles.avatarContainer}>
-        <TouchableOpacity>
-          <Image source={{uri: IMAGE}} style={styles.circle} />
-        </TouchableOpacity>
+        <Image source={{uri: IMAGE}} style={styles.circle} />
         <View style={styles.content}>
           <WText text={translate('source:hello')} typo="Body1" color="Main" />
           <WText

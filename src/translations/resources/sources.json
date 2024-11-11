@@ -51,6 +51,23 @@
     "detail": "Chi tiết",
     "search_placeholder": "Tìm kiếm địa điểm, khách sạn,...",
     "search_history": "Tìm kiếm gần đây",
-    "delete_all": "Xoá tất cả"
+    "delete_all": "Xoá tất cả",
+    "view_account": "Xem trang cá nhân của bạn",
+    "favorite": "Yêu thích",
+    "message": "Tin nhắn",
+    "notification": "Thông báo",
+    "my_booking": "Đặt phòng của tôi",
+    "my_flight": "Chuyến bay của tôi",
+    "voucher": "Mã giảm giá",
+    "setting": "Cài đặt",
+    "about_app": "Về ứng dụng",
+    "profile_information": "Thông tin cá nhân",
+    "payment_method": "Phương thức thanh toán",
+    "change_password": "Đổi mật khẩu",
+    "support_center": "Trung tâm hỗ trợ",
+    "privacy_list": "Chính sách riêng tư",
+    "term_and_condition": "Điều khoản dịch vụ",
+    "about_us": "Về chúng tôi",
+    "logout": "Đăng xuất"
   }
 }
