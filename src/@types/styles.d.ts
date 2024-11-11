@@ -70,3 +70,18 @@ export interface InputFieldsProps {
   onPress?: () => void;
   onLongPress?: () => void;
 }
+
+export interface TicketProps {
+  airlineLogo: string;
+  airlineName: string;
+  departureTime: string;
+  departureCity: string;
+  arrivalTime: string;
+  arrivalCity: string;
+  flightTime: string;
+  flightType: string;
+  ticketType: string;
+  numOfPassengers: number;
+  ticketPrice: string;
+  onPress?: () => void;
+}

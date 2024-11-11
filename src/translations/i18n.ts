@@ -9,6 +9,6 @@ i18n.use(initReactI18next).init({
   resources,
 });
 
-const translate = (res: any | string | string[]) => i18n.t(res) as any;
+const translate = (key: string, options?: any) => i18n.t(key, options) as any;
 
 export default translate;
