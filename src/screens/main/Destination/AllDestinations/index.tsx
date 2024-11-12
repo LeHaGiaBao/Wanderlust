@@ -1,10 +1,13 @@
 /* eslint-disable react-native/no-inline-styles */
 import React, {memo, useCallback} from 'react';
 import {FlatList, StyleSheet, View} from 'react-native';
-import {SmallCardItem, TopNavigation} from '@/components/containers';
-import {BaseColor, Devices, PrimaryColor} from '@/constants';
+import {
+  FilterList,
+  SmallCardItem,
+  TopNavigation,
+} from '@/components/containers';
+import {BaseColor, Devices} from '@/constants';
 import translate from '@/translations/i18n';
-import {WText} from '@/components/UIKit';
 
 const HOTEL_DATA = [
   {
@@ -72,35 +75,9 @@ const DATA = [
 }));
 
 const RenderHeader = memo(() => {
-  const renderFilter = useCallback(({item}: any) => {
-    const {text, isActive} = item;
-    const background = isActive ? PrimaryColor.Light : BaseColor.LightLightGray;
-
-    return (
-      <View style={[styles.filterItem, {backgroundColor: background}]}>
-        <WText
-          text={text}
-          typo="Button2"
-          color={isActive ? 'Main' : 'DarkGray'}
-        />
-      </View>
-    );
-  }, []);
-
-  const renderFilterSeparator = useCallback(() => {
-    return <View style={{width: 8}} />;
-  }, []);
-
   return (
     <View style={styles.containerFilter}>
-      <FlatList
-        data={FILTER_DATA}
-        horizontal
-        showsHorizontalScrollIndicator={false}
-        style={styles.filter}
-        renderItem={renderFilter}
-        ItemSeparatorComponent={renderFilterSeparator}
-      />
+      <FilterList data={FILTER_DATA} />
     </View>
   );
 });
@@ -166,21 +143,7 @@ const styles = StyleSheet.create({
   },
   containerFilter: {
     display: 'flex',
-  },
-  filter: {
     marginBottom: 12,
-    display: 'flex',
-    gap: 16,
-  },
-  filterItem: {
-    height: 32,
-    width: 'auto',
-    paddingHorizontal: 8,
-    paddingVertical: 4,
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-    borderRadius: 50,
   },
   footer: {
     width: '100%',
