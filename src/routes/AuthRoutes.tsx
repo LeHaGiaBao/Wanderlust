@@ -6,6 +6,7 @@ import SignIn from '@/screens/auth/SignIn';
 import SignUp from '@/screens/auth/SignUp';
 import OTP from '@/screens/auth/OTP';
 import EnterProfile from '@/screens/auth/EnterProfile';
+import ChangePassword from '@/screens/auth/ChangePassword';
 
 const Stack = createNativeStackNavigator();
 
@@ -31,6 +32,11 @@ function AuthRoutes() {
         <Stack.Screen
           name={Routes.enter_profile}
           component={EnterProfile}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name={Routes.change_password}
+          component={ChangePassword}
           options={{headerShown: false}}
         />
       </Stack.Navigator>

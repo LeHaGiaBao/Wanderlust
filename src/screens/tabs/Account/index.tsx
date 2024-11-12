@@ -20,25 +20,26 @@ import AccountSubNav from './components/Account.SubNav';
 import NavigateContainer from './components/NavigateContainer';
 import translate from '@/translations/i18n';
 import {WText} from '@/components/UIKit';
+import {Routes} from '@/routes/routes';
 
 const TOP_LEVEL_DATA = [
   {
     id: 1,
     icon: <Building4 size={24} color={PrimaryColor.Main} variant="Bold" />,
     title: translate('source:my_booking'),
-    route: '',
+    route: Routes.my_booking,
   },
   {
     id: 2,
     icon: <Airplane size={24} color={PrimaryColor.Main} variant="Bold" />,
     title: translate('source:my_flight'),
-    route: '',
+    route: Routes.my_flight,
   },
   {
     id: 3,
     icon: <TicketDiscount size={24} color={PrimaryColor.Main} variant="Bold" />,
-    title: translate('source:my_flight'),
-    route: '',
+    title: translate('source:voucher'),
+    route: Routes.my_voucher,
   },
 ];
 
@@ -47,19 +48,19 @@ const SETTING_DATA = [
     id: 1,
     icon: <ProfileCircle size={24} color={PrimaryColor.Main} />,
     title: translate('source:profile_information'),
-    route: '',
+    route: Routes.profile_detail,
   },
   {
     id: 2,
     icon: <EmptyWallet size={24} color={PrimaryColor.Main} />,
     title: translate('source:payment_method'),
-    route: '',
+    route: Routes.my_payment_method,
   },
   {
     id: 3,
     icon: <Key size={24} color={PrimaryColor.Main} />,
     title: translate('source:change_password'),
-    route: '',
+    route: Routes.change_password,
   },
 ];
 
@@ -68,25 +69,25 @@ const ABOUT_APP_DATA = [
     id: 1,
     icon: <MessageQuestion size={24} color={PrimaryColor.Main} />,
     title: translate('source:support_center'),
-    route: '',
+    route: Routes.support_center,
   },
   {
     id: 2,
     icon: <SecuritySafe size={24} color={PrimaryColor.Main} />,
     title: translate('source:privacy_list'),
-    route: '',
+    route: Routes.privacy_list,
   },
   {
     id: 3,
     icon: <DirectboxNotif size={24} color={PrimaryColor.Main} />,
     title: translate('source:term_and_condition'),
-    route: '',
+    route: Routes.term_and_condition,
   },
   {
     id: 4,
     icon: <InfoCircle size={24} color={PrimaryColor.Main} />,
     title: translate('source:about_us'),
-    route: '',
+    route: Routes.about_us,
   },
 ];
 
@@ -168,7 +169,7 @@ function AccountScreen() {
             <NavigateContainer
               icon={<LogoutCurve size={24} color={PrimaryColor.Main} />}
               title={translate('source:logout')}
-              route={''}
+              route={Routes.welcomeScreen}
             />
           </View>
         </>

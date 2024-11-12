@@ -4,23 +4,33 @@ import {PrimaryColor} from '@/constants';
 import {Heart, Message, Notification} from 'iconsax-react-native';
 import {WText} from '@/components/UIKit';
 import translate from '@/translations/i18n';
+import {useWanderlustNavigation} from '@/hooks/core/core';
+import {Routes} from '@/routes/routes';
 
 function AccountSubNav() {
+  const nav = useWanderlustNavigation();
+
   return (
     <View style={styles.container}>
-      <TouchableOpacity style={styles.itemContainer}>
+      <TouchableOpacity
+        style={styles.itemContainer}
+        onPress={() => nav.navigate(Routes.favorite)}>
         <View style={styles.item}>
           <Heart size={20} color={PrimaryColor.Main} />
         </View>
         <WText text={translate('source:favorite')} typo="Body2" color="Black" />
       </TouchableOpacity>
-      <TouchableOpacity style={styles.itemContainer}>
+      <TouchableOpacity
+        style={styles.itemContainer}
+        onPress={() => nav.navigate(Routes.message)}>
         <View style={styles.item}>
           <Message size={20} color={PrimaryColor.Main} />
         </View>
         <WText text={translate('source:message')} typo="Body2" color="Black" />
       </TouchableOpacity>
-      <TouchableOpacity style={styles.itemContainer}>
+      <TouchableOpacity
+        style={styles.itemContainer}
+        onPress={() => nav.navigate(Routes.notification)}>
         <View style={styles.item}>
           <Notification size={20} color={PrimaryColor.Main} />
         </View>

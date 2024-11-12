@@ -4,7 +4,7 @@ import {FlatList, StyleSheet, View} from 'react-native';
 import translate from '@/translations/i18n';
 import {BaseColor, Devices} from '@/constants';
 import {SmallCardItem} from '@/components/containers';
-import HomeTopNavBar from './components/Home.TopNavBar';
+import TopNavBar from '../_components/TopNavBar';
 import HomeNavigation from './components/Home.Navigation';
 import HomeDestinationList from './components/Home.DestinationList';
 import HomeHotelList from './components/Home.HotelList';
@@ -97,7 +97,12 @@ function HomeScreen() {
       ListFooterComponent={renderFooter}
       ListHeaderComponent={
         <>
-          <HomeTopNavBar />
+          <TopNavBar
+            title={translate('source:hello')}
+            subTitle={translate('source:where_want_to_go')}
+            showSearchBar
+            searchBarPlaceholder={translate('source:find_in_wanderlust')}
+          />
           <HomeNavigation
             title={translate('source:destination')}
             onPress={() => nav.navigate(Routes.all_destinations)}

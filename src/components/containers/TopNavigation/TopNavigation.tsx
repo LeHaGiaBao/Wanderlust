@@ -23,10 +23,10 @@ function TopNavigation(props: TopNavigationProps) {
       <TouchableOpacity style={styles.backButton} onPress={handleGoBack}>
         <ArrowCircleLeft size={20} color={PrimaryColor.Main} />
       </TouchableOpacity>
-      {!rightNode ? null : rightNode}
       <View style={styles.title}>
         <WText text={title ?? ''} typo="Heading2" color="Black" />
       </View>
+      {!rightNode ? null : rightNode}
     </View>
   );
 }
@@ -49,7 +49,7 @@ const styles = StyleSheet.create({
   },
   title: {
     position: 'absolute',
-    top: 0,
+    top: 7,
     right: 0,
     left: 0,
     alignItems: 'center',

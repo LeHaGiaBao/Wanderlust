@@ -58,6 +58,7 @@
     "notification": "Thông báo",
     "my_booking": "Đặt phòng của tôi",
     "my_flight": "Chuyến bay của tôi",
+    "my_voucher": "Mã giảm giá của tôi",
     "voucher": "Mã giảm giá",
     "setting": "Cài đặt",
     "about_app": "Về ứng dụng",
@@ -68,6 +69,17 @@
     "privacy_list": "Chính sách riêng tư",
     "term_and_condition": "Điều khoản dịch vụ",
     "about_us": "Về chúng tôi",
-    "logout": "Đăng xuất"
+    "logout": "Đăng xuất",
+    "profile_infor": "Trang cá nhân",
+    "no_message": "Bạn chưa có tin nhắn nào",
+    "comming_soon": "Tính năng này sắp được ra mắt",
+    "share_experiences": "Chia sẻ trải nghiệm hôm nay của bạn",
+    "find_experiences": "Tìm kiếm những trải nghiệm du lịch",
+    "n_feed": "{{n}} bài viết",
+    "create_first_feed": "Tạo bài viết đầu tiên của ban",
+    "empty_feed_description": "Những bài viết của bạn sẽ cung cấp thêm nhiều dữ liệu trải nghiệm cho những người dùng khác cùng tham khảo tại tính năng Khám phá",
+    "create_feed": "Tạo bài viết",
+    "customer_information": "Thông tin khách hàng",
+    "update_information": "Cập nhật thông tin cá nhân"
   }
 }

@@ -1,17 +1,19 @@
 import React, {memo} from 'react';
 import {Image, StyleSheet, View} from 'react-native';
+import {TopNavigation} from '@/components/containers';
 import {BaseColor, Devices} from '@/constants';
-import {WText} from '@/components/UIKit';
 import translate from '@/translations/i18n';
 import images from '@/assets/images';
+import {WText} from '@/components/UIKit';
 
-function RecommendScreen() {
+function MessageScreen() {
   return (
-    <View style={styles.recommendScreen}>
-      <View style={styles.commingSoon}>
-        <Image source={images.NoTasks} />
+    <View style={styles.container}>
+      <TopNavigation title={translate('source:message')} />
+      <View style={styles.haveNoMessage}>
+        <Image source={images.NoMesssage} />
         <WText
-          text={translate('source:comming_soon')}
+          text={translate('source:no_message')}
           typo="Heading2"
           color="Main"
         />
@@ -21,14 +23,14 @@ function RecommendScreen() {
 }
 
 const styles = StyleSheet.create({
-  recommendScreen: {
+  container: {
     display: 'flex',
     paddingTop: 77,
     paddingHorizontal: 16,
     backgroundColor: BaseColor.White,
     height: Devices.height,
   },
-  commingSoon: {
+  haveNoMessage: {
     position: 'absolute',
     top: 0,
     left: 0,
@@ -41,4 +43,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default memo(RecommendScreen);
+export default memo(MessageScreen);
