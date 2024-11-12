@@ -18,6 +18,7 @@ import AllFlights from '@/screens/main/Flight/AllFlights';
 import AllTours from '@/screens/main/Tour/AllTours';
 import Search from '@/screens/main/Search';
 import Message from '@/screens/main/Message';
+import ProfileDetail from '@/screens/main/Profile/ProfileDetail';
 
 const Stack = createNativeStackNavigator();
 
@@ -101,6 +102,11 @@ function MainRoutes() {
         <Stack.Screen
           name={Routes.message}
           component={Message}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name={Routes.profile_detail}
+          component={ProfileDetail}
           options={{headerShown: false}}
         />
       </Stack.Navigator>

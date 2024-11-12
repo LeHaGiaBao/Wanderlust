@@ -73,6 +73,10 @@
     "no_message": "Bạn chưa có tin nhắn nào",
     "comming_soon": "Tính năng này sắp được ra mắt",
     "share_experiences": "Chia sẻ trải nghiệm hôm nay của bạn",
-    "find_experiences": "Tìm kiếm những trải nghiệm du lịch"
+    "find_experiences": "Tìm kiếm những trải nghiệm du lịch",
+    "n_feed": "{{n}} bài viết",
+    "create_first_feed": "Tạo bài viết đầu tiên của ban",
+    "empty_feed_description": "Những bài viết của bạn sẽ cung cấp thêm nhiều dữ liệu trải nghiệm cho những người dùng khác cùng tham khảo tại tính năng Khám phá",
+    "create_feed": "Tạo bài viết"
   }
 }

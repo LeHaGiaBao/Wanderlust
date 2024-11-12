@@ -1,14 +1,18 @@
 import React, {memo} from 'react';
-import {Image, StyleSheet, View} from 'react-native';
+import {Image, StyleSheet, TouchableOpacity, View} from 'react-native';
 import {WText} from '@/components/UIKit';
 import {PrimaryColor} from '@/constants';
 import translate from '@/translations/i18n';
 import {ArrowRight2} from 'iconsax-react-native';
+import {useWanderlustNavigation} from '@/hooks/core/core';
+import {Routes} from '@/routes/routes';
 
 const IMAGE =
   'https://img.freepik.com/free-psd/3d-illustration-human-avatar-profile_23-2150671142.jpg?semt=ais_hybrid';
 
 function AccountTopNavBar() {
+  const nav = useWanderlustNavigation();
+
   return (
     <View style={styles.container}>
       <View style={styles.leftContainer}>
@@ -22,9 +26,11 @@ function AccountTopNavBar() {
           />
         </View>
       </View>
-      <View style={styles.rightContainer}>
+      <TouchableOpacity
+        style={styles.rightContainer}
+        onPress={() => nav.navigate(Routes.profile_detail)}>
         <ArrowRight2 size={20} color={PrimaryColor.Main} />
-      </View>
+      </TouchableOpacity>
     </View>
   );
 }

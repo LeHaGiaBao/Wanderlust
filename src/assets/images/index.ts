@@ -7,4 +7,5 @@ export default {
   ArrowRight: require('./ArrowRight.png'),
   NoMesssage: require('./NoMessage.png'),
   NoTasks: require('./NoTasks.png'),
+  New: require('./New.png'),
 };
