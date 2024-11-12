@@ -37,7 +37,7 @@ const TOP_LEVEL_DATA = [
   {
     id: 3,
     icon: <TicketDiscount size={24} color={PrimaryColor.Main} variant="Bold" />,
-    title: translate('source:my_flight'),
+    title: translate('source:voucher'),
     route: '',
   },
 ];

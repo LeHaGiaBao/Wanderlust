@@ -5,4 +5,5 @@ export default {
   Ticket: require('./Ticket.png'),
   TicketSelect: require('./TicketSelect.png'),
   ArrowRight: require('./ArrowRight.png'),
+  NoMesssage: require('./NoMessage.png'),
 };

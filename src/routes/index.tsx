@@ -17,6 +17,7 @@ import AllHotels from '@/screens/main/Hotel/AllHotels';
 import AllFlights from '@/screens/main/Flight/AllFlights';
 import AllTours from '@/screens/main/Tour/AllTours';
 import Search from '@/screens/main/Search';
+import Message from '@/screens/main/Message';
 
 const Stack = createNativeStackNavigator();
 
@@ -96,6 +97,11 @@ function MainRoutes() {
           name={Routes.search}
           component={Search}
           options={{headerShown: false, animation: 'slide_from_bottom'}}
+        />
+        <Stack.Screen
+          name={Routes.message}
+          component={Message}
+          options={{headerShown: false}}
         />
       </Stack.Navigator>
     </NavigationContainer>

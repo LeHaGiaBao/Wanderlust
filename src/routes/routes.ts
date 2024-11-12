@@ -16,4 +16,5 @@ export const Routes = {
   all_flights: 'all_flights',
   all_tours: 'all_tours',
   search: 'search',
+  message: 'message',
 };
