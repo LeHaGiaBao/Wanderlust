@@ -10,15 +10,26 @@ import Booking from '@/screens/tabs/Booking';
 import Explore from '@/screens/tabs/Explore';
 import Recommend from '@/screens/tabs/Recommend';
 import Account from '@/screens/tabs/Account';
-import Notification from '@/screens/main/Notification';
+import Notification from '@/screens/main/Profile/Notification';
 import AuthRoutes from './AuthRoutes';
 import AllDestinations from '@/screens/main/Destination/AllDestinations';
 import AllHotels from '@/screens/main/Hotel/AllHotels';
 import AllFlights from '@/screens/main/Flight/AllFlights';
 import AllTours from '@/screens/main/Tour/AllTours';
 import Search from '@/screens/main/Search';
-import Message from '@/screens/main/Message';
+import Message from '@/screens/main/Profile/Message';
+import Favorite from '@/screens/main/Profile/Favorite';
+import MyBooking from '@/screens/main/Profile/MyBooking';
+import MyFlight from '@/screens/main/Profile/MyFlight';
+import MyVoucher from '@/screens/main/Profile/MyVoucher';
+import ProfileFeed from '@/screens/main/Profile/ProfileFeed';
 import ProfileDetail from '@/screens/main/Profile/ProfileDetail';
+import ProfileEdit from '@/screens/main/Profile/ProfileEdit';
+import MyPaymentMethod from '@/screens/main/Payment/MyPaymentMethod';
+import SupportCenter from '@/screens/main/AboutUs/SupportCenter';
+import PrivacyList from '@/screens/main/AboutUs/PrivacyList';
+import TermAndCondition from '@/screens/main/AboutUs/TermAndCondition';
+import AboutUs from '@/screens/main/AboutUs/AboutUs';
 
 const Stack = createNativeStackNavigator();
 
@@ -105,8 +116,63 @@ function MainRoutes() {
           options={{headerShown: false}}
         />
         <Stack.Screen
+          name={Routes.favorite}
+          component={Favorite}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name={Routes.profile_feed}
+          component={ProfileFeed}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name={Routes.my_booking}
+          component={MyBooking}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name={Routes.my_flight}
+          component={MyFlight}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name={Routes.my_voucher}
+          component={MyVoucher}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
           name={Routes.profile_detail}
           component={ProfileDetail}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name={Routes.profile_edit}
+          component={ProfileEdit}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name={Routes.my_payment_method}
+          component={MyPaymentMethod}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name={Routes.support_center}
+          component={SupportCenter}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name={Routes.privacy_list}
+          component={PrivacyList}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name={Routes.term_and_condition}
+          component={TermAndCondition}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name={Routes.about_us}
+          component={AboutUs}
           options={{headerShown: false}}
         />
       </Stack.Navigator>

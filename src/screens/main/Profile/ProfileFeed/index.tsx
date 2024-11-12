@@ -3,11 +3,15 @@ import {StyleSheet, View} from 'react-native';
 import {BaseColor, Devices} from '@/constants';
 import {TopNavigation} from '@/components/containers';
 import translate from '@/translations/i18n';
+import ProfileFeedHeader from './components/ProfileFeedHeader';
+import EmptyFeed from './components/EmptyFeed';
 
-function ProfileDetail() {
+function ProfileFeed() {
   return (
     <View style={styles.container}>
-      <TopNavigation title={translate('source:customer_information')} />
+      <TopNavigation title={translate('source:profile_infor')} />
+      <ProfileFeedHeader numOfFeed={0} />
+      <EmptyFeed />
     </View>
   );
 }
@@ -22,4 +26,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default memo(ProfileDetail);
+export default memo(ProfileFeed);

@@ -12,7 +12,9 @@ function AccountSubNav() {
 
   return (
     <View style={styles.container}>
-      <TouchableOpacity style={styles.itemContainer}>
+      <TouchableOpacity
+        style={styles.itemContainer}
+        onPress={() => nav.navigate(Routes.favorite)}>
         <View style={styles.item}>
           <Heart size={20} color={PrimaryColor.Main} />
         </View>

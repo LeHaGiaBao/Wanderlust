@@ -11,7 +11,7 @@ interface ProfileDetailHeaderProps {
 const IMAGE =
   'https://img.freepik.com/free-psd/3d-illustration-human-avatar-profile_23-2150671142.jpg?semt=ais_hybrid';
 
-function ProfileDetailHeader(props: ProfileDetailHeaderProps) {
+function ProfileFeedHeader(props: ProfileDetailHeaderProps) {
   const {numOfFeed} = props;
 
   return (
@@ -51,4 +51,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default memo(ProfileDetailHeader);
+export default memo(ProfileFeedHeader);

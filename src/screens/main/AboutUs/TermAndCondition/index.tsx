@@ -4,10 +4,10 @@ import {BaseColor, Devices} from '@/constants';
 import {TopNavigation} from '@/components/containers';
 import translate from '@/translations/i18n';
 
-function ProfileDetail() {
+function TermAndCondition() {
   return (
     <View style={styles.container}>
-      <TopNavigation title={translate('source:customer_information')} />
+      <TopNavigation title={translate('source:term_and_condition')} />
     </View>
   );
 }
@@ -22,4 +22,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default memo(ProfileDetail);
+export default memo(TermAndCondition);

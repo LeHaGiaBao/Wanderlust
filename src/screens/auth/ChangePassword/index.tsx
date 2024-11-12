@@ -4,10 +4,10 @@ import {BaseColor, Devices} from '@/constants';
 import {TopNavigation} from '@/components/containers';
 import translate from '@/translations/i18n';
 
-function ProfileDetail() {
+function ChangePassword() {
   return (
     <View style={styles.container}>
-      <TopNavigation title={translate('source:customer_information')} />
+      <TopNavigation title={translate('source:change_password')} />
     </View>
   );
 }
@@ -22,4 +22,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default memo(ProfileDetail);
+export default memo(ChangePassword);

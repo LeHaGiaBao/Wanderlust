@@ -28,7 +28,7 @@ function AccountTopNavBar() {
       </View>
       <TouchableOpacity
         style={styles.rightContainer}
-        onPress={() => nav.navigate(Routes.profile_detail)}>
+        onPress={() => nav.navigate(Routes.profile_feed)}>
         <ArrowRight2 size={20} color={PrimaryColor.Main} />
       </TouchableOpacity>
     </View>
