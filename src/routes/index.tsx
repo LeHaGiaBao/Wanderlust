@@ -30,6 +30,7 @@ import SupportCenter from '@/screens/main/AboutUs/SupportCenter';
 import PrivacyList from '@/screens/main/AboutUs/PrivacyList';
 import TermAndCondition from '@/screens/main/AboutUs/TermAndCondition';
 import AboutUs from '@/screens/main/AboutUs/AboutUs';
+import ChangePassword from '@/screens/auth/ChangePassword';
 
 const Stack = createNativeStackNavigator();
 
@@ -173,6 +174,11 @@ function MainRoutes() {
         <Stack.Screen
           name={Routes.about_us}
           component={AboutUs}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name={Routes.change_password}
+          component={ChangePassword}
           options={{headerShown: false}}
         />
       </Stack.Navigator>

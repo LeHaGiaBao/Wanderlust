@@ -4,7 +4,7 @@ import {ButtonProps} from '@/@types/styles';
 import {memo, useCallback, useMemo} from 'react';
 import {StyleSheet, TouchableOpacity} from 'react-native';
 import WText from '../Text/WText';
-import {generateColor, generateRadius} from '@/components/UIKit/Utils';
+import {generateColor, generateRadius} from '@/utils';
 import {BaseColor} from '@/constants';
 
 function WButton(props: ButtonProps) {

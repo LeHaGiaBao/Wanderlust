@@ -1,7 +1,7 @@
 /* eslint-disable react-native/no-inline-styles */
 /* eslint-disable react/react-in-jsx-scope */
 import {TypographyProps} from '@/@types/styles';
-import {generateColor, generateTypography} from '@/components/UIKit/Utils';
+import {generateColor, generateTypography} from '@/utils';
 import {memo} from 'react';
 import {Text} from 'react-native';
 

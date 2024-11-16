@@ -80,6 +80,51 @@
     "empty_feed_description": "Những bài viết của bạn sẽ cung cấp thêm nhiều dữ liệu trải nghiệm cho những người dùng khác cùng tham khảo tại tính năng Khám phá",
     "create_feed": "Tạo bài viết",
     "customer_information": "Thông tin khách hàng",
-    "update_information": "Cập nhật thông tin cá nhân"
+    "update_information": "Cập nhật thông tin cá nhân",
+    "cancel_services": "Huỷ vé/ Huỷ phòng",
+    "cancel_services_description": "Chúng tôi sẽ giúp bạn liên hệ trực tiếp hãng bay để huỷ vé hoặc khách sạn để huỷ phòng",
+    "question_support": "Hỗ trợ giải đáp thắc mắc",
+    "question_support_description": "Chúng tôi sẽ hỗ trợ bạn giải đáp thắc mắc và quản lý đặt chổ của bạn",
+    "customer_services_contact": "Liên hệ dịch vụ khách hàng",
+    "privacy_list_infor": {
+      "list_1": "Khi bạn chia sẻ thông tin với Wanderlust, ví dụ như bằng cách tạo Tài khoản Wanderlust, Wanderlust có thể làm cho các sản phẩm, dịch vụ đó trở nên tốt hơn nữa, để cung cấp cho Bạn nhiều sản phẩm, dịch vụ tiện ích hơn. Khi Bạn sử dụng sản phẩm, dịch vụ của Wanderlust, Wanderlust muốn Bạn biết rõ cách Wanderlust đang sử dụng thông tin và cách Bạn có thể bảo vệ sự riêng tư của mình.",
+      "list_2": "Chính sách của Wanderlust về bảo mật thông tin bao gồm: \n . Loại thông tin Wanderlust thu thập và lý do thu thập. \n . Cách Wanderlust sử dụng thông tin đó. \n . Các lựa chọn mà Wanderlust cung cấp, bao gồm cả cách truy cập và cập nhật thông tin.",
+      "list_3": "Wanderlust cố gắng trình bày một cách đơn giản nhất có thể. Tuy nhiên, nếu Bạn không quen thuộc với các thuật ngữ như cookie, địa chỉ IP và trình duyệt, thì hãy tham khảo phụ lục về các thuật ngữ chính trước. Sự riêng tư của Bạn quan trọng đối với Wanderlust. Vì vậy, cho dù Bạn là người mới sử dụng hay người đã sử dụng lâu rồi, vui lòng dành thời gian để tìm hiểu về chính sách bảo mật. Và nếu Bạn có bất kỳ câu hỏi nào, hãy liên hệ với Wanderlust."
+    },
+    "term_and_condition_list": {
+      "header_1": "Quý khách vui lòng đọc kỹ Điều Khoản Sử Dụng (“Điều khoản”) khi tiến hành cài đặt ứng dụng Wanderlust.",
+      "header_2": "Quý khách chấp thuận các quy định và điều kiện trong Điều khoản này khi thực hiện các thao tác sau đây. Trường hợp Quý khách không đồng ý với bất kỳ điều khoản sử dụng nào của chúng tôi (phiên bản này và các phiên bản cập nhật), vui lòng không tải, cài đặt, sử dụng Wanderlust hoặc tháo gỡ Wanderlust ra khỏi thiết bị di động của Quý khách hàng.",
+      "term_title_1": "1. Giới thiệu về Ứng dụng",
+      "term_title_description_1": {
+        "des_1": "Wanderlust là ứng dụng tìm kiếm, đặt dịch vụ du lịch dành cho người dùng di động tại Việt Nam. Bạn sẽ được trải nghiệm trọn vẹn các dịch vụ du lịch hiện nay bao gồm nhưng không giới hạn như đặt phòng khách sạn, đặt vé máy bay, đặt vé tàu, đặt tour du lịch cũng như cung cấp các thông tin du lịch tới khách hàng. Wanderlust hiện hỗ trợ 2 nền tảng: iOS và Android.",
+        "des_2": "Wanderlust cung cấp dịch vụ cho khách hàng trên 18 tuổi, nếu dưới 18 tuổi phải truy cập dưới sự giám sát của cha mẹ hay người giám hộ hợp pháp. Để tham gia sử dụng dịch vụ của Wanderlust, bạn chỉ cần đáp ứng các điều kiện sau đây để có thể sử dụng các dịch vụ được cung cấp trên Wanderlust: \n- Người dùng sử dụng thiết bị có hỗ trợ tính năng kết nối Internet.\n- Người dùng đăng ký tài khoản và sử dụng dịch vụ."
+      },
+      "term_title_2": "2. Cập nhật",
+      "term_title_description_2": {
+        "des_1": "Ứng dụng có thể được cập nhật thường xuyên bởi nhà sản xuất. Chúng tôi có toàn quyền thay đổi những điều khoản, chính sách mà chúng tôi cho rằng không còn phù hợp mà không cần báo trước, bạn mặc nhiên đồng ý chấp hành các sửa đổi trong quy định mới."
+      },
+      "term_title_3": "3. Phạm vi các dịch vụ của Wanderlust",
+      "term_title_description_3": {
+        "des_1": "Thông qua Ứng dụng, Wanderlust cung cấp một nền công cụ trực tuyến, nơi bạn có thể duyệt tìm các hãng hàng không khác nhau, và/hoặc nơi lưu trú và phòng ở tạm thời (nếu có), và thực hiện việc đặt chỗ (“Dịch Vụ”). Người Dùng có thể đặt trên Ứng dụng các dịch vụ do các khách sạn, hãng hàng không và/hoặc bất kỳ nhà cung cấp dịch vụ khác (“Các Nhà Cung Cấp”) cung cấp. Bằng cách đưa ra một lệnh đặt chỗ thông qua Ứng dụng, bạn có thể đặt chỗ máy bay, phòng khách sạn, hoặc các dịch vụ khác trên Ứng dụng của chúng tôi. Chúng tôi sẽ gửi một xác nhận lệnh đặt chỗ qua email xác nhận. Chúng tôi bảo lưu quyền từ chối lệnh đặt chỗ của bạn theo quy định dưới đây.",
+        "des_2": "Xảy ra những thay đổi về điều kiện hoặc hoàn cảnh thị trường mà có thể dẫn đến những thay đổi trong một thời gian ngắn khiến thông tin được cung cấp không chính xác hoặc không hiện hành. Trong trường hợp có bất kỳ vấn đề gì, bộ phận dịch vụ khách hàng có thể liên hệ để hỗ trợ bạn và giải đáp cho các thắc mắc của bạn.",
+        "des_3": "Ứng dụng này không đưa ra bất cứ tuyên bố nào và không được giải thích là đưa ra bất cứ đề nghị hoặc gợi ý nào về mức độ chất lượng dịch vụ hoặc đánh giá xếp hạng về các Nhà Cung Cấp được liệt kê trên Ứng dụng. Chúng tôi tuyên bố khước từ bất kỳ khiếu nại, tổn thất hoặc trách nhiệm nào đối với chất lượng hay tình trạng của Nhà Cung Cấp hiện hữu được liệt kê trên Ứng dụng (cung cấp các dịch vụ hàng không, khách sạn hoặc các dịch vụ khác). Các Nhà Cung Cấp có thể được giới thiệu ở hình thức phân loại thứ hạng khác nhau dựa trên các yếu tố bao gồm nhưng không giới hạn các đánh giá, xếp hạng hoặc các yếu tố khác của họ. Sự xếp hạng đưa ra được tính dựa trên các thuật toán tự động có thể được cập nhật và thay đổi tùy từng thời điểm, theo quyết định chỉ của riêng của chúng tôi.",
+        "des_4": "Chúng tôi có quyền không chấp nhận bất kỳ Người Dùng hoặc việc đặt chỗ nào (hoặc trong một số trường hợp, hủy bỏ xác nhận việc đặt chỗ) theo quyết định của riêng chúng tôi vì bất kỳ nguyên nhân nào và không cần đưa ra lý do cho việc bác bỏ/từ chối/hủy bỏ. Những lý do để từ chối Người Dùng hoặc việc đặt chỗ hoặc hủy bỏ việc xác nhận đặt chỗ có thể bao gồm nhưng không giới hạn ở: vi phạm các Điều Khoản này, xử phạt về thương mại hay kinh tế của các cơ quan thẩm quyền toàn cầu hoặc quốc gia, cấm vận, các quy định cấm, gian lận hoặc trộm cắp (hoặc có dấu hiệu hay nghi ngờ gian lận hoặc trộm cắp), nghi ngờ về hoạt động tội phạm, việc đặt chỗ có dấu hiệu khả nghi, dịch vụ không có hoặc Nhà Cung Cấp không còn cung cấp, Người Dùng cung cấp thông tin không chính xác, thông tin sai hoặc thông tin nhầm lẫn, các vấn đề về trao đổi, thông tin, giao dịch điện tử thẻ tín dụng, hành vi không phù hợp, các mối đe dọa, xúc phạm, từ chối cung cấp thông tin, trở ngại thực tế, khó khăn hoặc trục trặc trong trao đổi thông tin, Lỗi Thực (được mô tả dưới đây), tiền sử có hành vi vi phạm những Điều Khoản này hoặc bị từ chối, hoặc có tên trong bất kỳ “danh sách đen” hay “danh sách bị theo dõi” của chính phủ hoặc các tổ chức quốc tế. Trong trường hợp đặt chỗ bị Wanderlust từ chối hoặc hủy bỏ và việc thanh toán đã được thực hiện, Wanderlust sẽ hoàn trả số tiền đã được thanh toán mà không tính thêm khoản phí nào. Chúng tôi có thể xóa hoặc gỡ bỏ (“Bị Gỡ Bỏ”) tư cách thành viên của Người Dùng Ứng dụng này bất cứ lúc nào, tạm thời hoặc vĩnh viễn. Những Người Dùng Bị Gỡ Bỏ bị cấm việc cố gắng sử dụng Ứng dụng với bất kỳ tên nào khác hoặc thông qua Người Dùng khác (được mô tả dưới đây trong quy định về Cơ Chế Phòng Chống Gian Lận).",
+        "des_5": "Trong trường hợp cụ thể, chúng tôi có thể hủy bỏ hoặc từ chối giao dịch đặt chỗ đối với các “Lỗi Thực”, mà không phụ thuộc vào nguồn gốc các sai sót. Để tránh sự nghi ngờ, Lỗi Thực là lỗi trên Ứng dụng (ví dụ như trong điều khoản về giá cả) mà không có người bình thường nào cho là phù hợp hoặc có ý nghĩa trong kinh doanh. Số tiền đã thanh toán sẽ được hoàn trả mà không tính thêm khoản phí nào khác trong trường hợp như vậy."
+      }
+    },
+    "about_us_list": {
+      "list_1": "Wanderlust là siêu ứng dụng du lịch và tiện ích sống hàng đầu Đông Nam Á, chúng tôi giúp bạn khám phá và mua đa dạng các loại sản phẩm du lịch, dịch vụ địa phương và dịch vụ tài chính. Danh mục sản phẩm toàn diện của Wanderlust bao gồm các dịch vụ đặt phương tiện đi lại như vé máy bay, xe buýt, tàu hỏa, cho thuê ô tô, đưa đón sân bay, cũng như kho khách sạn chỗ ở lớn nhất Đông Nam Á. Không chỉ vậy, để giúp bạn thực hiện nhiều ước vọng về phong cách sống của mình, chúng tôi còn hoàn thiện các dịch vụ của mình với một loạt các điểm tham quan, hoạt động địa phương cũng như các spa chăm sóc sức khỏe và sắc đẹp. Vì vậy, bất kể lựa chọn lối sống của bạn là gì, bạn chỉ cần một cú nhấp chuột!",
+      "list_2": "Wanderlust tin rằng hạnh phúc có thể đến dưới nhiều hình thức đối với những người khác nhau trong những thời điểm khác nhau. Vì vậy, với uy tín của chúng tôi và kinh nghiệm hơn 10 năm, chúng tôi hứa hẹn với bạn một loạt các lựa chọn phong phú để thắp sáng trạng thái hạnh phúc của chính bạn. Cho dù bạn đang tìm kiếm một trải nghiệm thú vị hay nghỉ ngơi trong khu nghỉ dưỡng 5 sao, một ngày spa thư giãn hay một chuyến phiêu lưu ly kỳ, một chuyến bay hạng nhất tiện lợi hay chuyến đi đường bộ thú vị, cho cả chuyến đi trong nước và quốc tế, bạn đều có tất cả trong một ứng dụng Wanderlust.",
+      "list_3": "Với dịch vụ chăm sóc khách hàng 24/7 bằng các ngôn ngữ địa phương cũng như hơn 30 phương thức thanh toán địa phương khác nhau, Wanderlust đã được tải xuống hơn 100 triệu lần, trở thành ứng dụng du lịch và tiện ích sống phổ biến nhất ở khu vực Đông Nam Á.",
+      "list_4": "Bạn còn chờ gì nữa? Đặt một chuyến đi được lên kế hoạch chu đáo hoặc một kỳ nghỉ được quyết định vào phút chót với chúng tôi. Với tất cả các lựa chọn du lịch và phong cách sống độc đáo của bạn, như mọi khi, Wanderlust sẽ đồng hành cùng bạn."
+    },
+    "change_password_form": {
+      "current_password": "Mật khẩu hiện tại",
+      "new_password": "Mật khẩu mới",
+      "new_password_placeholder": "Nhập mật khẩu mới",
+      "confirm_new_password": "Nhập lại mật khẩu",
+      "confirm_new_password_placeholder": "Nhập lại mật khẩu"
+    },
+    "save": "Lưu"
   }
 }

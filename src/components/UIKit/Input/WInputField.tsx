@@ -18,7 +18,7 @@ function WInputFields(props: InputFieldsProps) {
     type,
     iconAlign,
     border = true,
-    borderRadius,
+    borderRadius = 8,
   } = props;
   const [value, setValue] = useState('');
   const [focus, setFocus] = useState(false);
