@@ -4,7 +4,7 @@ import {WButton, WText} from '@/components/UIKit';
 import WInputField from '@/components/UIKit/Input/WInputField';
 import translate from '@/translations/i18n';
 import {styles} from './styles';
-import TopNavigation from '../components/TopNavigation';
+import TopNavigation from '../_components/TopNavigation';
 
 function OTPScreen() {
   return (

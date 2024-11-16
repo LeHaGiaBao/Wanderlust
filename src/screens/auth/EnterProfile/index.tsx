@@ -1,12 +1,20 @@
-import React, {memo} from 'react';
-import {View} from 'react-native';
+import React, {memo, useCallback} from 'react';
+import {TouchableOpacity, View} from 'react-native';
 import {WButton, WText} from '@/components/UIKit';
 import WInputField from '@/components/UIKit/Input/WInputField';
 import translate from '@/translations/i18n';
 import {styles} from './styles';
-import TopNavigation from '../components/TopNavigation';
+import TopNavigation from '../_components/TopNavigation';
+import {useWanderlustNavigation} from '@/hooks/core/core';
+import {Routes} from '@/routes/routes';
 
 function EnterProfile() {
+  const nav = useWanderlustNavigation();
+
+  const handleGoToTermAndCondition = useCallback(() => {
+    nav.navigate(Routes.term_and_condition);
+  }, [nav]);
+
   return (
     <View style={styles.page}>
       <TopNavigation />
@@ -47,13 +55,15 @@ function EnterProfile() {
             )}
           />
         </View>
-        <View style={styles.enterProfileContainer}>
+        <TouchableOpacity
+          style={styles.enterProfileContainer}
+          onPress={handleGoToTermAndCondition}>
           <WText
             text={translate('source:policy:agree_policy')}
             typo="Body3"
             color="Gray"
           />
-        </View>
+        </TouchableOpacity>
         <View style={styles.button}>
           <WButton
             text={translate('source:agree_and_continue')}

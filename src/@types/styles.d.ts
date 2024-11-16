@@ -87,3 +87,10 @@ export interface TicketProps {
   ticketPrice: string;
   onPress?: () => void;
 }
+
+export interface VoucherProps {
+  name: string;
+  description: string;
+  condition: string;
+  isExpired: boolean;
+}
