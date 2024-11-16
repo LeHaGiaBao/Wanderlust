@@ -3543,6 +3543,127 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@react-native-firebase/auth@npm:^21.4.1":
+  version: 21.4.1
+  resolution: "@react-native-firebase/auth@npm:21.4.1"
+  dependencies:
+    plist: ^3.1.0
+  peerDependencies:
+    "@react-native-firebase/app": 21.4.1
+    expo: ">=47.0.0"
+  peerDependenciesMeta:
+    expo:
+      optional: true
+  checksum: 669b07d7a30a03e89d080540c7da56dd94a16fef52e4791ab39a5231d74ce6a26139c11685ff3444328f8677ec06313be0b7e31352a044055c3d63b5388f493c
+  languageName: node
+  linkType: hard
+
+"@react-native-firebase/crashlytics@npm:^21.4.1":
+  version: 21.4.1
+  resolution: "@react-native-firebase/crashlytics@npm:21.4.1"
+  dependencies:
+    stacktrace-js: ^2.0.2
+  peerDependencies:
+    "@react-native-firebase/app": 21.4.1
+    expo: ">=47.0.0"
+  peerDependenciesMeta:
+    expo:
+      optional: true
+  checksum: a51a8a151dd990cfefff4e15b030b9c65156378ff970b4d7f4f6cc1dca9d3c85a4da60b193fc3b2f0f37eb3229c07da67f387ae1e7409249c6878b95fbef4cf7
+  languageName: node
+  linkType: hard
+
+"@react-native-firebase/database@npm:^21.4.1":
+  version: 21.4.1
+  resolution: "@react-native-firebase/database@npm:21.4.1"
+  peerDependencies:
+    "@react-native-firebase/app": 21.4.1
+  checksum: 2147df12e93329f1cc5948f004c117f31059f58c2aff93b6befe075132ce6e88c9d3f5f38efbc104d87e3cc6b868b4e1038a44004be2cddc3788c04e73561fe2
+  languageName: node
+  linkType: hard
+
+"@react-native-firebase/dynamic-links@npm:^21.4.1":
+  version: 21.4.1
+  resolution: "@react-native-firebase/dynamic-links@npm:21.4.1"
+  peerDependencies:
+    "@react-native-firebase/app": 21.4.1
+    expo: ">=47.0.0"
+  peerDependenciesMeta:
+    expo:
+      optional: true
+  checksum: 017150d3b87f195fafa24e521b8ac82400756a23c470f098d672a5ca8400384979ecf8ef3e352267f01fcff00e8be232014af0855f6407eee17ad831a75bf94d
+  languageName: node
+  linkType: hard
+
+"@react-native-firebase/firestore@npm:^21.4.1":
+  version: 21.4.1
+  resolution: "@react-native-firebase/firestore@npm:21.4.1"
+  peerDependencies:
+    "@react-native-firebase/app": 21.4.1
+  checksum: 064816021309d454c4aee0466721509032803dc103b1960b3347092d9849d6808efc8b197b8098597e627413ddf7a47b3b2a7f72ae665af18f76b69d59d48308
+  languageName: node
+  linkType: hard
+
+"@react-native-firebase/functions@npm:^21.4.1":
+  version: 21.4.1
+  resolution: "@react-native-firebase/functions@npm:21.4.1"
+  peerDependencies:
+    "@react-native-firebase/app": 21.4.1
+  checksum: 2019d24354db718cba8183b7f335c382e8a0fd0b0859f536cccdbb478c9295f9d3f39769cd06393de83c94e9cc2ef2eabe95897bc7373fe227edf5c51f532ee8
+  languageName: node
+  linkType: hard
+
+"@react-native-firebase/in-app-messaging@npm:^21.4.1":
+  version: 21.4.1
+  resolution: "@react-native-firebase/in-app-messaging@npm:21.4.1"
+  peerDependencies:
+    "@react-native-firebase/analytics": 21.4.1
+    "@react-native-firebase/app": 21.4.1
+  checksum: 00cb03e994288bddb99ac63439d2087f6fa4ac6b4d05273cc7c2a7cd1056ffaa24f4410fb26601c85e5ef069db152087ffec1816fbe7eaf32d747ca7aecaaaef
+  languageName: node
+  linkType: hard
+
+"@react-native-firebase/installations@npm:^21.4.1":
+  version: 21.4.1
+  resolution: "@react-native-firebase/installations@npm:21.4.1"
+  peerDependencies:
+    "@react-native-firebase/app": 21.4.1
+  checksum: 0e53767963eaa874836709bdd3fc36c1563a9d9dee2609ef14cbd9d94c669a41a382e2ab91a131eb7e058f740e865b14a4b8bcc20a12401e7f8d0b1987d4db4c
+  languageName: node
+  linkType: hard
+
+"@react-native-firebase/messaging@npm:^21.4.1":
+  version: 21.4.1
+  resolution: "@react-native-firebase/messaging@npm:21.4.1"
+  peerDependencies:
+    "@react-native-firebase/app": 21.4.1
+    expo: ">=47.0.0"
+  peerDependenciesMeta:
+    expo:
+      optional: true
+  checksum: 75aa0beccd2a282ff91fbee83d0071ee87ab009b1737b437f5dbfb65bda4bef19008490a90dd98e89c53ffdaa60053c7270a30afd7f25c364089e0de395ebb25
+  languageName: node
+  linkType: hard
+
+"@react-native-firebase/remote-config@npm:^21.4.1":
+  version: 21.4.1
+  resolution: "@react-native-firebase/remote-config@npm:21.4.1"
+  peerDependencies:
+    "@react-native-firebase/analytics": 21.4.1
+    "@react-native-firebase/app": 21.4.1
+  checksum: 85de616be7b9bd86d50bfc5af4382abb7209df898952d338630173772d682741886217b810b5563b6bdc679b3a86d5c0043bd8f29f3e5aa3a91f9c7eb615632b
+  languageName: node
+  linkType: hard
+
+"@react-native-firebase/storage@npm:^21.4.1":
+  version: 21.4.1
+  resolution: "@react-native-firebase/storage@npm:21.4.1"
+  peerDependencies:
+    "@react-native-firebase/app": 21.4.1
+  checksum: 5974ffb3820b8ca27e6a462325ab0cd6e145568e2ffc0bcc1b345ee802bbe93216e158800648eff80e6737d5a5da6a49abcc8b92f2d10d40392b03fc3da5f5dc
+  languageName: node
+  linkType: hard
+
 "@react-native-masked-view/masked-view@npm:^0.3.1":
   version: 0.3.1
   resolution: "@react-native-masked-view/masked-view@npm:0.3.1"
@@ -11021,7 +11142,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"plist@npm:^3.0.5":
+"plist@npm:^3.0.5, plist@npm:^3.1.0":
   version: 3.1.0
   resolution: "plist@npm:3.1.0"
   dependencies:
@@ -12926,7 +13047,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"stacktrace-js@npm:^2.0.0":
+"stacktrace-js@npm:^2.0.0, stacktrace-js@npm:^2.0.2":
   version: 2.0.2
   resolution: "stacktrace-js@npm:2.0.2"
   dependencies:
@@ -13962,6 +14083,17 @@ __metadata:
     "@react-native-community/hooks": ^3.0.0
     "@react-native-community/netinfo": ^11.4.1
     "@react-native-firebase/app": ^21.4.1
+    "@react-native-firebase/auth": ^21.4.1
+    "@react-native-firebase/crashlytics": ^21.4.1
+    "@react-native-firebase/database": ^21.4.1
+    "@react-native-firebase/dynamic-links": ^21.4.1
+    "@react-native-firebase/firestore": ^21.4.1
+    "@react-native-firebase/functions": ^21.4.1
+    "@react-native-firebase/in-app-messaging": ^21.4.1
+    "@react-native-firebase/installations": ^21.4.1
+    "@react-native-firebase/messaging": ^21.4.1
+    "@react-native-firebase/remote-config": ^21.4.1
+    "@react-native-firebase/storage": ^21.4.1
     "@react-native-masked-view/masked-view": ^0.3.1
     "@react-native-picker/picker": ^2.8.1
     "@react-native/babel-preset": 0.75.3
