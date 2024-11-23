@@ -125,6 +125,13 @@
       "confirm_new_password": "Nhập lại mật khẩu",
       "confirm_new_password_placeholder": "Nhập lại mật khẩu"
     },
-    "save": "Lưu"
+    "save": "Lưu",
+    "map": "Chỉ đường",
+    "n_review": "({{n}} Lượt đánh giá)",
+    "overview": "Tổng quan",
+    "view_more": "Xem thêm",
+    "review": "Đánh giá",
+    "ticket_type": "Loại vé",
+    "place_recommended": "Chỗ ở đề xuất"
   }
 }

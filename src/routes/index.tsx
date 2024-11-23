@@ -31,6 +31,7 @@ import PrivacyList from '@/screens/main/AboutUs/PrivacyList';
 import TermAndCondition from '@/screens/main/AboutUs/TermAndCondition';
 import AboutUs from '@/screens/main/AboutUs/AboutUs';
 import ChangePassword from '@/screens/auth/ChangePassword';
+import DestinationDetail from '@/screens/main/Destination/DestinationDetail';
 
 const Stack = createNativeStackNavigator();
 
@@ -179,6 +180,11 @@ function MainRoutes() {
         <Stack.Screen
           name={Routes.change_password}
           component={ChangePassword}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name={Routes.destination_detail}
+          component={DestinationDetail}
           options={{headerShown: false}}
         />
       </Stack.Navigator>
