@@ -1,6 +1,8 @@
 /* eslint-disable react-native/no-inline-styles */
 import {SmallCardItem} from '@/components/containers';
 import {BaseColor} from '@/constants';
+import {useWanderlustNavigation} from '@/hooks/core/core';
+import {Routes} from '@/routes/routes';
 import React, {memo, useCallback} from 'react';
 import {FlatList, StyleSheet, View} from 'react-native';
 
@@ -36,13 +38,27 @@ const HOTEL_DATA = [
 ];
 
 function HomeDestination() {
-  const renderItem = useCallback(({item}: any) => {
-    const {image, title, destination} = item;
+  const nav = useWanderlustNavigation();
 
-    return (
-      <SmallCardItem image={image} title={title} destination={destination} />
-    );
-  }, []);
+  const renderItem = useCallback(
+    ({item}: any) => {
+      const {image, title, destination} = item;
+
+      const handleNavigation = () => {
+        nav.navigate(Routes.destination_detail);
+      };
+
+      return (
+        <SmallCardItem
+          image={image}
+          title={title}
+          destination={destination}
+          onPressItem={handleNavigation}
+        />
+      );
+    },
+    [nav],
+  );
 
   const renderHotelSeparator = useCallback(() => {
     return <View style={{height: 12}} />;
