@@ -132,6 +132,11 @@
     "view_more": "Xem thêm",
     "review": "Đánh giá",
     "ticket_type": "Loại vé",
-    "place_recommended": "Chỗ ở đề xuất"
+    "place_recommended": "Chỗ ở đề xuất",
+    "buy_ticket_now": "Mua vé ngay",
+    "number_of_guests": "{{n}} hành khách",
+    "number_of_children": "{{n}} trẻ em",
+    "edit": "Chỉnh sửa",
+    "accommodation_recommend": "Chổ ở đề xuất"
   }
 }
