@@ -37,6 +37,7 @@ export interface TypographyProps extends Partial<TextComponent> {
   typo: TypoType;
   color: ColorType;
   numberOfLines?: number;
+  decoration?: 'underline' | 'line-through' | 'none';
   onTextLayout?: any;
   styles?: StyleProp;
 }

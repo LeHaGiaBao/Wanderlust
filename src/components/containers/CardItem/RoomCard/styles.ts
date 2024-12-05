@@ -1,4 +1,4 @@
-import {BaseColor} from '@/constants';
+import {BaseColor, PrimaryColor} from '@/constants';
 import {StyleSheet} from 'react-native';
 
 export const styles = StyleSheet.create({
@@ -39,5 +39,42 @@ export const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     gap: 4,
+  },
+  divider: {
+    width: '100%',
+    height: 1,
+    backgroundColor: BaseColor.MiddleGray,
+    marginVertical: 4,
+  },
+  content: {
+    width: '100%',
+    display: 'flex',
+    gap: 8,
+    marginHorizontal: 4,
+  },
+  voucher: {
+    backgroundColor: '#FFD0D0',
+    borderRadius: 50,
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
+    gap: 4,
+    paddingHorizontal: 8,
+    paddingVertical: 4,
+    width: 150,
+  },
+  priceContainer: {
+    display: 'flex',
+    alignItems: 'flex-end',
+    gap: 4,
+    paddingHorizontal: 8,
+    paddingBottom: 8,
+  },
+  button: {
+    borderRadius: 50,
+    backgroundColor: PrimaryColor.Main,
+    paddingHorizontal: 16,
+    paddingVertical: 8,
   },
 });

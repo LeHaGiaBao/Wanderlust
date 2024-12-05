@@ -11,20 +11,66 @@ import DetailReview from './components/Detail.Review';
 import DetailTicket from './components/Detail.Ticket';
 import {NavigationHeader} from '../../_components';
 
-const DATA = [
+const LIST_HOTEL = [
   {
     id: 1,
+    image:
+      'https://media-cdn-v2.laodong.vn/Storage/NewsPortal/2022/9/6/1089730/Heritage-Cruise-1.jpg',
+    name: 'Station Hostel',
+    numOfBed: '1',
+    discountPercent: '40',
+    discountPrice: '250.000 VND / người',
+    price: '100.000 - 150.000 VND / người',
   },
   {
     id: 2,
+    image:
+      'https://media-cdn-v2.laodong.vn/Storage/NewsPortal/2022/9/6/1089730/Heritage-Cruise-1.jpg',
+    name: 'The Fish Hotel',
+    numOfBed: '1',
+    discountPercent: '25',
+    discountPrice: '320.000 VND / người',
+    price: '230.000 VND / người',
+  },
+  {
+    id: 2,
+    image:
+      'https://media-cdn-v2.laodong.vn/Storage/NewsPortal/2022/9/6/1089730/Heritage-Cruise-1.jpg',
+    name: 'The Hotel',
+    numOfBed: '1',
+    discountPercent: '15',
+    discountPrice: '500.000 VND / người',
+    price: '300.000 VND / người',
   },
 ];
 
+const DATA = [
+  ...LIST_HOTEL,
+  ...LIST_HOTEL,
+  ...LIST_HOTEL,
+  ...LIST_HOTEL,
+  ...LIST_HOTEL,
+].map((item, index) => ({
+  ...item,
+  id: index + 1,
+}));
+
 function DestinationDetail() {
-  const renderItem = useCallback(() => {
+  const renderItem = useCallback(({item}: any) => {
+    const {id, image, name, numOfBed, discountPercent, discountPrice, price} =
+      item;
+
     return (
       <View style={styles.itemContainer}>
-        <RoomCard />
+        <RoomCard
+          id={id}
+          image={image}
+          name={name}
+          numOfBed={numOfBed}
+          discountPercent={discountPercent}
+          discountPrice={discountPrice}
+          price={price}
+        />
       </View>
     );
   }, []);
@@ -97,6 +143,7 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     alignItems: 'center',
     marginTop: 24,
+    marginBottom: 8,
     marginHorizontal: 16,
   },
   itemContainer: {

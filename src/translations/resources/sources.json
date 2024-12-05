@@ -137,6 +137,14 @@
     "number_of_guests": "{{n}} hành khách",
     "number_of_children": "{{n}} trẻ em",
     "edit": "Chỉnh sửa",
-    "accommodation_recommend": "Chổ ở đề xuất"
+    "accommodation_recommend": "Chổ ở đề xuất",
+    "num_of_bed": "{{n}} giường",
+    "wifi": "Wifi",
+    "bath": "Bồn tắm",
+    "swim": "Hồ bơi",
+    "free_breakfast": "Bữa sáng miễn phí",
+    "online_payment": "Thanh toán trước online",
+    "voucher_discount": "Giảm tới {{n}}% hôm nay",
+    "book_room": "Đặt phòng"
   }
 }

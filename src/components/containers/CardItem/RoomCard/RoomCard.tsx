@@ -1,38 +1,129 @@
-import React, {memo} from 'react';
-import {Image, View} from 'react-native';
+import React, {memo, useCallback} from 'react';
+import {Image, TouchableOpacity, View} from 'react-native';
 import {styles} from './styles';
-import {WText} from '@/components/UIKit';
-import {PrimaryColor} from '@/constants';
-import {Wifi} from 'iconsax-react-native';
+import {WIcon, WText} from '@/components/UIKit';
+import {PrimaryColor, StatusColor} from '@/constants';
+import {Wifi, Card, TicketDiscount} from 'iconsax-react-native';
+import translate from '@/translations/i18n';
 
-const IMAGE =
-  'https://media-cdn-v2.laodong.vn/Storage/NewsPortal/2022/9/6/1089730/Heritage-Cruise-1.jpg';
+interface RoomCardInterface {
+  id: string;
+  image: string;
+  name: string;
+  numOfBed: string;
+  discountPercent?: string;
+  discountPrice?: string;
+  price: string;
+  onPress?: () => void;
+}
 
-function RoomCard() {
+function RoomCard(props: RoomCardInterface) {
+  const {
+    id,
+    image,
+    name,
+    numOfBed,
+    discountPercent,
+    discountPrice,
+    price,
+    onPress,
+  } = props;
+
+  const handleOnPress = useCallback(() => {
+    onPress?.();
+  }, [onPress]);
+
   return (
-    <View style={styles.container}>
+    <View style={styles.container} key={id}>
       <View style={styles.header}>
-        <Image source={{uri: IMAGE}} style={styles.image} />
+        <Image source={{uri: image}} style={styles.image} />
         <View style={styles.headerContent}>
-          <WText text="Station Hostel" typo="Body1" color="Black" />
+          <WText text={name} typo="Body1" color="Black" />
           <View style={styles.itemContainer}>
             <View style={styles.item}>
-              <WText text="1 Giường lớn" typo="Body2" color="DarkGray" />
+              <WIcon icon="bed" size={20} color={PrimaryColor.Pressed} />
+              <WText
+                text={translate('source:num_of_bed', {n: numOfBed})}
+                typo="Body2"
+                color="DarkGray"
+              />
             </View>
             <View style={styles.item}>
               <Wifi size={20} color={PrimaryColor.Pressed} />
-              <WText text="Wifi" typo="Body2" color="DarkGray" />
+              <WText
+                text={translate('source:wifi')}
+                typo="Body2"
+                color="DarkGray"
+              />
             </View>
           </View>
           <View style={styles.itemContainer}>
             <View style={styles.item}>
-              <WText text="Bồn tắm" typo="Body2" color="DarkGray" />
+              <WIcon icon="bath" size={20} color={PrimaryColor.Pressed} />
+              <WText
+                text={translate('source:bath')}
+                typo="Body2"
+                color="DarkGray"
+              />
             </View>
             <View style={styles.item}>
-              <WText text="Hồ bơi" typo="Body2" color="DarkGray" />
+              <WIcon icon="swim" size={20} color={PrimaryColor.Pressed} />
+              <WText
+                text={translate('source:swim')}
+                typo="Body2"
+                color="DarkGray"
+              />
             </View>
           </View>
         </View>
+      </View>
+      <View style={styles.divider} />
+      <View style={styles.content}>
+        <View style={styles.item}>
+          <WIcon icon="knife" size={20} color={PrimaryColor.Pressed} />
+          <WText
+            text={translate('source:free_breakfast')}
+            typo="Body2"
+            color="DarkGray"
+          />
+        </View>
+        <View style={styles.item}>
+          <Card size={20} color={PrimaryColor.Pressed} />
+          <WText
+            text={translate('source:online_payment')}
+            typo="Body2"
+            color="DarkGray"
+          />
+        </View>
+        {discountPercent && (
+          <View style={styles.voucher}>
+            <TicketDiscount size={20} color={StatusColor.Error} />
+            <WText
+              text={translate('source:voucher_discount', {n: discountPercent})}
+              typo="Label"
+              color="Error"
+            />
+          </View>
+        )}
+      </View>
+      <View style={styles.divider} />
+      <View style={styles.priceContainer}>
+        {discountPrice && (
+          <WText
+            text={discountPrice || ''}
+            color="Gray"
+            typo="Body2"
+            decoration="line-through"
+          />
+        )}
+        <WText text={price} color="Error" typo="Body1" />
+        <TouchableOpacity style={styles.button} onPress={handleOnPress}>
+          <WText
+            text={translate('source:book_room')}
+            typo="Button2"
+            color="White"
+          />
+        </TouchableOpacity>
       </View>
     </View>
   );
