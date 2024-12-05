@@ -10,14 +10,14 @@ import images from '@/assets/images';
 import {Profile2User} from 'iconsax-react-native';
 import WText from '../Text/WText';
 import {BaseColor} from '@/constants';
-import {TicketProps} from '@/@types/styles';
+import {FlightTicketProps} from '@/@types/styles';
 import translate from '@/translations/i18n';
 
 const TICKET = images.Ticket;
 const TICKET_SELECT = images.TicketSelect;
 const ARROW = images.ArrowRight;
 
-function WTicket(props: TicketProps) {
+function WTicket(props: FlightTicketProps) {
   const {
     airlineLogo,
     airlineName,

@@ -37,6 +37,7 @@ export interface TypographyProps extends Partial<TextComponent> {
   typo: TypoType;
   color: ColorType;
   numberOfLines?: number;
+  decoration?: 'underline' | 'line-through' | 'none';
   onTextLayout?: any;
   styles?: StyleProp;
 }
@@ -73,7 +74,7 @@ export interface InputFieldsProps {
   onLongPress?: () => void;
 }
 
-export interface TicketProps {
+export interface FlightTicketProps {
   airlineLogo: string;
   airlineName: string;
   departureTime: string;
@@ -86,6 +87,14 @@ export interface TicketProps {
   numOfPassengers: number;
   ticketPrice: string;
   onPress?: () => void;
+}
+
+export interface PlaceTicketProps {
+  title: string;
+  numberOfGuest: string;
+  numerOfChildren: string;
+  price: string;
+  onEdit?: () => void;
 }
 
 export interface VoucherProps {

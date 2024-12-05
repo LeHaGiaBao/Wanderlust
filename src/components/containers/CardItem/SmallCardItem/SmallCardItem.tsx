@@ -67,6 +67,7 @@ function SmallCardItem(props: SmallCardItemProps) {
             <WText
               text={discount ?? ''}
               typo="Label"
+              decoration="line-through"
               color="Gray"
               numberOfLines={1}
             />

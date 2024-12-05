@@ -4,10 +4,6 @@ import {StyleSheet, TouchableOpacity, View} from 'react-native';
 import {Star1, Location, Map1} from 'iconsax-react-native';
 import {PrimaryColor, SecondaryColor} from '@/constants';
 import translate from '@/translations/i18n';
-import {ReviewCardItem} from '@/components/containers';
-
-const IMAGE =
-  'https://img.freepik.com/free-psd/3d-illustration-human-avatar-profile_23-2150671142.jpg?semt=ais_hybrid';
 
 function DetailContent() {
   const renderContentNode = useMemo(() => {
@@ -77,26 +73,6 @@ function DetailContent() {
           />
         </View>
       </View>
-      <View style={styles.container}>
-        <View style={styles.reviewHeader}>
-          <WText
-            text={translate('source:review')}
-            typo="Heading2"
-            color="Black"
-          />
-          <WText
-            text={translate('source:view_all')}
-            typo="Body3"
-            color="Main"
-          />
-        </View>
-        <ReviewCardItem
-          image={IMAGE}
-          name="Tui tên Testing"
-          rating="4.8"
-          content="“Thủy cung rất đẹp, mình như được lạc giữa chốn đại dương bao la để thưởng thức cảnh đẹp của biển cả.”"
-        />
-      </View>
     </View>
   );
 }
@@ -140,12 +116,6 @@ const styles = StyleSheet.create({
   overviewContent: {
     display: 'flex',
     gap: 4,
-  },
-  reviewHeader: {
-    display: 'flex',
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
   },
 });
 

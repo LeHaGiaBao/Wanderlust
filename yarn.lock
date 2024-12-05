@@ -3453,6 +3453,25 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@react-native-community/cli-tools@npm:^15.1.2":
+  version: 15.1.2
+  resolution: "@react-native-community/cli-tools@npm:15.1.2"
+  dependencies:
+    appdirsjs: ^1.2.4
+    chalk: ^4.1.2
+    execa: ^5.0.0
+    find-up: ^5.0.0
+    mime: ^2.4.1
+    open: ^6.2.0
+    ora: ^5.4.1
+    prompts: ^2.4.2
+    semver: ^7.5.2
+    shell-quote: ^1.7.3
+    sudo-prompt: ^9.0.0
+  checksum: 7ec508ae0cc538708a00743065ddb0845a41cebe38f3905aebff51e668c5688d04562e50dc8f2a7b0d981890ce26e7c84765f4a23dd97f903035159249bba7aa
+  languageName: node
+  linkType: hard
+
 "@react-native-community/cli-types@npm:14.1.0":
   version: 14.1.0
   resolution: "@react-native-community/cli-types@npm:14.1.0"
@@ -3681,6 +3700,22 @@ __metadata:
     react: "*"
     react-native: "*"
   checksum: e1aca13f01e325924b7218de11eed283a49e7c93faf5b0536731385150b6283844ab0efe981c4139b30308af8565290baa2acd51942345fb08ebf5f0269e54d7
+  languageName: node
+  linkType: hard
+
+"@react-native-vector-icons/common@npm:^11.0.0":
+  version: 11.0.0
+  resolution: "@react-native-vector-icons/common@npm:11.0.0"
+  dependencies:
+    "@react-native-community/cli-tools": ^15.1.2
+    picocolors: ^1.1.1
+    plist: ^3.1.0
+  peerDependencies:
+    react: "*"
+    react-native: "*"
+  bin:
+    rnvi-update-plist: lib/commonjs/scripts/updatePlist.js
+  checksum: 55145d053ac3bb7cb236387f80343831d512e70b5f351604c6a3c83b1388ff154360c68a0ec0fd510a57cd4fd96a54f16787ef5948f5ca3b4c008de77645a758
   languageName: node
   linkType: hard
 
@@ -11078,7 +11113,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"picocolors@npm:^1.0.0, picocolors@npm:^1.1.0":
+"picocolors@npm:^1.0.0, picocolors@npm:^1.1.0, picocolors@npm:^1.1.1":
   version: 1.1.1
   resolution: "picocolors@npm:1.1.1"
   checksum: e1cf46bf84886c79055fdfa9dcb3e4711ad259949e3565154b004b260cd356c5d54b31a1437ce9782624bf766272fe6b0154f5f0c744fb7af5d454d2b60db045
@@ -14096,6 +14131,7 @@ __metadata:
     "@react-native-firebase/storage": ^21.4.1
     "@react-native-masked-view/masked-view": ^0.3.1
     "@react-native-picker/picker": ^2.8.1
+    "@react-native-vector-icons/common": ^11.0.0
     "@react-native/babel-preset": 0.75.3
     "@react-native/eslint-config": 0.75.3
     "@react-native/metro-config": 0.75.3

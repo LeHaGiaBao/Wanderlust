@@ -3,7 +3,7 @@ import {FlatList, StyleSheet, View} from 'react-native';
 import {TopNavigation} from '@/components/containers';
 import {BaseColor, Devices} from '@/constants';
 import translate from '@/translations/i18n';
-import {WTicket} from '@/components/UIKit';
+import {WFlightTicket} from '@/components/UIKit';
 
 const FLIGHT_DATA = [
   {
@@ -98,7 +98,7 @@ function AllFlights() {
     } = item;
 
     return (
-      <WTicket
+      <WFlightTicket
         airlineLogo={airlineLogo}
         airlineName={airlineName}
         departureTime={departureTime}

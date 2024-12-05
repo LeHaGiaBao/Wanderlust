@@ -13,6 +13,7 @@ function WText(props: TypographyProps) {
     styles,
     numberOfLines,
     onTextLayout,
+    decoration,
     ...rest
   } = props;
 
@@ -27,7 +28,12 @@ function WText(props: TypographyProps) {
           fontFamily: fontFamily,
           fontSize: fontSize,
           color: textColor,
-          textDecorationLine: typo === 'Helper' ? 'underline' : 'none',
+          textDecorationLine:
+            typo === 'Helper'
+              ? 'underline'
+              : decoration === 'line-through'
+                ? 'line-through'
+                : 'none',
           fontWeight: fontWeight ?? 'medium',
         },
       ]}
