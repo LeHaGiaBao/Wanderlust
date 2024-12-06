@@ -32,7 +32,7 @@ import TermAndCondition from '@/screens/main/AboutUs/TermAndCondition';
 import AboutUs from '@/screens/main/AboutUs/AboutUs';
 import ChangePassword from '@/screens/auth/ChangePassword';
 import DestinationDetail from '@/screens/main/Destination/DestinationDetail';
-import AllReview from '@/screens/main/Review/AllReview';
+import AllReview from '@/screens/main/Accomodation/Review/AllReview';
 import AllAccomodations from '@/screens/main/Accomodation/AllAccomodations';
 import AccomodationOverview from '@/screens/main/Accomodation/AccomodationOverview';
 
