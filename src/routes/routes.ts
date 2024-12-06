@@ -30,5 +30,6 @@ export const Routes = {
   privacy_list: 'privacy_list',
   term_and_condition: 'term_and_condition',
   about_us: 'about_us',
+  all_review: 'all_review',
   destination_detail: 'destination_detail',
 };
