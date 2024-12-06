@@ -1,11 +1,15 @@
 import {WText} from '@/components/UIKit';
-import React, {memo, useMemo} from 'react';
+import React, {memo, useCallback, useMemo} from 'react';
 import {StyleSheet, TouchableOpacity, View} from 'react-native';
 import {Star1, Location, Map1} from 'iconsax-react-native';
 import {PrimaryColor, SecondaryColor} from '@/constants';
 import translate from '@/translations/i18n';
+import {useWanderlustNavigation} from '@/hooks/core/core';
+import {Routes} from '@/routes/routes';
 
 function DetailContent() {
+  const nav = useWanderlustNavigation();
+
   const renderContentNode = useMemo(() => {
     return (
       <View style={styles.contentNode}>
@@ -40,6 +44,10 @@ function DetailContent() {
     );
   }, []);
 
+  const onPressViewMore = useCallback(() => {
+    nav.navigate(Routes.accomodation_overview);
+  }, [nav]);
+
   return (
     <View style={styles.pageContainer}>
       <View style={styles.container}>
@@ -66,11 +74,13 @@ function DetailContent() {
             color="Gray"
             numberOfLines={4}
           />
-          <WText
-            text={translate('source:view_more')}
-            typo="Helper"
-            color="Main"
-          />
+          <TouchableOpacity onPress={onPressViewMore}>
+            <WText
+              text={translate('source:view_more')}
+              typo="Helper"
+              color="Main"
+            />
+          </TouchableOpacity>
         </View>
       </View>
     </View>
