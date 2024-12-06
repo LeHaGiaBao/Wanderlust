@@ -10,6 +10,8 @@ import {RoomCard} from '@/components/containers';
 import DetailReview from './components/Detail.Review';
 import DetailTicket from './components/Detail.Ticket';
 import {NavigationHeader} from '../../_components';
+import {useWanderlustNavigation} from '@/hooks/core/core';
+import {Routes} from '@/routes/routes';
 
 const LIST_HOTEL = [
   {
@@ -56,6 +58,8 @@ const DATA = [
 }));
 
 function DestinationDetail() {
+  const nav = useWanderlustNavigation();
+
   const renderItem = useCallback(({item}: any) => {
     const {id, image, name, numOfBed, discountPercent, discountPrice, price} =
       item;
@@ -83,6 +87,10 @@ function DestinationDetail() {
     return <View style={{height: 16}} />;
   }, []);
 
+  const onPressNavigate = useCallback(() => {
+    nav.navigate(Routes.accomodation_recommend);
+  }, [nav]);
+
   return (
     <>
       <FlatList
@@ -101,6 +109,7 @@ function DestinationDetail() {
               <NavigationHeader
                 title={translate('source:accommodation_recommend')}
                 navigateTitle={translate('source:view_more')}
+                onPress={onPressNavigate}
               />
             </View>
           </>

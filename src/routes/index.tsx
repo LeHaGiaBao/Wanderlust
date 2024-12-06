@@ -33,6 +33,7 @@ import AboutUs from '@/screens/main/AboutUs/AboutUs';
 import ChangePassword from '@/screens/auth/ChangePassword';
 import DestinationDetail from '@/screens/main/Destination/DestinationDetail';
 import AllReview from '@/screens/main/Review/AllReview';
+import AllAccomodations from '@/screens/main/Accomodation/AllAccomodations';
 
 const Stack = createNativeStackNavigator();
 
@@ -186,6 +187,11 @@ function MainRoutes() {
         <Stack.Screen
           name={Routes.all_review}
           component={AllReview}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name={Routes.accomodation_recommend}
+          component={AllAccomodations}
           options={{headerShown: false}}
         />
         <Stack.Screen

@@ -31,5 +31,6 @@ export const Routes = {
   term_and_condition: 'term_and_condition',
   about_us: 'about_us',
   all_review: 'all_review',
+  accomodation_recommend: 'accomodation_recommend',
   destination_detail: 'destination_detail',
 };
