@@ -32,6 +32,9 @@ import TermAndCondition from '@/screens/main/AboutUs/TermAndCondition';
 import AboutUs from '@/screens/main/AboutUs/AboutUs';
 import ChangePassword from '@/screens/auth/ChangePassword';
 import DestinationDetail from '@/screens/main/Destination/DestinationDetail';
+import AllReview from '@/screens/main/Accomodation/Review/AllReview';
+import AllAccomodations from '@/screens/main/Accomodation/AllAccomodations';
+import AccomodationOverview from '@/screens/main/Accomodation/AccomodationOverview';
 
 const Stack = createNativeStackNavigator();
 
@@ -180,6 +183,21 @@ function MainRoutes() {
         <Stack.Screen
           name={Routes.change_password}
           component={ChangePassword}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name={Routes.all_review}
+          component={AllReview}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name={Routes.accomodation_recommend}
+          component={AllAccomodations}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name={Routes.accomodation_overview}
+          component={AccomodationOverview}
           options={{headerShown: false}}
         />
         <Stack.Screen

@@ -10,6 +10,7 @@ import {
   SafeAreaProvider,
   initialWindowMetrics,
 } from 'react-native-safe-area-context';
+import {BottomSheetModalProvider} from '@gorhom/bottom-sheet';
 import store from '@/hooks/context';
 import MainRoutes from '@/routes';
 
@@ -24,7 +25,9 @@ function App(): React.JSX.Element {
           <QueryClientProvider client={queryClient}>
             <ModalPresenterParent>
               <MenuProvider>
-                <MainRoutes />
+                <BottomSheetModalProvider>
+                  <MainRoutes />
+                </BottomSheetModalProvider>
               </MenuProvider>
             </ModalPresenterParent>
           </QueryClientProvider>
