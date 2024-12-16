@@ -151,6 +151,14 @@
       "list_2": "Được mệnh danh là một đại dương thu nhỏ, thủy cung Vinpearl Phú Quốc sẽ giúp bạn chiêm ngưỡng hàng trăm loài sinh vật biển kỳ thú từ khắp mọi nơi trên thế giới. ",
       "list_3": "Nơi đây được sắp xếp và phân chia thành 3 khu vực: Rừng mưa nhiệt đới (nước ngọt), Hang động (bò sát), và Đại dương (nước mặn), rất thuận tiện cho việc di chuyển tham quan khám phá của bạn.",
       "list_4": "Bên cạnh đó, bạn còn có thể thưởng thức các chương trình biểu diễn đặc sắc, thú vị như tiết mục biểu diễn của những nàng tiên cá xinh đẹp hay tiết mục biểu diễn cho cá ăn sẽ được tổ chức hàng ngày tại thủy cung tuyệt đẹp này."
-    }
+    },
+    "ticket_info": "Thông tin vé",
+    "adult_ticket": "Vé người lớn",
+    "child_ticket": "Vé trẻ em",
+    "ticket_day": "Ngày tham quan",
+    "price_detail": "Chi tiết giá",
+    "num_of_adult_ticket": "Vé người lớn x{{x}}",
+    "num_of_child_ticket": "Vé trẻ em x{{x}}",
+    "total_payment": "Tổng thanh toán"
   }
 }
