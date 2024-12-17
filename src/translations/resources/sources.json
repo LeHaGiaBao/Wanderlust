@@ -83,6 +83,7 @@
     "update_information": "Cập nhật thông tin cá nhân",
     "cancel_services": "Huỷ vé/ Huỷ phòng",
     "cancel_services_description": "Chúng tôi sẽ giúp bạn liên hệ trực tiếp hãng bay để huỷ vé hoặc khách sạn để huỷ phòng",
+
     "question_support": "Hỗ trợ giải đáp thắc mắc",
     "question_support_description": "Chúng tôi sẽ hỗ trợ bạn giải đáp thắc mắc và quản lý đặt chổ của bạn",
     "customer_services_contact": "Liên hệ dịch vụ khách hàng",
@@ -159,6 +160,15 @@
     "price_detail": "Chi tiết giá",
     "num_of_adult_ticket": "Vé người lớn x{{x}}",
     "num_of_child_ticket": "Vé trẻ em x{{x}}",
-    "total_payment": "Tổng thanh toán"
+    "total_payment": "Tổng thanh toán",
+    "ticket_detail": "Chi tiết vé",
+    "ticket_price": "Giá vé",
+    "adult": "Người lớn",
+    "child": "Trẻ em",
+    "ticket_include": "Giá vé bao gồm",
+    "ticket_not_include": "Giá vé không bao gồm",
+    "ticket_expire": "Hiệu lực vé",
+    "day_use": "Thời gian sử dụng",
+    "term": "Điều khoản"
   }
 }

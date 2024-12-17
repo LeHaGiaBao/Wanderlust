@@ -17,11 +17,14 @@ import {
   BottomSheetView,
 } from '@gorhom/bottom-sheet';
 import WButton from '../Button/WButton';
+import {useWanderlustNavigation} from '@/hooks/core/core';
+import {Routes} from '@/routes/routes';
 
 const TICKET = images.Ticket;
 
 function WTicket(props: PlaceTicketProps) {
   const {title, numberOfGuest, numerOfChildren, price, onEdit} = props;
+  const nav = useWanderlustNavigation();
   const bottomSheetModalRef = useRef<BottomSheetModal>(null);
 
   const handlePresentModalPress = useCallback(() => {
@@ -43,6 +46,11 @@ function WTicket(props: PlaceTicketProps) {
       />
     );
   }, []);
+
+  const goToTicketDetail = useCallback(() => {
+    bottomSheetModalRef.current?.dismiss();
+    nav.navigate(Routes.ticket_detail);
+  }, [nav]);
 
   return (
     <>
@@ -234,6 +242,7 @@ function WTicket(props: PlaceTicketProps) {
                 typo="Button1"
                 color="White"
                 backgroundColor="Main"
+                onPress={goToTicketDetail}
               />
             </View>
           </View>

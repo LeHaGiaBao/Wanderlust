@@ -35,6 +35,7 @@ import DestinationDetail from '@/screens/main/Destination/DestinationDetail';
 import AllReview from '@/screens/main/Accomodation/Review/AllReview';
 import AllAccomodations from '@/screens/main/Accomodation/AllAccomodations';
 import AccomodationOverview from '@/screens/main/Accomodation/AccomodationOverview';
+import TicketDetail from '@/screens/main/Ticket/TicketDetail';
 
 const Stack = createNativeStackNavigator();
 
@@ -203,6 +204,11 @@ function MainRoutes() {
         <Stack.Screen
           name={Routes.destination_detail}
           component={DestinationDetail}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name={Routes.ticket_detail}
+          component={TicketDetail}
           options={{headerShown: false}}
         />
       </Stack.Navigator>

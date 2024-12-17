@@ -34,4 +34,5 @@ export const Routes = {
   accomodation_recommend: 'accomodation_recommend',
   accomodation_overview: 'accomodation_overview',
   destination_detail: 'destination_detail',
+  ticket_detail: 'ticket_detail',
 };
