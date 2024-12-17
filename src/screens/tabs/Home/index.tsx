@@ -62,19 +62,27 @@ function HomeScreen() {
   const nav = useWanderlustNavigation();
   const keyExtractor = useCallback((item: any) => item.id.toString(), []);
 
-  const renderItem = useCallback(({item}: any) => {
-    const {image, title, destination, price, discount} = item;
+  const goToTourDetail = useCallback(() => {
+    nav.navigate(Routes.tour_detail);
+  }, [nav]);
 
-    return (
-      <SmallCardItem
-        image={image}
-        title={title}
-        destination={destination}
-        price={price}
-        discount={discount}
-      />
-    );
-  }, []);
+  const renderItem = useCallback(
+    ({item}: any) => {
+      const {image, title, destination, price, discount} = item;
+
+      return (
+        <SmallCardItem
+          image={image}
+          title={title}
+          destination={destination}
+          price={price}
+          discount={discount}
+          onPressItem={goToTourDetail}
+        />
+      );
+    },
+    [goToTourDetail],
+  );
 
   const renderSeparator = useCallback(() => {
     return <View style={{height: 12}} />;

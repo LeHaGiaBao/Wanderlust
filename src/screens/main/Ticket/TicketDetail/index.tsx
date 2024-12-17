@@ -1,3 +1,4 @@
+/* eslint-disable react-native/no-inline-styles */
 import React, {memo} from 'react';
 import {StyleSheet, View} from 'react-native';
 import {WButton, WText} from '@/components/UIKit';
@@ -19,6 +20,15 @@ function TicketDetail() {
           numberOfLines={2}
         />
         <View style={styles.contentContainer}>
+          <View style={[styles.priceCondition, {marginBottom: 16}]}>
+            <WText
+              text={translate('source:tour_period')}
+              typo="Body1"
+              color="Main"
+            />
+            <WText text="8 giờ" typo="Body2" color="Black" numberOfLines={2} />
+          </View>
+
           <WText
             text={translate('source:ticket_price')}
             typo="Body1"
