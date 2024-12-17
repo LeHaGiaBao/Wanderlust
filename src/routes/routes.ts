@@ -35,5 +35,6 @@ export const Routes = {
   accomodation_overview: 'accomodation_overview',
   destination_detail: 'destination_detail',
   tour_detail: 'tour_detail',
+  hotel_detail: 'hotel_detail',
   ticket_detail: 'ticket_detail',
 };

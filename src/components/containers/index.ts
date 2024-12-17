@@ -1,3 +1,4 @@
+export {default as BookingEdit} from './Booking/BookingEdit';
 export {default as SmallCardItem} from './CardItem/SmallCardItem/SmallCardItem';
 export {default as CardItem} from './CardItem/CardItem/CardItem';
 export {default as ReviewCardItem} from './CardItem/ReviewCardItem/ReviewCardItem';

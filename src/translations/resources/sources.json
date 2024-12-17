@@ -170,6 +170,14 @@
     "ticket_expire": "Hiệu lực vé",
     "day_use": "Thời gian sử dụng",
     "term": "Điều khoản",
-    "tour_period": "Thời lượng tour"
+    "tour_period": "Thời lượng tour",
+    "convenience": "Tiện nghi",
+    "restaurant": "Nhà hàng",
+    "private_beach": "Bãi biển riêng tư",
+    "parking": "Bãi đậu xe",
+    "bar": "Quán Bar",
+    "booking_info": "Thông tin đặt phòng",
+    "check_in": "Check in",
+    "check_out": "Check_out"
   }
 }
