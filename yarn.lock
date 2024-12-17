@@ -4350,6 +4350,25 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@tanstack/query-devtools@npm:5.61.4":
+  version: 5.61.4
+  resolution: "@tanstack/query-devtools@npm:5.61.4"
+  checksum: b2138f9848e38353d21abf17a1ae7c65528ba6f095537988b5cbb365bb0a64176b7ff9ea5c0494d69b5d2799a4c495fc0fc877b5e1f369f178549655c2748be9
+  languageName: node
+  linkType: hard
+
+"@tanstack/react-query-devtools@npm:^5.62.7":
+  version: 5.62.7
+  resolution: "@tanstack/react-query-devtools@npm:5.62.7"
+  dependencies:
+    "@tanstack/query-devtools": 5.61.4
+  peerDependencies:
+    "@tanstack/react-query": ^5.62.7
+    react: ^18 || ^19
+  checksum: 3ae33c7910aced2a8fc5266cdba58927a98d325d3104b33ceac5714836f7bba93d74dec0dd58e033683c60cfce77d66ca3d5a36d684eaf7ab0989a12b1accb48
+  languageName: node
+  linkType: hard
+
 "@tanstack/react-query@npm:^5.59.15":
   version: 5.59.15
   resolution: "@tanstack/react-query@npm:5.59.15"
@@ -14267,6 +14286,7 @@ __metadata:
     "@shopify/flash-list": ^1.7.1
     "@tanstack/eslint-plugin-query": ^5.59.7
     "@tanstack/react-query": ^5.59.15
+    "@tanstack/react-query-devtools": ^5.62.7
     "@types/react": ^18.2.6
     "@types/react-test-renderer": ^18.0.0
     "@whitespectre/rn-modal-presenter": ^1.1.3

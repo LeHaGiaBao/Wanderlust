@@ -2,8 +2,6 @@ import React from 'react';
 import {StyleSheet} from 'react-native';
 import {GestureHandlerRootView} from 'react-native-gesture-handler';
 import {enableFreeze} from 'react-native-screens';
-import {QueryClient, QueryClientProvider} from '@tanstack/react-query';
-import {Provider} from 'react-redux';
 import {ModalPresenterParent} from '@whitespectre/rn-modal-presenter';
 import {MenuProvider} from 'react-native-popup-menu';
 import {
@@ -11,18 +9,18 @@ import {
   initialWindowMetrics,
 } from 'react-native-safe-area-context';
 import {BottomSheetModalProvider} from '@gorhom/bottom-sheet';
-import store from '@/hooks/context';
 import MainRoutes from '@/routes';
+import {QueryProvider} from '@/services/query';
+import StoreProvider from '@/services/store/StoreProvider';
 
 enableFreeze(true);
-const queryClient = new QueryClient();
 
 function App(): React.JSX.Element {
   return (
     <GestureHandlerRootView style={styles.appContainer}>
       <SafeAreaProvider initialMetrics={initialWindowMetrics}>
-        <Provider store={store}>
-          <QueryClientProvider client={queryClient}>
+        <QueryProvider>
+          <StoreProvider>
             <ModalPresenterParent>
               <MenuProvider>
                 <BottomSheetModalProvider>
@@ -30,8 +28,8 @@ function App(): React.JSX.Element {
                 </BottomSheetModalProvider>
               </MenuProvider>
             </ModalPresenterParent>
-          </QueryClientProvider>
-        </Provider>
+          </StoreProvider>
+        </QueryProvider>
       </SafeAreaProvider>
     </GestureHandlerRootView>
   );
