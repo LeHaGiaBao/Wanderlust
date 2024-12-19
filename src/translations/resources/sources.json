@@ -178,6 +178,16 @@
     "bar": "Quán Bar",
     "booking_info": "Thông tin đặt phòng",
     "check_in": "Check in",
-    "check_out": "Check_out"
+    "check_out": "Check_out",
+    "flight_detail": "Chi tiết chuyến bay",
+    "flight_detail_info": "Chi tiết hành trình",
+    "flight_ticket_policy": "Chính sách vé",
+    "total": "Tổng",
+    "choose_ticket": "Chọn vé",
+    "flight_ticket_type": "Hạng vé",
+    "hand_luggage": "Hành lý xách tay",
+    "checked_baggage": "Hành lý ký gửi",
+    "meal": "Suất ăn",
+    "refund_ticket": "Hoàn phí hủy chuyến"
   }
 }
