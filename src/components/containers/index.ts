@@ -5,3 +5,4 @@ export {default as ReviewCardItem} from './CardItem/ReviewCardItem/ReviewCardIte
 export {default as RoomCard} from './CardItem/RoomCard/RoomCard';
 export {default as FilterList} from './Fitter/FilterList';
 export {default as TopNavigation} from './TopNavigation/TopNavigation';
+export {default as FlightCard} from './Flight/FlightCard';
