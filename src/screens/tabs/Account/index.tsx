@@ -3,8 +3,6 @@ import React, {memo, useCallback, useMemo} from 'react';
 import {FlatList, StyleSheet, View} from 'react-native';
 import {BaseColor, Devices, PrimaryColor} from '@/constants';
 import {
-  Building4,
-  Airplane,
   TicketDiscount,
   ProfileCircle,
   EmptyWallet,
@@ -13,25 +11,24 @@ import {
   SecuritySafe,
   DirectboxNotif,
   InfoCircle,
-  LogoutCurve,
 } from 'iconsax-react-native';
 import AccountTopNavBar from './components/Account.TopNavBar';
 import AccountSubNav from './components/Account.SubNav';
 import NavigateContainer from './components/NavigateContainer';
 import translate from '@/translations/i18n';
-import {WText} from '@/components/UIKit';
+import {WIcon, WText} from '@/components/UIKit';
 import {Routes} from '@/routes/routes';
 
 const TOP_LEVEL_DATA = [
   {
     id: 1,
-    icon: <Building4 size={24} color={PrimaryColor.Main} variant="Bold" />,
+    icon: <WIcon icon="building" size={24} color={PrimaryColor.Main} />,
     title: translate('source:my_booking'),
     route: Routes.my_booking,
   },
   {
     id: 2,
-    icon: <Airplane size={24} color={PrimaryColor.Main} variant="Bold" />,
+    icon: <WIcon icon="airplane" size={24} color={PrimaryColor.Main} />,
     title: translate('source:my_flight'),
     route: Routes.my_flight,
   },
@@ -167,7 +164,7 @@ function AccountScreen() {
           {renderAboutAppNavigate}
           <View style={styles.footer}>
             <NavigateContainer
-              icon={<LogoutCurve size={24} color={PrimaryColor.Main} />}
+              icon={<WIcon icon="logout" size={24} color={PrimaryColor.Main} />}
               title={translate('source:logout')}
               route={Routes.welcomeScreen}
             />

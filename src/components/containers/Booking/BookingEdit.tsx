@@ -1,15 +1,9 @@
 import React, {memo} from 'react';
 import {View} from 'react-native';
 import {PrimaryColor} from '@/constants';
-import {
-  LoginCurve,
-  LogoutCurve,
-  Buildings,
-  Profile,
-  Pet,
-} from 'iconsax-react-native';
+import {LoginCurve, Buildings, Profile, Pet} from 'iconsax-react-native';
 import translate from '@/translations/i18n';
-import {WText} from '@/components/UIKit';
+import {WIcon, WText} from '@/components/UIKit';
 import {styles} from './styles';
 
 function BookingEdit() {
@@ -29,7 +23,7 @@ function BookingEdit() {
         </View>
 
         <View style={styles.headerItem}>
-          <LogoutCurve size={20} variant="Linear" color={PrimaryColor.Main} />
+          <WIcon icon="checkout" size={24} color={PrimaryColor.Main} />
           <View>
             <WText
               text={translate('source:check_out')}
