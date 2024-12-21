@@ -5,10 +5,13 @@ import {Image, StyleSheet, TouchableOpacity, View} from 'react-native';
 import {Notification, SearchNormal1} from 'iconsax-react-native';
 import {useWanderlustNavigation} from '@/hooks/core/core';
 import {Routes} from '@/routes/routes';
+import {ColorType} from '@/@types/styles';
 
 interface TopNavBarProps {
   title?: string;
+  titleColor?: ColorType;
   subTitle?: string;
+  subTitleColor?: ColorType;
   showSearchBar?: boolean;
   searchBarPlaceholder?: string;
 }
@@ -17,7 +20,14 @@ const IMAGE =
   'https://img.freepik.com/free-psd/3d-illustration-human-avatar-profile_23-2150671142.jpg?semt=ais_hybrid';
 
 function HomeTopNavBar(props: TopNavBarProps) {
-  const {title, subTitle, showSearchBar, searchBarPlaceholder} = props;
+  const {
+    title,
+    titleColor = 'Main',
+    subTitle,
+    subTitleColor = 'Gray',
+    showSearchBar,
+    searchBarPlaceholder,
+  } = props;
   const nav = useWanderlustNavigation();
 
   const renderAvatarConatainer = useMemo(() => {
@@ -25,12 +35,12 @@ function HomeTopNavBar(props: TopNavBarProps) {
       <View style={styles.avatarContainer}>
         <Image source={{uri: IMAGE}} style={styles.circle} />
         <View style={styles.content}>
-          <WText text={title || ''} typo="Body1" color="Main" />
-          <WText text={subTitle || ''} typo="Body3" color="Gray" />
+          <WText text={title || ''} typo="Body1" color={titleColor} />
+          <WText text={subTitle || ''} typo="Body3" color={subTitleColor} />
         </View>
       </View>
     );
-  }, [subTitle, title]);
+  }, [subTitle, subTitleColor, title, titleColor]);
 
   const renderNotificationIcon = useMemo(() => {
     return (

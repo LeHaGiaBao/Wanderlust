@@ -188,6 +188,9 @@
     "hand_luggage": "Hành lý xách tay",
     "checked_baggage": "Hành lý ký gửi",
     "meal": "Suất ăn",
-    "refund_ticket": "Hoàn phí hủy chuyến"
+    "refund_ticket": "Hoàn phí hủy chuyến",
+    "choose_hotel": "Chọn khách sạn mà bạn muốn đến",
+    "find_plane": "Tìm chuyến bay",
+    "find_train": "Tìm vé tàu"
   }
 }
