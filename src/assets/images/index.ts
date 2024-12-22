@@ -8,4 +8,7 @@ export default {
   NoMesssage: require('./NoMessage.png'),
   NoTasks: require('./NoTasks.png'),
   New: require('./New.png'),
+  Hotel: require('./hotel.png'),
+  Plane: require('./plane.png'),
+  NoTasksWhite: require('./NoTasksWhite.png'),
 };
