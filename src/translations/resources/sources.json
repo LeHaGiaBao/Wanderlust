@@ -190,7 +190,21 @@
     "meal": "Suất ăn",
     "refund_ticket": "Hoàn phí hủy chuyến",
     "choose_hotel": "Chọn khách sạn mà bạn muốn đến",
+    "choose_flight": "Tìm kiếm chuyến bay ngay!",
+    "choose_train": "Tìm vé tàu ngay!",
     "find_plane": "Tìm chuyến bay",
-    "find_train": "Tìm vé tàu"
+    "find_train": "Tìm vé tàu",
+    "find_hotel_placeholder": "Tìm khách sạn, homestay,...",
+    "dd_mm_placeholder": "dd tháng mm - dd tháng mm",
+    "room_placeholder": "2 người lớn - 1 phòng",
+    "find": "Tìm kiếm",
+    "one_way": "Một chiều",
+    "round_trip": "Khứ hồi",
+    "departure_placeholder": "Nơi cất cánh",
+    "arrival_placeholder": "Nơi hạ cánh",
+    "departure_date": "Ngày đi",
+    "return_date": "Ngày về",
+    "passenger": "Số khách",
+    "recommend": "Đề xuất"
   }
 }

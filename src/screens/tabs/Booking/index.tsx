@@ -12,6 +12,8 @@ import TopNavBar from '../_components/TopNavBar';
 import translate from '@/translations/i18n';
 import {WIcon, WText} from '@/components/UIKit';
 import {Bus} from 'iconsax-react-native';
+import BookingSearchHotel from './components/Booking.SearchHotel';
+import BookingSearchFlight from './components/Booking.SearchFlight';
 
 const IMAGE_DATA = [
   {
@@ -39,6 +41,37 @@ function BookingScreen() {
 
   const activeImage = useMemo(() => {
     return IMAGE_DATA.find(item => item.key === itemActive)?.image;
+  }, [itemActive]);
+
+  const renderNavigation = useMemo(() => {
+    if (itemActive === 'train') {
+      return (
+        <TopNavBar
+          title={translate('source:hello')}
+          titleColor="White"
+          subTitle={translate('source:choose_train')}
+          subTitleColor="White"
+        />
+      );
+    }
+    if (itemActive === 'plane') {
+      return (
+        <TopNavBar
+          title={translate('source:hello')}
+          titleColor="White"
+          subTitle={translate('source:choose_flight')}
+          subTitleColor="White"
+        />
+      );
+    }
+    return (
+      <TopNavBar
+        title={translate('source:hello')}
+        titleColor="White"
+        subTitle={translate('source:choose_hotel')}
+        subTitleColor="White"
+      />
+    );
   }, [itemActive]);
 
   const navigationBar = useMemo(() => {
@@ -111,6 +144,16 @@ function BookingScreen() {
     );
   }, [handlePress, itemActive]);
 
+  const renderFormField = useMemo(() => {
+    if (itemActive === 'train') {
+      return null;
+    }
+    if (itemActive === 'plane') {
+      return <BookingSearchFlight />;
+    }
+    return <BookingSearchHotel />;
+  }, [itemActive]);
+
   return (
     <>
       <View style={styles.bookingScreen}>
@@ -120,20 +163,13 @@ function BookingScreen() {
             style={styles.imageBackground}
             imageStyle={styles.imageStyle}
             resizeMode="cover">
-            <TopNavBar
-              title={translate('source:hello')}
-              subTitle={translate('source:choose_hotel')}
-            />
+            {renderNavigation}
             {navigationBar}
+            {renderFormField}
           </ImageBackground>
         ) : (
           <View style={styles.nullBackground}>
-            <TopNavBar
-              title={translate('source:hello')}
-              titleColor="White"
-              subTitle={translate('source:choose_hotel')}
-              subTitleColor="White"
-            />
+            {renderNavigation}
             {navigationBar}
             <View style={styles.commingSoon}>
               <Image source={images.NoTasksWhite} width={10} height={10} />
