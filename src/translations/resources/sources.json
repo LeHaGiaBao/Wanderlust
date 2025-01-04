@@ -205,6 +205,9 @@
     "departure_date": "Ngày đi",
     "return_date": "Ngày về",
     "passenger": "Số khách",
-    "recommend": "Đề xuất"
+    "recommend": "Đề xuất",
+    "num_of_room": "Số lượng phòng",
+    "pet": "Thú cưng",
+    "month-n": "Tháng {{-month}}"
   }
 }
