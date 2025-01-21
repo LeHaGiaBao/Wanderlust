@@ -39,4 +39,5 @@ export const Routes = {
   ticket_detail: 'ticket_detail',
   flight_detail: 'flight_detail',
   payment_confirm: 'payment_confirm',
+  payment_method: 'payment_method',
 };

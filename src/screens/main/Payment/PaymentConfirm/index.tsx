@@ -1,4 +1,4 @@
-import React, {memo} from 'react';
+import React, {memo, useCallback} from 'react';
 import {Image, StyleSheet, View} from 'react-native';
 import {BookingEdit, TopNavigation} from '@/components/containers';
 import {WButton, WText} from '@/components/UIKit';
@@ -6,11 +6,19 @@ import {BaseColor, Devices, SecondaryColor} from '@/constants';
 import translate from '@/translations/i18n';
 import {Call, Star1} from 'iconsax-react-native';
 import WInputField from '@/components/UIKit/Input/WInputField';
+import {useWanderlustNavigation} from '@/hooks/core/core';
+import {Routes} from '@/routes/routes';
 
 const IMAGE =
   'https://vinpearlresortvietnam.com/wp-content/uploads/villa-3-phong-ngu-vinpearl-discovery-coastalland-phu-quoc-6.jpg';
 
 function PaymentConfirm() {
+  const nav = useWanderlustNavigation();
+
+  const onPressNavigate = useCallback(() => {
+    nav.navigate(Routes.payment_method);
+  }, [nav]);
+
   return (
     <View style={styles.container}>
       <TopNavigation title={translate('source:confirm_information')} />
@@ -108,6 +116,7 @@ function PaymentConfirm() {
           typo="Button1"
           color="White"
           backgroundColor="Main"
+          onPress={onPressNavigate}
         />
       </View>
     </View>
