@@ -225,6 +225,8 @@
     "input_code": "Nhập mã code",
     "input_code_description": "Nhập mã của bạn tại đây",
     "list_voucher": "Mã giảm giá có sẵn",
-    "discount": "Giảm giá"
+    "discount": "Giảm giá",
+    "voucher_detail": "Chi tiết mã giảm giá",
+    "use_now": "Dùng ngay"
   }
 }

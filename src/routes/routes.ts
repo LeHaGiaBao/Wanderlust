@@ -43,4 +43,5 @@ export const Routes = {
   payment_edit: 'payment_edit',
   payment_card_list: 'payment_card_list',
   add_new_voucher: 'add_new_voucher',
+  voucher_detail: 'voucher_detail',
 };
