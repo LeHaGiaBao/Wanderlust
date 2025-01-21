@@ -221,6 +221,10 @@
     "card_number": "Số thẻ",
     "card_date": "Thời hạn",
     "card_cvv": "CVV",
-    "card_list": "Danh sách thẻ"
+    "card_list": "Danh sách thẻ",
+    "input_code": "Nhập mã code",
+    "input_code_description": "Nhập mã của bạn tại đây",
+    "list_voucher": "Mã giảm giá có sẵn",
+    "discount": "Giảm giá"
   }
 }

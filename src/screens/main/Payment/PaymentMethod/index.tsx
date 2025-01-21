@@ -31,6 +31,10 @@ function PaymentMethod() {
     nav.navigate(Routes.payment_card_list);
   }, [nav]);
 
+  const goToAddVoucher = useCallback(() => {
+    nav.navigate(Routes.add_new_voucher);
+  }, [nav]);
+
   return (
     <View style={styles.container}>
       <TopNavigation title={translate('source:payment_method')} />
@@ -89,7 +93,9 @@ function PaymentMethod() {
           typo="Heading2"
           color="Black"
         />
-        <TouchableOpacity style={styles.voucherContainer}>
+        <TouchableOpacity
+          style={styles.voucherContainer}
+          onPress={goToAddVoucher}>
           <View style={styles.leftContainer}>
             <TicketDiscount
               size={24}
