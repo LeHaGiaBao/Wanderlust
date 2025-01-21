@@ -70,6 +70,7 @@ export interface InputFieldsProps {
   inputStyles?: StyleProp;
   border?: boolean;
   borderRadius?: number;
+  isNotification: boolean;
   onPress?: () => void;
   onLongPress?: () => void;
 }

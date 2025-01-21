@@ -39,6 +39,7 @@ import TicketDetail from '@/screens/main/Ticket/TicketDetail';
 import TourDetail from '@/screens/main/Tour/TourDetail';
 import HotelDetail from '@/screens/main/Hotel/HotelDetail';
 import FlightDetail from '@/screens/main/Flight/FlightDetail';
+import PaymentConfirm from '@/screens/main/Payment/PaymentConfirm';
 
 const Stack = createNativeStackNavigator();
 
@@ -227,6 +228,11 @@ function MainRoutes() {
         <Stack.Screen
           name={Routes.ticket_detail}
           component={TicketDetail}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name={Routes.payment_confirm}
+          component={PaymentConfirm}
           options={{headerShown: false}}
         />
       </Stack.Navigator>

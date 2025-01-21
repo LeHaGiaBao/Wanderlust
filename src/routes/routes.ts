@@ -38,4 +38,5 @@ export const Routes = {
   hotel_detail: 'hotel_detail',
   ticket_detail: 'ticket_detail',
   flight_detail: 'flight_detail',
+  payment_confirm: 'payment_confirm',
 };

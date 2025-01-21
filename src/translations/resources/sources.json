@@ -208,6 +208,9 @@
     "recommend": "Đề xuất",
     "num_of_room": "Số lượng phòng",
     "pet": "Thú cưng",
-    "month-n": "Tháng {{-month}}"
+    "month-n": "Tháng {{-month}}",
+    "confirm_information": "Xác thực thông tin",
+    "customer_go_with_info": "Thông tin khách đi cùng",
+    "customer_go_with_name": "Tên khách đi cùng"
   }
 }

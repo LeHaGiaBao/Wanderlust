@@ -90,6 +90,10 @@ function HotelDetail() {
     nav.navigate(Routes.accomodation_recommend);
   }, [nav]);
 
+  const handleBookRoom = useCallback(() => {
+    nav.navigate(Routes.payment_confirm);
+  }, [nav]);
+
   return (
     <>
       <FlatList
@@ -125,6 +129,7 @@ function HotelDetail() {
           typo="Button1"
           color="White"
           backgroundColor="Main"
+          onPress={handleBookRoom}
         />
       </View>
     </>
