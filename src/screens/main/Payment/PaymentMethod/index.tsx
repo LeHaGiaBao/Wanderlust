@@ -1,4 +1,4 @@
-import React, {memo} from 'react';
+import React, {memo, useCallback} from 'react';
 import {StyleSheet, TouchableOpacity, View} from 'react-native';
 import {TopNavigation} from '@/components/containers';
 import {WButton, WIcon, WText} from '@/components/UIKit';
@@ -10,6 +10,8 @@ import {
   ArrowCircleRight,
 } from 'iconsax-react-native';
 import PaymentItem from './components/PaymentItem';
+import {useWanderlustNavigation} from '@/hooks/core/core';
+import {Routes} from '@/routes/routes';
 
 const MOMO =
   'https://cdn.haitrieu.com/wp-content/uploads/2022/10/Logo-MoMo-Square.png';
@@ -19,23 +21,39 @@ const VNPAY =
   'https://cdn.haitrieu.com/wp-content/uploads/2022/10/Icon-VNPAY-QR.png';
 
 function PaymentMethod() {
+  const nav = useWanderlustNavigation();
+
+  const handleCard = useCallback(() => {
+    nav.navigate(Routes.payment_edit);
+  }, [nav]);
+
+  const goToCardList = useCallback(() => {
+    nav.navigate(Routes.payment_card_list);
+  }, [nav]);
+
   return (
     <View style={styles.container}>
       <TopNavigation title={translate('source:payment_method')} />
       <View style={styles.contentContainer}>
-        <WText
-          text={translate('source:credit_or_debit')}
-          typo="Heading2"
-          color="Black"
-        />
-        <View style={styles.addNewCard}>
+        <View style={styles.flexContainer}>
+          <WText
+            text={translate('source:credit_or_debit')}
+            typo="Heading2"
+            color="Black"
+          />
+          <TouchableOpacity onPress={goToCardList}>
+            <WText text={translate('source:edit')} typo="Body3" color="Main" />
+          </TouchableOpacity>
+        </View>
+
+        <TouchableOpacity style={styles.addNewCard} onPress={handleCard}>
           <AddCircle size={24} variant="Linear" color={BaseColor.Black} />
           <WText
             text={translate('source:add_new_card')}
             typo="Body2"
             color="Black"
           />
-        </View>
+        </TouchableOpacity>
 
         <WText
           text={translate('source:other_method')}
@@ -122,6 +140,12 @@ const styles = StyleSheet.create({
     paddingHorizontal: 16,
     backgroundColor: BaseColor.White,
     height: Devices.height,
+  },
+  flexContainer: {
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
   },
   contentContainer: {
     marginTop: 16,

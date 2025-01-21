@@ -215,6 +215,12 @@
     "credit_or_debit": "Credit hoặc Debit Card",
     "add_new_card": "Thêm thẻ mới",
     "other_method": "Phương thức khác",
-    "choose_voucher": "Chọn mã giảm giá"
+    "choose_voucher": "Chọn mã giảm giá",
+    "add_card": "Thêm thẻ",
+    "card_user_name": "Tên chủ thẻ",
+    "card_number": "Số thẻ",
+    "card_date": "Thời hạn",
+    "card_cvv": "CVV",
+    "card_list": "Danh sách thẻ"
   }
 }

@@ -40,4 +40,6 @@ export const Routes = {
   flight_detail: 'flight_detail',
   payment_confirm: 'payment_confirm',
   payment_method: 'payment_method',
+  payment_edit: 'payment_edit',
+  payment_card_list: 'payment_card_list',
 };
