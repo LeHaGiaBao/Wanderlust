@@ -5,8 +5,11 @@ import {BaseColor, PrimaryColor} from '@/constants';
 import WText from '../Text/WText';
 import translate from '@/translations/i18n';
 import {VoucherProps} from '@/@types/styles';
+import {useWanderlustNavigation} from '@/hooks/core/core';
+import {Routes} from '@/routes/routes';
 
 function WVoucher(props: VoucherProps) {
+  const nav = useWanderlustNavigation();
   const {name, description, condition, isExpired} = props;
   const [selected, setSelected] = useState(false);
 
@@ -29,6 +32,10 @@ function WVoucher(props: VoucherProps) {
       setSelected(!selected);
     }
   }, [isExpired, selected]);
+
+  const goToVoucherDetail = useCallback(() => {
+    nav.navigate(Routes.voucher_detail);
+  }, [nav]);
 
   const Wrapper = selected ? TickCircle : AddCircle;
 
@@ -72,11 +79,13 @@ function WVoucher(props: VoucherProps) {
           typo="Small"
           color={isExpired ? 'DarkGray' : 'Main'}
         />
-        <WText
-          text={translate('source:detail')}
-          typo="Small"
-          color={isExpired ? 'DarkGray' : 'Main'}
-        />
+        <TouchableOpacity onPress={goToVoucherDetail}>
+          <WText
+            text={translate('source:detail')}
+            typo="Small"
+            color={isExpired ? 'DarkGray' : 'Main'}
+          />
+        </TouchableOpacity>
       </View>
     </View>
   );

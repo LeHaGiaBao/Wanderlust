@@ -38,4 +38,12 @@ export const Routes = {
   hotel_detail: 'hotel_detail',
   ticket_detail: 'ticket_detail',
   flight_detail: 'flight_detail',
+  payment_confirm: 'payment_confirm',
+  payment_method: 'payment_method',
+  payment_edit: 'payment_edit',
+  payment_card_list: 'payment_card_list',
+  add_new_voucher: 'add_new_voucher',
+  voucher_detail: 'voucher_detail',
+  payment_checkout: 'payment_checkout',
+  payment_detail: 'payment_detail',
 };

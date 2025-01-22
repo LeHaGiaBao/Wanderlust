@@ -19,6 +19,7 @@ function WInputFields(props: InputFieldsProps) {
     iconAlign,
     border = true,
     borderRadius = 8,
+    isNotification = true,
   } = props;
   const [value, setValue] = useState('');
   const [focus, setFocus] = useState(false);
@@ -71,11 +72,13 @@ function WInputFields(props: InputFieldsProps) {
           </TouchableOpacity>
         )}
       </TouchableOpacity>
-      <WText
-        text={notification || ''}
-        typo="Label"
-        color={isError ? 'Error' : 'DarkGray'}
-      />
+      {isNotification && (
+        <WText
+          text={notification || ''}
+          typo="Label"
+          color={isError ? 'Error' : 'DarkGray'}
+        />
+      )}
     </TouchableOpacity>
   );
 }

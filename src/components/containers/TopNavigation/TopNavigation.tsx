@@ -4,6 +4,7 @@ import {StyleSheet, TouchableOpacity, View} from 'react-native';
 import {ArrowCircleLeft} from 'iconsax-react-native';
 import {WText} from '@/components/UIKit';
 import {useWanderlustNavigation} from '@/hooks/core/core';
+import {Routes} from '@/routes/routes';
 
 interface TopNavigationProps {
   title?: string;
@@ -15,7 +16,11 @@ function TopNavigation(props: TopNavigationProps) {
   const nav = useWanderlustNavigation();
 
   const handleGoBack = useCallback(() => {
-    nav.goBack();
+    if (nav.canGoBack()) {
+      nav.goBack();
+      return;
+    }
+    nav.reset({index: 0, routes: [{name: Routes.appScreen}]});
   }, [nav]);
 
   return (

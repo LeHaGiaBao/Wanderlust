@@ -39,6 +39,14 @@ import TicketDetail from '@/screens/main/Ticket/TicketDetail';
 import TourDetail from '@/screens/main/Tour/TourDetail';
 import HotelDetail from '@/screens/main/Hotel/HotelDetail';
 import FlightDetail from '@/screens/main/Flight/FlightDetail';
+import PaymentConfirm from '@/screens/main/Payment/PaymentConfirm';
+import PaymentMethod from '@/screens/main/Payment/PaymentMethod';
+import PaymentEdit from '@/screens/main/Payment/PaymentEdit';
+import PaymentCardList from '@/screens/main/Payment/PaymentCardList';
+import AddNewVoucher from '@/screens/main/Voucher/AddNewVoucher';
+import VoucherDetail from '@/screens/main/Voucher/VoucherDetail';
+import PaymentCheckout from '@/screens/main/Payment/PaymentCheckout';
+import PaymentDetail from '@/screens/main/Payment/PaymentDetail';
 
 const Stack = createNativeStackNavigator();
 
@@ -227,6 +235,46 @@ function MainRoutes() {
         <Stack.Screen
           name={Routes.ticket_detail}
           component={TicketDetail}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name={Routes.payment_confirm}
+          component={PaymentConfirm}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name={Routes.payment_method}
+          component={PaymentMethod}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name={Routes.payment_edit}
+          component={PaymentEdit}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name={Routes.payment_card_list}
+          component={PaymentCardList}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name={Routes.add_new_voucher}
+          component={AddNewVoucher}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name={Routes.voucher_detail}
+          component={VoucherDetail}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name={Routes.payment_checkout}
+          component={PaymentCheckout}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name={Routes.payment_detail}
+          component={PaymentDetail}
           options={{headerShown: false}}
         />
       </Stack.Navigator>
