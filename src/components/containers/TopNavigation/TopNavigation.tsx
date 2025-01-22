@@ -20,7 +20,7 @@ function TopNavigation(props: TopNavigationProps) {
       nav.goBack();
       return;
     }
-    nav.reset({index: 0, routes: [{name: Routes.tab_home}]});
+    nav.reset({index: 0, routes: [{name: Routes.appScreen}]});
   }, [nav]);
 
   return (
