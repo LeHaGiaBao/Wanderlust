@@ -45,4 +45,5 @@ export const Routes = {
   add_new_voucher: 'add_new_voucher',
   voucher_detail: 'voucher_detail',
   payment_checkout: 'payment_checkout',
+  payment_detail: 'payment_detail',
 };

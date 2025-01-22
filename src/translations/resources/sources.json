@@ -83,7 +83,6 @@
     "update_information": "Cập nhật thông tin cá nhân",
     "cancel_services": "Huỷ vé/ Huỷ phòng",
     "cancel_services_description": "Chúng tôi sẽ giúp bạn liên hệ trực tiếp hãng bay để huỷ vé hoặc khách sạn để huỷ phòng",
-
     "question_support": "Hỗ trợ giải đáp thắc mắc",
     "question_support_description": "Chúng tôi sẽ hỗ trợ bạn giải đáp thắc mắc và quản lý đặt chổ của bạn",
     "customer_services_contact": "Liên hệ dịch vụ khách hàng",
@@ -235,6 +234,22 @@
     "payment_success": "Thanh toán thành công",
     "payment_success_description": "Hoá đơn của bạn đã được thanh toán thành công",
     "see_payment_detail": "Xem hoá đơn",
-    "back_to_home": "Quay lại trang chủ"
+    "back_to_home": "Quay lại trang chủ",
+    "payment_detail": "Thông tin đặt phòng",
+    "payment_code": "Mã xác nhận",
+    "payment_detail_change_info": "Bạn muốn thay đổi thông tin khách hàng?",
+    "payment_detail_change_info_des": "Vui lòng liên hệ khách sạn để thay đổi thông tin.",
+    "hotel_contact_title": "Liên hệ khách sạn",
+    "cancel_payment_policy": "Chính sách hủy phòng",
+    "cancel_room": "Hủy phòng",
+    "cancel_room_des": "Bạn muốn hủy phòng? Vui lòng liên hệ khách sạn để hủy phòng bạn đã đặt.",
+    "no_refund": "Không hoàn tiền",
+    "no_refund_des": "Xin lưu ý, trong mọi trường hợp đặt phòng bị hủy, thay đổi hoặc vắng mặt, toàn bộ tiền phòng vẫn sẽ được thu.",
+    "hotel_rule": {
+      "rule_title": "Quy định khách sạn",
+      "rule_des1": ". Căn hộ cho tối đa 2 người lớn, 1 trẻ em và 1 thú cưng dưới 5 kg.",
+      "rule_des2": ". Khách hàng gửi xe tại bãi giữ xe riêng của khách sạn.",
+      "rule_des3": ". Nhận phòng tại quầy lễ tân ở sảnh A của khu nghỉ dưỡng."
+    }
   }
 }

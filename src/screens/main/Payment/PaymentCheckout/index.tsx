@@ -72,6 +72,11 @@ function PaymentCheckout() {
     paymentBottomSheetModalRef.current?.dismiss();
   }, [nav]);
 
+  const goToPaymentDetail = useCallback(() => {
+    nav.reset({index: 0, routes: [{name: Routes.payment_detail}]});
+    paymentBottomSheetModalRef.current?.dismiss();
+  }, [nav]);
+
   return (
     <>
       <View style={styles.container}>
@@ -295,6 +300,7 @@ function PaymentCheckout() {
               typo="Button1"
               color="White"
               backgroundColor="Main"
+              onPress={goToPaymentDetail}
             />
             <TouchableOpacity onPress={goBackHome}>
               <WText
