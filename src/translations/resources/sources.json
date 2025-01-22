@@ -227,6 +227,14 @@
     "list_voucher": "Mã giảm giá có sẵn",
     "discount": "Giảm giá",
     "voucher_detail": "Chi tiết mã giảm giá",
-    "use_now": "Dùng ngay"
+    "use_now": "Dùng ngay",
+    "payment_checkout": "Xác nhận thanh toán",
+    "change": "Thay đổi",
+    "checkout": "Thanh toán",
+    "payment_progress": "Đang thanh toán",
+    "payment_success": "Thanh toán thành công",
+    "payment_success_description": "Hoá đơn của bạn đã được thanh toán thành công",
+    "see_payment_detail": "Xem hoá đơn",
+    "back_to_home": "Quay lại trang chủ"
   }
 }

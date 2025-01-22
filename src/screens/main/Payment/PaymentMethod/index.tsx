@@ -35,6 +35,10 @@ function PaymentMethod() {
     nav.navigate(Routes.add_new_voucher);
   }, [nav]);
 
+  const goToPaymentCheckout = useCallback(() => {
+    nav.navigate(Routes.payment_checkout);
+  }, [nav]);
+
   return (
     <View style={styles.container}>
       <TopNavigation title={translate('source:payment_method')} />
@@ -133,6 +137,7 @@ function PaymentMethod() {
           typo="Button1"
           color="White"
           backgroundColor="Main"
+          onPress={goToPaymentCheckout}
         />
       </View>
     </View>

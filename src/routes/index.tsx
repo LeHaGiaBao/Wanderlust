@@ -45,6 +45,7 @@ import PaymentEdit from '@/screens/main/Payment/PaymentEdit';
 import PaymentCardList from '@/screens/main/Payment/PaymentCardList';
 import AddNewVoucher from '@/screens/main/Voucher/AddNewVoucher';
 import VoucherDetail from '@/screens/main/Voucher/VoucherDetail';
+import PaymentCheckout from '@/screens/main/Payment/PaymentCheckout';
 
 const Stack = createNativeStackNavigator();
 
@@ -263,6 +264,11 @@ function MainRoutes() {
         <Stack.Screen
           name={Routes.voucher_detail}
           component={VoucherDetail}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name={Routes.payment_checkout}
+          component={PaymentCheckout}
           options={{headerShown: false}}
         />
       </Stack.Navigator>
