@@ -36,7 +36,9 @@
       "full_name_placeholder": "Tên của bạn",
       "email": "Email",
       "email_placeholder": "email@gmail.com",
+      "phone": "Số điện thoại",
       "birth": "Ngày sinh",
+      "gender": "Giới tính",
       "birth_placeholder": "dd/mm/yyyy",
       "password": "Mật khẩu",
       "confirm_password": "Nhập lại mật khẩu",
@@ -250,6 +252,10 @@
       "rule_des1": ". Căn hộ cho tối đa 2 người lớn, 1 trẻ em và 1 thú cưng dưới 5 kg.",
       "rule_des2": ". Khách hàng gửi xe tại bãi giữ xe riêng của khách sạn.",
       "rule_des3": ". Nhận phòng tại quầy lễ tân ở sảnh A của khu nghỉ dưỡng."
-    }
+    },
+    "linked": "Liên kết",
+    "account_linked": "Tài khoản đã liên kết",
+    "account_not_linked": "Chưa liên kết",
+    "account_is_linked": "Bạn đang đăng nhập bằng tài khoản {{name}}"
   }
 }
