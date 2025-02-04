@@ -11,6 +11,7 @@ import {
   configureReanimatedLogger,
   ReanimatedLogLevel,
 } from 'react-native-reanimated';
+import 'react-native-url-polyfill/auto';
 //import '@react-native-firebase/app';
 //import firestore from '@react-native-firebase/firestore';
 //import functions from '@react-native-firebase/functions';

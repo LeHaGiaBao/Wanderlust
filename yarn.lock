@@ -4192,21 +4192,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@supabase/auth-js@npm:2.67.1":
-  version: 2.67.1
-  resolution: "@supabase/auth-js@npm:2.67.1"
+"@supabase/auth-js@npm:2.67.3":
+  version: 2.67.3
+  resolution: "@supabase/auth-js@npm:2.67.3"
   dependencies:
     "@supabase/node-fetch": ^2.6.14
-  checksum: 46d695ddf7ba230e6bf6239ca559ab8aa6e4c300a97761a3f3a46c5e0f1ab7457c3c1ccef7ba34d560da5aa26076c7fa043467097f6e7a3a381700b30f871a88
+  checksum: f2ffea5518616b009b4572cd60bca5fb1eb0d925243cbfd97aa2dc627d58642105d6af1ab5fcde9ecf3d7da5e44ae4a5441390a76cb600fdb44f80cfa57f9c08
   languageName: node
   linkType: hard
 
-"@supabase/functions-js@npm:2.4.3":
-  version: 2.4.3
-  resolution: "@supabase/functions-js@npm:2.4.3"
+"@supabase/functions-js@npm:2.4.4":
+  version: 2.4.4
+  resolution: "@supabase/functions-js@npm:2.4.4"
   dependencies:
     "@supabase/node-fetch": ^2.6.14
-  checksum: 1c2d58b498c19bd0c8984407f1d4c207ac6816df5e38c52f0d009a9ae55cfd80cc3b74b66414b386c3dc5c972b7db99452aeed545f9f5d6472ebb631274261a8
+  checksum: cbddd6c0f03de1d3ff1c9b760c028f9101b0221a2dc032000debd1734c725fe0217d56c281437cf71ff30e23a094b47275511b598ef68a39a66b967664faf7cb
   languageName: node
   linkType: hard
 
@@ -4219,12 +4219,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@supabase/postgrest-js@npm:1.17.7":
-  version: 1.17.7
-  resolution: "@supabase/postgrest-js@npm:1.17.7"
+"@supabase/postgrest-js@npm:1.18.1":
+  version: 1.18.1
+  resolution: "@supabase/postgrest-js@npm:1.18.1"
   dependencies:
     "@supabase/node-fetch": ^2.6.14
-  checksum: cb1c1e4d82af4d94e8f76f5bd301e0f8cbfb4837b7d7df5def4f8be1db75f33a0d5029938508166d2aa0a34e77bcdb5f25953d2fc7e8d5a4f76f8d9395cd7877
+  checksum: 6dca9bdd7255b30a18aacbbe62725df3b84ae0bb2d1777dd8c0110217e6387b0acccda14099a610c3a0c7aabf2d651ce7e7271a1ef79bfab3a4b51589eb2026f
   languageName: node
   linkType: hard
 
@@ -4249,17 +4249,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@supabase/supabase-js@npm:^2.47.8":
-  version: 2.47.8
-  resolution: "@supabase/supabase-js@npm:2.47.8"
+"@supabase/supabase-js@npm:^2.48.1":
+  version: 2.48.1
+  resolution: "@supabase/supabase-js@npm:2.48.1"
   dependencies:
-    "@supabase/auth-js": 2.67.1
-    "@supabase/functions-js": 2.4.3
+    "@supabase/auth-js": 2.67.3
+    "@supabase/functions-js": 2.4.4
     "@supabase/node-fetch": 2.6.15
-    "@supabase/postgrest-js": 1.17.7
+    "@supabase/postgrest-js": 1.18.1
     "@supabase/realtime-js": 2.11.2
     "@supabase/storage-js": 2.7.1
-  checksum: 1950a98bb4571edac26f9fe0ba1e3753fdc1b791506de3537f84da1cea20d6cf0a7c28be32952638dcfaf40c4215fbf7cf1c36e1554f001d70efd2fd241d937c
+  checksum: ac9ad8eccd27da2561fe43ba401634cd48cbf2dd8bd5f82e0ebcc2e05dabccc0bdeafc5f34068c827e2a053656e12fa9618e4c1c8e2709758407313e7d2d500b
   languageName: node
   linkType: hard
 
@@ -5695,7 +5695,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"buffer@npm:^5.5.0":
+"buffer@npm:^5.4.3, buffer@npm:^5.5.0":
   version: 5.7.1
   resolution: "buffer@npm:5.7.1"
   dependencies:
@@ -11562,7 +11562,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"punycode@npm:^2.1.0":
+"punycode@npm:^2.1.0, punycode@npm:^2.1.1":
   version: 2.3.1
   resolution: "punycode@npm:2.3.1"
   checksum: bb0a0ceedca4c3c57a9b981b90601579058903c62be23c5e8e843d2c2d4148a3ecf029d5133486fb0e1822b098ba8bba09e89d6b21742d02fa26bda6441a6fb2
@@ -12156,6 +12156,17 @@ __metadata:
     react: "*"
     react-native: "*"
   checksum: 2f8dd506466ed65a2493d9a26a5d515e745e96afa0e81a106af338464393e899d746c426b2953654efb1c2132cd4d73e9f068ed3eaa4339d4c74a0e63ed9550a
+  languageName: node
+  linkType: hard
+
+"react-native-url-polyfill@npm:^2.0.0":
+  version: 2.0.0
+  resolution: "react-native-url-polyfill@npm:2.0.0"
+  dependencies:
+    whatwg-url-without-unicode: 8.0.0-3
+  peerDependencies:
+    react-native: "*"
+  checksum: 1a2e1030a62fd093764b5330ce0ff34d72246e581dd2892cddc347d8621931aeb2c9ea3e054960484a1259230e8461e569e1890f1ff452d3c5c0adef70190fc3
   languageName: node
   linkType: hard
 
@@ -14371,7 +14382,7 @@ __metadata:
     "@react-navigation/stack": ^6.4.1
     "@reduxjs/toolkit": ^2.3.0
     "@shopify/flash-list": ^1.7.1
-    "@supabase/supabase-js": ^2.47.8
+    "@supabase/supabase-js": ^2.48.1
     "@tanstack/eslint-plugin-query": ^5.59.7
     "@tanstack/react-query": ^5.59.15
     "@tanstack/react-query-devtools": ^5.62.7
@@ -14434,6 +14445,7 @@ __metadata:
     react-native-svg-transformer: ^1.5.0
     react-native-tab-view: ^3.5.2
     react-native-ui-datepicker: ^2.0.4
+    react-native-url-polyfill: ^2.0.0
     react-native-vector-icons: ^10.2.0
     react-native-webview: ^13.12.3
     react-redux: ^9.1.2
@@ -14480,6 +14492,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"webidl-conversions@npm:^5.0.0":
+  version: 5.0.0
+  resolution: "webidl-conversions@npm:5.0.0"
+  checksum: ccf1ec2ca7c0b5671e5440ace4a66806ae09c49016ab821481bec0c05b1b82695082dc0a27d1fe9d804d475a408ba0c691e6803fd21be608e710955d4589cd69
+  languageName: node
+  linkType: hard
+
 "websocket-driver@npm:>=0.5.1":
   version: 0.7.4
   resolution: "websocket-driver@npm:0.7.4"
@@ -14502,6 +14521,17 @@ __metadata:
   version: 3.6.20
   resolution: "whatwg-fetch@npm:3.6.20"
   checksum: c58851ea2c4efe5c2235f13450f426824cf0253c1d45da28f45900290ae602a20aff2ab43346f16ec58917d5562e159cd691efa368354b2e82918c2146a519c5
+  languageName: node
+  linkType: hard
+
+"whatwg-url-without-unicode@npm:8.0.0-3":
+  version: 8.0.0-3
+  resolution: "whatwg-url-without-unicode@npm:8.0.0-3"
+  dependencies:
+    buffer: ^5.4.3
+    punycode: ^2.1.1
+    webidl-conversions: ^5.0.0
+  checksum: 1fe266f7161e0bd961087c1254a5a59d1138c3d402064495eed65e7590d9caed5a1d9acfd6e7a1b0bf0431253b0e637ee3e4ffc08387cd60e0b2ddb9d4687a4b
   languageName: node
   linkType: hard
 
