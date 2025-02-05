@@ -71,6 +71,8 @@ export interface InputFieldsProps {
   border?: boolean;
   borderRadius?: number;
   isNotification?: boolean;
+  value?: string;
+  onChangeText?: (text: string) => void;
   onPress?: () => void;
   onLongPress?: () => void;
 }

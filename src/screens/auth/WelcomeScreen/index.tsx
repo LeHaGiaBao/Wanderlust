@@ -60,7 +60,7 @@ function WelcomeScreen() {
       ref.current?.next();
 
       if (index === 2) {
-        nav.navigate(Routes.appScreen);
+        nav.navigate(Routes.sign_in);
       }
     },
     [nav],

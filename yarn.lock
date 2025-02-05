@@ -6788,6 +6788,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"dotenv@npm:^16.4.5":
+  version: 16.4.7
+  resolution: "dotenv@npm:16.4.7"
+  checksum: c27419b5875a44addcc56cc69b7dc5b0e6587826ca85d5b355da9303c6fc317fc9989f1f18366a16378c9fdd9532d14117a1abe6029cc719cdbbef6eaef2cea4
+  languageName: node
+  linkType: hard
+
 "eastasianwidth@npm:^0.2.0":
   version: 0.2.0
   resolution: "eastasianwidth@npm:0.2.0"
@@ -11841,6 +11848,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"react-native-dotenv@npm:^3.4.11":
+  version: 3.4.11
+  resolution: "react-native-dotenv@npm:3.4.11"
+  dependencies:
+    dotenv: ^16.4.5
+  peerDependencies:
+    "@babel/runtime": ^7.20.6
+  checksum: 3ebac2c2ed79dd7e4920fd3fc2da9187413b7190231618e4858b46c47833677838b96d531afe7bd5c4b0a60454dba40cb8708722210df5d522e30aefbf41da05
+  languageName: node
+  linkType: hard
+
 "react-native-file-access@npm:^3.1.1":
   version: 3.1.1
   resolution: "react-native-file-access@npm:3.1.1"
@@ -12142,6 +12160,16 @@ __metadata:
     react-native: "*"
     react-native-pager-view: "*"
   checksum: bd287e5543881aa662ee55418a3bd5dacb25033425a9fcb0fff21c3a3b96f956af1a77cd9bab4e7a8e94590080a5d8e3cb99cfa8613b19bf6da24bfc9b4942d4
+  languageName: node
+  linkType: hard
+
+"react-native-toast-message@npm:^2.2.1":
+  version: 2.2.1
+  resolution: "react-native-toast-message@npm:2.2.1"
+  peerDependencies:
+    react: "*"
+    react-native: "*"
+  checksum: c6b5d231b3b617b3d3d893023673534fe2cc0c5f32bb5fc4aecfe239e9de2fb9f0e9a4086d776e53daf3bc2376dce16dcec13e1b5cf1554dbf51808695fc2441
   languageName: node
   linkType: hard
 
@@ -14421,6 +14449,7 @@ __metadata:
     react-native-date-picker: ^5.0.7
     react-native-device-info: ^13.1.0
     react-native-document-picker: ^9.3.1
+    react-native-dotenv: ^3.4.11
     react-native-file-access: ^3.1.1
     react-native-file-viewer: ^2.1.5
     react-native-fs: ^2.20.0
@@ -14444,6 +14473,7 @@ __metadata:
     react-native-svg: ^15.7.1
     react-native-svg-transformer: ^1.5.0
     react-native-tab-view: ^3.5.2
+    react-native-toast-message: ^2.2.1
     react-native-ui-datepicker: ^2.0.4
     react-native-url-polyfill: ^2.0.0
     react-native-vector-icons: ^10.2.0

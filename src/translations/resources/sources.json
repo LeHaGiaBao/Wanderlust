@@ -256,6 +256,10 @@
     "linked": "Liên kết",
     "account_linked": "Tài khoản đã liên kết",
     "account_not_linked": "Chưa liên kết",
-    "account_is_linked": "Bạn đang đăng nhập bằng tài khoản {{name}}"
+    "account_is_linked": "Bạn đang đăng nhập bằng tài khoản {{name}}",
+    "log_in_status": {
+      "success": "Đăng nhập thành công",
+      "error": "Đăng nhập thất bại"
+    }
   }
 }

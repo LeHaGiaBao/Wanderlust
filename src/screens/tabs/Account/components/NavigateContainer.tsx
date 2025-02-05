@@ -8,7 +8,7 @@ import {useWanderlustNavigation} from '@/hooks/core/core';
 interface NavigateContainerProps {
   icon: JSX.Element;
   title: string;
-  route: string;
+  route?: string;
 }
 
 function NavigateContainer(props: NavigateContainerProps) {
@@ -16,7 +16,9 @@ function NavigateContainer(props: NavigateContainerProps) {
   const {icon, title, route} = props;
 
   const handleOnPress = useCallback(() => {
-    nav.navigate(route);
+    if (route) {
+      nav.navigate(route);
+    }
   }, [nav, route]);
 
   return (

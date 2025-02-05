@@ -2,6 +2,7 @@ import React, {memo} from 'react';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {NavigationContainer} from '@react-navigation/native';
 import {Routes} from './routes';
+import WelcomeScreen from '@/screens/auth/WelcomeScreen';
 import SignIn from '@/screens/auth/SignIn';
 import SignUp from '@/screens/auth/SignUp';
 import OTP from '@/screens/auth/OTP';
@@ -13,6 +14,11 @@ function AuthRoutes() {
   return (
     <NavigationContainer>
       <Stack.Navigator>
+        <Stack.Screen
+          name={Routes.welcomeScreen}
+          component={WelcomeScreen}
+          options={{headerShown: false}}
+        />
         <Stack.Screen
           name={Routes.sign_in}
           component={SignIn}

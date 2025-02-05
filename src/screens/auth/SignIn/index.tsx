@@ -1,4 +1,4 @@
-import React, {memo} from 'react';
+import React, {memo, useCallback, useState} from 'react';
 import {View} from 'react-native';
 import {WButton, WText} from '@/components/UIKit';
 import WInputField from '@/components/UIKit/Input/WInputField';
@@ -6,8 +6,34 @@ import translate from '@/translations/i18n';
 import {PrimaryColor} from '@/constants';
 import {Google, Facebook} from 'iconsax-react-native';
 import {styles} from './styles';
+import {useSignInWithPassword} from '@/hooks/auth/useAuth';
+import Toast from 'react-native-toast-message';
+import {useWanderlustNavigation} from '@/hooks/core/core';
+import {Routes} from '@/routes/routes';
 
 function SignIn() {
+  const nav = useWanderlustNavigation();
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const {signInWithPassword, loading} = useSignInWithPassword();
+
+  const handleSignIn = useCallback(async () => {
+    const response = await signInWithPassword(email, password);
+
+    if (!response.error) {
+      nav.navigate(Routes.appScreen);
+      Toast.show({
+        type: 'success',
+        text1: translate('source:log_in_status:success'),
+      });
+    } else {
+      Toast.show({
+        type: 'error',
+        text1: translate('source:log_in_status:error'),
+      });
+    }
+  }, [nav, email, password, signInWithPassword]);
+
   return (
     <View style={styles.page}>
       <View style={styles.container}>
@@ -28,11 +54,15 @@ function SignIn() {
             type="Text"
             text={translate('source:email_or_phone')}
             placeholder={translate('source:enter_email_or_phone')}
+            value={email}
+            onChangeText={setEmail}
           />
           <WInputField
             type="Password"
             text={translate('source:password')}
             placeholder={translate('source:enter_password')}
+            value={password}
+            onChangeText={setPassword}
           />
           <View style={styles.rightContent}>
             <WText
@@ -48,6 +78,8 @@ function SignIn() {
             typo="Button1"
             backgroundColor="Main"
             color="White"
+            onPress={handleSignIn}
+            disable={loading}
           />
         </View>
         <View style={styles.orContainer}>

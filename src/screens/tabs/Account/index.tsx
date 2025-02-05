@@ -1,6 +1,6 @@
 /* eslint-disable react-native/no-inline-styles */
 import React, {memo, useCallback, useMemo} from 'react';
-import {FlatList, StyleSheet, View} from 'react-native';
+import {FlatList, StyleSheet, TouchableOpacity, View} from 'react-native';
 import {BaseColor, Devices, PrimaryColor} from '@/constants';
 import {
   TicketDiscount,
@@ -18,6 +18,8 @@ import NavigateContainer from './components/NavigateContainer';
 import translate from '@/translations/i18n';
 import {WIcon, WText} from '@/components/UIKit';
 import {Routes} from '@/routes/routes';
+import {useWanderlustNavigation} from '@/hooks/core/core';
+import {useAuth} from '@/services/provider/auth/AuthProvider';
 
 const TOP_LEVEL_DATA = [
   {
@@ -89,6 +91,14 @@ const ABOUT_APP_DATA = [
 ];
 
 function AccountScreen() {
+  const nav = useWanderlustNavigation();
+  const {signOut} = useAuth();
+
+  const handleSignOut = useCallback(async () => {
+    signOut();
+    nav.navigate(Routes.sign_in);
+  }, [signOut, nav]);
+
   const renderItem = useCallback(({item}: any) => {
     const {icon, title, route} = item;
 
@@ -162,13 +172,12 @@ function AccountScreen() {
         <>
           {renderSettingNavigate}
           {renderAboutAppNavigate}
-          <View style={styles.footer}>
+          <TouchableOpacity style={styles.footer} onPress={handleSignOut}>
             <NavigateContainer
               icon={<WIcon icon="logout" size={24} color={PrimaryColor.Main} />}
               title={translate('source:logout')}
-              route={Routes.welcomeScreen}
             />
-          </View>
+          </TouchableOpacity>
         </>
       }
     />
