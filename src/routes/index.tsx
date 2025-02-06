@@ -12,7 +12,7 @@ function MainRoutes() {
 
   const {user} = useAuth();
 
-  console.log('user', user);
+  //console.log('user', user);
 
   if (user === null) {
     return <AuthRoutes />;
