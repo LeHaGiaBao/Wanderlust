@@ -8,16 +8,21 @@ import {useWanderlustNavigation} from '@/hooks/core/core';
 interface NavigateContainerProps {
   icon: JSX.Element;
   title: string;
-  route: string;
+  route?: string;
+  onPress?: () => void;
 }
 
 function NavigateContainer(props: NavigateContainerProps) {
   const nav = useWanderlustNavigation();
-  const {icon, title, route} = props;
+  const {icon, title, route, onPress} = props;
 
   const handleOnPress = useCallback(() => {
-    nav.navigate(route);
-  }, [nav, route]);
+    if (route) {
+      nav.navigate(route);
+    } else if (onPress) {
+      onPress?.();
+    }
+  }, [nav, route, onPress]);
 
   return (
     <TouchableOpacity style={styles.container} onPress={handleOnPress}>

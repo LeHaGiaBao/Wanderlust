@@ -18,6 +18,7 @@ import NavigateContainer from './components/NavigateContainer';
 import translate from '@/translations/i18n';
 import {WIcon, WText} from '@/components/UIKit';
 import {Routes} from '@/routes/routes';
+import {useSignOut} from '@/hooks/auth/useAuth';
 
 const TOP_LEVEL_DATA = [
   {
@@ -89,6 +90,12 @@ const ABOUT_APP_DATA = [
 ];
 
 function AccountScreen() {
+  const {signOut} = useSignOut();
+
+  const handleSignOut = useCallback(async () => {
+    signOut();
+  }, [signOut]);
+
   const renderItem = useCallback(({item}: any) => {
     const {icon, title, route} = item;
 
@@ -166,7 +173,7 @@ function AccountScreen() {
             <NavigateContainer
               icon={<WIcon icon="logout" size={24} color={PrimaryColor.Main} />}
               title={translate('source:logout')}
-              route={Routes.welcomeScreen}
+              onPress={handleSignOut}
             />
           </View>
         </>

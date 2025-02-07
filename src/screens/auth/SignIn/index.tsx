@@ -1,13 +1,29 @@
-import React, {memo} from 'react';
-import {View} from 'react-native';
+import React, {memo, useCallback, useState} from 'react';
+import {TouchableOpacity, View} from 'react-native';
 import {WButton, WText} from '@/components/UIKit';
 import WInputField from '@/components/UIKit/Input/WInputField';
 import translate from '@/translations/i18n';
 import {PrimaryColor} from '@/constants';
 import {Google, Facebook} from 'iconsax-react-native';
 import {styles} from './styles';
+import {useSignInWithPassword} from '@/hooks/auth/useAuth';
+import {useWanderlustNavigation} from '@/hooks/core/core';
+import {Routes} from '@/routes/routes';
 
 function SignIn() {
+  const nav = useWanderlustNavigation();
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const {signInWithPassword, loading} = useSignInWithPassword();
+
+  const handleSignIn = useCallback(async () => {
+    await signInWithPassword(email, password);
+  }, [email, password, signInWithPassword]);
+
+  const navigateToSignUp = useCallback(() => {
+    nav.navigate(Routes.sign_up);
+  }, [nav]);
+
   return (
     <View style={styles.page}>
       <View style={styles.container}>
@@ -28,11 +44,15 @@ function SignIn() {
             type="Text"
             text={translate('source:email_or_phone')}
             placeholder={translate('source:enter_email_or_phone')}
+            value={email}
+            onChangeText={setEmail}
           />
           <WInputField
             type="Password"
             text={translate('source:password')}
             placeholder={translate('source:enter_password')}
+            value={password}
+            onChangeText={setPassword}
           />
           <View style={styles.rightContent}>
             <WText
@@ -48,6 +68,8 @@ function SignIn() {
             typo="Button1"
             backgroundColor="Main"
             color="White"
+            onPress={handleSignIn}
+            disable={loading}
           />
         </View>
         <View style={styles.orContainer}>
@@ -69,11 +91,13 @@ function SignIn() {
             typo="Body3"
             color="Gray"
           />
-          <WText
-            text={translate('source:sign_up_now')}
-            typo="Helper"
-            color="Main"
-          />
+          <TouchableOpacity onPress={navigateToSignUp}>
+            <WText
+              text={translate('source:sign_up_now')}
+              typo="Helper"
+              color="Main"
+            />
+          </TouchableOpacity>
         </View>
       </View>
     </View>

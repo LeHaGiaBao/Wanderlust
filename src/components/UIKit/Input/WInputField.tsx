@@ -20,8 +20,10 @@ function WInputFields(props: InputFieldsProps) {
     border = true,
     borderRadius = 8,
     isNotification = true,
+    value,
+    onChangeText,
+    ...rest
   } = props;
-  const [value, setValue] = useState('');
   const [focus, setFocus] = useState(false);
   const [showPassword, setShowPassword] = useState(type === 'Password');
 
@@ -53,13 +55,14 @@ function WInputFields(props: InputFieldsProps) {
         <TextInput
           autoCapitalize="none"
           value={value}
-          onChangeText={val => setValue(val)}
+          onChangeText={onChangeText}
           style={styles.placeholderText}
           onFocus={() => setFocus(true)}
           onBlur={() => setFocus(false)}
           secureTextEntry={showPassword}
           placeholder={placeholder}
           placeholderTextColor={BaseColor.DarkGray}
+          {...rest}
         />
         {type === 'Text' && iconAlign === 'Right' && icon}
         {type === 'Password' && (

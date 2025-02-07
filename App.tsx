@@ -9,9 +9,12 @@ import {
   initialWindowMetrics,
 } from 'react-native-safe-area-context';
 import {BottomSheetModalProvider} from '@gorhom/bottom-sheet';
+import Toast from 'react-native-toast-message';
 import MainRoutes from '@/routes';
 import {QueryProvider} from '@/services/query';
 import StoreProvider from '@/services/store/StoreProvider';
+import {toastConfig} from '@/utils/toast';
+import {AuthProvider} from '@/services/provider/auth/AuthProvider';
 
 enableFreeze(true);
 
@@ -24,7 +27,16 @@ function App(): React.JSX.Element {
             <ModalPresenterParent>
               <MenuProvider>
                 <BottomSheetModalProvider>
-                  <MainRoutes />
+                  <AuthProvider>
+                    <MainRoutes />
+                  </AuthProvider>
+                  <Toast
+                    config={toastConfig}
+                    position="bottom"
+                    visibilityTime={1500}
+                    bottomOffset={50}
+                    keyboardOffset={30}
+                  />
                 </BottomSheetModalProvider>
               </MenuProvider>
             </ModalPresenterParent>

@@ -1,13 +1,21 @@
-import React, {memo} from 'react';
-import {View} from 'react-native';
+import React, {memo, useCallback} from 'react';
+import {TouchableOpacity, View} from 'react-native';
 import {WButton, WText} from '@/components/UIKit';
 import WInputField from '@/components/UIKit/Input/WInputField';
 import translate from '@/translations/i18n';
 import {Call} from 'iconsax-react-native';
 import {styles} from './styles';
 import {BaseColor} from '@/constants';
+import {useWanderlustNavigation} from '@/hooks/core/core';
+import {Routes} from '@/routes/routes';
 
 function SignUp() {
+  const nav = useWanderlustNavigation();
+
+  const goToSignIn = useCallback(() => {
+    nav.navigate(Routes.sign_in);
+  }, [nav]);
+
   return (
     <View style={styles.page}>
       <View style={styles.container}>
@@ -49,11 +57,13 @@ function SignUp() {
             typo="Body3"
             color="Gray"
           />
-          <WText
-            text={translate('navigation:sign_in')}
-            typo="Helper"
-            color="Main"
-          />
+          <TouchableOpacity onPress={goToSignIn}>
+            <WText
+              text={translate('navigation:sign_in')}
+              typo="Helper"
+              color="Main"
+            />
+          </TouchableOpacity>
         </View>
       </View>
     </View>
