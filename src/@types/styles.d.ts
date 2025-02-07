@@ -1,4 +1,4 @@
-import {Button, StyleProp, TextComponent} from 'react-native';
+import {Button, StyleProp, TextComponent, TextInputProps} from 'react-native';
 
 export type TypoType =
   | 'Title'
@@ -59,7 +59,7 @@ export interface ButtonProps extends Partial<Button> {
   onLongPress?: () => void;
 }
 
-export interface InputFieldsProps {
+export interface InputFieldsProps extends Partial<TextInputProps> {
   type: 'Text' | 'Password' | 'OTP';
   text?: string;
   placeholder?: string;

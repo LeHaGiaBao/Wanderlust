@@ -22,6 +22,7 @@ function WInputFields(props: InputFieldsProps) {
     isNotification = true,
     value,
     onChangeText,
+    ...rest
   } = props;
   const [focus, setFocus] = useState(false);
   const [showPassword, setShowPassword] = useState(type === 'Password');
@@ -61,6 +62,7 @@ function WInputFields(props: InputFieldsProps) {
           secureTextEntry={showPassword}
           placeholder={placeholder}
           placeholderTextColor={BaseColor.DarkGray}
+          {...rest}
         />
         {type === 'Text' && iconAlign === 'Right' && icon}
         {type === 'Password' && (
