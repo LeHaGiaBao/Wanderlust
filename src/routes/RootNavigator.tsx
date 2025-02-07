@@ -52,7 +52,7 @@ function RootNavigator() {
       <Stack.Screen
         name={Routes.appScreen}
         component={AppScreen}
-        options={{headerShown: false}}
+        options={{headerShown: false, animation: 'slide_from_bottom'}}
       />
       <Stack.Screen
         name={Routes.tab_home}

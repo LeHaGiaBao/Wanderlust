@@ -12,15 +12,9 @@ function MainRoutes() {
 
   const {user} = useAuth();
 
-  //console.log('user', user);
-
-  if (user === null) {
-    return <AuthRoutes />;
-  }
-
   return (
     <NavigationContainer onReady={onNavigationReady}>
-      <RootNavigator />
+      {user === null ? <AuthRoutes /> : <RootNavigator />}
     </NavigationContainer>
   );
 }

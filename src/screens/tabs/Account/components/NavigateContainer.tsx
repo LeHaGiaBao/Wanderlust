@@ -9,17 +9,20 @@ interface NavigateContainerProps {
   icon: JSX.Element;
   title: string;
   route?: string;
+  onPress?: () => void;
 }
 
 function NavigateContainer(props: NavigateContainerProps) {
   const nav = useWanderlustNavigation();
-  const {icon, title, route} = props;
+  const {icon, title, route, onPress} = props;
 
   const handleOnPress = useCallback(() => {
     if (route) {
       nav.navigate(route);
+    } else if (onPress) {
+      onPress?.();
     }
-  }, [nav, route]);
+  }, [nav, route, onPress]);
 
   return (
     <TouchableOpacity style={styles.container} onPress={handleOnPress}>

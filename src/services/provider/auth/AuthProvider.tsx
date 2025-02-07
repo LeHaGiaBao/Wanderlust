@@ -1,10 +1,4 @@
-import React, {
-  createContext,
-  useCallback,
-  useContext,
-  useEffect,
-  useState,
-} from 'react';
+import React, {createContext, useContext, useEffect, useState} from 'react';
 import {supabase} from '@/services/supabase';
 import {
   getStorageData,
@@ -15,12 +9,10 @@ import {
 
 interface AuthContextProps {
   user: any | null;
-  signOut: () => Promise<void>;
 }
 
 const AuthContext = createContext<AuthContextProps>({
   user: null,
-  signOut: async () => {},
 });
 
 export const AuthProvider: React.FC<{children: React.ReactNode}> = ({
@@ -40,10 +32,10 @@ export const AuthProvider: React.FC<{children: React.ReactNode}> = ({
 
     const {data: authListener} = supabase.auth.onAuthStateChange(
       (event, session) => {
-        if (session?.user) {
+        if (event === 'SIGNED_IN' && session?.user) {
           setUser(session.user);
           storageData(keyStorage.user, JSON.stringify(session.user));
-        } else {
+        } else if (event === 'SIGNED_OUT') {
           setUser(null);
           removeStorageData(keyStorage.user);
         }
@@ -55,17 +47,7 @@ export const AuthProvider: React.FC<{children: React.ReactNode}> = ({
     };
   }, []);
 
-  const signOut = useCallback(async () => {
-    await supabase.auth.signOut();
-    await removeStorageData(keyStorage.user);
-    setUser(null);
-  }, []);
-
-  return (
-    <AuthContext.Provider value={{user, signOut}}>
-      {children}
-    </AuthContext.Provider>
-  );
+  return <AuthContext.Provider value={{user}}>{children}</AuthContext.Provider>;
 };
 
 export const useAuth = () => useContext(AuthContext);

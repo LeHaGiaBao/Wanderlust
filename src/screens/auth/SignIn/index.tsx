@@ -1,5 +1,5 @@
 import React, {memo, useCallback, useState} from 'react';
-import {View} from 'react-native';
+import {TouchableOpacity, View} from 'react-native';
 import {WButton, WText} from '@/components/UIKit';
 import WInputField from '@/components/UIKit/Input/WInputField';
 import translate from '@/translations/i18n';
@@ -7,7 +7,6 @@ import {PrimaryColor} from '@/constants';
 import {Google, Facebook} from 'iconsax-react-native';
 import {styles} from './styles';
 import {useSignInWithPassword} from '@/hooks/auth/useAuth';
-import Toast from 'react-native-toast-message';
 import {useWanderlustNavigation} from '@/hooks/core/core';
 import {Routes} from '@/routes/routes';
 
@@ -18,21 +17,12 @@ function SignIn() {
   const {signInWithPassword, loading} = useSignInWithPassword();
 
   const handleSignIn = useCallback(async () => {
-    const response = await signInWithPassword(email, password);
+    await signInWithPassword(email, password);
+  }, [email, password, signInWithPassword]);
 
-    if (!response.error) {
-      nav.navigate(Routes.appScreen);
-      Toast.show({
-        type: 'success',
-        text1: translate('source:log_in_status:success'),
-      });
-    } else {
-      Toast.show({
-        type: 'error',
-        text1: translate('source:log_in_status:error'),
-      });
-    }
-  }, [nav, email, password, signInWithPassword]);
+  const navigateToSignUp = useCallback(() => {
+    nav.navigate(Routes.sign_up);
+  }, [nav]);
 
   return (
     <View style={styles.page}>
@@ -101,11 +91,13 @@ function SignIn() {
             typo="Body3"
             color="Gray"
           />
-          <WText
-            text={translate('source:sign_up_now')}
-            typo="Helper"
-            color="Main"
-          />
+          <TouchableOpacity onPress={navigateToSignUp}>
+            <WText
+              text={translate('source:sign_up_now')}
+              typo="Helper"
+              color="Main"
+            />
+          </TouchableOpacity>
         </View>
       </View>
     </View>

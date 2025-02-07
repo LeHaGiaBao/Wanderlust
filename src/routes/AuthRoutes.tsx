@@ -1,6 +1,5 @@
 import React, {memo} from 'react';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
-import {NavigationContainer} from '@react-navigation/native';
 import {Routes} from './routes';
 import WelcomeScreen from '@/screens/auth/WelcomeScreen';
 import SignIn from '@/screens/auth/SignIn';
@@ -12,35 +11,33 @@ const Stack = createNativeStackNavigator();
 
 function AuthRoutes() {
   return (
-    <NavigationContainer>
-      <Stack.Navigator>
-        <Stack.Screen
-          name={Routes.welcomeScreen}
-          component={WelcomeScreen}
-          options={{headerShown: false}}
-        />
-        <Stack.Screen
-          name={Routes.sign_in}
-          component={SignIn}
-          options={{headerShown: false}}
-        />
-        <Stack.Screen
-          name={Routes.sign_up}
-          component={SignUp}
-          options={{headerShown: false}}
-        />
-        <Stack.Screen
-          name={Routes.otp}
-          component={OTP}
-          options={{headerShown: false}}
-        />
-        <Stack.Screen
-          name={Routes.enter_profile}
-          component={EnterProfile}
-          options={{headerShown: false}}
-        />
-      </Stack.Navigator>
-    </NavigationContainer>
+    <Stack.Navigator>
+      <Stack.Screen
+        name={Routes.welcomeScreen}
+        component={WelcomeScreen}
+        options={{headerShown: false}}
+      />
+      <Stack.Screen
+        name={Routes.sign_in}
+        component={SignIn}
+        options={{headerShown: false, animation: 'slide_from_bottom'}}
+      />
+      <Stack.Screen
+        name={Routes.sign_up}
+        component={SignUp}
+        options={{headerShown: false}}
+      />
+      <Stack.Screen
+        name={Routes.otp}
+        component={OTP}
+        options={{headerShown: false}}
+      />
+      <Stack.Screen
+        name={Routes.enter_profile}
+        component={EnterProfile}
+        options={{headerShown: false}}
+      />
+    </Stack.Navigator>
   );
 }
 
