@@ -24,7 +24,6 @@ import ProfileEdit from '@/screens/main/Profile/ProfileEdit';
 import MyPaymentMethod from '@/screens/main/Payment/MyPaymentMethod';
 import SupportCenter from '@/screens/main/AboutUs/SupportCenter';
 import PrivacyList from '@/screens/main/AboutUs/PrivacyList';
-import TermAndCondition from '@/screens/main/AboutUs/TermAndCondition';
 import AboutUs from '@/screens/main/AboutUs/AboutUs';
 import ChangePassword from '@/screens/auth/ChangePassword';
 import DestinationDetail from '@/screens/main/Destination/DestinationDetail';
@@ -162,11 +161,6 @@ function RootNavigator() {
       <Stack.Screen
         name={Routes.privacy_list}
         component={PrivacyList}
-        options={{headerShown: false}}
-      />
-      <Stack.Screen
-        name={Routes.term_and_condition}
-        component={TermAndCondition}
         options={{headerShown: false}}
       />
       <Stack.Screen

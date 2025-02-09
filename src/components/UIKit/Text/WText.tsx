@@ -11,6 +11,7 @@ function WText(props: TypographyProps) {
     typo,
     color,
     styles,
+    textStyles,
     numberOfLines,
     onTextLayout,
     decoration,
@@ -34,8 +35,9 @@ function WText(props: TypographyProps) {
               : decoration === 'line-through'
                 ? 'line-through'
                 : 'none',
-          fontWeight: fontWeight ?? 'medium',
+          fontWeight: fontWeight ?? '500',
         },
+        textStyles,
       ]}
       numberOfLines={numberOfLines ?? undefined}
       onTextLayout={onTextLayout}

@@ -1,8 +1,10 @@
+/* eslint-disable react-native/no-inline-styles */
 import React, {memo} from 'react';
 import {Image, StyleSheet, View} from 'react-native';
 import {WText} from '@/components/UIKit';
 import {PrimaryColor} from '@/constants';
 import translate from '@/translations/i18n';
+import {useUserData} from '@/hooks/auth/useAuth';
 
 interface ProfileDetailHeaderProps {
   numOfFeed: number;
@@ -13,12 +15,18 @@ const IMAGE =
 
 function ProfileFeedHeader(props: ProfileDetailHeaderProps) {
   const {numOfFeed} = props;
+  const {userName} = useUserData();
 
   return (
     <View style={styles.container}>
       <Image source={{uri: IMAGE}} style={styles.avatar} />
       <View style={styles.content}>
-        <WText text="Tui tên testing" typo="Heading1" color="Main" />
+        <WText
+          text={userName}
+          typo="Heading1"
+          color="Main"
+          textStyles={{textTransform: 'capitalize'}}
+        />
         <WText
           text={translate('source:n_feed', {n: numOfFeed})}
           typo="Body3"

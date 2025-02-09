@@ -44,12 +44,16 @@ function WButton(props: ButtonProps) {
   }, [color, disable]);
 
   const handleOnPress = useCallback(() => {
-    onPress?.();
-  }, [onPress]);
+    if (!disable) {
+      onPress?.();
+    }
+  }, [disable, onPress]);
 
   const handleOnLongPress = useCallback(() => {
-    onLongPress?.();
-  }, [onLongPress]);
+    if (!disable) {
+      onLongPress?.();
+    }
+  }, [disable, onLongPress]);
 
   return (
     <TouchableOpacity

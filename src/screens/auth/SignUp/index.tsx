@@ -1,20 +1,25 @@
-import React, {memo, useCallback} from 'react';
+import React, {memo, useCallback, useState} from 'react';
 import {TouchableOpacity, View} from 'react-native';
 import {WButton, WText} from '@/components/UIKit';
 import WInputField from '@/components/UIKit/Input/WInputField';
 import translate from '@/translations/i18n';
-import {Call} from 'iconsax-react-native';
 import {styles} from './styles';
-import {BaseColor} from '@/constants';
 import {useWanderlustNavigation} from '@/hooks/core/core';
 import {Routes} from '@/routes/routes';
 
 function SignUp() {
   const nav = useWanderlustNavigation();
+  const [email, setEmail] = useState('');
 
   const goToSignIn = useCallback(() => {
     nav.navigate(Routes.sign_in);
   }, [nav]);
+
+  const goToEnterProfile = useCallback(() => {
+    if (email) {
+      nav.navigate(Routes.enter_profile, {email: email});
+    }
+  }, [nav, email]);
 
   return (
     <View style={styles.page}>
@@ -34,13 +39,9 @@ function SignUp() {
         <View style={styles.form}>
           <WInputField
             type="Text"
-            placeholder={translate('source:enter_phone')}
-            iconAlign="Left"
-            icon={
-              <>
-                <Call size={24} color={BaseColor.DarkGray} />
-              </>
-            }
+            placeholder={translate('source:enter_email')}
+            value={email}
+            onChangeText={setEmail}
           />
         </View>
         <View style={styles.button}>
@@ -49,6 +50,8 @@ function SignUp() {
             typo="Button1"
             backgroundColor="Main"
             color="White"
+            disable={!email}
+            onPress={goToEnterProfile}
           />
         </View>
         <View style={styles.signUpContainer}>

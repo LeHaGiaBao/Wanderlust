@@ -6,6 +6,7 @@ import SignIn from '@/screens/auth/SignIn';
 import SignUp from '@/screens/auth/SignUp';
 import OTP from '@/screens/auth/OTP';
 import EnterProfile from '@/screens/auth/EnterProfile';
+import TermAndCondition from '@/screens/main/AboutUs/TermAndCondition';
 
 const Stack = createNativeStackNavigator();
 
@@ -36,6 +37,11 @@ function AuthRoutes() {
         name={Routes.enter_profile}
         component={EnterProfile}
         options={{headerShown: false}}
+      />
+      <Stack.Screen
+        name={Routes.term_and_condition}
+        component={TermAndCondition}
+        options={{headerShown: false, animation: 'slide_from_bottom'}}
       />
     </Stack.Navigator>
   );

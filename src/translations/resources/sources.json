@@ -20,6 +20,9 @@
     "welcome_to_wanderlust": "Chào mừng bạn đến với Wanderlust!",
     "email_or_phone": "Email/Số điện thoại",
     "enter_email_or_phone": "Nhập email hoặc số điện thoại",
+    "email": "Email",
+    "enter_email": "Nhập email",
+    "phone": "Số điện thoại",
     "enter_phone": "Nhập số điện thoại",
     "password": "Mật khẩu",
     "enter_password": "Nhập mật khẩu",
@@ -261,7 +264,10 @@
       "log_in_success": "Đăng nhập thành công",
       "log_in_error": "Đăng nhập thất bại",
       "log_out_success": "Đăng xuất thành công",
-      "log_out_error": "Đăng xuất thất bại"
+      "log_out_error": "Đăng xuất thất bại",
+      "register_success": "Đăng ký thành công",
+      "register_error": "Đăng ký thất bại",
+      "confirm_password_error": "Mật khẩu không khớp"
     }
   }
 }
