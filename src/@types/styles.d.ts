@@ -1,4 +1,11 @@
-import {Button, StyleProp, TextComponent, TextInputProps} from 'react-native';
+import {
+  Button,
+  StyleProp,
+  TextComponent,
+  TextInputProps,
+  TextStyle,
+  ViewStyle,
+} from 'react-native';
 
 export type TypoType =
   | 'Title'
@@ -40,6 +47,7 @@ export interface TypographyProps extends Partial<TextComponent> {
   decoration?: 'underline' | 'line-through' | 'none';
   onTextLayout?: any;
   styles?: StyleProp;
+  textStyles?: TextStyle;
 }
 
 export interface ButtonProps extends Partial<Button> {
@@ -52,7 +60,7 @@ export interface ButtonProps extends Partial<Button> {
   width?: number;
   height?: number;
   disable?: boolean;
-  buttonStyles?: StyleProp;
+  buttonStyles?: ViewStyle;
   icon?: JSX.Element;
   iconAlign?: 'Left' | 'Right';
   onPress?: () => void;
@@ -67,7 +75,7 @@ export interface InputFieldsProps extends Partial<TextInputProps> {
   isError?: boolean;
   icon?: JSX.Element;
   iconAlign?: 'Left' | 'Right';
-  inputStyles?: StyleProp;
+  inputStyles?: ViewStyle;
   border?: boolean;
   borderRadius?: number;
   isNotification?: boolean;

@@ -7,12 +7,16 @@ import {PrimaryColor} from '@/constants';
 import {Google, Facebook} from 'iconsax-react-native';
 import {styles} from './styles';
 import {useSignInWithPassword} from '@/hooks/auth/useAuth';
-import {useWanderlustNavigation} from '@/hooks/core/core';
+import {
+  useWanderlustNavigation,
+  useWanderlustNavigationParams,
+} from '@/hooks/core/core';
 import {Routes} from '@/routes/routes';
 
 function SignIn() {
   const nav = useWanderlustNavigation();
-  const [email, setEmail] = useState('');
+  const params = (useWanderlustNavigationParams() as {email?: string}) || {};
+  const [email, setEmail] = useState(params?.email ?? '');
   const [password, setPassword] = useState('');
   const {signInWithPassword, loading} = useSignInWithPassword();
 
@@ -42,8 +46,8 @@ function SignIn() {
         <View style={styles.form}>
           <WInputField
             type="Text"
-            text={translate('source:email_or_phone')}
-            placeholder={translate('source:enter_email_or_phone')}
+            text={translate('source:email')}
+            placeholder={translate('source:enter_email')}
             value={email}
             onChangeText={setEmail}
           />
@@ -69,7 +73,7 @@ function SignIn() {
             backgroundColor="Main"
             color="White"
             onPress={handleSignIn}
-            disable={loading}
+            disable={loading || !email || !password}
           />
         </View>
         <View style={styles.orContainer}>
