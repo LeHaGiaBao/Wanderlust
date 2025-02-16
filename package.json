@@ -86,6 +86,7 @@
     "react-native-linear-gradient": "^2.8.3",
     "react-native-mask-input": "^1.2.3",
     "react-native-mmkv": "^3.0.2",
+    "react-native-modal": "^13.0.1",
     "react-native-pager-view": "^6.4.1",
     "react-native-popup-menu": "^0.16.1",
     "react-native-reanimated": "^3.16.0",

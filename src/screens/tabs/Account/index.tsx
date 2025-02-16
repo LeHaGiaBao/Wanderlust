@@ -1,7 +1,7 @@
 /* eslint-disable react-native/no-inline-styles */
-import React, {memo, useCallback, useMemo} from 'react';
-import {FlatList, StyleSheet, View} from 'react-native';
-import {BaseColor, Devices, PrimaryColor} from '@/constants';
+import React, {memo, useCallback, useMemo, useState} from 'react';
+import {FlatList, StyleSheet, TouchableOpacity, View} from 'react-native';
+import {BaseColor, Devices, PrimaryColor, StatusColor} from '@/constants';
 import {
   TicketDiscount,
   ProfileCircle,
@@ -19,6 +19,7 @@ import translate from '@/translations/i18n';
 import {WIcon, WText} from '@/components/UIKit';
 import {Routes} from '@/routes/routes';
 import {useSignOut} from '@/hooks/auth/useAuth';
+import Modal from 'react-native-modal';
 
 const TOP_LEVEL_DATA = [
   {
@@ -90,11 +91,18 @@ const ABOUT_APP_DATA = [
 ];
 
 function AccountScreen() {
+  const [isModalVisible, setModalVisible] = useState(false);
+
   const {signOut} = useSignOut();
 
   const handleSignOut = useCallback(async () => {
-    signOut();
-  }, [signOut]);
+    await signOut();
+    setModalVisible(!isModalVisible);
+  }, [isModalVisible, signOut]);
+
+  const toggleModal = useCallback(() => {
+    setModalVisible(!isModalVisible);
+  }, [isModalVisible]);
 
   const renderItem = useCallback(({item}: any) => {
     const {icon, title, route} = item;
@@ -151,34 +159,74 @@ function AccountScreen() {
   }, [renderItem, renderSeparator]);
 
   return (
-    <FlatList
-      data={TOP_LEVEL_DATA}
-      showsVerticalScrollIndicator={false}
-      style={styles.container}
-      renderItem={renderItem}
-      ItemSeparatorComponent={renderSeparator}
-      ListHeaderComponent={
-        <>
-          <AccountTopNavBar />
-          <View style={styles.subNav}>
-            <AccountSubNav />
+    <>
+      <FlatList
+        data={TOP_LEVEL_DATA}
+        showsVerticalScrollIndicator={false}
+        style={styles.container}
+        renderItem={renderItem}
+        ItemSeparatorComponent={renderSeparator}
+        ListHeaderComponent={
+          <>
+            <AccountTopNavBar />
+            <View style={styles.subNav}>
+              <AccountSubNav />
+            </View>
+          </>
+        }
+        ListFooterComponent={
+          <>
+            {renderSettingNavigate}
+            {renderAboutAppNavigate}
+            <View style={styles.footer}>
+              <NavigateContainer
+                icon={
+                  <WIcon icon="logout" size={24} color={PrimaryColor.Main} />
+                }
+                title={translate('source:logout')}
+                onPress={toggleModal}
+              />
+            </View>
+          </>
+        }
+      />
+
+      <Modal isVisible={isModalVisible}>
+        <View style={styles.modal}>
+          <WText
+            text={translate('source:notification')}
+            typo="Heading2"
+            color="Main"
+          />
+          <WText
+            text={translate('source:log_out_des')}
+            typo="Body2"
+            color="Black"
+          />
+          <View style={styles.modalButton}>
+            <TouchableOpacity
+              style={styles.buttonMainStyle}
+              onPress={handleSignOut}>
+              <WText
+                text={translate('source:logout')}
+                typo="Body2"
+                color="White"
+              />
+            </TouchableOpacity>
+
+            <TouchableOpacity
+              style={styles.buttonErrorStyle}
+              onPress={toggleModal}>
+              <WText
+                text={translate('source:cancel')}
+                typo="Body2"
+                color="Error"
+              />
+            </TouchableOpacity>
           </View>
-        </>
-      }
-      ListFooterComponent={
-        <>
-          {renderSettingNavigate}
-          {renderAboutAppNavigate}
-          <View style={styles.footer}>
-            <NavigateContainer
-              icon={<WIcon icon="logout" size={24} color={PrimaryColor.Main} />}
-              title={translate('source:logout')}
-              onPress={handleSignOut}
-            />
-          </View>
-        </>
-      }
-    />
+        </View>
+      </Modal>
+    </>
   );
 }
 
@@ -204,6 +252,41 @@ const styles = StyleSheet.create({
   footer: {
     marginTop: 40,
     marginBottom: 100,
+  },
+  modal: {
+    borderRadius: 8,
+    padding: 32,
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: BaseColor.White,
+    gap: 24,
+    height: 200,
+  },
+  modalButton: {
+    display: 'flex',
+    flexDirection: 'row',
+    gap: 16,
+  },
+  buttonMainStyle: {
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    width: 150,
+    height: 40,
+    borderRadius: 25,
+    backgroundColor: PrimaryColor.Main,
+  },
+  buttonErrorStyle: {
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    width: 150,
+    height: 40,
+    borderRadius: 25,
+    borderWidth: 1,
+    borderColor: StatusColor.Error,
+    backgroundColor: BaseColor.White,
   },
 });
 
