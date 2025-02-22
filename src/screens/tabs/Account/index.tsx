@@ -53,7 +53,7 @@ const SETTING_DATA = [
     id: 2,
     icon: <EmptyWallet size={24} color={PrimaryColor.Main} />,
     title: translate('source:payment_method'),
-    route: Routes.my_payment_method,
+    route: Routes.my_payment,
   },
   {
     id: 3,

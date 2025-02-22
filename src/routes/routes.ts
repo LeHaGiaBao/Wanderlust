@@ -22,6 +22,7 @@ export const Routes = {
   my_booking: 'my_booking',
   my_flight: 'my_flight',
   my_voucher: 'my_voucher',
+  my_payment: 'my_payment',
   profile_detail: 'profile_detail',
   profile_feed: 'profile_feed',
   profile_edit: 'profile_edit',
