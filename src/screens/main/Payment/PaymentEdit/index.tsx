@@ -1,15 +1,35 @@
-import React, {memo} from 'react';
+import React, {memo, useCallback, useEffect, useState} from 'react';
 import {Image, StyleSheet, View} from 'react-native';
 import {TopNavigation} from '@/components/containers';
 import {WButton, WIcon, WText} from '@/components/UIKit';
-import {BaseColor, Devices} from '@/constants';
+import {BaseColor, Devices, PrimaryColor} from '@/constants';
 import translate from '@/translations/i18n';
 import WInputField from '@/components/UIKit/Input/WInputField';
+import {useWanderlustNavigation} from '@/hooks/core/core';
+import Modal from 'react-native-modal';
+import {Verify} from 'iconsax-react-native';
 
 const VISA =
   'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Visa_Inc._logo.svg/1000px-Visa_Inc._logo.svg.png';
 
 function PaymentEdit() {
+  const [isModalVisible, setModalVisible] = useState(false);
+  const nav = useWanderlustNavigation();
+
+  const handleAddNewCard = useCallback(() => {
+    setModalVisible(!isModalVisible);
+  }, [isModalVisible]);
+
+  useEffect(() => {
+    if (isModalVisible) {
+      const timer = setTimeout(() => {
+        setModalVisible(!isModalVisible);
+        nav.goBack();
+      }, 2000);
+      return () => clearTimeout(timer);
+    }
+  }, [isModalVisible, nav]);
+
   return (
     <View style={styles.container}>
       <TopNavigation title={translate('source:add_new_card')} />
@@ -83,8 +103,25 @@ function PaymentEdit() {
           typo="Button1"
           color="White"
           backgroundColor="Main"
+          onPress={handleAddNewCard}
         />
       </View>
+
+      <Modal isVisible={isModalVisible}>
+        <View style={styles.modal}>
+          <WText
+            text={translate('source:notification')}
+            typo="Heading2"
+            color="Main"
+          />
+          <Verify size={55} color={PrimaryColor.Main} variant="Bold" />
+          <WText
+            text={translate('source:add_new_card_status:success')}
+            typo="Body2"
+            color="Black"
+          />
+        </View>
+      </Modal>
     </View>
   );
 }
@@ -140,6 +177,16 @@ const styles = StyleSheet.create({
     paddingTop: 16,
     paddingBottom: 24,
     paddingHorizontal: 16,
+  },
+  modal: {
+    borderRadius: 8,
+    padding: 32,
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: BaseColor.White,
+    gap: 24,
+    height: 200,
   },
 });
 

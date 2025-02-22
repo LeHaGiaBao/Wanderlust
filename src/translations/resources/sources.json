@@ -75,6 +75,8 @@
     "term_and_condition": "Điều khoản dịch vụ",
     "about_us": "Về chúng tôi",
     "logout": "Đăng xuất",
+    "log_out_des": "Bạn chắc chắn muốn thoát khỏi ứng dụng?",
+    "cancel": "Huỷ",
     "profile_infor": "Trang cá nhân",
     "no_message": "Bạn chưa có tin nhắn nào",
     "comming_soon": "Tính năng này sắp được ra mắt",
@@ -136,6 +138,9 @@
     "overview": "Tổng quan",
     "view_more": "Xem thêm",
     "review": "Đánh giá",
+    "review_now": "Đánh giá ngay",
+    "view_review": "Xem đánh giá",
+    "review_placeholder": "Chia sẻ cảm nhận của bạn ...",
     "ticket_type": "Loại vé",
     "place_recommended": "Chỗ ở đề xuất",
     "buy_ticket_now": "Mua vé ngay",
@@ -218,6 +223,13 @@
     "customer_go_with_name": "Tên khách đi cùng",
     "credit_or_debit": "Credit hoặc Debit Card",
     "add_new_card": "Thêm thẻ mới",
+    "add_new_card_status": {
+      "success": "Thêm thẻ thành công!"
+    },
+    "edit_card_status": {
+      "delete_confirm": "Bạn chắc chắn muốn xoá thẻ này?",
+      "delete_success": "Xoá thẻ thành công!"
+    },
     "other_method": "Phương thức khác",
     "choose_voucher": "Chọn mã giảm giá",
     "add_card": "Thêm thẻ",
@@ -268,6 +280,10 @@
       "register_success": "Đăng ký thành công",
       "register_error": "Đăng ký thất bại",
       "confirm_password_error": "Mật khẩu không khớp"
-    }
+    },
+    "upcoming": "Sắp diễn ra",
+    "visited": "Đã ghé thăm",
+    "flight_upcoming": "Chuyến bay sắp diễn ra",
+    "flight_visited": "Chuyến bay đã diễn ra"
   }
 }
