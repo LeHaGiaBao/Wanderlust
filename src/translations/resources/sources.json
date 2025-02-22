@@ -284,6 +284,8 @@
     "upcoming": "Sắp diễn ra",
     "visited": "Đã ghé thăm",
     "flight_upcoming": "Chuyến bay sắp diễn ra",
-    "flight_visited": "Chuyến bay đã diễn ra"
+    "flight_visited": "Chuyến bay đã diễn ra",
+    "feed_detail": "Chi tiết bài đăng",
+    "share": "Chia sẻ"
   }
 }
