@@ -138,6 +138,9 @@
     "overview": "Tổng quan",
     "view_more": "Xem thêm",
     "review": "Đánh giá",
+    "review_now": "Đánh giá ngay",
+    "view_review": "Xem đánh giá",
+    "review_placeholder": "Chia sẻ cảm nhận của bạn ...",
     "ticket_type": "Loại vé",
     "place_recommended": "Chỗ ở đề xuất",
     "buy_ticket_now": "Mua vé ngay",
@@ -277,6 +280,8 @@
       "register_success": "Đăng ký thành công",
       "register_error": "Đăng ký thất bại",
       "confirm_password_error": "Mật khẩu không khớp"
-    }
+    },
+    "upcoming": "Sắp diễn ra",
+    "visited": "Đã ghé thăm"
   }
 }

@@ -42,6 +42,7 @@ import AddNewVoucher from '@/screens/main/Voucher/AddNewVoucher';
 import VoucherDetail from '@/screens/main/Voucher/VoucherDetail';
 import PaymentCheckout from '@/screens/main/Payment/PaymentCheckout';
 import PaymentDetail from '@/screens/main/Payment/PaymentDetail';
+import AddNewReview from '@/screens/main/Accomodation/Review/AddNewReview';
 
 const Stack = createNativeStackNavigator();
 
@@ -176,6 +177,11 @@ function RootNavigator() {
       <Stack.Screen
         name={Routes.all_review}
         component={AllReview}
+        options={{headerShown: false}}
+      />
+      <Stack.Screen
+        name={Routes.add_new_review}
+        component={AddNewReview}
         options={{headerShown: false}}
       />
       <Stack.Screen
