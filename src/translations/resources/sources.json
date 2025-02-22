@@ -220,6 +220,13 @@
     "customer_go_with_name": "Tên khách đi cùng",
     "credit_or_debit": "Credit hoặc Debit Card",
     "add_new_card": "Thêm thẻ mới",
+    "add_new_card_status": {
+      "success": "Thêm thẻ thành công!"
+    },
+    "edit_card_status": {
+      "delete_confirm": "Bạn chắc chắn muốn xoá thẻ này?",
+      "delete_success": "Xoá thẻ thành công!"
+    },
     "other_method": "Phương thức khác",
     "choose_voucher": "Chọn mã giảm giá",
     "add_card": "Thêm thẻ",
