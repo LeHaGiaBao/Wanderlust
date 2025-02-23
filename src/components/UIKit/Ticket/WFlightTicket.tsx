@@ -34,14 +34,16 @@ function WTicket(props: FlightTicketProps) {
   } = props;
   const [selected, setSelected] = useState(false);
 
-  const handleSelect = useCallback(() => {
-    setSelected(!selected);
-  }, [selected]);
-
-  const Wrapper = onPress?.() ? TouchableOpacity : View;
+  const handleOnPress = useCallback(() => {
+    if (onPress) {
+      onPress();
+    } else {
+      setSelected(!selected);
+    }
+  }, [onPress, selected]);
 
   return (
-    <Wrapper onPress={handleSelect}>
+    <View>
       <ImageBackground
         source={selected ? TICKET_SELECT : TICKET}
         resizeMode="stretch"
@@ -71,11 +73,13 @@ function WTicket(props: FlightTicketProps) {
           </View>
         </View>
         <View style={styles.rightContainer}>
-          <WText
-            text={translate('source:detail')}
-            typo="Label"
-            color="Pressed"
-          />
+          <TouchableOpacity onPress={handleOnPress}>
+            <WText
+              text={translate('source:detail')}
+              typo="Label"
+              color="Pressed"
+            />
+          </TouchableOpacity>
           <View style={styles.ticketInfo}>
             <View style={styles.rowContent}>
               <Profile2User size={16} color={BaseColor.DarkGray} />
@@ -89,7 +93,7 @@ function WTicket(props: FlightTicketProps) {
           </View>
         </View>
       </ImageBackground>
-    </Wrapper>
+    </View>
   );
 }
 

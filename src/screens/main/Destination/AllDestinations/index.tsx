@@ -8,6 +8,8 @@ import {
 } from '@/components/containers';
 import {BaseColor, Devices} from '@/constants';
 import translate from '@/translations/i18n';
+import {useWanderlustNavigation} from '@/hooks/core/core';
+import {Routes} from '@/routes/routes';
 
 const HOTEL_DATA = [
   {
@@ -83,15 +85,28 @@ const RenderHeader = memo(() => {
 });
 
 function AllDestinations() {
+  const nav = useWanderlustNavigation();
   const keyExtractor = useCallback((item: any) => item.id.toString(), []);
 
-  const renderItem = useCallback(({item}: any) => {
-    const {image, title, destination} = item;
+  const goToDestinationDetail = useCallback(() => {
+    nav.navigate(Routes.destination_detail);
+  }, [nav]);
 
-    return (
-      <SmallCardItem image={image} title={title} destination={destination} />
-    );
-  }, []);
+  const renderItem = useCallback(
+    ({item}: any) => {
+      const {image, title, destination} = item;
+
+      return (
+        <SmallCardItem
+          image={image}
+          title={title}
+          destination={destination}
+          onPressItem={goToDestinationDetail}
+        />
+      );
+    },
+    [goToDestinationDetail],
+  );
 
   const renderSeparator = useCallback(() => {
     return <View style={{height: 12}} />;
