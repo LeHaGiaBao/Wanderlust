@@ -9,19 +9,24 @@ import {Routes} from '@/routes/routes';
 interface TopNavigationProps {
   title?: string;
   rightNode?: JSX.Element;
+  onPress?: () => void;
 }
 
 function TopNavigation(props: TopNavigationProps) {
-  const {title, rightNode} = props;
+  const {title, rightNode, onPress} = props;
   const nav = useWanderlustNavigation();
 
   const handleGoBack = useCallback(() => {
-    if (nav.canGoBack()) {
-      nav.goBack();
-      return;
+    if (onPress) {
+      onPress?.();
+    } else {
+      if (nav.canGoBack()) {
+        nav.goBack();
+        return;
+      }
+      nav.reset({index: 0, routes: [{name: Routes.appScreen}]});
     }
-    nav.reset({index: 0, routes: [{name: Routes.appScreen}]});
-  }, [nav]);
+  }, [nav, onPress]);
 
   return (
     <View style={styles.container}>

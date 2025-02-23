@@ -1,12 +1,20 @@
-import React, {memo} from 'react';
+import React, {memo, useCallback} from 'react';
 import {Image, StyleSheet, View} from 'react-native';
 import images from '@/assets/images';
 import {WButton, WText} from '@/components/UIKit';
 import translate from '@/translations/i18n';
 import {AddCircle} from 'iconsax-react-native';
 import {BaseColor} from '@/constants';
+import {useWanderlustNavigation} from '@/hooks/core/core';
+import {Routes} from '@/routes/routes';
 
 function EmptyFeed() {
+  const nav = useWanderlustNavigation();
+
+  const handleCreateFeed = useCallback(() => {
+    nav.navigate(Routes.feed_create);
+  }, [nav]);
+
   return (
     <View style={styles.container}>
       <Image source={images.New} />
@@ -29,6 +37,7 @@ function EmptyFeed() {
         height={35}
         iconAlign="Left"
         icon={<AddCircle size={16} color={BaseColor.White} />}
+        onPress={handleCreateFeed}
       />
     </View>
   );

@@ -7,6 +7,8 @@ import translate from '@/translations/i18n';
 import {Add} from 'iconsax-react-native';
 import FeedItem from '@/components/containers/Explore/FeedItem/FeedItem';
 import {FlatList} from 'react-native-gesture-handler';
+import {useWanderlustNavigation} from '@/hooks/core/core';
+import {Routes} from '@/routes/routes';
 
 const MOCK_DATA = [
   {
@@ -50,6 +52,7 @@ const DATA = [...MOCK_DATA, ...MOCK_DATA, ...MOCK_DATA].map((item, index) => ({
 }));
 
 function ExploreScreen() {
+  const nav = useWanderlustNavigation();
   const keyExtractor = useCallback((item: any) => item.id.toString(), []);
 
   const renderItem = useCallback(({item}: any) => {
@@ -75,6 +78,10 @@ function ExploreScreen() {
     return <View style={styles.footer} />;
   }, []);
 
+  const handleCreateNewFeed = useCallback(() => {
+    nav.navigate(Routes.feed_create);
+  }, [nav]);
+
   return (
     <>
       <FlatList
@@ -96,7 +103,9 @@ function ExploreScreen() {
           </>
         }
       />
-      <TouchableOpacity style={styles.buttonCreate}>
+      <TouchableOpacity
+        style={styles.buttonCreate}
+        onPress={handleCreateNewFeed}>
         <Add size={40} variant="Linear" color={BaseColor.White} />
       </TouchableOpacity>
     </>

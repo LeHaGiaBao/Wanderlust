@@ -3,6 +3,8 @@ import {Image, StyleSheet, TouchableOpacity, View} from 'react-native';
 import {WText} from '@/components/UIKit';
 import {BaseColor, PrimaryColor, StatusColor} from '@/constants';
 import {ExportCurve, Heart} from 'iconsax-react-native';
+import {useWanderlustNavigation} from '@/hooks/core/core';
+import {Routes} from '@/routes/routes';
 
 interface FeedItemProps {
   id: string;
@@ -16,6 +18,7 @@ interface FeedItemProps {
 }
 
 function FeedItem(props: FeedItemProps) {
+  const nav = useWanderlustNavigation();
   const [isFavorite, setIsFavorite] = useState(false);
   const {image, avatar, name, content, tags, onPressItem, onPressFavorite} =
     props;
@@ -27,7 +30,8 @@ function FeedItem(props: FeedItemProps) {
 
   const handleOnPressItem = useCallback(() => {
     onPressItem?.();
-  }, [onPressItem]);
+    nav.navigate(Routes.feed_detail);
+  }, [onPressItem, nav]);
 
   return (
     <TouchableOpacity style={styles.container} onPress={handleOnPressItem}>

@@ -44,6 +44,8 @@ import PaymentCheckout from '@/screens/main/Payment/PaymentCheckout';
 import PaymentDetail from '@/screens/main/Payment/PaymentDetail';
 import AddNewReview from '@/screens/main/Accomodation/Review/AddNewReview';
 import MyPayment from '@/screens/main/Profile/MyPayment';
+import FeedDetail from '@/screens/main/Feed/FeedDetail';
+import FeedCreate from '@/screens/main/Feed/FeedCreate';
 
 const Stack = createNativeStackNavigator();
 
@@ -263,6 +265,16 @@ function RootNavigator() {
       <Stack.Screen
         name={Routes.payment_detail}
         component={PaymentDetail}
+        options={{headerShown: false}}
+      />
+      <Stack.Screen
+        name={Routes.feed_detail}
+        component={FeedDetail}
+        options={{headerShown: false}}
+      />
+      <Stack.Screen
+        name={Routes.feed_create}
+        component={FeedCreate}
         options={{headerShown: false}}
       />
     </Stack.Navigator>
