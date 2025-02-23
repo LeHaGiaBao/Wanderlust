@@ -1,6 +1,6 @@
 /* eslint-disable react-native/no-inline-styles */
 import React, {memo, useCallback} from 'react';
-import {StyleSheet, View} from 'react-native';
+import {StyleSheet, TouchableOpacity, View} from 'react-native';
 import {WButton, WIcon, WText} from '@/components/UIKit';
 import {BaseColor, Devices, PrimaryColor} from '@/constants';
 import {useWanderlustNavigation} from '@/hooks/core/core';
@@ -12,8 +12,20 @@ import {ArrowCircleRight, ShoppingBag, AddCircle} from 'iconsax-react-native';
 function BuyMoreServices() {
   const nav = useWanderlustNavigation();
 
+  const onPressFreeServices = useCallback(() => {
+    nav.navigate(Routes.flight_services, {services: 'free'});
+  }, [nav]);
+
+  const onPressLuggageServices = useCallback(() => {
+    nav.navigate(Routes.flight_services, {services: 'luggage'});
+  }, [nav]);
+
+  const onPressMealServices = useCallback(() => {
+    nav.navigate(Routes.flight_services, {services: 'meal'});
+  }, [nav]);
+
   const onPressNavigate = useCallback(() => {
-    nav.navigate(Routes.payment_method);
+    nav.navigate(Routes.payment_confirm);
   }, [nav]);
 
   return (
@@ -23,14 +35,16 @@ function BuyMoreServices() {
           <FlightTicketConfirm />
         </View>
 
-        <View style={styles.itemContainer}>
+        <TouchableOpacity
+          style={styles.itemContainer}
+          onPress={onPressFreeServices}>
           <WText
             text={translate('source:free_flight_services')}
             typo="Body2"
             color="Black"
           />
           <ArrowCircleRight size={20} color={BaseColor.DarkGray} />
-        </View>
+        </TouchableOpacity>
 
         <View style={styles.anotherServices}>
           <WText
@@ -40,7 +54,9 @@ function BuyMoreServices() {
           />
         </View>
 
-        <View style={styles.itemContainer}>
+        <TouchableOpacity
+          style={styles.itemContainer}
+          onPress={onPressLuggageServices}>
           <View style={styles.row}>
             <ShoppingBag size={20} color={PrimaryColor.Main} />
             <WText
@@ -51,15 +67,17 @@ function BuyMoreServices() {
           </View>
 
           <AddCircle size={20} variant="Bold" color={PrimaryColor.Main} />
-        </View>
+        </TouchableOpacity>
 
-        <View style={styles.itemContainer}>
+        <TouchableOpacity
+          style={styles.itemContainer}
+          onPress={onPressMealServices}>
           <View style={styles.row}>
             <WIcon icon="knife" size={20} color={PrimaryColor.Main} />
             <WText text={translate('source:meal')} typo="Body2" color="Black" />
           </View>
           <AddCircle size={20} variant="Bold" color={PrimaryColor.Main} />
-        </View>
+        </TouchableOpacity>
 
         <View style={styles.anotherServices}>
           <WText
