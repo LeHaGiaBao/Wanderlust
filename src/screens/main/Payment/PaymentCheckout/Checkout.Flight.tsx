@@ -37,7 +37,10 @@ function CheckoutFlight() {
   }, [nav]);
 
   const goToPaymentDetail = useCallback(() => {
-    nav.reset({index: 0, routes: [{name: Routes.payment_detail}]});
+    nav.reset({
+      index: 0,
+      routes: [{name: Routes.payment_detail, params: {isFlightBooking: true}}],
+    });
     paymentBottomSheetModalRef.current?.dismiss();
   }, [nav]);
 
