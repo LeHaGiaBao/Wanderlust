@@ -286,6 +286,13 @@
     "flight_upcoming": "Chuyến bay sắp diễn ra",
     "flight_visited": "Chuyến bay đã diễn ra",
     "feed_detail": "Chi tiết bài đăng",
-    "share": "Chia sẻ"
+    "share": "Chia sẻ",
+    "feed_create": "Tạo bài đăng",
+    "add_new_feed": "Đăng bài",
+    "cancel_new_feed": "Huỷ bài đăng",
+    "cancel_new_feed_des": "Bạn muốn huỷ bỏ bài đăng?",
+    "continue_edit": "Tiếp tục chỉnh sửa",
+    "confirm_cancel": "Xác nhận huỷ",
+    "save_draff": "Lưu bản nháp"
   }
 }
