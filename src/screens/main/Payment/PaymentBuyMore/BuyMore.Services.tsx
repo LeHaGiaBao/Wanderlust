@@ -25,7 +25,7 @@ function BuyMoreServices() {
   }, [nav]);
 
   const onPressNavigate = useCallback(() => {
-    nav.navigate(Routes.payment_confirm);
+    nav.navigate(Routes.payment_method, {isFlightBooking: true});
   }, [nav]);
 
   return (

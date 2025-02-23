@@ -125,7 +125,7 @@ function ConfirmRoom() {
 const styles = StyleSheet.create({
   contentContainer: {
     marginTop: 16,
-    height: Devices.height - 250,
+    height: Devices.height - 150,
   },
   roomInfo: {
     width: '100%',

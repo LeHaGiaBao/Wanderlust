@@ -1,5 +1,5 @@
 import React, {memo} from 'react';
-import {ScrollView, StyleSheet, View} from 'react-native';
+import {ScrollView, StyleSheet} from 'react-native';
 import {TopNavigation} from '@/components/containers';
 import {BaseColor, Devices} from '@/constants';
 import translate from '@/translations/i18n';
@@ -22,7 +22,6 @@ function PaymentConfirm() {
         }
       />
       {isFlightBooking ? <ConfirmPassengerInfo /> : <ConfirmRoom />}
-      <View style={styles.footer} />
     </ScrollView>
   );
 }
