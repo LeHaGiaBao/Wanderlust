@@ -45,7 +45,11 @@
       "birth_placeholder": "dd/mm/yyyy",
       "password": "Mật khẩu",
       "confirm_password": "Nhập lại mật khẩu",
-      "confirm_password_placeholder": "Xác nhận mật khẩu"
+      "confirm_password_placeholder": "Xác nhận mật khẩu",
+      "last_name": "Họ",
+      "first_name": "Tên đệm và tên",
+      "male": "Nam",
+      "female": "Nữ"
     },
     "policy": {
       "agree_policy": "Bằng cách Đồng ý và tiếp tục, tôi đồng ý với\n Điều khoản và điều kiện của Wanderlust",
@@ -262,6 +266,7 @@
     "cancel_room_des": "Bạn muốn hủy phòng? Vui lòng liên hệ khách sạn để hủy phòng bạn đã đặt.",
     "no_refund": "Không hoàn tiền",
     "no_refund_des": "Xin lưu ý, trong mọi trường hợp đặt phòng bị hủy, thay đổi hoặc vắng mặt, toàn bộ tiền phòng vẫn sẽ được thu.",
+    "no_refund_flight_des": "Xin lưu ý, trong mọi trường hợp huỷ vé, vắng mặt, toàn bộ tiền chi phí sẽ không được hoàn lại",
     "hotel_rule": {
       "rule_title": "Quy định khách sạn",
       "rule_des1": ". Căn hộ cho tối đa 2 người lớn, 1 trẻ em và 1 thú cưng dưới 5 kg.",
@@ -293,6 +298,17 @@
     "cancel_new_feed_des": "Bạn muốn huỷ bỏ bài đăng?",
     "continue_edit": "Tiếp tục chỉnh sửa",
     "confirm_cancel": "Xác nhận huỷ",
-    "save_draff": "Lưu bản nháp"
+    "save_draff": "Lưu bản nháp",
+    "passenger_info": "Thông tin hành khách",
+    "contact_info": "Thông tin liên hệ",
+    "passenger_info_n": "Thông tin hành khách {{n}}",
+    "include_vat": "Đã bao gồm thuế và phí",
+    "continue_confirm": "Thông tin vé và chuyến bay của bạn sẽ được gửi đến email và số điện thoại bạn cung cấp dưới đây",
+    "free_flight_services": "Dịch vụ miễn phí theo hạng vé",
+    "departure_title": "Chặng đi",
+    "arrival_title": "Chặng về",
+    "anothor_services": "Dịch vụ bổ sung",
+    "ensure_services": "Dịch vụ bảo hiểm",
+    "departure_detail": "Chi tiết chặng đi"
   }
 }

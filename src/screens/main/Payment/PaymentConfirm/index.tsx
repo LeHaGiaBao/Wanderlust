@@ -1,26 +1,42 @@
 import React, {memo} from 'react';
-import {StyleSheet, View} from 'react-native';
+import {ScrollView, StyleSheet, View} from 'react-native';
 import {TopNavigation} from '@/components/containers';
 import {BaseColor, Devices} from '@/constants';
 import translate from '@/translations/i18n';
-import ConfirmRoom from './components/Confirm.Room';
+import ConfirmRoom from './Confirm.Room';
+import {useWanderlustNavigationParams} from '@/hooks/core/core';
+import ConfirmPassengerInfo from './Confirm.PassengerInfo';
 
 function PaymentConfirm() {
+  const params =
+    (useWanderlustNavigationParams() as {isFlightBooking?: boolean}) || {};
+  const isFlightBooking = params.isFlightBooking ?? false;
+
   return (
-    <View style={styles.container}>
-      <TopNavigation title={translate('source:confirm_information')} />
-      <ConfirmRoom />
-    </View>
+    <ScrollView style={styles.container} showsVerticalScrollIndicator={false}>
+      <TopNavigation
+        title={
+          isFlightBooking
+            ? translate('source:passenger_info')
+            : translate('source:confirm_information')
+        }
+      />
+      {isFlightBooking ? <ConfirmPassengerInfo /> : <ConfirmRoom />}
+      <View style={styles.footer} />
+    </ScrollView>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    display: 'flex',
+    flex: 1,
     paddingTop: 77,
     paddingHorizontal: 16,
     backgroundColor: BaseColor.White,
     height: Devices.height,
+  },
+  footer: {
+    height: 100,
   },
 });
 
