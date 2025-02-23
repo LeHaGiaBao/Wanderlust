@@ -1,5 +1,5 @@
 import React, {memo, useCallback} from 'react';
-import {StyleSheet, TouchableOpacity, View} from 'react-native';
+import {ScrollView, StyleSheet, TouchableOpacity, View} from 'react-native';
 import {TopNavigation} from '@/components/containers';
 import {WButton, WIcon, WText} from '@/components/UIKit';
 import {BaseColor, Devices, PrimaryColor} from '@/constants';
@@ -10,7 +10,10 @@ import {
   ArrowCircleRight,
 } from 'iconsax-react-native';
 import PaymentItem from './components/PaymentItem';
-import {useWanderlustNavigation} from '@/hooks/core/core';
+import {
+  useWanderlustNavigation,
+  useWanderlustNavigationParams,
+} from '@/hooks/core/core';
 import {Routes} from '@/routes/routes';
 
 const MOMO =
@@ -22,6 +25,9 @@ const VNPAY =
 
 function PaymentMethod() {
   const nav = useWanderlustNavigation();
+  const params =
+    (useWanderlustNavigationParams() as {isFlightBooking?: boolean}) || {};
+  const isFlightBooking = params.isFlightBooking ?? false;
 
   const handleCard = useCallback(() => {
     nav.navigate(Routes.payment_edit);
@@ -36,11 +42,11 @@ function PaymentMethod() {
   }, [nav]);
 
   const goToPaymentCheckout = useCallback(() => {
-    nav.navigate(Routes.payment_checkout);
-  }, [nav]);
+    nav.navigate(Routes.payment_checkout, {isFlightBooking: isFlightBooking});
+  }, [nav, isFlightBooking]);
 
   return (
-    <View style={styles.container}>
+    <ScrollView style={styles.container} showsVerticalScrollIndicator={false}>
       <TopNavigation title={translate('source:payment_method')} />
       <View style={styles.contentContainer}>
         <View style={styles.flexContainer}>
@@ -140,13 +146,13 @@ function PaymentMethod() {
           onPress={goToPaymentCheckout}
         />
       </View>
-    </View>
+    </ScrollView>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    display: 'flex',
+    flex: 1,
     paddingTop: 77,
     paddingHorizontal: 16,
     backgroundColor: BaseColor.White,
@@ -160,6 +166,7 @@ const styles = StyleSheet.create({
   },
   contentContainer: {
     marginTop: 16,
+    height: Devices.height - 150,
   },
   roomInfo: {
     width: '100%',
@@ -215,9 +222,6 @@ const styles = StyleSheet.create({
     bottom: 0,
     left: 0,
     right: 0,
-    paddingTop: 16,
-    paddingBottom: 24,
-    paddingHorizontal: 16,
   },
   divider: {
     width: '100%',

@@ -1,25 +1,24 @@
 import React, {memo, useCallback, useRef} from 'react';
 import {Image, StyleSheet, TouchableOpacity, View} from 'react-native';
-import {BookingEdit} from '@/components/containers';
 import {WButton, WText} from '@/components/UIKit';
-import WInputField from '@/components/UIKit/Input/WInputField';
-import {BaseColor, PrimaryColor, SecondaryColor} from '@/constants';
+import {BaseColor, Devices, PrimaryColor} from '@/constants';
 import {useWanderlustNavigation} from '@/hooks/core/core';
 import {Routes} from '@/routes/routes';
 import translate from '@/translations/i18n';
+import FlightTicketConfirm from './components/FlightTicketConfirm';
 import {
   BottomSheetBackdrop,
   BottomSheetModal,
   BottomSheetView,
 } from '@gorhom/bottom-sheet';
-import {Call, Star1, Verify} from 'iconsax-react-native';
+import WInputField from '@/components/UIKit/Input/WInputField';
+import {Call, Verify} from 'iconsax-react-native';
+import FlightPassengerInfor from './components/FlightPassengerInfor';
 
-const IMAGE =
-  'https://vinpearlresortvietnam.com/wp-content/uploads/villa-3-phong-ngu-vinpearl-discovery-coastalland-phu-quoc-6.jpg';
 const VISA =
   'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Visa_Inc._logo.svg/1000px-Visa_Inc._logo.svg.png';
 
-function CheckoutRoom() {
+function CheckoutFlight() {
   const nav = useWanderlustNavigation();
   const bottomSheetModalRef = useRef<BottomSheetModal>(null);
   const paymentBottomSheetModalRef = useRef<BottomSheetModal>(null);
@@ -32,13 +31,18 @@ function CheckoutRoom() {
     paymentBottomSheetModalRef.current?.present();
   }, []);
 
-  const handleEdit = useCallback(() => {
-    handlePresentModalPress();
-  }, [handlePresentModalPress]);
+  const goBackHome = useCallback(() => {
+    nav.reset({index: 0, routes: [{name: Routes.appScreen}]});
+    paymentBottomSheetModalRef.current?.dismiss();
+  }, [nav]);
 
-  const handleCheckout = useCallback(() => {
-    handlePresentPaymentModalPress();
-  }, [handlePresentPaymentModalPress]);
+  const goToPaymentDetail = useCallback(() => {
+    nav.reset({
+      index: 0,
+      routes: [{name: Routes.payment_detail, params: {isFlightBooking: true}}],
+    });
+    paymentBottomSheetModalRef.current?.dismiss();
+  }, [nav]);
 
   const renderBackdrop = useCallback((p: any) => {
     return (
@@ -63,81 +67,40 @@ function CheckoutRoom() {
     );
   }, []);
 
+  const handleCheckout = useCallback(() => {
+    handlePresentPaymentModalPress();
+  }, [handlePresentPaymentModalPress]);
+
   const handleChangePaymentMethod = useCallback(() => {
     nav.navigate(Routes.payment_card_list);
-  }, [nav]);
-
-  const goBackHome = useCallback(() => {
-    nav.reset({index: 0, routes: [{name: Routes.appScreen}]});
-    paymentBottomSheetModalRef.current?.dismiss();
-  }, [nav]);
-
-  const goToPaymentDetail = useCallback(() => {
-    nav.reset({index: 0, routes: [{name: Routes.payment_detail}]});
-    paymentBottomSheetModalRef.current?.dismiss();
   }, [nav]);
 
   return (
     <>
       <View style={styles.contentContainer}>
-        <WText
-          text={translate('source:booking_info')}
-          typo="Heading2"
-          color="Black"
-        />
-        <View style={styles.roomInfo}>
-          <Image source={{uri: IMAGE}} style={styles.image} />
-          <View style={styles.roomContent}>
-            <WText
-              text="Khu nghỉ dưỡng Vinpearl Wonderwold Phú Quốc"
-              typo="Body2"
-              color="Black"
-              numberOfLines={2}
-            />
-            <WText
-              text="Biệt thự Rose, 1 phòng ngủ lớn"
-              typo="Body3"
-              color="DarkGray"
-              numberOfLines={2}
-            />
-            <View style={styles.star}>
-              <Star1 size={12} variant="Bold" color={SecondaryColor.Yellow} />
-              <WText text="4.8" typo="Label" color="Black" numberOfLines={1} />
-            </View>
-          </View>
-        </View>
-
         <View style={styles.inforDetail}>
-          <BookingEdit />
+          <FlightTicketConfirm />
         </View>
 
         <View style={styles.customerInfor}>
           <WText
-            text={translate('source:customer_information')}
+            text={translate('source:contact_info')}
             typo="Heading2"
             color="Black"
           />
-          <TouchableOpacity onPress={handleEdit}>
-            <WText
-              text={translate('source:change')}
-              typo="Body3"
-              color="Main"
-            />
+          <TouchableOpacity onPress={handlePresentModalPress}>
+            <WText text={translate('source:edit')} typo="Body3" color="Main" />
           </TouchableOpacity>
         </View>
 
-        <View style={styles.listItem}>
-          <View style={styles.itemContainer}>
-            <WText text="Mỹ Duyên - 0343123456" typo="Body2" color="DarkGray" />
-          </View>
+        <View style={styles.itemContainer}>
+          <WText text="Mỹ Duyên - 0343123456" typo="Body2" color="Black" />
+          <WText text="abc@gmail.com" typo="Body2" color="Black" />
+        </View>
 
-          <View style={styles.itemContainer}>
-            <WText
-              text="Thanh Mai - 0349876543"
-              typo="Body2"
-              color="DarkGray"
-            />
-          </View>
+        <View style={styles.passengerInfo}>
+          <FlightPassengerInfor passengerNum={1} />
+          <FlightPassengerInfor passengerNum={2} />
         </View>
 
         <View style={styles.customerInfor}>
@@ -156,7 +119,7 @@ function CheckoutRoom() {
         </View>
 
         <View style={styles.listItem}>
-          <View style={styles.itemContainer}>
+          <View style={styles.itemPayment}>
             <Image
               source={{uri: VISA}}
               style={styles.circleAvatar}
@@ -166,19 +129,55 @@ function CheckoutRoom() {
           </View>
         </View>
       </View>
+
       <View style={styles.buttonContainer}>
+        <View style={styles.priceFooter}>
+          <WText
+            text={translate('source:price_detail')}
+            typo="Heading2"
+            color="Black"
+          />
+        </View>
+
+        <View style={styles.price}>
+          <View style={styles.priceLeft}>
+            <WText
+              text="Vé chiều đi SGN - PQC x2"
+              typo="Body2"
+              color="DarkGray"
+            />
+            <WText
+              text="Vé chiều đi PGC - SGN x2"
+              typo="Body2"
+              color="DarkGray"
+            />
+          </View>
+
+          <View style={styles.priceRight}>
+            <WText text="7,990.000VNĐ" typo="Body2" color="DarkGray" />
+            <WText text="7,990.000VNĐ" typo="Body2" color="DarkGray" />
+          </View>
+        </View>
+
         <View style={styles.divider} />
+
+        <WText
+          text={translate('source:include_vat')}
+          typo="Body3"
+          color="DarkGray"
+        />
+
         <View style={styles.flexButton}>
           <WText
-            text={translate('source:total_payment') + ':'}
+            text={translate('source:total') + ':'}
             typo="Heading1"
             color="Black"
           />
-          <WText text="1.234.000 VND" typo="Heading1" color="Error" />
+          <WText text="15.980.000 VND" typo="Heading1" color="Error" />
         </View>
 
         <WButton
-          text={translate('source:checkout')}
+          text={translate('source:continue')}
           typo="Button1"
           color="White"
           backgroundColor="Main"
@@ -193,47 +192,30 @@ function CheckoutRoom() {
         <BottomSheetView style={styles.bottomSheetContainer}>
           <View style={styles.bottomsheetHeader}>
             <WText
-              text={translate('source:customer_information')}
+              text={translate('source:contact_info')}
               typo="Heading1"
               color="Black"
             />
-          </View>
-
-          <View style={styles.bottomSheetCustomerInfor}>
             <WText
-              text={translate('source:customer_information')}
-              typo="Heading2"
-              color="Black"
-            />
-            <WInputField
-              type="Text"
-              text={translate('source:profile_info:full_name')}
-              placeholder={translate('source:customer_go_with_name')}
-              isNotification={false}
-            />
-            <WInputField
-              type="Text"
-              placeholder={translate('source:enter_phone')}
-              iconAlign="Left"
-              icon={
-                <>
-                  <Call size={24} color={BaseColor.DarkGray} variant="Bold" />
-                </>
-              }
-              isNotification={false}
+              text={translate('source:continue_confirm')}
+              typo="Body3"
+              color="DarkGray"
             />
           </View>
 
           <View style={styles.bottomSheetCustomerInfor}>
-            <WText
-              text={translate('source:customer_go_with_info')}
-              typo="Heading2"
-              color="Black"
-            />
             <WInputField
               type="Text"
               text={translate('source:profile_info:full_name')}
-              placeholder={translate('source:customer_go_with_name')}
+              placeholder={translate(
+                'source:profile_info:full_name_placeholder',
+              )}
+              isNotification={false}
+            />
+            <WInputField
+              type="Text"
+              text={translate('source:profile_info:email')}
+              placeholder={translate('source:profile_info:email_placeholder')}
               isNotification={false}
             />
             <WInputField
@@ -284,7 +266,7 @@ function CheckoutRoom() {
 
           <View style={styles.bottomSheetButtonContainer}>
             <WButton
-              text={translate('source:see_payment_detail')}
+              text={translate('source:see_ticket_payment_detail')}
               typo="Button1"
               color="White"
               backgroundColor="Main"
@@ -306,59 +288,30 @@ function CheckoutRoom() {
 
 const styles = StyleSheet.create({
   contentContainer: {
-    marginTop: 16,
-  },
-  roomInfo: {
-    width: '100%',
-    marginTop: 8,
-    padding: 4,
     display: 'flex',
-    flexDirection: 'row',
-    gap: 16,
-    borderRadius: 8,
-    backgroundColor: BaseColor.White,
-    shadowOffset: {width: 0, height: 4},
-    shadowOpacity: 0.3,
-    shadowColor: '#C9C9C9',
-    elevation: 20,
-  },
-  image: {
-    width: 125,
-    height: 70,
-    borderRadius: 8,
-  },
-  roomContent: {
-    flex: 1,
-    justifyContent: 'center',
-    gap: 4,
-  },
-  star: {
-    flexDirection: 'row',
-    gap: 4,
+    marginTop: 16,
+    height: Devices.height + 50,
   },
   inforDetail: {
-    marginVertical: 16,
-    borderRadius: 8,
-    backgroundColor: BaseColor.White,
-    shadowOffset: {width: 0, height: 4},
-    shadowOpacity: 0.3,
-    shadowColor: '#C9C9C9',
-    elevation: 20,
+    marginTop: 8,
+    marginBottom: 16,
   },
   customerInfor: {
     display: 'flex',
     flexDirection: 'row',
+    alignItems: 'center',
     justifyContent: 'space-between',
-    gap: 8,
+  },
+  passengerInfo: {
+    display: 'flex',
+    marginTop: 16,
   },
   buttonContainer: {
     position: 'absolute',
     bottom: 0,
     left: 0,
     right: 0,
-    paddingTop: 16,
-    paddingBottom: 24,
-    paddingHorizontal: 16,
+    marginBottom: 100,
   },
   divider: {
     width: '100%',
@@ -370,6 +323,7 @@ const styles = StyleSheet.create({
     display: 'flex',
     flexDirection: 'row',
     justifyContent: 'space-between',
+    marginTop: 8,
     marginBottom: 40,
   },
   price: {
@@ -391,12 +345,20 @@ const styles = StyleSheet.create({
     marginTop: 16,
     marginBottom: 8,
   },
-  listItem: {
+  itemContainer: {
+    marginTop: 8,
     display: 'flex',
     gap: 8,
-    marginVertical: 16,
+    borderRadius: 8,
+    paddingHorizontal: 12,
+    paddingVertical: 8,
+    backgroundColor: BaseColor.White,
+    shadowOffset: {width: 0, height: 0},
+    shadowOpacity: 0.25,
+    shadowColor: BaseColor.Gray,
+    elevation: 5,
   },
-  itemContainer: {
+  itemPayment: {
     height: 40,
     display: 'flex',
     flexDirection: 'row',
@@ -411,21 +373,6 @@ const styles = StyleSheet.create({
     shadowColor: BaseColor.Gray,
     elevation: 5,
   },
-  leftContainer: {
-    display: 'flex',
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: 8,
-  },
-  circleAvatar: {
-    height: 24,
-    width: 24,
-    borderRadius: 2,
-    backgroundColor: BaseColor.White,
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
   bottomSheetContainer: {
     display: 'flex',
     paddingHorizontal: 16,
@@ -434,6 +381,7 @@ const styles = StyleSheet.create({
   bottomsheetHeader: {
     display: 'flex',
     alignItems: 'center',
+    gap: 24,
     marginTop: 24,
   },
   bottomSheetCustomerInfor: {
@@ -454,6 +402,20 @@ const styles = StyleSheet.create({
     marginBottom: 16,
     gap: 16,
   },
+  listItem: {
+    display: 'flex',
+    gap: 8,
+    marginVertical: 16,
+  },
+  circleAvatar: {
+    height: 24,
+    width: 24,
+    borderRadius: 2,
+    backgroundColor: BaseColor.White,
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
 });
 
-export default memo(CheckoutRoom);
+export default memo(CheckoutFlight);

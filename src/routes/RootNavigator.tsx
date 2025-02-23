@@ -46,6 +46,8 @@ import AddNewReview from '@/screens/main/Accomodation/Review/AddNewReview';
 import MyPayment from '@/screens/main/Profile/MyPayment';
 import FeedDetail from '@/screens/main/Feed/FeedDetail';
 import FeedCreate from '@/screens/main/Feed/FeedCreate';
+import PaymentBuyMore from '@/screens/main/Payment/PaymentBuyMore';
+import FlightServices from '@/screens/main/Flight/FlightServices';
 
 const Stack = createNativeStackNavigator();
 
@@ -265,6 +267,16 @@ function RootNavigator() {
       <Stack.Screen
         name={Routes.payment_detail}
         component={PaymentDetail}
+        options={{headerShown: false}}
+      />
+      <Stack.Screen
+        name={Routes.payment_buy_more}
+        component={PaymentBuyMore}
+        options={{headerShown: false}}
+      />
+      <Stack.Screen
+        name={Routes.flight_services}
+        component={FlightServices}
         options={{headerShown: false}}
       />
       <Stack.Screen

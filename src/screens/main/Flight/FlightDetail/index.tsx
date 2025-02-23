@@ -1,14 +1,22 @@
-import React, {memo} from 'react';
+import React, {memo, useCallback} from 'react';
 import {StyleSheet, View} from 'react-native';
 import {BaseColor, Devices, PrimaryColor} from '@/constants';
 import {FlightCard, TopNavigation} from '@/components/containers';
 import translate from '@/translations/i18n';
 import {WButton, WIcon, WText} from '@/components/UIKit';
 import {ShoppingBag} from 'iconsax-react-native';
+import {useWanderlustNavigation} from '@/hooks/core/core';
+import {Routes} from '@/routes/routes';
 
 const LOGO = 'https://rubee.com.vn/wp-content/uploads/2021/05/Logo-vietjet.jpg';
 
 function FlightDetail() {
+  const nav = useWanderlustNavigation();
+
+  const handleBookingFlight = useCallback(() => {
+    nav.navigate(Routes.payment_confirm, {isFlightBooking: true});
+  }, [nav]);
+
   return (
     <>
       <View style={styles.container}>
@@ -120,6 +128,7 @@ function FlightDetail() {
           typo="Button1"
           color="White"
           backgroundColor="Main"
+          onPress={handleBookingFlight}
         />
       </View>
     </>

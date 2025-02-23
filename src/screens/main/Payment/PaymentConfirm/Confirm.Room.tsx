@@ -1,7 +1,7 @@
 import {BookingEdit} from '@/components/containers';
 import {WButton, WText} from '@/components/UIKit';
 import WInputField from '@/components/UIKit/Input/WInputField';
-import {BaseColor, SecondaryColor} from '@/constants';
+import {BaseColor, Devices, SecondaryColor} from '@/constants';
 import {useWanderlustNavigation} from '@/hooks/core/core';
 import {Routes} from '@/routes/routes';
 import translate from '@/translations/i18n';
@@ -125,6 +125,7 @@ function ConfirmRoom() {
 const styles = StyleSheet.create({
   contentContainer: {
     marginTop: 16,
+    height: Devices.height - 150,
   },
   roomInfo: {
     width: '100%',
@@ -172,9 +173,6 @@ const styles = StyleSheet.create({
     bottom: 0,
     left: 0,
     right: 0,
-    paddingTop: 16,
-    paddingBottom: 24,
-    paddingHorizontal: 16,
   },
   divider: {
     width: '100%',
