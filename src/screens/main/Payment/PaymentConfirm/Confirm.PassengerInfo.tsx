@@ -24,7 +24,7 @@ function ConfirmPassengerInfo() {
   }, []);
 
   const onPressNavigate = useCallback(() => {
-    nav.navigate(Routes.payment_method);
+    nav.navigate(Routes.payment_buy_more);
   }, [nav]);
 
   const renderBackdrop = useCallback((p: any) => {

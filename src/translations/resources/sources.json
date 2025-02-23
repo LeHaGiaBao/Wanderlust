@@ -304,11 +304,15 @@
     "passenger_info_n": "Thông tin hành khách {{n}}",
     "include_vat": "Đã bao gồm thuế và phí",
     "continue_confirm": "Thông tin vé và chuyến bay của bạn sẽ được gửi đến email và số điện thoại bạn cung cấp dưới đây",
+    "buy_more_services": "Mua thêm dịch vụ",
     "free_flight_services": "Dịch vụ miễn phí theo hạng vé",
     "departure_title": "Chặng đi",
     "arrival_title": "Chặng về",
-    "anothor_services": "Dịch vụ bổ sung",
+    "another_services": "Dịch vụ bổ sung",
     "ensure_services": "Dịch vụ bảo hiểm",
-    "departure_detail": "Chi tiết chặng đi"
+    "departure_detail": "Chi tiết chặng đi",
+    "safe_services": "Bảo hiểm du lịch an toàn",
+    "safe_services_des": "Bảo vệ bạn khỏi các rủi ro tai nạn, thất lạc tài khoản, hành lý, mức bồi thường: 30.000.000 VND",
+    "safe_services_price": "34.000 VND/Khách/Chuyến bay"
   }
 }
