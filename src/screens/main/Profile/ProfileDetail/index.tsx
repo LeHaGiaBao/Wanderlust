@@ -1,13 +1,21 @@
 /* eslint-disable react-native/no-inline-styles */
-import React, {memo} from 'react';
+import React, {memo, useCallback} from 'react';
 import {StyleSheet, TouchableOpacity, View} from 'react-native';
 import {BaseColor, Devices, PrimaryColor} from '@/constants';
 import {TopNavigation} from '@/components/containers';
 import translate from '@/translations/i18n';
 import {WText} from '@/components/UIKit';
 import {Facebook, Google} from 'iconsax-react-native';
+import {useWanderlustNavigation} from '@/hooks/core/core';
+import {Routes} from '@/routes/routes';
 
 function ProfileDetail() {
+  const nav = useWanderlustNavigation();
+
+  const handleEditInfo = useCallback(() => {
+    nav.navigate(Routes.profile_edit);
+  }, [nav]);
+
   return (
     <View style={styles.container}>
       <TopNavigation title={translate('source:customer_information')} />
@@ -18,7 +26,7 @@ function ProfileDetail() {
             typo="Heading2"
             color="Black"
           />
-          <TouchableOpacity>
+          <TouchableOpacity onPress={handleEditInfo}>
             <WText text={translate('source:edit')} typo="Body3" color="Main" />
           </TouchableOpacity>
         </View>
