@@ -1,5 +1,4 @@
-/* eslint-disable react-native/no-inline-styles */
-import React, {memo, useCallback, useMemo, useState} from 'react';
+import React, {memo, useCallback, useState} from 'react';
 import {StyleSheet, TouchableOpacity, View} from 'react-native';
 import {BaseColor, Devices, PrimaryColor, SecondaryColor} from '@/constants';
 import {
@@ -9,69 +8,59 @@ import {
   Profile2User,
   SearchNormal1,
 } from 'iconsax-react-native';
-import {WButton, WText} from '@/components/UIKit';
+import {WText} from '@/components/UIKit';
 import translate from '@/translations/i18n';
-import {
-  Buildings,
-  Profile,
-  Pet,
-  ArrowDown2,
-  ArrowLeft2,
-  ArrowRight2,
-} from 'iconsax-react-native';
-import ChooseRoomDropdown from './ChooseRoomDropdown';
-import Animated, {
-  useAnimatedStyle,
-  useSharedValue,
-  withTiming,
-} from 'react-native-reanimated';
-import ChooseDateDropdown from './ChooseDateDropdown';
-import dayjs from 'dayjs';
+//import {Buildings, Profile, Pet} from 'iconsax-react-native';
+// import ChooseRoomDropdown from './ChooseRoomDropdown';
+import {useSharedValue, withTiming} from 'react-native-reanimated';
+import DatePicker from 'react-native-date-picker';
 
 function BookingSearchHotel() {
-  const now = dayjs();
-  const [calendarDropdownVisible, setCalendarDropdownVisible] = useState(false);
+  // const now = dayjs();
+  //const [calendarDropdownVisible, setCalendarDropdownVisible] = useState(false);
+  // const [isChooseMonth, setIsChooseMonth] = useState(false);
+  // const [selectedMonth, setSelectedMonth] = useState(now.format('MM-YYYY'));
+  const [date, setDate] = useState(new Date());
+  const [open, setOpen] = useState(false);
   const [roomDropdownVisible, setRoomDropdownVisible] = useState(false);
-  const [isChooseMonth, setIsChooseMonth] = useState(false);
-  const [selectedMonth, setSelectedMonth] = useState(now.format('MM-YYYY'));
 
-  const handleNextMonth = useCallback(() => {
-    setSelectedMonth(prevMonth => {
-      const [month, year] = prevMonth.split('-');
-      const currentDate = dayjs(`${year}-${month}-01`);
-      const nextMonth = currentDate.add(1, 'month');
-      return nextMonth.format('MM-YYYY');
-    });
-  }, []);
+  // const handleNextMonth = useCallback(() => {
+  //   setSelectedMonth(prevMonth => {
+  //     const [month, year] = prevMonth.split('-');
+  //     const currentDate = dayjs(`${year}-${month}-01`);
+  //     const nextMonth = currentDate.add(1, 'month');
+  //     return nextMonth.format('MM-YYYY');
+  //   });
+  // }, []);
 
-  const handlePreviousMonth = useCallback(() => {
-    setSelectedMonth(prevMonth => {
-      const [month, year] = prevMonth.split('-');
-      const currentDate = dayjs(`${year}-${month}-01`);
-      const previousMonth = currentDate.subtract(1, 'month');
+  // const handlePreviousMonth = useCallback(() => {
+  //   setSelectedMonth(prevMonth => {
+  //     const [month, year] = prevMonth.split('-');
+  //     const currentDate = dayjs(`${year}-${month}-01`);
+  //     const previousMonth = currentDate.subtract(1, 'month');
 
-      // Prevent navigating before current month
-      if (previousMonth.isBefore(now, 'month')) {
-        return now.format('MM-YYYY');
-      }
+  //     // Prevent navigating before current month
+  //     if (previousMonth.isBefore(now, 'month')) {
+  //       return now.format('MM-YYYY');
+  //     }
 
-      return previousMonth.format('MM-YYYY');
-    });
-  }, [now]);
+  //     return previousMonth.format('MM-YYYY');
+  //   });
+  // }, [now]);
 
   const dropdownTranslateY = useSharedValue(-200);
   const dropdownOpacity = useSharedValue(0);
 
-  const handleCalendarDropdown = useCallback(() => {
-    if (calendarDropdownVisible) {
-      dropdownTranslateY.value = withTiming(-200, {duration: 300});
-      dropdownOpacity.value = withTiming(0, {duration: 300});
-    } else {
-      dropdownTranslateY.value = withTiming(0, {duration: 300});
-      dropdownOpacity.value = withTiming(1, {duration: 300});
-    }
-    setCalendarDropdownVisible(!calendarDropdownVisible);
-  }, [calendarDropdownVisible, dropdownTranslateY, dropdownOpacity]);
+  // const handleCalendarDropdown = useCallback(() => {
+  //   if (calendarDropdownVisible) {
+  //     dropdownTranslateY.value = withTiming(-200, {duration: 300});
+  //     dropdownOpacity.value = withTiming(0, {duration: 300});
+  //   } else {
+  //     dropdownTranslateY.value = withTiming(0, {duration: 300});
+  //     dropdownOpacity.value = withTiming(1, {duration: 300});
+  //   }
+  //   setCalendarDropdownVisible(!calendarDropdownVisible);
+  // }, [calendarDropdownVisible, dropdownTranslateY, dropdownOpacity]);
 
   const handleOpenRoomDropdown = useCallback(() => {
     if (roomDropdownVisible) {
@@ -84,124 +73,137 @@ function BookingSearchHotel() {
     setRoomDropdownVisible(!roomDropdownVisible);
   }, [roomDropdownVisible, dropdownTranslateY, dropdownOpacity]);
 
-  const animatedDropdownStyle = useAnimatedStyle(() => ({
-    transform: [{translateY: dropdownTranslateY.value}],
-    opacity: dropdownOpacity.value,
-  }));
+  // const animatedDropdownStyle = useAnimatedStyle(() => ({
+  //   transform: [{translateY: dropdownTranslateY.value}],
+  //   opacity: dropdownOpacity.value,
+  // }));
 
-  const handleChooseMonth = useCallback(() => {
-    setIsChooseMonth(!isChooseMonth);
-  }, [isChooseMonth]);
+  // const handleChooseMonth = useCallback(() => {
+  //   setIsChooseMonth(!isChooseMonth);
+  // }, [isChooseMonth]);
 
-  const calendarDropdown = useMemo(() => {
-    const IconWrapper = isChooseMonth ? ArrowDown2 : ArrowRight2;
+  // const calendarDropdown = useMemo(() => {
+  //   const IconWrapper = isChooseMonth ? ArrowDown2 : ArrowRight2;
 
-    return (
-      <Animated.View
-        style={[styles.selectedDropdown, animatedDropdownStyle, {top: 100}]}>
-        <View style={styles.dropdownHeader}>
-          <TouchableOpacity style={styles.leftNode} onPress={handleChooseMonth}>
-            <WText
-              text={translate('source:month-n', {month: selectedMonth})}
-              typo="Button1"
-              color="Main"
-            />
-            <IconWrapper size={20} variant="Linear" color={PrimaryColor.Main} />
-          </TouchableOpacity>
+  //   return (
+  //     <Animated.View
+  //       style={[styles.selectedDropdown, animatedDropdownStyle, {top: 100}]}>
+  //       <View style={styles.dropdownHeader}>
+  //         <TouchableOpacity style={styles.leftNode} onPress={handleChooseMonth}>
+  //           <WText
+  //             text={translate('source:month-n', {month: selectedMonth})}
+  //             typo="Button1"
+  //             color="Main"
+  //           />
+  //           <IconWrapper size={20} variant="Linear" color={PrimaryColor.Main} />
+  //         </TouchableOpacity>
 
-          <View style={styles.rightNode}>
-            <TouchableOpacity onPress={handlePreviousMonth}>
-              <ArrowLeft2
-                size={20}
-                variant="Linear"
-                color={PrimaryColor.Main}
-              />
-            </TouchableOpacity>
-            <TouchableOpacity onPress={handleNextMonth}>
-              <ArrowRight2
-                size={20}
-                variant="Linear"
-                color={PrimaryColor.Main}
-              />
-            </TouchableOpacity>
-          </View>
-        </View>
+  //         <View style={styles.rightNode}>
+  //           <TouchableOpacity onPress={handlePreviousMonth}>
+  //             <ArrowLeft2
+  //               size={20}
+  //               variant="Linear"
+  //               color={PrimaryColor.Main}
+  //             />
+  //           </TouchableOpacity>
+  //           <TouchableOpacity onPress={handleNextMonth}>
+  //             <ArrowRight2
+  //               size={20}
+  //               variant="Linear"
+  //               color={PrimaryColor.Main}
+  //             />
+  //           </TouchableOpacity>
+  //         </View>
+  //       </View>
 
-        <View style={styles.calendarView}>
-          <ChooseDateDropdown
-            isChooseMonth={isChooseMonth}
-            onPressArrowLeft={handlePreviousMonth}
-            onPressArrowRight={handleNextMonth}
-          />
-        </View>
+  //       <View style={styles.calendarView}>
+  //         <ChooseDateDropdown
+  //           isChooseMonth={isChooseMonth}
+  //           onPressArrowLeft={handlePreviousMonth}
+  //           onPressArrowRight={handleNextMonth}
+  //         />
+  //       </View>
 
-        <View style={styles.dropdownButton}>
-          <WButton
-            text={translate('source:confirm')}
-            backgroundColor="Light"
-            color="Main"
-            typo="Body2"
-            height={45}
-          />
-        </View>
-      </Animated.View>
-    );
-  }, [
-    animatedDropdownStyle,
-    handleChooseMonth,
-    handleNextMonth,
-    handlePreviousMonth,
-    isChooseMonth,
-    selectedMonth,
-  ]);
+  //       <View style={styles.dropdownButton}>
+  //         <WButton
+  //           text={translate('source:confirm')}
+  //           backgroundColor="Light"
+  //           color="Main"
+  //           typo="Body2"
+  //           height={45}
+  //         />
+  //       </View>
+  //     </Animated.View>
+  //   );
+  // }, [
+  //   animatedDropdownStyle,
+  //   handleChooseMonth,
+  //   handleNextMonth,
+  //   handlePreviousMonth,
+  //   isChooseMonth,
+  //   selectedMonth,
+  // ]);
 
-  const roomDropDown = useMemo(() => {
-    return (
-      <Animated.View
-        style={[styles.selectedDropdown, animatedDropdownStyle, {top: 50}]}>
-        <ChooseRoomDropdown
-          iconWrapper={Buildings}
-          text="source:num_of_room"
-          value="1"
-          onMinusPress={() => {}}
-          onPlusPress={() => {}}
-        />
-        <View style={styles.divider} />
-        <ChooseRoomDropdown
-          iconWrapper={Profile}
-          text="source:adult"
-          value="1"
-          onMinusPress={() => {}}
-          onPlusPress={() => {}}
-        />
-        <View style={styles.divider} />
-        <ChooseRoomDropdown
-          iconWrapper={Profile}
-          text="source:child"
-          value="1"
-          onMinusPress={() => {}}
-          onPlusPress={() => {}}
-        />
-        <View style={styles.divider} />
-        <ChooseRoomDropdown
-          iconWrapper={Pet}
-          text="source:pet"
-          value="1"
-          onMinusPress={() => {}}
-          onPlusPress={() => {}}
-        />
-        <View style={styles.dropdownButton}>
-          <WButton
-            text={translate('source:confirm')}
-            backgroundColor="Light"
-            color="Main"
-            typo="Body2"
-            height={45}
-          />
-        </View>
-      </Animated.View>
-    );
-  }, [animatedDropdownStyle]);
+  const handleOpenDatePicker = useCallback(() => {
+    setOpen(true);
+  }, []);
+
+  const onConfirm = useCallback(() => {
+    setOpen(false);
+    setDate(date);
+  }, [date]);
+
+  const onCancel = useCallback(() => {
+    setOpen(false);
+  }, []);
+
+  // const roomDropDown = useMemo(() => {
+  //   return (
+  //     <Animated.View
+  //       style={[styles.selectedDropdown, animatedDropdownStyle, {top: 50}]}>
+  //       <ChooseRoomDropdown
+  //         iconWrapper={Buildings}
+  //         text="source:num_of_room"
+  //         value="1"
+  //         onMinusPress={() => {}}
+  //         onPlusPress={() => {}}
+  //       />
+  //       <View style={styles.divider} />
+  //       <ChooseRoomDropdown
+  //         iconWrapper={Profile}
+  //         text="source:adult"
+  //         value="1"
+  //         onMinusPress={() => {}}
+  //         onPlusPress={() => {}}
+  //       />
+  //       <View style={styles.divider} />
+  //       <ChooseRoomDropdown
+  //         iconWrapper={Profile}
+  //         text="source:child"
+  //         value="1"
+  //         onMinusPress={() => {}}
+  //         onPlusPress={() => {}}
+  //       />
+  //       <View style={styles.divider} />
+  //       <ChooseRoomDropdown
+  //         iconWrapper={Pet}
+  //         text="source:pet"
+  //         value="1"
+  //         onMinusPress={() => {}}
+  //         onPlusPress={() => {}}
+  //       />
+  //       <View style={styles.dropdownButton}>
+  //         <WButton
+  //           text={translate('source:confirm')}
+  //           backgroundColor="Light"
+  //           color="Main"
+  //           typo="Body2"
+  //           height={45}
+  //         />
+  //       </View>
+  //     </Animated.View>
+  //   );
+  // }, [animatedDropdownStyle]);
 
   return (
     <>
@@ -217,7 +219,7 @@ function BookingSearchHotel() {
 
         <TouchableOpacity
           style={styles.fieldItem}
-          onPress={handleCalendarDropdown}>
+          onPress={handleOpenDatePicker}>
           <Calendar size={24} variant="Linear" color={PrimaryColor.Main} />
           <WText
             text={translate('source:dd_mm_placeholder')}
@@ -232,7 +234,7 @@ function BookingSearchHotel() {
           />
         </TouchableOpacity>
 
-        {calendarDropdownVisible && calendarDropdown}
+        {/* {calendarDropdown} */}
 
         <View>
           <TouchableOpacity
@@ -256,13 +258,21 @@ function BookingSearchHotel() {
             />
           </TouchableOpacity>
 
-          {roomDropdownVisible && roomDropDown}
+          {/* {roomDropdownVisible && roomDropDown} */}
         </View>
       </View>
       <TouchableOpacity style={styles.button}>
         <SearchNormal1 size={20} variant="Linear" color={BaseColor.Black} />
         <WText text={translate('source:find')} typo="Body2" color="Black" />
       </TouchableOpacity>
+
+      <DatePicker
+        modal
+        open={open}
+        date={date}
+        onConfirm={onConfirm}
+        onCancel={onCancel}
+      />
     </>
   );
 }

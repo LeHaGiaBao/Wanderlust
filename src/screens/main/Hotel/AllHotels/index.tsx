@@ -4,6 +4,8 @@ import {FlatList, StyleSheet, View} from 'react-native';
 import {CardItem, TopNavigation} from '@/components/containers';
 import {BaseColor, Devices} from '@/constants';
 import translate from '@/translations/i18n';
+import {useWanderlustNavigation} from '@/hooks/core/core';
+import {Routes} from '@/routes/routes';
 
 const HOTEL_DATA = [
   {
@@ -116,21 +118,30 @@ const DATA = [
 }));
 
 function AllHotels() {
+  const nav = useWanderlustNavigation();
   const keyExtractor = useCallback((item: any) => item.id.toString(), []);
 
-  const renderItem = useCallback(({item}: any) => {
-    const {images, title, destination, price, discount} = item;
+  const goToHotelDetail = useCallback(() => {
+    nav.navigate(Routes.hotel_detail);
+  }, [nav]);
 
-    return (
-      <CardItem
-        images={images}
-        title={title}
-        destination={destination}
-        price={price}
-        discount={discount}
-      />
-    );
-  }, []);
+  const renderItem = useCallback(
+    ({item}: any) => {
+      const {images, title, destination, price, discount} = item;
+
+      return (
+        <CardItem
+          images={images}
+          title={title}
+          destination={destination}
+          price={price}
+          discount={discount}
+          onPressItem={goToHotelDetail}
+        />
+      );
+    },
+    [goToHotelDetail],
+  );
 
   const renderSeparator = useCallback(() => {
     return <View style={{height: 12}} />;

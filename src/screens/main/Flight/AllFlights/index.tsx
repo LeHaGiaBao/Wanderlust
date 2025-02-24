@@ -4,6 +4,8 @@ import {TopNavigation} from '@/components/containers';
 import {BaseColor, Devices} from '@/constants';
 import translate from '@/translations/i18n';
 import {WFlightTicket} from '@/components/UIKit';
+import {useWanderlustNavigation} from '@/hooks/core/core';
+import {Routes} from '@/routes/routes';
 
 const FLIGHT_DATA = [
   {
@@ -80,39 +82,48 @@ const DATA = [
 }));
 
 function AllFlights() {
+  const nav = useWanderlustNavigation();
   const keyExtractor = useCallback((item: any) => item.id.toString(), []);
 
-  const renderItem = useCallback(({item}: any) => {
-    const {
-      airlineLogo,
-      airlineName,
-      departureTime,
-      departureCity,
-      arrivalTime,
-      arrivalCity,
-      flightTime,
-      flightType,
-      ticketType,
-      ticketPrice,
-      numOfPassengers,
-    } = item;
+  const goToFlightDetail = useCallback(() => {
+    nav.navigate(Routes.flight_detail);
+  }, [nav]);
 
-    return (
-      <WFlightTicket
-        airlineLogo={airlineLogo}
-        airlineName={airlineName}
-        departureTime={departureTime}
-        departureCity={departureCity}
-        arrivalTime={arrivalTime}
-        arrivalCity={arrivalCity}
-        flightTime={flightTime}
-        flightType={flightType}
-        ticketType={ticketType}
-        numOfPassengers={numOfPassengers}
-        ticketPrice={ticketPrice}
-      />
-    );
-  }, []);
+  const renderItem = useCallback(
+    ({item}: any) => {
+      const {
+        airlineLogo,
+        airlineName,
+        departureTime,
+        departureCity,
+        arrivalTime,
+        arrivalCity,
+        flightTime,
+        flightType,
+        ticketType,
+        ticketPrice,
+        numOfPassengers,
+      } = item;
+
+      return (
+        <WFlightTicket
+          airlineLogo={airlineLogo}
+          airlineName={airlineName}
+          departureTime={departureTime}
+          departureCity={departureCity}
+          arrivalTime={arrivalTime}
+          arrivalCity={arrivalCity}
+          flightTime={flightTime}
+          flightType={flightType}
+          ticketType={ticketType}
+          numOfPassengers={numOfPassengers}
+          ticketPrice={ticketPrice}
+          onPress={goToFlightDetail}
+        />
+      );
+    },
+    [goToFlightDetail],
+  );
 
   const renderFooter = useCallback(() => {
     return <View style={styles.footer} />;

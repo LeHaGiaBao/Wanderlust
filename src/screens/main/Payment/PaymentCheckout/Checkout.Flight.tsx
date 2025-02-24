@@ -290,7 +290,7 @@ const styles = StyleSheet.create({
   contentContainer: {
     display: 'flex',
     marginTop: 16,
-    height: Devices.height + 50,
+    height: Devices.height + 150,
   },
   inforDetail: {
     marginTop: 8,

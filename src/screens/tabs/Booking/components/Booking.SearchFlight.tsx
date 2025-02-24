@@ -1,4 +1,4 @@
-import React, {memo} from 'react';
+import React, {memo, useCallback, useState} from 'react';
 import {StyleSheet, TouchableOpacity, View} from 'react-native';
 import {BaseColor, Devices, PrimaryColor, SecondaryColor} from '@/constants';
 import {
@@ -9,10 +9,27 @@ import {
 } from 'iconsax-react-native';
 import {WIcon, WText} from '@/components/UIKit';
 import translate from '@/translations/i18n';
+import DatePicker from 'react-native-date-picker';
 
 const ITEM_WIDTH = (Devices.width - 40) / 2;
 
 function BookingSearchFlight() {
+  const [date, setDate] = useState(new Date());
+  const [open, setOpen] = useState(false);
+
+  const handleOpenDatePicker = useCallback(() => {
+    setOpen(true);
+  }, []);
+
+  const onConfirm = useCallback(() => {
+    setOpen(false);
+    setDate(date);
+  }, [date]);
+
+  const onCancel = useCallback(() => {
+    setOpen(false);
+  }, []);
+
   return (
     <>
       <View style={styles.formField}>
@@ -69,23 +86,27 @@ function BookingSearchFlight() {
         </View>
 
         <View style={styles.flexContainer}>
-          <View style={[styles.fieldItem, {width: ITEM_WIDTH}]}>
+          <TouchableOpacity
+            style={[styles.fieldItem, {width: ITEM_WIDTH}]}
+            onPress={handleOpenDatePicker}>
             <WIcon icon="calendar-in" size={24} color={PrimaryColor.Main} />
             <WText
               text={translate('source:departure_date')}
               typo="Body2"
               color="Main"
             />
-          </View>
+          </TouchableOpacity>
 
-          <View style={[styles.fieldItem, {width: ITEM_WIDTH}]}>
+          <TouchableOpacity
+            style={[styles.fieldItem, {width: ITEM_WIDTH}]}
+            onPress={handleOpenDatePicker}>
             <WIcon icon="calender-out" size={24} color={PrimaryColor.Main} />
             <WText
               text={translate('source:return_date')}
               typo="Body2"
               color="Main"
             />
-          </View>
+          </TouchableOpacity>
         </View>
 
         <View style={styles.flexContainer}>
@@ -127,6 +148,14 @@ function BookingSearchFlight() {
         <SearchNormal1 size={20} variant="Linear" color={BaseColor.Black} />
         <WText text={translate('source:find')} typo="Body2" color="Black" />
       </TouchableOpacity>
+
+      <DatePicker
+        modal
+        open={open}
+        date={date}
+        onConfirm={onConfirm}
+        onCancel={onCancel}
+      />
     </>
   );
 }

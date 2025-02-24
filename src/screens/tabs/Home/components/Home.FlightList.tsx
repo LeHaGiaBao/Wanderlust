@@ -10,7 +10,7 @@ const FLIGHT_DATA = [
   {
     id: 1,
     image:
-      'https://e-magazine.asiamedia.vn/wp-content/uploads/2024/01/tct-hang-khong-viet-nam-600.png',
+      'https://sgp1.digitaloceanspaces.com/e-magazine.asiamedia.vn/wp-content/uploads/2024/01/09194036/tct-hang-khong-viet-nam-600.png',
     title: 'TP.HCM - Quy Nhơn',
     date: '14.12.2024',
     price: '1.234.000VNĐ',
@@ -27,7 +27,7 @@ const FLIGHT_DATA = [
   {
     id: 3,
     image:
-      'https://e-magazine.asiamedia.vn/wp-content/uploads/2024/01/tct-hang-khong-viet-nam-600.png',
+      'https://cdn.haitrieu.com/wp-content/uploads/2022/01/Logo-Bamboo-Airways-V.png',
     title: 'TP.HCM - Hà Nội',
     date: '16.12.2024',
     price: '1.234.000VNĐ',

@@ -3453,25 +3453,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@react-native-community/cli-tools@npm:^15.1.2":
-  version: 15.1.2
-  resolution: "@react-native-community/cli-tools@npm:15.1.2"
-  dependencies:
-    appdirsjs: ^1.2.4
-    chalk: ^4.1.2
-    execa: ^5.0.0
-    find-up: ^5.0.0
-    mime: ^2.4.1
-    open: ^6.2.0
-    ora: ^5.4.1
-    prompts: ^2.4.2
-    semver: ^7.5.2
-    shell-quote: ^1.7.3
-    sudo-prompt: ^9.0.0
-  checksum: 7ec508ae0cc538708a00743065ddb0845a41cebe38f3905aebff51e668c5688d04562e50dc8f2a7b0d981890ce26e7c84765f4a23dd97f903035159249bba7aa
-  languageName: node
-  linkType: hard
-
 "@react-native-community/cli-types@npm:14.1.0":
   version: 14.1.0
   resolution: "@react-native-community/cli-types@npm:14.1.0"
@@ -3700,22 +3681,6 @@ __metadata:
     react: "*"
     react-native: "*"
   checksum: e1aca13f01e325924b7218de11eed283a49e7c93faf5b0536731385150b6283844ab0efe981c4139b30308af8565290baa2acd51942345fb08ebf5f0269e54d7
-  languageName: node
-  linkType: hard
-
-"@react-native-vector-icons/common@npm:^11.0.0":
-  version: 11.0.0
-  resolution: "@react-native-vector-icons/common@npm:11.0.0"
-  dependencies:
-    "@react-native-community/cli-tools": ^15.1.2
-    picocolors: ^1.1.1
-    plist: ^3.1.0
-  peerDependencies:
-    react: "*"
-    react-native: "*"
-  bin:
-    rnvi-update-plist: lib/commonjs/scripts/updatePlist.js
-  checksum: 55145d053ac3bb7cb236387f80343831d512e70b5f351604c6a3c83b1388ff154360c68a0ec0fd510a57cd4fd96a54f16787ef5948f5ca3b4c008de77645a758
   languageName: node
   linkType: hard
 
@@ -5967,17 +5932,6 @@ __metadata:
     strip-ansi: ^6.0.0
     wrap-ansi: ^6.2.0
   checksum: 4fcfd26d292c9f00238117f39fc797608292ae36bac2168cfee4c85923817d0607fe21b3329a8621e01aedf512c99b7eaa60e363a671ffd378df6649fb48ae42
-  languageName: node
-  linkType: hard
-
-"cliui@npm:^7.0.2":
-  version: 7.0.4
-  resolution: "cliui@npm:7.0.4"
-  dependencies:
-    string-width: ^4.2.0
-    strip-ansi: ^6.0.0
-    wrap-ansi: ^7.0.0
-  checksum: ce2e8f578a4813806788ac399b9e866297740eecd4ad1823c27fd344d78b22c5f8597d548adbcc46f0573e43e21e751f39446c5a5e804a12aace402b7a315d7f
   languageName: node
   linkType: hard
 
@@ -11321,7 +11275,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"picocolors@npm:^1.0.0, picocolors@npm:^1.1.0, picocolors@npm:^1.1.1":
+"picocolors@npm:^1.0.0, picocolors@npm:^1.1.0":
   version: 1.1.1
   resolution: "picocolors@npm:1.1.1"
   checksum: e1cf46bf84886c79055fdfa9dcb3e4711ad259949e3565154b004b260cd356c5d54b31a1437ce9782624bf766272fe6b0154f5f0c744fb7af5d454d2b60db045
@@ -11995,13 +11949,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-native-mmkv@npm:^3.0.2":
-  version: 3.0.2
-  resolution: "react-native-mmkv@npm:3.0.2"
+"react-native-mmkv@npm:2.6.1":
+  version: 2.6.1
+  resolution: "react-native-mmkv@npm:2.6.1"
   peerDependencies:
     react: "*"
-    react-native: "*"
-  checksum: a6426a446514abac7f2ce76a54716210ff26e4220317d86cae0efd13b878566ce1112380915a36deb3e5e3498fa1c8910a82065b547f6c24d61aa6a026af01ed
+    react-native: ">=0.71.0"
+  checksum: c73959d10e102a08bbde6a8dd041840a680faa8ef411125431afe63fdce38bf5f58cbd3985f8ef63832b8f5c0279ca39d7cd4a2ca1bde172a23eb74e644af5e0
   languageName: node
   linkType: hard
 
@@ -12217,21 +12171,6 @@ __metadata:
   peerDependencies:
     react-native: "*"
   checksum: 1a2e1030a62fd093764b5330ce0ff34d72246e581dd2892cddc347d8621931aeb2c9ea3e054960484a1259230e8461e569e1890f1ff452d3c5c0adef70190fc3
-  languageName: node
-  linkType: hard
-
-"react-native-vector-icons@npm:^10.2.0":
-  version: 10.2.0
-  resolution: "react-native-vector-icons@npm:10.2.0"
-  dependencies:
-    prop-types: ^15.7.2
-    yargs: ^16.1.1
-  bin:
-    fa-upgrade.sh: bin/fa-upgrade.sh
-    fa5-upgrade: bin/fa5-upgrade.sh
-    fa6-upgrade: bin/fa6-upgrade.sh
-    generate-icon: bin/generate-icon.js
-  checksum: fda930df4e63f12533268f5b339ebe4c77c691eae43503328466b3087ed868a06a4593fd246e75ac6b5ec955543eec35608c7922191bdcc3b3a94ed7f3575ef0
   languageName: node
   linkType: hard
 
@@ -14413,7 +14352,6 @@ __metadata:
     "@react-native-firebase/storage": ^21.4.1
     "@react-native-masked-view/masked-view": ^0.3.1
     "@react-native-picker/picker": ^2.8.1
-    "@react-native-vector-icons/common": ^11.0.0
     "@react-native/babel-preset": 0.75.3
     "@react-native/eslint-config": 0.75.3
     "@react-native/metro-config": 0.75.3
@@ -14475,7 +14413,7 @@ __metadata:
     react-native-keychain: ^9.0.0
     react-native-linear-gradient: ^2.8.3
     react-native-mask-input: ^1.2.3
-    react-native-mmkv: ^3.0.2
+    react-native-mmkv: 2.6.1
     react-native-modal: ^13.0.1
     react-native-pager-view: ^6.4.1
     react-native-popup-menu: ^0.16.1
@@ -14492,7 +14430,6 @@ __metadata:
     react-native-toast-message: ^2.2.1
     react-native-ui-datepicker: ^2.0.4
     react-native-url-polyfill: ^2.0.0
-    react-native-vector-icons: ^10.2.0
     react-native-webview: ^13.12.3
     react-redux: ^9.1.2
     react-test-renderer: 18.3.1
@@ -14939,13 +14876,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"yargs-parser@npm:^20.2.2":
-  version: 20.2.9
-  resolution: "yargs-parser@npm:20.2.9"
-  checksum: 8bb69015f2b0ff9e17b2c8e6bfe224ab463dd00ca211eece72a4cd8a906224d2703fb8a326d36fdd0e68701e201b2a60ed7cf81ce0fd9b3799f9fe7745977ae3
-  languageName: node
-  linkType: hard
-
 "yargs-parser@npm:^21.1.1":
   version: 21.1.1
   resolution: "yargs-parser@npm:21.1.1"
@@ -14969,21 +14899,6 @@ __metadata:
     y18n: ^4.0.0
     yargs-parser: ^18.1.2
   checksum: 40b974f508d8aed28598087720e086ecd32a5fd3e945e95ea4457da04ee9bdb8bdd17fd91acff36dc5b7f0595a735929c514c40c402416bbb87c03f6fb782373
-  languageName: node
-  linkType: hard
-
-"yargs@npm:^16.1.1":
-  version: 16.2.0
-  resolution: "yargs@npm:16.2.0"
-  dependencies:
-    cliui: ^7.0.2
-    escalade: ^3.1.1
-    get-caller-file: ^2.0.5
-    require-directory: ^2.1.1
-    string-width: ^4.2.0
-    y18n: ^5.0.5
-    yargs-parser: ^20.2.2
-  checksum: b14afbb51e3251a204d81937c86a7e9d4bdbf9a2bcee38226c900d00f522969ab675703bee2a6f99f8e20103f608382936034e64d921b74df82b63c07c5e8f59
   languageName: node
   linkType: hard
 
