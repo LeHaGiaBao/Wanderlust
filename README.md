@@ -22,6 +22,13 @@ yarn install
 cd ios && pod install
 ```
 
+Create .env file with key from Supabase
+
+```
+PUBLIC_SUPABASE_URL=<PUBLIC_SUPABASE_URL>
+PUBLIC_SUPABASE_ANON_KEY=<PUBLIC_SUPABASE_ANON_KEY>
+```
+
 To start app
 
 ```
