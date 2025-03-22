@@ -22,7 +22,11 @@ export const styles = StyleSheet.create({
     gap: 2,
   },
   buttonContainer: {
-    paddingBottom: 40,
+    position: 'absolute',
+    left: 0,
+    right: 0,
+    bottom: 100,
+    paddingHorizontal: 16,
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
